@@ -27,8 +27,17 @@ def _scrub(value):
 
 
 def client_ip(request):
+    """Client IP honouring the configured number of trusted proxies (same rule as DRF throttling)."""
     if request is None:
         return None
+    from django.conf import settings
+
+    hops = settings.REST_FRAMEWORK.get("NUM_PROXIES")
+    xff = request.META.get("HTTP_X_FORWARDED_FOR")
+    if hops and xff:
+        addrs = [a.strip() for a in xff.split(",") if a.strip()]
+        if addrs:
+            return addrs[-min(hops, len(addrs))]
     return request.META.get("REMOTE_ADDR")
 
 

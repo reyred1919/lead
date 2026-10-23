@@ -31,7 +31,7 @@ export function NotificationsPage() {
                 </span>
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2">
-                    {!n.read_at && <span className="size-2 rounded-full bg-action" aria-label="خوانده‌نشده" />}
+                    {!n.read_at && <span className="size-2 rounded-full bg-action" role="img" aria-label="خوانده‌نشده" />}
                     <span className="font-bold">{n.title}</span>
                     <Badge tone="neutral">{n.kind_label}</Badge>
                     {n.priority !== "NORMAL" && <Badge tone={n.priority === "LOW" ? "neutral" : "danger"}>اولویت {PRIORITY[n.priority]}</Badge>}

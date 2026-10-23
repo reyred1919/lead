@@ -136,8 +136,16 @@ def resolve_contact(user, contact_id, full_name, mobile, email, account):
     return contact, True, candidates
 
 
-def suggest_contacts(query, mobile=None, limit=8):
+def suggest_contacts(user, query, mobile=None, limit=8):
+    """Suggestions are limited to contacts the user can already see through a visible lead (QA-D-01):
+    a booth user of event B must not learn names captured only in event A. Exact-match linking on the
+    server (resolve_contact) still prevents duplicates without disclosing anything."""
+    from django.db.models import Exists, OuterRef
+
     qs = Contact.objects.filter(status=RecordStatus.ACTIVE).select_related("primary_account")
+    if not authz_for(user).has_global("lead.view.all"):
+        visible = scoping.visible_interactions(user, Interaction.objects.all()).filter(contact_id=OuterRef("pk"))
+        qs = qs.filter(Exists(visible))
     results = []
     if mobile:
         results = list(qs.filter(mobile=mobile)[:limit])

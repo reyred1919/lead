@@ -1,0 +1,310 @@
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - banner:
+          - generic:
+            - generic:
+              - generic:
+                - img:
+                  - img
+            - generic:
+              - generic:
+                - generic: نمایشگاه نمونه فناوری ۱۴۰۵
+            - generic:
+              - button:
+                - img
+            - link:
+              - /url: /notifications
+              - img
+        - main:
+          - generic:
+            - generic:
+              - generic:
+                - heading [level=1]: رویدادها
+                - paragraph: هر رویداد تیم، محصولات، مسئولیت‌ها و گزارش مستقل دارد؛ پیکربندی رویداد آینده بدون تغییر کد انجام می‌شود.
+              - generic:
+                - button:
+                  - img
+                  - text: رویداد جدید
+            - radiogroup:
+              - radio [checked]: همه
+              - radio: پیش‌نویس
+              - radio: آماده
+              - radio: فعال
+              - radio: پایان‌یافته
+              - radio: بایگانی
+            - generic:
+              - link:
+                - /url: /admin/events/b4a5f03e-6a0e-41ed-a2b1-931b2e454152
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد آینده (پیش‌نویس)
+                    - generic: DEMO-NEXT-1406
+                  - generic: پیش‌نویس
+                - generic:
+                  - img
+                  - text: مشهد
+                - generic: ۱ دی ۱۴۰۵ تا ۴ دی ۱۴۰۵
+                - generic:
+                  - generic: ۰ عضو
+                  - generic: ۱ محصول
+                  - generic: ۰ ثبت
+              - link:
+                - /url: /admin/events/da15fa8c-8ffe-4050-95dd-11b925ca36b4
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1XIUF-240
+                    - generic: QA-MVL1XIUF-240
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/0bc6838a-1d97-4c38-85a6-c9dbf66d583a
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1X0K3-978
+                    - generic: QA-MVL1X0K3-978
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/cebad66e-a6a1-4f7e-849d-5a394befe1ae
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1L0UI-629
+                    - generic: QA-MVL1L0UI-629
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/00167850-dfd2-4f4d-97a3-72c640dd8b11
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1KO2Y-291
+                    - generic: QA-MVL1KO2Y-291
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/ba5f91ba-effc-4198-a9d0-f43a3ca0628e
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1JCVA-622
+                    - generic: QA-MVL1JCVA-622
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/76e11ca8-94ac-4472-b940-5ce2e8880875
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1J8EY-86
+                    - generic: QA-MVL1J8EY-86
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/8ce60bd8-0577-41b7-b4f1-4e9fc75c44ff
+                - generic:
+                  - generic:
+                    - heading [level=2]: همایش نمونه انرژی هوشمند
+                    - generic: DEMO-ENERGY-1405
+                  - generic: فعال
+                - generic:
+                  - img
+                  - text: اصفهان · مرکز همایش نمونه
+                - generic: ۳۰ مهر ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۴ عضو
+                  - generic: ۳ محصول
+                  - generic: ۱۴ ثبت
+              - link:
+                - /url: /admin/events/96aee70b-d7b1-4227-bcdb-204cc2b1d0ae
+                - generic:
+                  - generic:
+                    - heading [level=2]: نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)
+                    - generic: CLN-MVL1KCDO
+                  - generic: پیش‌نویس
+                - generic:
+                  - img
+                  - text: تهران · سالن نمونه ۳۸
+                - generic: ۲۹ مهر ۱۴۰۵ تا ۳ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۹ عضو
+                  - generic: ۴ محصول
+                  - generic: ۰ ثبت
+              - link:
+                - /url: /admin/events/bc6d0b1b-dbe7-4c4f-916d-2c2192c69520
+                - generic:
+                  - generic:
+                    - heading [level=2]: نمایشگاه نمونه فناوری ۱۴۰۵
+                    - generic: DEMO-TECH-1405
+                  - generic: فعال
+                - generic:
+                  - img
+                  - text: تهران · سالن نمونه ۳۸
+                - generic: ۲۹ مهر ۱۴۰۵ تا ۳ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۹ عضو
+                  - generic: ۴ محصول
+                  - generic: ۱۰۷ ثبت
+              - link:
+                - /url: /admin/events/5c3eeedb-91df-44e3-ad54-b3e973f7897f
+                - generic:
+                  - generic:
+                    - heading [level=2]: نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)
+                    - generic: CLN-MVL1KD7G
+                  - generic: پیش‌نویس
+                - generic:
+                  - img
+                  - text: تهران · سالن نمونه ۳۸
+                - generic: ۲۹ مهر ۱۴۰۵ تا ۳ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۹ عضو
+                  - generic: ۴ محصول
+                  - generic: ۰ ثبت
+              - link:
+                - /url: /admin/events/d1ef34ac-c5aa-4594-9e34-e4ea368d14e4
+                - generic:
+                  - generic:
+                    - heading [level=2]: نمایشگاه نمونه ۱۴۰۴
+                    - generic: DEMO-EXPO-1404
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: تهران · سالن نمونه ۳۱
+                - generic: ۲۲ شهریور ۱۴۰۵ تا ۲۵ شهریور ۱۴۰۵
+                - generic:
+                  - generic: ۳ عضو
+                  - generic: ۳ محصول
+                  - generic: ۹ ثبت
+              - link:
+                - /url: /admin/events/df788871-60bd-4b2b-894c-8994e8c9ff1e
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد بایگانی‌شده نمونه
+                    - generic: DEMO-OLD-1403
+                  - generic: بایگانی
+                - generic:
+                  - img
+                  - text: شیراز
+                - generic: ۲۷ شهریور ۱۴۰۴ تا ۳۰ شهریور ۱۴۰۴
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۰ ثبت
+      - navigation:
+        - generic:
+          - link:
+            - /url: /
+            - img
+            - text: خانه
+          - link:
+            - /url: /leads
+            - img
+            - text: لیدها
+          - generic:
+            - button:
+              - img
+          - link:
+            - /url: /inbox
+            - img
+            - text: کارتابل
+          - button:
+            - img
+            - text: بیشتر
+  - dialog "رویداد جدید" [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - heading "رویداد جدید" [level=2] [ref=e6]
+        - paragraph [ref=e7]: رویداد جدید
+      - button "بستن" [ref=e8]:
+        - img [ref=e9]
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - text: کد رویداد (تغییرناپذیر)*
+          - generic [ref=e16]: (الزامی)
+        - textbox "کد رویداد (تغییرناپذیر) (الزامی)" [ref=e17]:
+          - /placeholder: EXPO-1405
+          - text: UI-MVL1XVXT
+        - paragraph [ref=e18]: حروف لاتین، عدد و خط تیره
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - text: نام نمایشی*
+          - generic [ref=e21]: (الزامی)
+        - textbox "نام نمایشی (الزامی)" [active] [ref=e22]: رویداد رابط کاربری UI-MVL1XVXT
+      - generic [ref=e23]:
+        - generic [ref=e24]: شهر
+        - textbox "شهر" [ref=e25]
+      - generic [ref=e26]:
+        - generic [ref=e27]: محل برگزاری
+        - textbox "محل برگزاری" [ref=e28]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - text: شروع*
+          - generic [ref=e31]: (الزامی)
+        - button "شروع (الزامی)" [ref=e32]:
+          - img [ref=e33]
+          - generic [ref=e35]: انتخاب تاریخ
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - text: پایان*
+          - generic [ref=e38]: (الزامی)
+        - button "پایان (الزامی)" [ref=e39]:
+          - img [ref=e40]
+          - generic [ref=e42]: انتخاب تاریخ
+      - generic [ref=e43]:
+        - generic [ref=e44]: مهلت همگام‌سازی آفلاین پس از پایان (ساعت)
+        - spinbutton "مهلت همگام‌سازی آفلاین پس از پایان (ساعت)" [ref=e45]: "24"
+        - paragraph [ref=e46]: ثبت‌های آفلاینِ زمان رویداد تا این مهلت پذیرفته و پس از آن برای بازبینی مدیر نگه داشته می‌شوند.
+      - generic [ref=e47]:
+        - generic [ref=e48]: SLA پذیرش ارجاع (ساعت، اختیاری)
+        - spinbutton "SLA پذیرش ارجاع (ساعت، اختیاری)" [ref=e49]
+      - generic [ref=e50]:
+        - generic [ref=e51]: توضیحات
+        - textbox "توضیحات" [ref=e52]
+    - generic [ref=e53]:
+      - button "انصراف" [ref=e54]
+      - button "ذخیره" [ref=e55]
+```

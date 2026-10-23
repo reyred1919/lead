@@ -1,0 +1,211 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها ۱۰" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+        - generic [ref=e39]: ۱۰
+      - link "داشبورد تحلیلی" [ref=e40] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e41]
+        - generic [ref=e43]: داشبورد تحلیلی
+      - link "گزارش و خروجی" [ref=e44] [cursor=pointer]:
+        - /url: /reports
+        - img [ref=e45]
+        - generic [ref=e49]: گزارش و خروجی
+      - link "پیام و درخواست اقدام" [ref=e50] [cursor=pointer]:
+        - /url: /messages
+        - img [ref=e51]
+        - generic [ref=e54]: پیام و درخواست اقدام
+      - generic [ref=e55]: مدیریت و تنظیمات
+      - link "رویدادها و تیم‌ها" [ref=e56] [cursor=pointer]:
+        - /url: /admin/events
+        - img [ref=e57]
+        - generic [ref=e59]: رویدادها و تیم‌ها
+      - link "طرح‌ها و محصولات" [ref=e60] [cursor=pointer]:
+        - /url: /admin/catalog
+        - img [ref=e61]
+        - generic [ref=e65]: طرح‌ها و محصولات
+      - link "سازمان‌ها و مخاطبان" [ref=e66] [cursor=pointer]:
+        - /url: /admin/accounts
+        - img [ref=e67]
+        - generic [ref=e71]: سازمان‌ها و مخاطبان
+      - link "بازبینی تکراری‌ها" [ref=e72] [cursor=pointer]:
+        - /url: /admin/duplicates
+        - img [ref=e73]
+        - generic [ref=e76]: بازبینی تکراری‌ها
+      - link "ثبت‌های آفلاین معلق" [ref=e77] [cursor=pointer]:
+        - /url: /admin/quarantine
+        - img [ref=e78]
+        - generic [ref=e82]: ثبت‌های آفلاین معلق
+      - link "برچسب‌های لید" [ref=e83] [cursor=pointer]:
+        - /url: /admin/tags
+        - img [ref=e84]
+        - generic [ref=e88]: برچسب‌های لید
+      - link "اعلان، پیامک و ایمیل" [ref=e89] [cursor=pointer]:
+        - /url: /admin/notify
+        - img [ref=e90]
+        - generic [ref=e92]: اعلان، پیامک و ایمیل
+      - link "هویت بصری" [ref=e93] [cursor=pointer]:
+        - /url: /admin/branding
+        - img [ref=e94]
+        - generic [ref=e100]: هویت بصری
+      - link "گزارش ممیزی" [ref=e101] [cursor=pointer]:
+        - /url: /admin/audit
+        - img [ref=e102]
+        - generic [ref=e105]: گزارش ممیزی
+    - generic [ref=e106]:
+      - generic [ref=e107]: م‌ت
+      - link "مریم توسعه‌بازار مدیر توسعه بازار" [ref=e108] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e109]: مریم توسعه‌بازار
+        - generic [ref=e110]: مدیر توسعه بازار
+      - button "خروج" [ref=e111]:
+        - img [ref=e112]
+  - generic [ref=e115]:
+    - banner [ref=e116]:
+      - generic [ref=e117]:
+        - generic "رویداد فعال" [ref=e119]:
+          - generic [ref=e121]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e122]: DEMO-TECH-1405
+        - generic [ref=e124]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e126]':
+          - img [ref=e127]
+          - generic [ref=e130]: همگام
+    - main [ref=e131]:
+      - generic [ref=e132]:
+        - generic [ref=e134]:
+          - generic [ref=e135]: عصر بخیر
+          - heading "مریم توسعه‌بازار" [level=1] [ref=e136]
+          - paragraph [ref=e137]: مدیر توسعه بازار
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]: رویداد فعال
+            - heading "نمایشگاه نمونه فناوری ۱۴۰۵" [level=2] [ref=e144]
+            - paragraph [ref=e145]:
+              - text: تهران · سالن نمونه ۳۸ ·
+              - generic [ref=e146]: DEMO-TECH-1405
+          - link "ثبت لید جدید" [ref=e147] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e148]:
+              - img [ref=e149]
+              - text: ثبت لید جدید
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - generic [ref=e153]: ثبت‌های امروز من
+              - img [ref=e155]
+            - generic [ref=e157]: ۱۰
+            - generic [ref=e158]: "مجموع: ۱۴"
+          - link "ارجاع در انتظار من ۰ پذیرش یا بازگرداندن" [ref=e159] [cursor=pointer]:
+            - /url: /inbox
+            - generic [ref=e160]:
+              - generic [ref=e161]:
+                - generic [ref=e162]: ارجاع در انتظار من
+                - img [ref=e164]
+              - generic [ref=e167]: ۰
+              - generic [ref=e168]: پذیرش یا بازگرداندن
+          - link "وظایف باز من ۰" [ref=e169] [cursor=pointer]:
+            - /url: /inbox?tab=tasks
+            - generic [ref=e170]:
+              - generic [ref=e171]:
+                - generic [ref=e172]: وظایف باز من
+                - img [ref=e174]
+              - generic [ref=e178]: ۰
+          - link "درخواست اقدام ۰" [ref=e179] [cursor=pointer]:
+            - /url: /inbox?tab=actions
+            - generic [ref=e180]:
+              - generic [ref=e181]:
+                - generic [ref=e182]: درخواست اقدام
+                - img [ref=e184]
+              - generic [ref=e188]: ۰
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - heading "آخرین ثبت‌های من" [level=2] [ref=e193]
+              - link "همه" [ref=e195] [cursor=pointer]:
+                - /url: /leads?scope=mine
+            - list [ref=e196]:
+              - listitem [ref=e197]:
+                - link "بازگشت desktop-1920 27228 قابل‌پیگیری ۴ ثانیه پیش" [ref=e198] [cursor=pointer]:
+                  - /url: /leads/e1146f3b-6fee-437c-9ccf-3a777a6dfb18
+                  - generic [ref=e199]: بازگشت desktop-1920 27228
+                  - generic [ref=e200]: قابل‌پیگیری
+                  - generic [ref=e201]: ۴ ثانیه پیش
+              - listitem [ref=e202]:
+                - link "ارجاع دستگاه desktop-1920 9757 قابل‌پیگیری ۲۱ ثانیه پیش" [ref=e203] [cursor=pointer]:
+                  - /url: /leads/81722e8a-939d-4a7e-acc0-2e3b8e36a7a4
+                  - generic [ref=e204]: ارجاع دستگاه desktop-1920 9757
+                  - generic [ref=e205]: قابل‌پیگیری
+                  - generic [ref=e206]: ۲۱ ثانیه پیش
+              - listitem [ref=e207]:
+                - link "=HYPERLINK(\"http://evil.invalid\",\"x\") 7562559 قابل‌پیگیری ۸ دقیقه پیش" [ref=e208] [cursor=pointer]:
+                  - /url: /leads/ffeba940-8ffe-47a4-9917-2ee195422cda
+                  - generic [ref=e209]: =HYPERLINK("http://evil.invalid","x") 7562559
+                  - generic [ref=e210]: قابل‌پیگیری
+                  - generic [ref=e211]: ۸ دقیقه پیش
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e214]:
+                - heading "نمای کلی محدوده من" [level=2] [ref=e215]
+                - paragraph [ref=e216]: داده نمونه (DEMO)
+              - link "داشبورد" [ref=e218] [cursor=pointer]:
+                - /url: /dashboard
+                - text: داشبورد
+                - img [ref=e219]
+            - generic [ref=e221]:
+              - generic [ref=e222]:
+                - generic [ref=e223]: تعاملات
+                - generic [ref=e224]: ۱۱۳
+              - generic [ref=e225]:
+                - generic [ref=e226]: مخاطبان یکتا
+                - generic [ref=e227]: ۱۰۵
+              - generic [ref=e228]:
+                - generic [ref=e229]: فرصت‌ها
+                - generic [ref=e230]: ۱۴
+              - generic [ref=e231]:
+                - generic [ref=e232]: بدون مسئول
+                - generic [ref=e233]: ۸۱
+            - generic [ref=e234]:
+              - generic [ref=e235]:
+                - img [ref=e236]
+                - text: پیگیری‌های معوق تیم
+              - list [ref=e240]:
+                - listitem [ref=e241]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e242] [cursor=pointer]:
+                    - /url: /leads/94e16b49-c138-464e-8f47-db5fd927f417
+                - listitem [ref=e243]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e244] [cursor=pointer]:
+                    - /url: /leads/acd115af-7975-4ac4-a637-53e3d2c251b4
+                - listitem [ref=e245]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e246] [cursor=pointer]:
+                    - /url: /leads/22610009-6407-49b5-a20e-c0720465fb66
+                - listitem [ref=e247]:
+                  - link "معوق QA 66307 · پرهام برنامه‌ریز" [ref=e248] [cursor=pointer]:
+                    - /url: /leads/96261622-c65c-4de9-b332-da5f454c2cf5
+```

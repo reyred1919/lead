@@ -1,0 +1,107 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: عصر بخیر
+          - heading "سینا غرفه‌دار" [level=1] [ref=e32]
+          - paragraph [ref=e33]: کارشناس غرفه
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: رویداد فعال
+            - heading "نمایشگاه نمونه فناوری ۱۴۰۵" [level=2] [ref=e40]
+            - paragraph [ref=e41]:
+              - text: تهران · سالن نمونه ۳۸ ·
+              - generic [ref=e42]: DEMO-TECH-1405
+          - link "ثبت لید جدید" [ref=e43] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e44]:
+              - img [ref=e45]
+              - text: ثبت لید جدید
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]: ثبت‌های امروز من
+              - img [ref=e51]
+            - generic [ref=e53]: ۳۷
+            - generic [ref=e54]: "مجموع: ۴۳"
+          - link "ارجاع در انتظار من ۰ پذیرش یا بازگرداندن" [ref=e55] [cursor=pointer]:
+            - /url: /inbox
+            - generic [ref=e56]:
+              - generic [ref=e57]:
+                - generic [ref=e58]: ارجاع در انتظار من
+                - img [ref=e60]
+              - generic [ref=e63]: ۰
+              - generic [ref=e64]: پذیرش یا بازگرداندن
+          - link "وظایف باز من ۰" [ref=e65] [cursor=pointer]:
+            - /url: /inbox?tab=tasks
+            - generic [ref=e66]:
+              - generic [ref=e67]:
+                - generic [ref=e68]: وظایف باز من
+                - img [ref=e70]
+              - generic [ref=e74]: ۰
+          - link "درخواست اقدام ۰" [ref=e75] [cursor=pointer]:
+            - /url: /inbox?tab=actions
+            - generic [ref=e76]:
+              - generic [ref=e77]:
+                - generic [ref=e78]: درخواست اقدام
+                - img [ref=e80]
+              - generic [ref=e84]: ۰
+        - generic [ref=e86]:
+          - generic [ref=e87]:
+            - heading "آخرین ثبت‌های من" [level=2] [ref=e89]
+            - link "همه" [ref=e91] [cursor=pointer]:
+              - /url: /leads?scope=mine
+          - list [ref=e92]:
+            - listitem [ref=e93]:
+              - link "=HYPERLINK(\"http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"QA\") قابل‌پیگیری ۱ ثانیه پیش" [ref=e94] [cursor=pointer]:
+                - /url: /leads/4396c52c-3335-495a-9f11-0f6d5c0dd47a
+                - generic [ref=e95]: =HYPERLINK("http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","QA")
+                - generic [ref=e96]: قابل‌پیگیری
+                - generic [ref=e97]: ۱ ثانیه پیش
+            - listitem [ref=e98]:
+              - link "لید QA 7921236 قابل‌پیگیری ۱۶ ثانیه پیش" [ref=e99] [cursor=pointer]:
+                - /url: /leads/666da5cf-f6b7-4bf6-b9c7-47912d3a13e9
+                - generic [ref=e100]: لید QA 7921236
+                - generic [ref=e101]: قابل‌پیگیری
+                - generic [ref=e102]: ۱۶ ثانیه پیش
+            - listitem [ref=e103]:
+              - link "لید QA 1680227 قابل‌پیگیری ۵۲ ثانیه پیش" [ref=e104] [cursor=pointer]:
+                - /url: /leads/469794a1-b35b-4e7f-8ad9-2ecc2d4e5592
+                - generic [ref=e105]: لید QA 1680227
+                - generic [ref=e106]: قابل‌پیگیری
+                - generic [ref=e107]: ۵۲ ثانیه پیش
+  - navigation "ناوبری پایین" [ref=e108]:
+    - generic [ref=e109]:
+      - link "خانه" [ref=e110] [cursor=pointer]:
+        - /url: /
+        - img [ref=e111]
+        - text: خانه
+      - link "لیدها" [ref=e114] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e115]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e119]:
+        - img [ref=e120]
+      - link "کارتابل" [ref=e121] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e122]
+        - text: کارتابل
+      - button "بیشتر" [ref=e125]:
+        - img [ref=e126]
+        - text: بیشتر
+```

@@ -21,7 +21,7 @@ def _settings(settings, tmp_path):
     settings.MEDIA_ROOT = tmp_path / "media"
     settings.DEMO_MODE = True
     settings.PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
-    settings.REST_FRAMEWORK = {**settings.REST_FRAMEWORK, "DEFAULT_THROTTLE_RATES": {"login": "1000/min", "password_reset": "1000/min"}}
+    settings.REST_FRAMEWORK = {**settings.REST_FRAMEWORK, "DEFAULT_THROTTLE_RATES": {"login": "1000/min", "password_forgot": "1000/min", "password_reset_token": "1000/min", "password_reset_ip": "1000/min"}}
 
 
 def make_user(username, roles=(), **extra):

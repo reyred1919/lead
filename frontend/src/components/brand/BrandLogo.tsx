@@ -22,7 +22,7 @@ export function BrandLogo({ variant = "light", height = 32, showTitle = true, cl
         <img src={`${asset.url}?r=${data?.revision}`} alt={data?.logo_alt || "نشان سازمان"} style={{ height: h, width: "auto", maxWidth: h * 5 }} className="object-contain shrink-0" />
       ) : (
         <span className={cn("shrink-0 grid place-items-center rounded-[10px] font-extrabold", variant === "dark" ? "bg-white/10 text-white" : "bg-navy text-white")}
-          style={{ height: h, width: h, fontSize: h * 0.42 }} aria-label="نشان موقت (جایگزین)" title="نشان موقت — نشان رسمی سازمان هنوز بارگذاری نشده است">
+          style={{ height: h, width: h, fontSize: h * 0.42 }} role="img" aria-label="نشان موقت (جایگزین)" title="نشان موقت — نشان رسمی سازمان هنوز بارگذاری نشده است">
           <svg viewBox="0 0 24 24" width={h * 0.58} height={h * 0.58} aria-hidden>
             <rect x="4" y="5" width="16" height="3" rx="1.5" fill="currentColor" />
             <rect x="4" y="10.5" width="11" height="3" rx="1.5" fill="currentColor" opacity=".65" />

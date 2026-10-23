@@ -1,0 +1,740 @@
+{
+  "config": {
+    "configFile": "/home/user/lead/frontend/qa.config.ts",
+    "rootDir": "/home/user/lead/frontend/qa-e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../qa/results/playwright-a11y-mobile-390.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/a11y-mobile-390",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop-1440",
+        "name": "desktop-1440",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/a11y-mobile-390",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop-1920",
+        "name": "desktop-1920",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/a11y-mobile-390",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet-768",
+        "name": "tablet-768",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/a11y-mobile-390",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet-1024",
+        "name": "tablet-1024",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/a11y-mobile-390",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile-390",
+        "name": "mobile-390",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/a11y-mobile-390",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile-375",
+        "name": "mobile-375",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "07-matrix-visual.spec.ts",
+      "file": "07-matrix-visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-MTX admin: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-admin\",\"role\":\"admin\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 62031,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T15:56:24.892Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-admin\",\"role\":\"admin\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-8b7008d9b915084b835d",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-mdm\",\"role\":\"mdm\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 42409,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T15:57:27.038Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-mdm\",\"role\":\"mdm\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-fec8bd7f18ce7ed77999",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX dg: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-dg\",\"role\":\"dg\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34504,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T15:58:09.464Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-dg\",\"role\":\"dg\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-b96fdd78ccb8af13d5f5",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX exec: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-exec\",\"role\":\"exec\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32076,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T15:58:43.982Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-exec\",\"role\":\"exec\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-f5182c46415a99f51db4",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-evmgr\",\"role\":\"evmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32650,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T15:59:16.078Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-evmgr\",\"role\":\"evmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-de92cfb55a75c388b8c0",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-planmgr\",\"role\":\"planmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 37353,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T15:59:48.744Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-planmgr\",\"role\":\"planmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-508846eed65bb24b0584",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX owner: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-owner\",\"role\":\"owner\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33918,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T16:00:26.113Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-owner\",\"role\":\"owner\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-cbd692614033c45d7c68",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-specialist1\",\"role\":\"specialist1\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 31797,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T16:01:00.046Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-specialist1\",\"role\":\"specialist1\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-a36f72f85f2900dbee54",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-qa_dual\",\"role\":\"qa_dual\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 33839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T16:01:31.857Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-qa_dual\",\"role\":\"qa_dual\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-03ad0749a59f39dd0f5d",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-qa_nomember\",\"role\":\"qa_nomember\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T16:02:05.709Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-qa_nomember\",\"role\":\"qa_nomember\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-60a6d2d7d724e62cedad",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-qa_closed\",\"role\":\"qa_closed\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 28898,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T16:02:33.948Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-qa_closed\",\"role\":\"qa_closed\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-67cb3fa4bfd9beb4e81a",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-VIS-STATES loading, error, offline banner, popovers and toasts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-VIS-STATES\",\"role\":\"planmgr\",\"route\":\"various\",\"action\":\"state gallery\",\"expected\":\"every state renders without overflow\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8897,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T16:03:02.874Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-VIS-STATES\",\"role\":\"planmgr\",\"route\":\"various\",\"action\":\"state gallery\",\"expected\":\"every state renders without overflow\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-b15bb8c75c5571fd002e",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 103,
+          "column": 1
+        },
+        {
+          "title": "TC-VIS-JALALI date picker round-trips value and month/year navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "logic check on one viewport",
+                  "location": {
+                    "file": "/home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts",
+                    "line": 144,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile-390",
+              "projectName": "mobile-390",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 100,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T16:03:11.785Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "logic check on one viewport",
+                      "location": {
+                        "file": "/home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts",
+                        "line": 144,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "808262a518b8d0464077-460724ae233c77744230",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 143,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-23T15:56:23.911Z",
+    "duration": 408530.818,
+    "expected": 12,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

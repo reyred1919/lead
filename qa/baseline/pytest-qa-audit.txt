@@ -1,0 +1,198 @@
+......................FFFFFF..F......F                                   [100%]
+=================================== FAILURES ===================================
+___________ test_qa_activation_link_check_not_blocked_by_other_users ___________
+
+real_throttles = None, world = <tests.conftest.World object at 0x7fd3eb210830>
+
+    def test_qa_activation_link_check_not_blocked_by_other_users(real_throttles, world):
+        """QA-D-02: opening/validating activation links of several users from one office IP must keep working."""
+        from apps.iam.models import PasswordResetToken
+    
+        c = APIClient(REMOTE_ADDR="10.0.0.9")
+        statuses = []
+        for i in range(6):
+            u = make_user(f"onboard{i}")
+            _, raw = PasswordResetToken.issue(u, "ACTIVATION")
+            statuses.append(c.get(f"/api/v1/auth/password/reset?token={raw}").status_code)
+            statuses.append(c.post("/api/v1/auth/password/reset", {"token": raw, "password": "Onb0ard-Pass-2026!"}, format="json").status_code)
+>       assert 429 not in statuses, statuses
+E       AssertionError: [200, 200, 200, 200, 200, 429, ...]
+E       assert 429 not in [200, 200, 200, 200, 200, 429, ...]
+
+tests/test_qa_audit.py:152: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2026-10-23 13:16:58,902 WARNING django.request Too Many Requests: /api/v1/auth/password/reset
+2026-10-23 13:16:58,909 WARNING django.request Too Many Requests: /api/v1/auth/password/reset
+2026-10-23 13:16:58,909 WARNING django.request Too Many Requests: /api/v1/auth/password/reset
+2026-10-23 13:16:58,914 WARNING django.request Too Many Requests: /api/v1/auth/password/reset
+2026-10-23 13:16:58,914 WARNING django.request Too Many Requests: /api/v1/auth/password/reset
+2026-10-23 13:16:58,918 WARNING django.request Too Many Requests: /api/v1/auth/password/reset
+2026-10-23 13:16:58,919 WARNING django.request Too Many Requests: /api/v1/auth/password/reset
+------------------------------ Captured log call -------------------------------
+WARNING  django.request:log.py:253 Too Many Requests: /api/v1/auth/password/reset
+WARNING  django.request:log.py:253 Too Many Requests: /api/v1/auth/password/reset
+WARNING  django.request:log.py:253 Too Many Requests: /api/v1/auth/password/reset
+WARNING  django.request:log.py:253 Too Many Requests: /api/v1/auth/password/reset
+WARNING  django.request:log.py:253 Too Many Requests: /api/v1/auth/password/reset
+WARNING  django.request:log.py:253 Too Many Requests: /api/v1/auth/password/reset
+WARNING  django.request:log.py:253 Too Many Requests: /api/v1/auth/password/reset
+___________________ test_qa_unauthenticated_api_returns_401 ____________________
+
+world = <tests.conftest.World object at 0x7fd3eb212190>
+
+    def test_qa_unauthenticated_api_returns_401(world):
+        """QA-D-04: expired/missing session must be distinguishable (401) from forbidden (403) so the SPA can re-login."""
+        r = APIClient().get("/api/v1/interactions")
+>       assert r.status_code == 401
+E       assert 403 == 401
+E        +  where 403 = <Response status_code=403, "application/json">.status_code
+
+tests/test_qa_audit.py:158: AssertionError
+----------------------------- Captured stderr call -----------------------------
+2026-10-23 13:16:59,031 WARNING django.request Forbidden: /api/v1/interactions
+------------------------------ Captured log call -------------------------------
+WARNING  django.request:log.py:253 Forbidden: /api/v1/interactions
+__________ test_qa_contact_search_does_not_leak_other_event_contacts ___________
+
+world = <tests.conftest.World object at 0x7fd3eb212430>
+leads = {'e': {'id': 'c560cce2-87a9-496b-81d3-0c0688c3aee4', 'version': 1, 'event': {'id': 'cf1471d8-ad94-4db7-bbd7-e810ce7164...us': 'ACTIVE'}, 'captured_at': datetime.datetime(2026, 10, 23, 13, 16, 59, 165186, tzinfo=datetime.timezone.utc), ...}}
+
+    def test_qa_contact_search_does_not_leak_other_event_contacts(world, leads):
+        """QA-D-01: a booth user of event F must not learn names of contacts captured only in event E."""
+        from apps.crm.models import Contact
+    
+        e_contact = Contact.objects.get(pk=leads["e"]["contact"]["id"])
+        c = client_for(world.spec_f)
+        by_mobile = c.get(f"/api/v1/contacts/search?mobile={e_contact.mobile}").data
+        by_name = c.get("/api/v1/contacts/search?q=مخاطب آزمون").data
+>       assert by_mobile == [] and by_name == [], (by_mobile, by_name)
+E       AssertionError: ([{'id': '6cd9b975-0fc9-42d1-8b84-1864bbe935c3', 'full_name': 'مخاطب آزمون', 'mobile_masked': '+98912••••567', 'accoun...obile_masked': '+98912••••567', 'account': {'id': '53d62be2-64ee-4713-ba00-4c233f88394b', 'name': 'شرکت آزمون'}, ...}])
+E       assert ([{'id': '6cd9...آزمون'}, ...}] == []
+E         
+E         Left contains one more item: {'id': '6cd9b975-0fc9-42d1-8b84-1864bbe935c3', 'full_name': 'مخاطب آزمون', 'mobile_masked': '+98912••••567', 'account': {'id': '53d62be2-64ee-4713-ba00-4c233f88394b', 'name': 'شرکت آزمون'}, ...}
+E         Use -v to get more diff)
+
+tests/test_qa_audit.py:170: AssertionError
+________________ test_qa_personal_today_metric_uses_tehran_day _________________
+
+world = <tests.conftest.World object at 0x7fd3eb212f90>
+capture = <function capture.<locals>._capture at 0x7fd3eb10f100>
+
+    def test_qa_personal_today_metric_uses_tehran_day(world, capture):
+        """QA-D-05: 'my captures today' must follow the Asia/Tehran calendar day, not UTC."""
+        lead = capture(world.specialist).data
+        # 23:30 Tehran yesterday == 20:00 UTC; "now" is 01:00 Tehran today == 21:30 UTC (same UTC date!).
+        now_tehran = datetime(2026, 10, 24, 1, 0, tzinfo=TEHRAN)
+        Interaction.objects.filter(pk=lead["id"]).update(captured_at=datetime(2026, 10, 23, 23, 30, tzinfo=TEHRAN))
+        with mock.patch("django.utils.timezone.now", return_value=now_tehran.astimezone(ZoneInfo("UTC"))):
+            data = client_for(world.specialist).get("/api/v1/dashboard").data
+>       assert data["personal"]["my_captures_today"] == 0
+E       assert 1 == 0
+
+tests/test_qa_audit.py:184: AssertionError
+_____________________ test_qa_date_filter_uses_tehran_day ______________________
+
+world = <tests.conftest.World object at 0x7fd3eb213070>
+capture = <function capture.<locals>._capture at 0x7fd3eb24e200>
+
+    def test_qa_date_filter_uses_tehran_day(world, capture):
+        """QA-D-05b: date_from/date_to filters are Jalali/Tehran days in the UI; an 01:00 Tehran capture belongs to that day."""
+        lead = capture(world.specialist).data
+        Interaction.objects.filter(pk=lead["id"]).update(captured_at=datetime(2026, 10, 24, 1, 0, tzinfo=TEHRAN))  # 21:30 UTC on 23rd
+        ids = [r["id"] for r in client_for(world.admin).get("/api/v1/interactions?date_from=2026-10-24&date_to=2026-10-24").data["results"]]
+>       assert lead["id"] in ids
+E       AssertionError: assert '8ab86056-ced0-4f56-890f-55611e676a89' in []
+
+tests/test_qa_audit.py:192: AssertionError
+_ test_qa_list_endpoints_have_no_n_plus_one[/api/v1/users?page_size=100-users] _
+
+world = <tests.conftest.World object at 0x7fd3ed5eb310>
+capture = <function capture.<locals>._capture at 0x7fd3eb24f600>
+url = '/api/v1/users?page_size=100', factory = 'users'
+
+    @pytest.mark.parametrize("url,factory", [("/api/v1/users?page_size=100", "users"), ("/api/v1/interactions?page_size=100", "leads"),
+                                             ("/api/v1/referrals?box=team&status=PENDING&page_size=100", "referrals"), ("/api/v1/plans", "plans")])
+    def test_qa_list_endpoints_have_no_n_plus_one(world, capture, url, factory):
+        """QA-D-06: query count must not grow linearly with rows."""
+        from apps.catalog.models import Plan
+    
+        c = client_for(world.admin)
+    
+        def grow(n):
+            for i in range(n):
+                if factory == "users":
+                    make_user(f"n1_{uuid.uuid4().hex[:6]}", ["EXECUTIVE_READONLY"])
+                elif factory == "leads":
+                    capture(world.specialist, contact_name=f"n1 {uuid.uuid4().hex[:6]}", mobile=f"0912{uuid.uuid4().int % 10**7:07d}")
+                elif factory == "referrals":
+                    lid = capture(world.specialist, contact_name=f"r {uuid.uuid4().hex[:6]}", mobile=f"0912{uuid.uuid4().int % 10**7:07d}").data["id"]
+                    client_for(world.mdm).post(f"/api/v1/interactions/{lid}/refer", {"to_user_id": str(world.planmgr.id)}, format="json")
+                else:
+                    Plan.objects.create(code=f"P{uuid.uuid4().hex[:5]}", name_fa="طرح")
+    
+        grow(3)
+        small = _count(c, url)
+        grow(12)
+        large = _count(c, url)
+>       assert large - small <= 2, f"{url}: {small} queries for small set vs {large} for +12 rows"
+E       AssertionError: /api/v1/users?page_size=100: 21 queries for small set vs 28 for +12 rows
+E       assert (28 - 21) <= 2
+
+tests/test_qa_audit.py:225: AssertionError
+________ test_qa_list_endpoints_have_no_n_plus_one[/api/v1/plans-plans] ________
+
+world = <tests.conftest.World object at 0x7fd3ed5e90f0>
+capture = <function capture.<locals>._capture at 0x7fd3eb029800>
+url = '/api/v1/plans', factory = 'plans'
+
+    @pytest.mark.parametrize("url,factory", [("/api/v1/users?page_size=100", "users"), ("/api/v1/interactions?page_size=100", "leads"),
+                                             ("/api/v1/referrals?box=team&status=PENDING&page_size=100", "referrals"), ("/api/v1/plans", "plans")])
+    def test_qa_list_endpoints_have_no_n_plus_one(world, capture, url, factory):
+        """QA-D-06: query count must not grow linearly with rows."""
+        from apps.catalog.models import Plan
+    
+        c = client_for(world.admin)
+    
+        def grow(n):
+            for i in range(n):
+                if factory == "users":
+                    make_user(f"n1_{uuid.uuid4().hex[:6]}", ["EXECUTIVE_READONLY"])
+                elif factory == "leads":
+                    capture(world.specialist, contact_name=f"n1 {uuid.uuid4().hex[:6]}", mobile=f"0912{uuid.uuid4().int % 10**7:07d}")
+                elif factory == "referrals":
+                    lid = capture(world.specialist, contact_name=f"r {uuid.uuid4().hex[:6]}", mobile=f"0912{uuid.uuid4().int % 10**7:07d}").data["id"]
+                    client_for(world.mdm).post(f"/api/v1/interactions/{lid}/refer", {"to_user_id": str(world.planmgr.id)}, format="json")
+                else:
+                    Plan.objects.create(code=f"P{uuid.uuid4().hex[:5]}", name_fa="طرح")
+    
+        grow(3)
+        small = _count(c, url)
+        grow(12)
+        large = _count(c, url)
+>       assert large - small <= 2, f"{url}: {small} queries for small set vs {large} for +12 rows"
+E       AssertionError: /api/v1/plans: 6 queries for small set vs 18 for +12 rows
+E       assert (18 - 6) <= 2
+
+tests/test_qa_audit.py:225: AssertionError
+________________ test_qa_deployment_declares_trusted_proxy_hop _________________
+
+    def test_qa_deployment_declares_trusted_proxy_hop():
+        """QA-D-03b: the Docker stack sits behind nginx, so the API must be told how many proxy hops to trust
+        (otherwise throttling and audit IPs see only the proxy address)."""
+        from django.conf import settings as dj
+    
+        compose = (Path(__file__).resolve().parents[2] / "infra" / "docker-compose.yml").read_text()
+>       assert "DJANGO_NUM_PROXIES" in compose, "compose must set DJANGO_NUM_PROXIES for the backend behind nginx"
+E       AssertionError: compose must set DJANGO_NUM_PROXIES for the backend behind nginx
+E       assert 'DJANGO_NUM_PROXIES' in '# Production-like stack. TLS terminates at your reverse proxy / load balancer in front of `web`.\nname: mci-expo-lead... ["${WEB_PORT:-8080}:80"]\n    depends_on: [backend]\n    restart: unless-stopped\n\nvolumes:\n  pgdata:\n  appdata:\n'
+
+tests/test_qa_audit.py:287: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_qa_audit.py::test_qa_activation_link_check_not_blocked_by_other_users
+FAILED tests/test_qa_audit.py::test_qa_unauthenticated_api_returns_401 - asse...
+FAILED tests/test_qa_audit.py::test_qa_contact_search_does_not_leak_other_event_contacts
+FAILED tests/test_qa_audit.py::test_qa_personal_today_metric_uses_tehran_day
+FAILED tests/test_qa_audit.py::test_qa_date_filter_uses_tehran_day - Assertio...
+FAILED tests/test_qa_audit.py::test_qa_list_endpoints_have_no_n_plus_one[/api/v1/users?page_size=100-users]
+FAILED tests/test_qa_audit.py::test_qa_list_endpoints_have_no_n_plus_one[/api/v1/plans-plans]
+FAILED tests/test_qa_audit.py::test_qa_deployment_declares_trusted_proxy_hop

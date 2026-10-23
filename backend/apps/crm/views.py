@@ -12,6 +12,7 @@ from rest_framework.views import APIView
 
 from apps.common.audit import audit, diff
 from apps.common.concurrency import bump, check_version
+from apps.common.dates import day_range, day_start
 from apps.common.exceptions import BusinessRuleViolation
 from apps.common.pagination import StandardPagination
 from apps.common.text import clean_display, mask_phone, normalize_digits, normalize_mobile, normalize_search
@@ -86,10 +87,11 @@ def apply_lead_filters(qs, params, user):
         qs = qs.filter(triage_owner__isnull=True).filter(Q(opportunity__isnull=True) | Q(opportunity__owner__isnull=True)).exclude(
             Exists(Referral.objects.filter(interaction=OuterRef("pk"), status="PENDING"))
         )
+    # Dates are Jalali/Tehran calendar days in the UI (QA-D-05): compare against local-day boundaries.
     if p.get("date_from") and parse_date(p["date_from"]):
-        qs = qs.filter(captured_at__date__gte=parse_date(p["date_from"]))
+        qs = qs.filter(captured_at__gte=day_start(parse_date(p["date_from"])))
     if p.get("date_to") and parse_date(p["date_to"]):
-        qs = qs.filter(captured_at__date__lte=parse_date(p["date_to"]))
+        qs = qs.filter(captured_at__lt=day_range(parse_date(p["date_to"]))[1])
     if p.get("ids"):
         qs = qs.filter(pk__in=[i for i in p["ids"].split(",") if i])
     if p.get("q"):
@@ -384,7 +386,7 @@ class ContactSearchView(APIView):
             {"id": str(c.id), "full_name": c.full_name, "mobile_masked": mask_phone(c.mobile),
              "account": {"id": str(c.primary_account_id), "name": c.primary_account.name} if c.primary_account_id else None,
              "same_mobile": bool(mobile and c.mobile == mobile)}
-            for c in services.suggest_contacts(q, mobile)
+            for c in services.suggest_contacts(request.user, q, mobile)
         ])
 
 

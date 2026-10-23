@@ -1,0 +1,54 @@
+{
+ "label": "after",
+ "sha": "e661188",
+ "tests": {
+  "PASS": 390,
+  "SKIP": 12,
+  "BLOCKED": 3
+ },
+ "tests_by_project": {
+  "desktop-1440": {
+   "PASS": 67
+  },
+  "desktop-1920": {
+   "PASS": 65,
+   "SKIP": 2
+  },
+  "firefox-desktop": {
+   "BLOCKED": 1
+  },
+  "mobile-375": {
+   "PASS": 64,
+   "SKIP": 3
+  },
+  "mobile-390": {
+   "PASS": 65,
+   "SKIP": 2
+  },
+  "tablet-1024": {
+   "PASS": 64,
+   "SKIP": 3
+  },
+  "tablet-768": {
+   "PASS": 65,
+   "SKIP": 2
+  },
+  "webkit-desktop": {
+   "BLOCKED": 1
+  },
+  "webkit-mobile": {
+   "BLOCKED": 1
+  }
+ },
+ "matrix_rows": 1452,
+ "matrix": {
+  "PASS": 1440,
+  "SKIP": 12
+ },
+ "screenshots": 866,
+ "contact_sheets": 57,
+ "axe_rules_violated": 3,
+ "axe_nodes": 25,
+ "failed_cases": [],
+ "matrix_failures": []
+}

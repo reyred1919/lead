@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - heading "دسترسی مجاز نیست" [level=3] [ref=e29]
+        - paragraph [ref=e30]: این بخش در محدوده مجوزهای شما نیست. مجوزها در سرور نیز بررسی می‌شوند.
+  - navigation "ناوبری پایین" [ref=e31]:
+    - generic [ref=e32]:
+      - link "خانه" [ref=e33] [cursor=pointer]:
+        - /url: /
+        - img [ref=e34]
+        - text: خانه
+      - link "لیدها" [ref=e37] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e38]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e42]:
+        - img [ref=e43]
+      - link "کارتابل ۱۹" [ref=e44] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e45]
+        - text: کارتابل
+        - generic [ref=e48]: ۱۹
+      - button "بیشتر" [ref=e49]:
+        - img [ref=e50]
+        - text: بیشتر
+```

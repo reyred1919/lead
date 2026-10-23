@@ -1,0 +1,61 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [disabled]:
+      - img
+      - text: ثبت لید جدید
+    - navigation [ref=e16]:
+      - link "خانه" [ref=e17] [cursor=pointer]:
+        - /url: /
+        - img [ref=e18]
+        - generic [ref=e21]: خانه
+      - link "لیدها" [ref=e22] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e23]
+        - generic [ref=e26]: لیدها
+      - link "کارتابل" [ref=e27] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e28]
+        - generic [ref=e31]: کارتابل
+      - link "اعلان‌ها" [ref=e32] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e33]
+        - generic [ref=e36]: اعلان‌ها
+      - link "داشبورد تحلیلی" [ref=e37] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e38]
+        - generic [ref=e40]: داشبورد تحلیلی
+      - generic [ref=e41]: مدیریت و تنظیمات
+      - link "سازمان‌ها و مخاطبان" [ref=e42] [cursor=pointer]:
+        - /url: /admin/accounts
+        - img [ref=e43]
+        - generic [ref=e47]: سازمان‌ها و مخاطبان
+    - generic [ref=e48]:
+      - generic [ref=e49]: ا‌ن
+      - link "الهام ناظر ناظر اجرایی (فقط‌خواندنی)" [ref=e50] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e51]: الهام ناظر
+        - generic [ref=e52]: ناظر اجرایی (فقط‌خواندنی)
+      - button "خروج" [ref=e53]:
+        - img [ref=e54]
+  - generic [ref=e57]:
+    - banner [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e61]: رویداد فعالی برای ثبت لید به شما اختصاص داده نشده است.
+        - generic [ref=e63]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e65]':
+          - img [ref=e66]
+          - generic [ref=e69]: همگام
+    - main [ref=e70]:
+      - generic [ref=e71]:
+        - heading "دسترسی مجاز نیست" [level=3] [ref=e72]
+        - paragraph [ref=e73]: این بخش در محدوده مجوزهای شما نیست. مجوزها در سرور نیز بررسی می‌شوند.
+```

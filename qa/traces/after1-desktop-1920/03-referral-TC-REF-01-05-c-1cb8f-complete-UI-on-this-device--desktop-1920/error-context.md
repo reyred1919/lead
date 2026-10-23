@@ -1,0 +1,251 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - img "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها ۱۵" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+        - generic [ref=e39]: ۱۵
+      - link "داشبورد تحلیلی" [ref=e40] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e41]
+        - generic [ref=e43]: داشبورد تحلیلی
+      - link "گزارش و خروجی" [ref=e44] [cursor=pointer]:
+        - /url: /reports
+        - img [ref=e45]
+        - generic [ref=e49]: گزارش و خروجی
+      - link "پیام و درخواست اقدام" [ref=e50] [cursor=pointer]:
+        - /url: /messages
+        - img [ref=e51]
+        - generic [ref=e54]: پیام و درخواست اقدام
+      - generic [ref=e55]: مدیریت و تنظیمات
+      - link "رویدادها و تیم‌ها" [ref=e56] [cursor=pointer]:
+        - /url: /admin/events
+        - img [ref=e57]
+        - generic [ref=e59]: رویدادها و تیم‌ها
+      - link "طرح‌ها و محصولات" [ref=e60] [cursor=pointer]:
+        - /url: /admin/catalog
+        - img [ref=e61]
+        - generic [ref=e65]: طرح‌ها و محصولات
+      - link "سازمان‌ها و مخاطبان" [ref=e66] [cursor=pointer]:
+        - /url: /admin/accounts
+        - img [ref=e67]
+        - generic [ref=e71]: سازمان‌ها و مخاطبان
+      - link "بازبینی تکراری‌ها" [ref=e72] [cursor=pointer]:
+        - /url: /admin/duplicates
+        - img [ref=e73]
+        - generic [ref=e76]: بازبینی تکراری‌ها
+      - link "ثبت‌های آفلاین معلق" [ref=e77] [cursor=pointer]:
+        - /url: /admin/quarantine
+        - img [ref=e78]
+        - generic [ref=e82]: ثبت‌های آفلاین معلق
+      - link "برچسب‌های لید" [ref=e83] [cursor=pointer]:
+        - /url: /admin/tags
+        - img [ref=e84]
+        - generic [ref=e88]: برچسب‌های لید
+      - link "اعلان، پیامک و ایمیل" [ref=e89] [cursor=pointer]:
+        - /url: /admin/notify
+        - img [ref=e90]
+        - generic [ref=e92]: اعلان، پیامک و ایمیل
+      - link "هویت بصری" [ref=e93] [cursor=pointer]:
+        - /url: /admin/branding
+        - img [ref=e94]
+        - generic [ref=e100]: هویت بصری
+      - link "گزارش ممیزی" [ref=e101] [cursor=pointer]:
+        - /url: /admin/audit
+        - img [ref=e102]
+        - generic [ref=e105]: گزارش ممیزی
+    - generic [ref=e106]:
+      - generic [ref=e107]: م‌ت
+      - link "مریم توسعه‌بازار مدیر توسعه بازار" [ref=e108] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e109]: مریم توسعه‌بازار
+        - generic [ref=e110]: مدیر توسعه بازار
+      - button "خروج" [ref=e111]:
+        - img [ref=e112]
+  - generic [ref=e115]:
+    - banner [ref=e116]:
+      - generic [ref=e117]:
+        - generic "رویداد فعال" [ref=e119]:
+          - generic [ref=e121]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e122]: DEMO-TECH-1405
+        - generic [ref=e124]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e126]':
+          - img [ref=e127]
+          - generic [ref=e130]: همگام
+    - main [ref=e131]:
+      - generic [ref=e132]:
+        - link "بازگشت به لیدها" [ref=e133] [cursor=pointer]:
+          - /url: /leads
+          - img [ref=e134]
+          - text: بازگشت به لیدها
+        - generic [ref=e137]:
+          - generic [ref=e138]: ا‌د
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - heading "ارجاع دستگاه desktop-1920 33462" [level=1] [ref=e141]
+              - generic [ref=e142]: قابل‌پیگیری
+              - generic [ref=e143]: در انتظار ارزیابی
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - img [ref=e146]
+                - text: شخص حقیقی / بدون سازمان
+              - generic [ref=e150]:
+                - text: نمایشگاه نمونه فناوری ۱۴۰۵
+                - generic [ref=e151]: DEMO-TECH-1405
+              - generic [ref=e152]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۵۵
+            - generic [ref=e154]: پارکینگ هوشمند
+          - generic [ref=e155]:
+            - button "تکمیل اطلاعات لید" [ref=e156]:
+              - img [ref=e157]
+              - text: تکمیل اطلاعات لید
+            - button "ارزیابی و ایجاد فرصت" [ref=e160]:
+              - img [ref=e161]
+              - text: ارزیابی و ایجاد فرصت
+            - button "ارجاع" [ref=e164]:
+              - img [ref=e165]
+              - text: ارجاع
+            - button "وظیفه" [ref=e168]:
+              - img [ref=e169]
+              - text: وظیفه
+            - button "یادداشت" [ref=e172]:
+              - img [ref=e173]
+              - text: یادداشت
+            - button "اصلاح ثبت" [ref=e175]
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179]:
+                - generic [ref=e180]: م‌ت
+                - generic [ref=e181]:
+                  - generic [ref=e182]: ثبت‌کننده
+                  - generic [ref=e183]: مریم توسعه‌بازار
+              - generic [ref=e184]:
+                - img [ref=e186]
+                - generic [ref=e189]:
+                  - generic [ref=e190]: مسئول پیگیری
+                  - generic [ref=e191]: تعیین نشده
+              - generic [ref=e192]:
+                - img [ref=e194]
+                - generic [ref=e197]:
+                  - generic [ref=e198]: ارزیاب
+                  - generic [ref=e199]: هنوز ارزیابی نشده
+            - generic [ref=e200]:
+              - heading "برچسب‌ها" [level=2] [ref=e201]
+              - paragraph [ref=e202]: برچسب‌گذاری پس از ارزیابی و ایجاد فرصت فعال می‌شود.
+            - generic [ref=e203]:
+              - heading "اطلاعات تماس و سازمان" [level=2] [ref=e206]
+              - generic [ref=e207]:
+                - generic [ref=e208]:
+                  - term [ref=e209]: موبایل
+                  - definition [ref=e210]:
+                    - link "0912 358 4348" [ref=e211] [cursor=pointer]:
+                      - /url: tel:+989123584348
+                      - img [ref=e212]
+                      - generic [ref=e214]: 0912 358 4348
+                - generic [ref=e215]:
+                  - term [ref=e216]: ایمیل
+                  - definition [ref=e217]: ثبت نشده
+                - generic [ref=e218]:
+                  - term [ref=e219]: سمت
+                  - definition [ref=e220]: ثبت نشده
+                - generic [ref=e221]:
+                  - term [ref=e222]: تلفن جایگزین
+                  - definition [ref=e223]: ثبت نشده
+                - generic [ref=e224]:
+                  - term [ref=e225]: صنعت
+                  - definition [ref=e226]: ثبت نشده
+                - generic [ref=e227]:
+                  - term [ref=e228]: شهر
+                  - definition [ref=e229]: ثبت نشده
+                - generic [ref=e230]:
+                  - term [ref=e231]: وب‌سایت
+                  - definition [ref=e232]: ثبت نشده
+                - generic [ref=e233]:
+                  - term [ref=e234]: نام رسمی سازمان
+                  - definition [ref=e235]: ثبت نشده
+            - generic [ref=e236]:
+              - generic [ref=e238]:
+                - heading "یادداشت غرفه و ثبت اولیه" [level=2] [ref=e239]
+                - paragraph [ref=e240]: داده واردشده در غرفه بدون تغییر نگهداری می‌شود.
+              - generic [ref=e241]:
+                - paragraph [ref=e242]: یادداشتی ثبت نشده است.
+                - generic [ref=e243]:
+                  - text: "ثبت اولیه: ارجاع دستگاه desktop-1920 33462 ·"
+                  - generic [ref=e244]: "09123584348"
+                  - text: ·
+                  - generic [ref=e245]: ثبت‌شده
+            - generic [ref=e246]:
+              - generic [ref=e248]:
+                - heading "تاریخچه" [level=2] [ref=e249]
+                - paragraph [ref=e250]: همه تغییرات با نام انجام‌دهنده و زمان ثبت می‌شوند.
+              - list [ref=e251]:
+                - listitem [ref=e252]:
+                  - img [ref=e255]
+                  - generic [ref=e258]:
+                    - text: ارجاع
+                    - generic [ref=e259]: · مریم توسعه‌بازار · ۱ ثانیه پیش
+                  - paragraph [ref=e260]: لطفاً ارزیابی شود — QA
+                  - paragraph [ref=e261]: به پرهام برنامه‌ریز
+                - listitem [ref=e262]:
+                  - img [ref=e264]
+                  - generic [ref=e266]:
+                    - text: ثبت در غرفه
+                    - generic [ref=e267]: · مریم توسعه‌بازار · ۵ ثانیه پیش
+          - complementary [ref=e268]:
+            - generic [ref=e269]:
+              - generic [ref=e270]:
+                - heading "کامل بودن اطلاعات" [level=2] [ref=e271]
+                - generic [ref=e272]: ۱۵٪
+              - progressbar "درصد تکمیل" [ref=e273]
+              - paragraph [ref=e275]: "موارد ثبت‌نشده (نامعلوم، نه منفی):"
+              - generic [ref=e276]:
+                - generic [ref=e277]: سمت مخاطب
+                - generic [ref=e278]: ایمیل کاری
+                - generic [ref=e279]: سازمان
+                - generic [ref=e280]: صنعت
+                - generic [ref=e281]: شهر
+                - generic [ref=e282]: وب‌سایت
+                - generic [ref=e283]: ارزیابی
+                - generic [ref=e284]: مسئله کسب‌وکار
+                - generic [ref=e285]: فوریت
+                - generic [ref=e286]: اقدام بعدی
+                - generic [ref=e287]: مسئول پیگیری
+              - button "تکمیل اطلاعات" [ref=e288]
+            - generic [ref=e289]:
+              - heading "ارجاع‌ها" [level=2] [ref=e292]
+              - list [ref=e293]:
+                - listitem [ref=e294]:
+                  - generic [ref=e295]:
+                    - generic [ref=e296]: مریم توسعه‌بازار ← پرهام برنامه‌ریز
+                    - generic [ref=e297]: در انتظار پذیرش
+                  - generic [ref=e299]: ارزیابی · ۱ ثانیه پیش · مهلت ۳ آبان ۱۴۰۵ ساعت ۱۷:۵۵
+                  - generic [ref=e300]: «لطفاً ارزیابی شود — QA»
+            - generic [ref=e301]:
+              - heading "وظایف پیگیری" [level=2] [ref=e304]
+              - paragraph [ref=e305]: وظیفه‌ای تعریف نشده است.
+```

@@ -1,0 +1,156 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e18]: DEMO-TECH-1405
+        - generic [ref=e20]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: آفلاین" [ref=e22]':
+          - img [ref=e23]
+          - generic [ref=e27]: آفلاین
+        - link "اعلان‌ها" [ref=e28] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e29]
+    - main [ref=e32]:
+      - generic [ref=e33]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: عصر بخیر
+          - heading "پرهام برنامه‌ریز" [level=1] [ref=e37]
+          - paragraph [ref=e38]: مدیر طرح شهر هوشمند
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: رویداد فعال
+            - heading "نمایشگاه نمونه فناوری ۱۴۰۵" [level=2] [ref=e45]
+            - paragraph [ref=e46]:
+              - text: تهران · سالن نمونه ۳۸ ·
+              - generic [ref=e47]: DEMO-TECH-1405
+          - link "ثبت لید جدید" [ref=e48] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e49]:
+              - img [ref=e50]
+              - text: ثبت لید جدید
+        - generic [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: ثبت‌های امروز من
+              - img [ref=e56]
+            - generic [ref=e58]: ۱۸
+            - generic [ref=e59]: "مجموع: ۲۷"
+          - link "ارجاع در انتظار من ۷ پذیرش یا بازگرداندن" [ref=e60] [cursor=pointer]:
+            - /url: /inbox
+            - generic [ref=e61]:
+              - generic [ref=e62]:
+                - generic [ref=e63]: ارجاع در انتظار من
+                - img [ref=e65]
+              - generic [ref=e68]: ۷
+              - generic [ref=e69]: پذیرش یا بازگرداندن
+          - link "وظایف باز من ۸ ۸ معوق" [ref=e70] [cursor=pointer]:
+            - /url: /inbox?tab=tasks
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - generic [ref=e73]: وظایف باز من
+                - img [ref=e75]
+              - generic [ref=e79]: ۸
+              - generic [ref=e80]: ۸ معوق
+          - link "درخواست اقدام ۰" [ref=e81] [cursor=pointer]:
+            - /url: /inbox?tab=actions
+            - generic [ref=e82]:
+              - generic [ref=e83]:
+                - generic [ref=e84]: درخواست اقدام
+                - img [ref=e86]
+              - generic [ref=e90]: ۰
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - heading "آخرین ثبت‌های من" [level=2] [ref=e95]
+              - link "همه" [ref=e97] [cursor=pointer]:
+                - /url: /leads?scope=mine
+            - list [ref=e98]:
+              - listitem [ref=e99]:
+                - link "لید QA 7954239 قابل‌پیگیری ۴۴ ثانیه پیش" [ref=e100] [cursor=pointer]:
+                  - /url: /leads/ed8f093e-cf26-4f8b-aee4-81bc6c2e2943
+                  - generic [ref=e101]: لید QA 7954239
+                  - generic [ref=e102]: قابل‌پیگیری
+                  - generic [ref=e103]: ۴۴ ثانیه پیش
+              - listitem [ref=e104]:
+                - link "لید QA 1616573 · سازمان تعارض 81466 قابل‌پیگیری ۵۱ ثانیه پیش" [ref=e105] [cursor=pointer]:
+                  - /url: /leads/9e6b49bd-c759-4efb-b54a-37a5bdc84131
+                  - generic [ref=e106]:
+                    - text: لید QA 1616573
+                    - generic [ref=e107]: · سازمان تعارض 81466
+                  - generic [ref=e108]: قابل‌پیگیری
+                  - generic [ref=e109]: ۵۱ ثانیه پیش
+              - listitem [ref=e110]:
+                - link "پس از رویداد QA-MVL0PZ52-932 · سازمان QA-MVL0PZ52-932 قابل‌پیگیری ۱ دقیقه پیش" [ref=e111] [cursor=pointer]:
+                  - /url: /leads/2142c263-750f-4062-b8e5-7357f1b18b8e
+                  - generic [ref=e112]:
+                    - text: پس از رویداد QA-MVL0PZ52-932
+                    - generic [ref=e113]: · سازمان QA-MVL0PZ52-932
+                  - generic [ref=e114]: قابل‌پیگیری
+                  - generic [ref=e115]: ۱ دقیقه پیش
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e118]:
+                - heading "نمای کلی محدوده من" [level=2] [ref=e119]
+                - paragraph [ref=e120]: داده نمونه (DEMO)
+              - link "داشبورد" [ref=e122] [cursor=pointer]:
+                - /url: /dashboard
+                - text: داشبورد
+                - img [ref=e123]
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - generic [ref=e127]: تعاملات
+                - generic [ref=e128]: ۷۷
+              - generic [ref=e129]:
+                - generic [ref=e130]: مخاطبان یکتا
+                - generic [ref=e131]: ۷۴
+              - generic [ref=e132]:
+                - generic [ref=e133]: فرصت‌ها
+                - generic [ref=e134]: ۱۷
+              - generic [ref=e135]:
+                - generic [ref=e136]: بدون مسئول
+                - generic [ref=e137]: ۴۰
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - img [ref=e140]
+                - text: پیگیری‌های معوق تیم
+              - list [ref=e144]:
+                - listitem [ref=e145]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e146] [cursor=pointer]:
+                    - /url: /leads/94e16b49-c138-464e-8f47-db5fd927f417
+                - listitem [ref=e147]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e148] [cursor=pointer]:
+                    - /url: /leads/acd115af-7975-4ac4-a637-53e3d2c251b4
+                - listitem [ref=e149]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e150] [cursor=pointer]:
+                    - /url: /leads/22610009-6407-49b5-a20e-c0720465fb66
+                - listitem [ref=e151]:
+                  - link "معوق QA 66307 · پرهام برنامه‌ریز" [ref=e152] [cursor=pointer]:
+                    - /url: /leads/96261622-c65c-4de9-b332-da5f454c2cf5
+  - navigation "ناوبری پایین" [ref=e153]:
+    - generic [ref=e154]:
+      - link "خانه" [ref=e155] [cursor=pointer]:
+        - /url: /
+        - img [ref=e156]
+        - text: خانه
+      - link "لیدها" [ref=e159] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e160]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e164]:
+        - img [ref=e165]
+      - link "کارتابل ۱۵" [ref=e166] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e167]
+        - text: کارتابل
+        - generic [ref=e170]: ۱۵
+      - button "بیشتر" [ref=e171]:
+        - img [ref=e172]
+        - text: بیشتر
+```

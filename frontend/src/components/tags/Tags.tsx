@@ -29,7 +29,7 @@ export function TagChip({ tag, onRemove, size = "md" }: { tag: TagT; onRemove?: 
     >
       <span className="size-1.5 rounded-full shrink-0" style={{ background: s.dot }} aria-hidden />
       <span className="truncate">{label}</span>
-      {tag.status === "ARCHIVED" && <span className="text-[10.5px] opacity-70 font-medium">(بایگانی)</span>}
+      {tag.status === "ARCHIVED" && <span className="text-[10.5px] font-medium">(بایگانی)</span>}
       {onRemove && (
         <button type="button" onClick={onRemove} aria-label={`حذف برچسب ${label}`}
           className="relative -me-1 size-5 grid place-items-center rounded-full hover:bg-black/5 before:absolute before:-inset-3 before:content-['']">
@@ -70,14 +70,14 @@ export function TagCombobox({ all, selectedIds, onAdd, disabled }: { all: TagT[]
       </div>
       <ul id="tag-options" role="listbox" aria-label="برچسب‌های قابل انتخاب" className="max-h-64 overflow-y-auto scrollbar-thin">
         {options.map((t, i) => (
-          <li key={t.id} id={`tag-opt-${t.id}`} role="option" aria-selected={i === cursor}>
-            <button type="button" onMouseEnter={() => setCursor(i)} onClick={() => onAdd(t)} className={cn("w-full flex items-center justify-between gap-2 px-2 py-1.5 rounded-[10px] min-h-10", i === cursor && "bg-line-2")}>
+          <li key={t.id} role="none">
+            <button type="button" id={`tag-opt-${t.id}`} role="option" aria-selected={i === cursor} onMouseEnter={() => setCursor(i)} onClick={() => onAdd(t)} className={cn("w-full flex items-center justify-between gap-2 px-2 py-1.5 rounded-[10px] min-h-10", i === cursor && "bg-line-2")}>
               <TagChip tag={t} size="sm" />
               {t.name_en && <span className="text-[11.5px] text-muted ltr truncate">{t.name_en}</span>}
             </button>
           </li>
         ))}
-        {!options.length && <li className="text-center text-[13px] text-muted py-5 px-3 leading-6">{all.length ? "برچسب دیگری برای افزودن وجود ندارد." : "هنوز برچسبی تعریف نشده است. مدیر توسعه بازار برچسب‌ها را تعریف می‌کند."}</li>}
+        {!options.length && <li role="none" className="text-center text-[13px] text-muted py-5 px-3 leading-6">{all.length ? "برچسب دیگری برای افزودن وجود ندارد." : "هنوز برچسبی تعریف نشده است. مدیر توسعه بازار برچسب‌ها را تعریف می‌کند."}</li>}
       </ul>
     </Popover>
   );

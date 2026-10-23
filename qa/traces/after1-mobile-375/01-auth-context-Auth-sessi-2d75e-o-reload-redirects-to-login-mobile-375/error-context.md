@@ -1,0 +1,55 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e4]:
+  - generic [ref=e6]:
+    - img "نشان موقت (جایگزین)" [ref=e7]:
+      - img [ref=e8]
+    - generic [ref=e12]:
+      - generic [ref=e13]: سامانه لیدهای نمایشگاهی
+      - generic [ref=e14]: همراه اول · نشان موقت
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - heading "ورود به سامانه" [level=2] [ref=e17]
+      - paragraph [ref=e18]: با نام کاربری سازمانی خود وارد شوید.
+    - generic [ref=e19]:
+      - generic [ref=e20]: نام کاربری
+      - textbox "نام کاربری" [active] [ref=e21]
+    - generic [ref=e22]:
+      - generic [ref=e23]: رمز عبور
+      - generic [ref=e24]:
+        - textbox "رمز عبور" [ref=e25]
+        - button "نمایش رمز" [ref=e26]:
+          - img [ref=e27]
+    - button "ورود" [ref=e30]
+    - button "رمز عبور را فراموش کرده‌اید؟" [ref=e31]
+  - generic [ref=e32]:
+    - generic [ref=e33]:
+      - generic [ref=e34]: حساب‌های نمایشی
+      - generic [ref=e35]: DEMO · داده نمونه
+    - paragraph [ref=e36]:
+      - text: "رمز همه حساب‌های نمونه:"
+      - generic [ref=e37]: Demo@Expo1405
+    - generic [ref=e38]:
+      - button "مدیر سامانه admin" [ref=e39]:
+        - text: مدیر سامانه
+        - generic [ref=e40]: admin
+      - button "مدیر توسعه بازار mdm" [ref=e41]:
+        - text: مدیر توسعه بازار
+        - generic [ref=e42]: mdm
+      - button "مدیرکل dg" [ref=e43]:
+        - text: مدیرکل
+        - generic [ref=e44]: dg
+      - button "مدیر طرح planmgr" [ref=e45]:
+        - text: مدیر طرح
+        - generic [ref=e46]: planmgr
+      - button "مالک محصول owner" [ref=e47]:
+        - text: مالک محصول
+        - generic [ref=e48]: owner
+      - button "کارشناس غرفه specialist1" [ref=e49]:
+        - text: کارشناس غرفه
+        - generic [ref=e50]: specialist1
+      - button "ناظر فقط‌خواندنی exec" [ref=e51]:
+        - text: ناظر فقط‌خواندنی
+        - generic [ref=e52]: exec
+```

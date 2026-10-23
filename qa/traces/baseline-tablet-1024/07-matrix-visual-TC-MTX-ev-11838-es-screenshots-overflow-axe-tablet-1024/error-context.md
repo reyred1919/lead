@@ -1,0 +1,71 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+      - link "داشبورد تحلیلی" [ref=e39] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e40]
+        - generic [ref=e42]: داشبورد تحلیلی
+      - link "گزارش و خروجی" [ref=e43] [cursor=pointer]:
+        - /url: /reports
+        - img [ref=e44]
+        - generic [ref=e48]: گزارش و خروجی
+      - link "پیام و درخواست اقدام" [ref=e49] [cursor=pointer]:
+        - /url: /messages
+        - img [ref=e50]
+        - generic [ref=e53]: پیام و درخواست اقدام
+      - generic [ref=e54]: مدیریت و تنظیمات
+      - link "رویدادها و تیم‌ها" [ref=e55] [cursor=pointer]:
+        - /url: /admin/events
+        - img [ref=e56]
+        - generic [ref=e58]: رویدادها و تیم‌ها
+    - generic [ref=e59]:
+      - generic [ref=e60]: ا‌ر
+      - link "ارغوان رویدادی مدیر رویداد انرژی" [ref=e61] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e62]: ارغوان رویدادی
+        - generic [ref=e63]: مدیر رویداد انرژی
+      - button "خروج" [ref=e64]:
+        - img [ref=e65]
+  - generic [ref=e68]:
+    - banner [ref=e69]:
+      - generic [ref=e70]:
+        - generic "رویداد فعال" [ref=e72]:
+          - generic [ref=e74]: همایش نمونه انرژی هوشمند
+          - generic [ref=e75]: DEMO-ENERGY-1405
+        - generic [ref=e77]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e79]':
+          - img [ref=e80]
+          - generic [ref=e83]: همگام
+    - main [ref=e84]:
+      - generic [ref=e85]:
+        - heading "دسترسی مجاز نیست" [level=3] [ref=e86]
+        - paragraph [ref=e87]: این بخش در محدوده مجوزهای شما نیست. مجوزها در سرور نیز بررسی می‌شوند.
+```

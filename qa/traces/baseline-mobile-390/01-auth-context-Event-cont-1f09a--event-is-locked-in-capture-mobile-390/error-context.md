@@ -1,0 +1,130 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - img [ref=e31]
+          - generic [ref=e33]:
+            - generic [ref=e34]: ثبت در رویداد
+            - generic [ref=e35]:
+              - text: نمایشگاه نمونه فناوری ۱۴۰۵
+              - img "رویداد قفل‌شده"
+          - generic [ref=e38]: DEMO-TECH-1405
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - text: نام مخاطب*
+              - generic [ref=e42]: (الزامی)
+            - generic [ref=e43]:
+              - img [ref=e44]
+              - textbox "نام مخاطب (الزامی)" [active] [ref=e47]:
+                - /placeholder: مثلاً سارا احمدی
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: راه تماس*
+              - radiogroup "نوع راه تماس" [ref=e51]:
+                - radio "موبایل" [checked] [ref=e52]:
+                  - img [ref=e53]
+                  - text: موبایل
+                - radio "ایمیل" [ref=e55]:
+                  - img [ref=e56]
+                  - text: ایمیل
+            - generic [ref=e59]:
+              - generic [ref=e60]: شماره موبایل
+              - textbox "شماره موبایل" [ref=e61]:
+                - /placeholder: 0912 345 6789
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - text: محصول مورد علاقه*
+              - generic [ref=e64]: (الزامی)
+            - group "محصولات" [ref=e65]:
+              - button "دروازه IoT صنعتی" [ref=e66]:
+                - generic [ref=e67]: دروازه IoT صنعتی
+              - button "روشنایی هوشمند معابر" [ref=e68]:
+                - generic [ref=e69]: روشنایی هوشمند معابر
+              - button "پارکینگ هوشمند" [ref=e70]:
+                - generic [ref=e71]: پارکینگ هوشمند
+              - button "پایش هوشمند ناوگان" [ref=e72]:
+                - generic [ref=e73]: پایش هوشمند ناوگان
+            - paragraph [ref=e74]: فقط محصولات ارائه‌شده در این رویداد نمایش داده می‌شوند.
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: سازمان / شرکت (اختیاری)
+              - button "شخص حقیقی" [ref=e79]
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - textbox "سازمان / شرکت (اختیاری)" [ref=e85]:
+                - /placeholder: جست‌وجو یا نام سازمان جدید
+          - generic [ref=e86]:
+            - generic [ref=e87]: کیفیت گفت‌وگو
+            - radiogroup "کیفیت گفت‌وگو" [ref=e88]:
+              - radio "جدی" [ref=e89]
+              - radio "قابل‌پیگیری" [checked] [ref=e90]
+              - radio "آشنایی" [ref=e91]
+          - generic [ref=e92]:
+            - generic [ref=e93]: یادداشت کوتاه
+            - textbox "یادداشت کوتاه" [ref=e94]:
+              - /placeholder: نیاز، زمان‌بندی یا نکته مهم گفت‌وگو
+        - button "ثبت لید" [ref=e96]
+        - paragraph [ref=e97]: رویداد، ثبت‌کننده (سینا غرفه‌دار) و زمان به‌صورت خودکار ثبت می‌شوند.
+        - generic [ref=e98]:
+          - generic [ref=e99]: آخرین ثبت‌های من
+          - list [ref=e100]:
+            - listitem [ref=e101]:
+              - link "مالک پیش‌فرض 3795593 قابل‌پیگیری ۱۴ ثانیه پیش" [ref=e102] [cursor=pointer]:
+                - /url: /leads/1f2705c2-3bfc-4ceb-9d74-d8d7a7c71450
+                - img [ref=e103]
+                - generic [ref=e106]: مالک پیش‌فرض 3795593
+                - generic [ref=e107]: قابل‌پیگیری
+                - generic [ref=e108]: ۱۴ ثانیه پیش
+            - listitem [ref=e109]:
+              - link "مالک پیش‌فرض 3251856 قابل‌پیگیری ۱۴ ثانیه پیش" [ref=e110] [cursor=pointer]:
+                - /url: /leads/c1bd2909-654c-42fc-8eed-8c081de05985
+                - img [ref=e111]
+                - generic [ref=e114]: مالک پیش‌فرض 3251856
+                - generic [ref=e115]: قابل‌پیگیری
+                - generic [ref=e116]: ۱۴ ثانیه پیش
+            - listitem [ref=e117]:
+              - link "مخاطب جدید 7301220 · سازمان تازه QA 7301331 قابل‌پیگیری ۳۹ ثانیه پیش" [ref=e118] [cursor=pointer]:
+                - /url: /leads/d622afe9-864a-46f2-a257-6bec4000c28a
+                - img [ref=e119]
+                - generic [ref=e122]:
+                  - text: مخاطب جدید 7301220
+                  - generic [ref=e123]: · سازمان تازه QA 7301331
+                - generic [ref=e124]: قابل‌پیگیری
+                - generic [ref=e125]: ۳۹ ثانیه پیش
+  - navigation "ناوبری پایین" [ref=e126]:
+    - generic [ref=e127]:
+      - link "خانه" [ref=e128] [cursor=pointer]:
+        - /url: /
+        - img [ref=e129]
+        - text: خانه
+      - link "لیدها" [ref=e132] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e133]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e137]:
+        - img [ref=e138]
+      - link "کارتابل" [ref=e139] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e140]
+        - text: کارتابل
+      - button "بیشتر" [ref=e143]:
+        - img [ref=e144]
+        - text: بیشتر
+```

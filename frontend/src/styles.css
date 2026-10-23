@@ -13,7 +13,7 @@
   --color-panel: #ffffff;
   --color-ink: #142847;
   --color-ink-2: #44546d;
-  --color-muted: #718198;
+  --color-muted: #5d6b81; /* ≥4.7:1 on all surfaces (was #718198, 3.5–3.97:1) */
   --color-line: #e5eaf1;
   --color-line-2: #eef1f6;
   --color-navy: #10294c;
@@ -38,12 +38,17 @@
 
 @layer base {
   html {
+    /* Keep scrolled-to / focused elements clear of the sticky header and the fixed mobile tab bar (WCAG 2.4.11, QA-D-21). */
+    scroll-padding-top: 4.5rem;
+    scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
   body {
     @apply bg-canvas text-ink font-sans;
+    /* Long unbroken user input (URLs, codes, pasted tokens) wraps instead of widening the page (QA-D-17). */
+    overflow-wrap: anywhere;
     font-feature-settings: "ss01";
     min-height: 100dvh;
   }
@@ -104,4 +109,9 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Desktop has no bottom tab bar. */
+@media (min-width: 1024px) {
+  html { scroll-padding-bottom: 1rem; }
 }

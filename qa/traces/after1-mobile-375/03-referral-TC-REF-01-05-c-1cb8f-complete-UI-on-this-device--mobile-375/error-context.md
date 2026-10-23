@@ -1,0 +1,187 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - img "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - link "بازگشت به لیدها" [ref=e29] [cursor=pointer]:
+          - /url: /leads
+          - img [ref=e30]
+          - text: بازگشت به لیدها
+        - generic [ref=e33]:
+          - generic [ref=e34]: ا‌د
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - heading "ارجاع دستگاه mobile-375 53280" [level=1] [ref=e37]
+              - generic [ref=e38]: قابل‌پیگیری
+              - generic [ref=e39]: در انتظار ارزیابی
+            - generic [ref=e40]:
+              - generic [ref=e41]:
+                - img [ref=e42]
+                - text: شخص حقیقی / بدون سازمان
+              - generic [ref=e46]:
+                - text: نمایشگاه نمونه فناوری ۱۴۰۵
+                - generic [ref=e47]: DEMO-TECH-1405
+              - generic [ref=e48]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۴۴
+            - generic [ref=e50]: پارکینگ هوشمند
+          - generic [ref=e51]:
+            - button "تکمیل اطلاعات لید" [ref=e52]:
+              - img [ref=e53]
+              - text: تکمیل اطلاعات لید
+            - button "ارزیابی و ایجاد فرصت" [ref=e56]:
+              - img [ref=e57]
+              - text: ارزیابی و ایجاد فرصت
+            - button "ارجاع" [ref=e60]:
+              - img [ref=e61]
+              - text: ارجاع
+            - button "وظیفه" [ref=e64]:
+              - img [ref=e65]
+              - text: وظیفه
+            - button "یادداشت" [ref=e68]:
+              - img [ref=e69]
+              - text: یادداشت
+            - button "اصلاح ثبت" [ref=e71]
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - generic [ref=e74]:
+              - generic [ref=e75]:
+                - generic [ref=e76]: م‌ت
+                - generic [ref=e77]:
+                  - generic [ref=e78]: ثبت‌کننده
+                  - generic [ref=e79]: مریم توسعه‌بازار
+              - generic [ref=e80]:
+                - img [ref=e82]
+                - generic [ref=e85]:
+                  - generic [ref=e86]: مسئول پیگیری
+                  - generic [ref=e87]: تعیین نشده
+              - generic [ref=e88]:
+                - img [ref=e90]
+                - generic [ref=e93]:
+                  - generic [ref=e94]: ارزیاب
+                  - generic [ref=e95]: هنوز ارزیابی نشده
+            - generic [ref=e96]:
+              - heading "برچسب‌ها" [level=2] [ref=e97]
+              - paragraph [ref=e98]: برچسب‌گذاری پس از ارزیابی و ایجاد فرصت فعال می‌شود.
+            - generic [ref=e99]:
+              - heading "اطلاعات تماس و سازمان" [level=2] [ref=e102]
+              - generic [ref=e103]:
+                - generic [ref=e104]:
+                  - term [ref=e105]: موبایل
+                  - definition [ref=e106]:
+                    - link "0912 341 9745" [ref=e107] [cursor=pointer]:
+                      - /url: tel:+989123419745
+                      - img [ref=e108]
+                      - generic [ref=e110]: 0912 341 9745
+                - generic [ref=e111]:
+                  - term [ref=e112]: ایمیل
+                  - definition [ref=e113]: ثبت نشده
+                - generic [ref=e114]:
+                  - term [ref=e115]: سمت
+                  - definition [ref=e116]: ثبت نشده
+                - generic [ref=e117]:
+                  - term [ref=e118]: تلفن جایگزین
+                  - definition [ref=e119]: ثبت نشده
+                - generic [ref=e120]:
+                  - term [ref=e121]: صنعت
+                  - definition [ref=e122]: ثبت نشده
+                - generic [ref=e123]:
+                  - term [ref=e124]: شهر
+                  - definition [ref=e125]: ثبت نشده
+                - generic [ref=e126]:
+                  - term [ref=e127]: وب‌سایت
+                  - definition [ref=e128]: ثبت نشده
+                - generic [ref=e129]:
+                  - term [ref=e130]: نام رسمی سازمان
+                  - definition [ref=e131]: ثبت نشده
+            - generic [ref=e132]:
+              - generic [ref=e134]:
+                - heading "یادداشت غرفه و ثبت اولیه" [level=2] [ref=e135]
+                - paragraph [ref=e136]: داده واردشده در غرفه بدون تغییر نگهداری می‌شود.
+              - generic [ref=e137]:
+                - paragraph [ref=e138]: یادداشتی ثبت نشده است.
+                - generic [ref=e139]:
+                  - text: "ثبت اولیه: ارجاع دستگاه mobile-375 53280 ·"
+                  - generic [ref=e140]: "09123419745"
+                  - text: ·
+                  - generic [ref=e141]: ثبت‌شده
+            - generic [ref=e142]:
+              - generic [ref=e144]:
+                - heading "تاریخچه" [level=2] [ref=e145]
+                - paragraph [ref=e146]: همه تغییرات با نام انجام‌دهنده و زمان ثبت می‌شوند.
+              - list [ref=e147]:
+                - listitem [ref=e148]:
+                  - img [ref=e151]
+                  - generic [ref=e154]:
+                    - text: ارجاع
+                    - generic [ref=e155]: · مریم توسعه‌بازار · اکنون
+                  - paragraph [ref=e156]: لطفاً ارزیابی شود — QA
+                  - paragraph [ref=e157]: به پرهام برنامه‌ریز
+                - listitem [ref=e158]:
+                  - img [ref=e160]
+                  - generic [ref=e162]:
+                    - text: ثبت در غرفه
+                    - generic [ref=e163]: · مریم توسعه‌بازار · ۳ ثانیه پیش
+          - complementary [ref=e164]:
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - heading "کامل بودن اطلاعات" [level=2] [ref=e167]
+                - generic [ref=e168]: ۱۵٪
+              - progressbar "درصد تکمیل" [ref=e169]
+              - paragraph [ref=e171]: "موارد ثبت‌نشده (نامعلوم، نه منفی):"
+              - generic [ref=e172]:
+                - generic [ref=e173]: سمت مخاطب
+                - generic [ref=e174]: ایمیل کاری
+                - generic [ref=e175]: سازمان
+                - generic [ref=e176]: صنعت
+                - generic [ref=e177]: شهر
+                - generic [ref=e178]: وب‌سایت
+                - generic [ref=e179]: ارزیابی
+                - generic [ref=e180]: مسئله کسب‌وکار
+                - generic [ref=e181]: فوریت
+                - generic [ref=e182]: اقدام بعدی
+                - generic [ref=e183]: مسئول پیگیری
+              - button "تکمیل اطلاعات" [ref=e184]
+            - generic [ref=e185]:
+              - heading "ارجاع‌ها" [level=2] [ref=e188]
+              - list [ref=e189]:
+                - listitem [ref=e190]:
+                  - generic [ref=e191]:
+                    - generic [ref=e192]: مریم توسعه‌بازار ← پرهام برنامه‌ریز
+                    - generic [ref=e193]: در انتظار پذیرش
+                  - generic [ref=e195]: ارزیابی · اکنون · مهلت ۳ آبان ۱۴۰۵ ساعت ۱۷:۴۴
+                  - generic [ref=e196]: «لطفاً ارزیابی شود — QA»
+            - generic [ref=e197]:
+              - heading "وظایف پیگیری" [level=2] [ref=e200]
+              - paragraph [ref=e201]: وظیفه‌ای تعریف نشده است.
+  - navigation "ناوبری پایین" [ref=e202]:
+    - generic [ref=e203]:
+      - link "خانه" [ref=e204] [cursor=pointer]:
+        - /url: /
+        - img [ref=e205]
+        - text: خانه
+      - link "لیدها" [ref=e208] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e209]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e213]:
+        - img [ref=e214]
+      - link "کارتابل" [ref=e215] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e216]
+        - text: کارتابل
+      - button "بیشتر" [ref=e219]:
+        - img [ref=e220]
+        - text: بیشتر
+```

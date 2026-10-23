@@ -1,0 +1,708 @@
+
+Running 67 tests using 2 workers
+
+  ✓   2 [tablet-768] › qa-e2e/01-auth-context.spec.ts:5:3 › Auth & session › TC-AUTH-01 invalid password shows error, no session (2.7s)
+  ✓   1 [tablet-768] › qa-e2e/02-capture.spec.ts:23:1 › TC-CAP-01 existing organization chosen from search suggestion (5.2s)
+  ✓   3 [tablet-768] › qa-e2e/01-auth-context.spec.ts:13:3 › Auth & session › TC-AUTH-02 login then logout clears session and protected routes redirect (4.4s)
+  ✓   5 [tablet-768] › qa-e2e/01-auth-context.spec.ts:28:3 › Auth & session › TC-AUTH-03 login rate-limit message is shown for HTTP 429 (UI mapping; server limit covered in pytest) (2.2s)
+  ✓   4 [tablet-768] › qa-e2e/02-capture.spec.ts:39:1 › TC-CAP-02 inline new organization and TC-CAP-05 Persian digits are normalized (5.7s)
+  ✓   6 [tablet-768] › qa-e2e/01-auth-context.spec.ts:35:3 › Auth & session › TC-AUTH-04 expired session during use redirects to login (3.8s)
+  ✓   7 [tablet-768] › qa-e2e/02-capture.spec.ts:53:1 › TC-CAP-03 individual without organization; TC-CAP-04 Arabic-Indic digits (5.1s)
+  ✓   9 [tablet-768] › qa-e2e/02-capture.spec.ts:67:1 › TC-CAP-06 validation: required fields, invalid mobile, invalid email (3.1s)
+  ✓  10 [tablet-768] › qa-e2e/02-capture.spec.ts:85:1 › TC-CAP-07 multi-product limited to event offerings, quality and note (3.7s)
+  ✘   8 [tablet-768] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login (13.7s)
+  ✓  11 [tablet-768] › qa-e2e/02-capture.spec.ts:105:1 › TC-CAP-08 rapid consecutive entry with 'next' loop (4.6s)
+  ✓  12 [tablet-768] › qa-e2e/02-capture.spec.ts:125:1 › TC-CAP-09 captured_by stays separate from assignee (default owner mapping) (4.2s)
+  ✓  14 [tablet-768] › qa-e2e/02-capture.spec.ts:141:1 › TC-CAP-10 lost response then retry creates exactly one record (idempotency) (3.3s)
+  ✓  15 [tablet-768] › qa-e2e/02-capture.spec.ts:163:1 › TC-CAP-11 same contact at two events links one contact, shows cross-event history (5.8s)
+  -  16 [tablet-768] › qa-e2e/02-capture.spec.ts:184:1 › TC-CAP-12 keyboard-only capture
+  ✘  13 [tablet-768] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works (14.1s)
+  ✓  18 [tablet-768] › qa-e2e/01-auth-context.spec.ts:79:3 › Event context › TC-CTX-01 single active membership: event is locked in capture (2.3s)
+  ✓  19 [tablet-768] › qa-e2e/01-auth-context.spec.ts:87:3 › Event context › TC-CTX-02 two active events: selector switches products and persists across reload (4.0s)
+  ✓  20 [tablet-768] › qa-e2e/01-auth-context.spec.ts:100:3 › Event context › TC-CTX-03 no membership: capture disabled with explanation (2.5s)
+  ✓  21 [tablet-768] › qa-e2e/01-auth-context.spec.ts:109:3 › Event context › TC-CTX-04 only closed/archived events: capture blocked, home explains (2.9s)
+  ✓  17 [tablet-768] › qa-e2e/03-referral.spec.ts:20:1 › TC-REF-01..05 create → accept → qualify → task → complete (UI on this device) (20.1s)
+  ✓  23 [tablet-768] › qa-e2e/03-referral.spec.ts:78:1 › TC-REF-03/04 return with mandatory reason, returned box, reassign keeps history (8.7s)
+  ✓  24 [tablet-768] › qa-e2e/03-referral.spec.ts:111:1 › TC-REF-06 negative: specialist has no referral affordance and API refuses (2.7s)
+  ✘  22 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:5:3 › Lead lists › TC-LST-01 pagination across >25 leads (18.4s)
+  ✓  25 [tablet-768] › qa-e2e/03-referral.spec.ts:125:1 › TC-REF-08 overdue task is flagged in inbox (2.8s)
+  ✓  27 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:18:3 › Lead lists › TC-LST-02 search by name and by Persian-digit mobile fragment (3.2s)
+  ✓  28 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:27:3 › Lead lists › TC-LST-03 filters (quality, stage) and empty state (4.4s)
+  ✓  26 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:5:3 › Admin CRUD › TC-ADM-01 create event via UI (Jalali dates), add product and member, activate (12.2s)
+  ✓  29 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:38:3 › Lead lists › TC-LST-04 long and mixed-direction names render without overflow (4.3s)
+  ✓  30 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:48:3 › Admin CRUD › TC-ADM-02 clone event copies configuration, never leads (4.4s)
+  ✓  32 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:67:3 › Admin CRUD › TC-ADM-03 user creation requires valid mobile; activation link issued (4.5s)
+  ✓  33 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:89:3 › Admin CRUD › TC-ADM-04 tag taxonomy: create, archive; archived not selectable (3.5s)
+  ✘  31 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order (14.3s)
+  ✓  34 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:107:3 › Admin CRUD › TC-ADM-05 logo upload: SVG rejected, PNG accepted, reset (3.7s)
+  ✓  35 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:63:3 › Lead lists › TC-LST-06 scope: booth specialist sees only own leads (3.0s)
+  ✓  37 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:73:3 › Enrichment & opportunity detail › TC-ENR-01 enrichment after event closure with field history (8.6s)
+  ✓  36 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:132:3 › Notification & action center › TC-NTF-01/02 action request: reading ≠ completing; completion tracked for requester (11.5s)
+  ✓  39 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:172:3 › Notification & action center › TC-NTF-03 mock SMS test send reported as SIMULATED, never delivered (5.0s)
+  ✓  38 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:98:3 › Enrichment & opportunity detail › TC-ENR-02 field-level authorization: viewer & creator read-only (6.9s)
+  ✓  40 [tablet-768] › qa-e2e/05-admin-notify.spec.ts:182:3 › Notification & action center › TC-NTF-04 delivery log never shows mock attempts as delivered (3.7s)
+  ✓  42 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:5:3 › Exports › TC-EXP-01 JSON export via UI is scoped, versioned and masks unauthorized PII (4.3s)
+  ✓  41 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:117:3 › Enrichment & opportunity detail › TC-ENR-03 concurrent edit shows conflict instead of overwriting (7.0s)
+  ✓  43 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:23:3 › Exports › TC-EXP-02 CSV keeps Persian text (UTF-8 BOM) and neutralizes formulas (1.1s)
+  ✓  45 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:41:3 › Exports › TC-EXP-03 download link is owner-only (1.9s)
+  ✓  44 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:138:3 › Enrichment & opportunity detail › TC-ENR-04 tags: add/remove on qualified lead, archived tag label, stage change (7.2s)
+  ✓  46 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:55:3 › Offline › TC-OFF-01/02 offline capture: encrypted at rest, exactly one sync upload, one record (5.6s)
+  ✘  47 [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:158:1 › TC-LST-07 unbroken long lead name does not widen Home or Leads (bottom nav stays reachable) (2.9s)
+  ✓  48 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:88:3 › Offline › TC-OFF-03 switching event while a record is queued never retags it (3.9s)
+  ✓  50 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:109:3 › Offline › TC-OFF-04 logout with pending queue warns; discard wipes device; next user sees nothing (6.2s)
+  ✓  51 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:143:3 › Offline › TC-OFF-05 offline capture synced after closure beyond grace goes to admin review (26.7s)
+  ✘  52 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture (2.6s)
+  ✓  53 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:189:3 › Browser-level security › TC-SEC-01 stored XSS payload in lead fields renders as text (4.7s)
+  ✓  54 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:202:3 › Browser-level security › TC-SEC-02 CSRF required for state-changing API calls (720ms)
+  ✓  55 [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:210:3 › Browser-level security › TC-SEC-03 security headers on API responses (374ms)
+  ✘  49 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe (1.2m)
+  ✓  56 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe (1.4m)
+  ✓  57 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe (47.3s)
+  ✘  58 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe (45.5s)
+  ✓  59 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe (52.0s)
+  ✘  60 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe (42.5s)
+  ✓  61 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX owner: route access, menu affordances, screenshots, overflow, axe (47.2s)
+  ✘  62 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe (17.4s)
+  ✓  63 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe (44.6s)
+  ✓  64 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe (32.7s)
+  ✓  65 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe (33.1s)
+  ✘  66 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts (19.3s)
+  -  67 [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:143:1 › TC-VIS-JALALI date picker round-trips value and month/year navigation
+
+
+  1) [tablet-768] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/\/login/[39m
+    Received string:  [31m"http://localhost:5174/leads"[39m
+    Timeout: 10000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 10000ms[22m
+    [2m    14 × unexpected value "http://localhost:5174/leads"[22m
+
+
+      48 |     const nav = page.getByRole("link", { name: /^لیدها/ }).first();
+      49 |     await nav.click();
+    > 50 |     await expect(page).toHaveURL(/\/login/, { timeout: 10_000 });
+         |                        ^
+      51 |   });
+      52 |
+      53 |   test("TC-AUTH-06 activation/reset link: set password, link is single-use, new password works", async ({ page, browser }, info) => {
+        at /home/user/lead/frontend/qa-e2e/01-auth-context.spec.ts:50:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [tablet-768] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('heading', { name: 'فعال‌سازی حساب' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByRole('heading', { name: 'فعال‌سازی حساب' })[22m
+
+
+      62 |     const url = `${info.project.use.baseURL}${link.pathname}${link.search}`;
+      63 |     await p.goto(url);
+    > 64 |     await expect(p.getByRole("heading", { name: "فعال‌سازی حساب" })).toBeVisible();
+         |                                                                      ^
+      65 |     const newPw = `Qa-${Date.now()}-Pass!`;
+      66 |     await p.fill("#np", newPw);
+      67 |     await p.fill("#npc", newPw);
+        at /home/user/lead/frontend/qa-e2e/01-auth-context.spec.ts:64:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-tablet-768/test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-tablet-768/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:5:3 › Lead lists › TC-LST-01 pagination across >25 leads 
+
+    TimeoutError: locator.tap: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: 'صفحه بعد' })[22m
+    [2m    - locator resolved to <button aria-label="صفحه بعد" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-[background,box-shadow,color,transform] duration-150 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none text-ink-2 hover:bg-line-2 h-9 w-9 rounded-[10px]">…</button>[22m
+    [2m  - attempting tap action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - <div class="grid grid-cols-5 h-16 items-center">…</div> from <nav aria-label="ناوبری پایین" class="lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]">…</nav> subtree intercepts pointer events[22m
+    [2m  - retrying tap action[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - <button aria-label="بیشتر" class="flex flex-col items-center gap-0.5 text-[11px] text-muted">…</button> from <nav aria-label="ناوبری پایین" class="lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]">…</nav> subtree intercepts pointer events[22m
+    [2m  - retrying tap action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="grid grid-cols-5 h-16 items-center">…</div> from <nav aria-label="ناوبری پایین" class="lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]">…</nav> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 100ms[22m
+    [2m    7 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="grid grid-cols-5 h-16 items-center">…</div> from <nav aria-label="ناوبری پایین" class="lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]">…</nav> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <button aria-label="بیشتر" class="flex flex-col items-center gap-0.5 text-[11px] text-muted">…</button> from <nav aria-label="ناوبری پایین" class="lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]">…</nav> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="grid grid-cols-5 h-16 items-center">…</div> from <nav aria-label="ناوبری پایین" class="lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]">…</nav> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="grid grid-cols-5 h-16 items-center">…</div> from <nav aria-label="ناوبری پایین" class="lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]">…</nav> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+
+
+       at support.ts:25
+
+      23 | export async function press(info: TestInfo, loc: Locator) {
+      24 |   await loc.scrollIntoViewIfNeeded();
+    > 25 |   if (isTouch(info)) await loc.tap();
+         |                                ^
+      26 |   else await loc.click();
+      27 | }
+      28 |
+        at press (/home/user/lead/frontend/qa-e2e/support.ts:25:32)
+        at /home/user/lead/frontend/qa-e2e/04-leads-enrichment.spec.ts:12:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByLabel('مرتب‌سازی')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByLabel('مرتب‌سازی')[22m
+
+
+      56 |     await loginAs(page, "admin", "/leads");
+      57 |     const sort = page.getByLabel("مرتب‌سازی");
+    > 58 |     await expect(sort).toBeVisible();
+         |                        ^
+      59 |     await sort.selectOption("captured_at");
+      60 |     await expect(page).toHaveURL(/ordering=captured_at/);
+      61 |   });
+        at /home/user/lead/frontend/qa-e2e/04-leads-enrichment.spec.ts:58:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:158:1 › TC-LST-07 unbroken long lead name does not widen Home or Leads (bottom nav stays reachable) 
+
+    Error: horizontal overflow specialist1 /: {"scrollWidth":981,"clientWidth":768,"overflow":213,"offenders":["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]}
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m213[39m
+
+       at support.ts:89
+
+      87 | export async function expectNoOverflow(page: Page, label = "") {
+      88 |   const o = await overflow(page);
+    > 89 |   expect(o.overflow, `horizontal overflow ${label}: ${JSON.stringify(o)}`).toBeLessThanOrEqual(1);
+         |                                                                            ^
+      90 | }
+      91 |
+      92 | export function appendJsonl(file: string, row: unknown) {
+        at expectNoOverflow (/home/user/lead/frontend/qa-e2e/support.ts:89:76)
+        at /home/user/lead/frontend/qa-e2e/04-leads-enrichment.spec.ts:166:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-TC-LST-1153f-bottom-nav-stays-reachable--tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-TC-LST-1153f-bottom-nav-stays-reachable--tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-TC-LST-1153f-bottom-nav-stays-reachable--tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-TC-LST-1153f-bottom-nav-stays-reachable--tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/04-leads-enrichment-TC-LST-1153f-bottom-nav-stays-reachable--tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture 
+
+    Error: locator.scrollIntoViewIfNeeded: Error: strict mode violation: getByRole('button', { name: 'ثبت لید جدید' }) resolved to 2 elements:
+        1) <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-[background,box-shadow,color,transform] duration-150 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none bg-action text-white hover:bg-action-2 shadow-[0_1px_0_rgb(255_255_255/0.2)_inset,0_1px_2px_rgb(16_41_76/0.2)] h-13 px-6 text-base rounded-[14px] min-h-[52px] w-full md:w-auto">…</button> aka getByRole('link', { name: 'ثبت لید جدید' }).getByRole('button')
+        2) <button aria-label="ثبت لید جدید" class="-mt-6 size-14 rounded-full bg-action text-white grid place-items-center shadow-[0_8px_24px_rgb(35_104_229/0.45)] disabled:opacity-50 active:scale-95 transition-transform">…</button> aka getByLabel('ثبت لید جدید')
+
+    Call log:
+    [2m  - waiting for getByRole('button', { name: 'ثبت لید جدید' })[22m
+
+
+       at support.ts:24
+
+      22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */
+      23 | export async function press(info: TestInfo, loc: Locator) {
+    > 24 |   await loc.scrollIntoViewIfNeeded();
+         |             ^
+      25 |   if (isTouch(info)) await loc.tap();
+      26 |   else await loc.click();
+      27 | }
+        at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)
+        at /home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts:180:14
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe 
+
+    Error: admin overflow /dashboard on tablet-768: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m120[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-2.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-3.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-5.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #6: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-4.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #7: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-6.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #8: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-7.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #9: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-8.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #10: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-10.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #11: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-9.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #12: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-11.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #13: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-12.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #14: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-13.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #15: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-15.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #16: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-14.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #17: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-16.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #18: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-17.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #19: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-18.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #20: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-20.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #21: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-19.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #22: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-21.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #23: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video-22.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #24: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/error-context.md
+
+    attachment #26: trace (application/zip) ────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe 
+
+    Error: exec overflow /leads/:id on tablet-768: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m560[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    Error: exec overflow /dashboard on tablet-768: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m120[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ex-3b3a1-es-screenshots-overflow-axe-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ex-3b3a1-es-screenshots-overflow-axe-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ex-3b3a1-es-screenshots-overflow-axe-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ex-3b3a1-es-screenshots-overflow-axe-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-ex-3b3a1-es-screenshots-overflow-axe-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe 
+
+    Error: planmgr overflow /leads/:id on tablet-768: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m560[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    Error: planmgr overflow /dashboard on tablet-768: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m120[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe 
+
+    TimeoutError: locator.tap: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: 'بیشتر' })[22m
+    [2m    - locator resolved to <button aria-label="بیشتر" class="flex flex-col items-center gap-0.5 text-[11px] text-muted">…</button>[22m
+    [2m  - attempting tap action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - element is outside of the viewport[22m
+    [2m    - retrying tap action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - element is outside of the viewport[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 100ms[22m
+    [2m    29 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is visible, enabled and stable[22m
+    [2m       - scrolling into view if needed[22m
+    [2m       - done scrolling[22m
+    [2m       - element is outside of the viewport[22m
+    [2m     - retrying tap action[22m
+    [2m       - waiting 500ms[22m
+
+
+       at support.ts:25
+
+      23 | export async function press(info: TestInfo, loc: Locator) {
+      24 |   await loc.scrollIntoViewIfNeeded();
+    > 25 |   if (isTouch(info)) await loc.tap();
+         |                                ^
+      26 |   else await loc.click();
+      27 | }
+      28 |
+        at press (/home/user/lead/frontend/qa-e2e/support.ts:25:32)
+        at menuHrefs (/home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:44:3)
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:61:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-sp-79fc6-es-screenshots-overflow-axe-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-sp-79fc6-es-screenshots-overflow-axe-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-sp-79fc6-es-screenshots-overflow-axe-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-sp-79fc6-es-screenshots-overflow-axe-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-MTX-sp-79fc6-es-screenshots-overflow-axe-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11) [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByText(/آفلاین هستید/)
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByText(/آفلاین هستید/)[22m
+
+
+      130 |   await context.setOffline(true);
+      131 |   await page.evaluate(() => window.dispatchEvent(new Event("offline")));
+    > 132 |   await expect(page.getByText(/آفلاین هستید/)).toBeVisible();
+          |                                                ^
+      133 |   await shot(page, info, "planmgr", "/capture", "offline", "TC-VIS-STATES");
+      134 |   await context.setOffline(false);
+      135 |   // user menu / more sheet on narrow screens
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:132:48
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  11 failed
+    [tablet-768] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login 
+    [tablet-768] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works 
+    [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:5:3 › Lead lists › TC-LST-01 pagination across >25 leads 
+    [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order 
+    [tablet-768] › qa-e2e/04-leads-enrichment.spec.ts:158:1 › TC-LST-07 unbroken long lead name does not widen Home or Leads (bottom nav stays reachable) 
+    [tablet-768] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture 
+    [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe 
+    [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe 
+    [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe 
+    [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe 
+    [tablet-768] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts 
+  2 skipped
+  54 passed (11.6m)

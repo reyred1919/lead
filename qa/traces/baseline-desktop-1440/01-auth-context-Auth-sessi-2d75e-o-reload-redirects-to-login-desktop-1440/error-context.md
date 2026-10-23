@@ -1,0 +1,89 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [active] [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل ۸" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+        - generic [ref=e34]: ۸
+      - link "اعلان‌ها ۱۳" [ref=e35] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e36]
+        - generic [ref=e39]: اعلان‌ها
+        - generic [ref=e40]: ۱۳
+      - link "داشبورد تحلیلی" [ref=e41] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e42]
+        - generic [ref=e44]: داشبورد تحلیلی
+      - link "گزارش و خروجی" [ref=e45] [cursor=pointer]:
+        - /url: /reports
+        - img [ref=e46]
+        - generic [ref=e50]: گزارش و خروجی
+      - link "پیام و درخواست اقدام" [ref=e51] [cursor=pointer]:
+        - /url: /messages
+        - img [ref=e52]
+        - generic [ref=e55]: پیام و درخواست اقدام
+    - generic [ref=e56]:
+      - generic [ref=e57]: پ‌ب
+      - link "پرهام برنامه‌ریز مدیر طرح شهر هوشمند" [ref=e58] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e59]: پرهام برنامه‌ریز
+        - generic [ref=e60]: مدیر طرح شهر هوشمند
+      - button "خروج" [ref=e61]:
+        - img [ref=e62]
+  - generic [ref=e65]:
+    - banner [ref=e66]:
+      - generic [ref=e67]:
+        - generic "رویداد فعال" [ref=e69]:
+          - generic [ref=e71]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e72]: DEMO-TECH-1405
+        - generic [ref=e74]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e76]':
+          - img [ref=e77]
+          - generic [ref=e80]: همگام
+    - main [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - heading "لیدها" [level=1] [ref=e85]
+            - paragraph [ref=e86]: تعاملات ثبت‌شده و فرصت‌های پیگیری
+          - link "ثبت لید جدید" [ref=e88] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e89]
+        - generic [ref=e90]:
+          - radiogroup "محدوده" [ref=e91]:
+            - radio "همه در محدوده من" [checked] [ref=e92]
+            - radio "ثبت‌های من" [ref=e93]
+            - radio "مسئولیت من" [ref=e94]
+            - radio "بدون مسئول" [ref=e95]
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - img [ref=e98]
+              - textbox "جست‌وجو" [ref=e101]:
+                - /placeholder: نام مخاطب، سازمان یا شماره موبایل
+            - button "فیلترها" [ref=e102]:
+              - img [ref=e103]
+        - generic [ref=e106]:
+          - heading "دسترسی مجاز نیست" [level=3] [ref=e107]
+          - paragraph [ref=e108]: اطلاعات برای اعتبارسنجی ارسال نشده است.
+```

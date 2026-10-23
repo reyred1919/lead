@@ -1,0 +1,57 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - img "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها ۶" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+        - generic [ref=e39]: ۶
+    - generic [ref=e40]:
+      - generic [ref=e41]: د‌د
+      - link "دونا دورویدادی کارشناس غرفه دو رویداد" [ref=e42] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e43]: دونا دورویدادی
+        - generic [ref=e44]: کارشناس غرفه دو رویداد
+      - button "خروج" [ref=e45]:
+        - img [ref=e46]
+  - generic [ref=e49]:
+    - banner [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: رویداد فعال برای ثبت
+          - combobox "رویداد فعال برای ثبت" [ref=e56]:
+            - option "همایش نمونه انرژی هوشمند (DEMO-ENERGY-1405)" [selected]
+            - option "نمایشگاه نمونه فناوری ۱۴۰۵ (DEMO-TECH-1405)"
+        - generic [ref=e58]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e60]':
+          - img [ref=e61]
+          - generic [ref=e64]: همگام
+    - main [ref=e65]:
+      - generic [ref=e66]:
+        - heading "دسترسی مجاز نیست" [level=3] [ref=e67]
+        - paragraph [ref=e68]: این بخش در محدوده مجوزهای شما نیست. مجوزها در سرور نیز بررسی می‌شوند.
+```

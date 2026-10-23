@@ -1,0 +1,442 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - heading "لیدها" [level=1] [ref=e31]
+            - paragraph [ref=e32]: ۷۸ لید در محدوده دسترسی شما
+          - link "ثبت لید جدید" [ref=e34] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e35]
+        - generic [ref=e36]:
+          - radiogroup "محدوده" [ref=e37]:
+            - radio "همه در محدوده من" [checked] [ref=e38]
+            - radio "ثبت‌های من" [ref=e39]
+            - radio "مسئولیت من" [ref=e40]
+            - radio "بدون مسئول" [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - img [ref=e44]
+              - textbox "جست‌وجو" [ref=e47]:
+                - /placeholder: نام مخاطب، سازمان یا شماره موبایل
+            - button "فیلترها" [ref=e48]:
+              - img [ref=e49]
+        - generic [ref=e51]:
+          - list [ref=e52]:
+            - listitem [ref=e53]:
+              - link "لید QA 1883353 بدون سازمان · 0912 188 3847 قابل‌پیگیری در انتظار ارزیابی ۴ ثانیه پیش · DEMO-TECH-1405" [ref=e54] [cursor=pointer]:
+                - /url: /leads/238e8240-da9f-42c6-b3d5-07ddfa44f625
+                - generic [ref=e55]:
+                  - generic [ref=e56]:
+                    - generic [ref=e57]: لید QA 1883353
+                    - generic [ref=e58]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e59]: 0912 188 3847
+                  - generic [ref=e60]: قابل‌پیگیری
+                - generic [ref=e61]:
+                  - generic [ref=e62]: در انتظار ارزیابی
+                  - generic [ref=e63]:
+                    - text: ۴ ثانیه پیش ·
+                    - generic [ref=e64]: DEMO-TECH-1405
+            - listitem [ref=e65]:
+              - link "بازگشت desktop-1440 54589 بدون سازمان · 0912 480 0862 قابل‌پیگیری در انتظار ارزیابی ۱۱ ثانیه پیش · DEMO-TECH-1405" [ref=e66] [cursor=pointer]:
+                - /url: /leads/90bcc127-ef6e-455c-9b7f-dd2e271d9f08
+                - generic [ref=e67]:
+                  - generic [ref=e68]:
+                    - generic [ref=e69]: بازگشت desktop-1440 54589
+                    - generic [ref=e70]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e71]: 0912 480 0862
+                  - generic [ref=e72]: قابل‌پیگیری
+                - generic [ref=e73]:
+                  - generic [ref=e74]: در انتظار ارزیابی
+                  - generic [ref=e75]:
+                    - text: ۱۱ ثانیه پیش ·
+                    - generic [ref=e76]: DEMO-TECH-1405
+            - listitem [ref=e77]:
+              - link "بازگشت mobile-390 46425 بدون سازمان · 0912 662 4790 قابل‌پیگیری در انتظار ارزیابی ۱۹ ثانیه پیش · DEMO-TECH-1405" [ref=e78] [cursor=pointer]:
+                - /url: /leads/39fb9c46-116f-4046-a730-2c5fc271090a
+                - generic [ref=e79]:
+                  - generic [ref=e80]:
+                    - generic [ref=e81]: بازگشت mobile-390 46425
+                    - generic [ref=e82]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e83]: 0912 662 4790
+                  - generic [ref=e84]: قابل‌پیگیری
+                - generic [ref=e85]:
+                  - generic [ref=e86]: در انتظار ارزیابی
+                  - generic [ref=e87]:
+                    - text: ۱۹ ثانیه پیش ·
+                    - generic [ref=e88]: DEMO-TECH-1405
+            - listitem [ref=e89]:
+              - link "ارجاع دستگاه desktop-1440 25024 بدون سازمان · 0912 530 1516 قابل‌پیگیری تخصیص‌یافته ۴۱ ثانیه پیش · DEMO-TECH-1405" [ref=e90] [cursor=pointer]:
+                - /url: /leads/9a078fc4-afb6-4e1f-8dfc-8c228728a606
+                - generic [ref=e91]:
+                  - generic [ref=e92]:
+                    - generic [ref=e93]: ارجاع دستگاه desktop-1440 25024
+                    - generic [ref=e94]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e95]: 0912 530 1516
+                  - generic [ref=e96]: قابل‌پیگیری
+                - generic [ref=e97]:
+                  - generic [ref=e98]: تخصیص‌یافته
+                  - generic [ref=e100]:
+                    - text: ۴۱ ثانیه پیش ·
+                    - generic [ref=e101]: DEMO-TECH-1405
+            - listitem [ref=e102]:
+              - link "کیبورد 0926679 بدون سازمان · 0912 127 9370 قابل‌پیگیری در انتظار ارزیابی ۴۴ ثانیه پیش · DEMO-TECH-1405" [ref=e103] [cursor=pointer]:
+                - /url: /leads/e7474c91-7b93-4a93-bb42-76b653190ab7
+                - generic [ref=e104]:
+                  - generic [ref=e105]:
+                    - generic [ref=e106]: کیبورد 0926679
+                    - generic [ref=e107]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e108]: 0912 127 9370
+                  - generic [ref=e109]: قابل‌پیگیری
+                - generic [ref=e110]:
+                  - generic [ref=e111]: در انتظار ارزیابی
+                  - generic [ref=e112]:
+                    - text: ۴۴ ثانیه پیش ·
+                    - generic [ref=e113]: DEMO-TECH-1405
+            - listitem [ref=e114]:
+              - link "ارجاع دستگاه mobile-390 21159 بدون سازمان · 0912 126 8329 قابل‌پیگیری تخصیص‌یافته ۴۵ ثانیه پیش · DEMO-TECH-1405" [ref=e115] [cursor=pointer]:
+                - /url: /leads/81dc6725-d33e-4a74-b922-1b25d9982d36
+                - generic [ref=e116]:
+                  - generic [ref=e117]:
+                    - generic [ref=e118]: ارجاع دستگاه mobile-390 21159
+                    - generic [ref=e119]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e120]: 0912 126 8329
+                  - generic [ref=e121]: قابل‌پیگیری
+                - generic [ref=e122]:
+                  - generic [ref=e123]: تخصیص‌یافته
+                  - generic [ref=e125]:
+                    - text: ۴۵ ثانیه پیش ·
+                    - generic [ref=e126]: DEMO-TECH-1405
+            - listitem [ref=e127]:
+              - link "دو رویداد 1576757 بدون سازمان · 0912 157 6892 قابل‌پیگیری در انتظار ارزیابی ۵۰ ثانیه پیش · DEMO-ENERGY-1405" [ref=e128] [cursor=pointer]:
+                - /url: /leads/273c63e8-88a3-4e66-9dc2-1449331a711a
+                - generic [ref=e129]:
+                  - generic [ref=e130]:
+                    - generic [ref=e131]: دو رویداد 1576757
+                    - generic [ref=e132]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e133]: 0912 157 6892
+                  - generic [ref=e134]: قابل‌پیگیری
+                - generic [ref=e135]:
+                  - generic [ref=e136]: در انتظار ارزیابی
+                  - generic [ref=e137]:
+                    - text: ۵۰ ثانیه پیش ·
+                    - generic [ref=e138]: DEMO-ENERGY-1405
+            - listitem [ref=e139]:
+              - link "دو رویداد 0919377 بدون سازمان · 0912 091 9930 قابل‌پیگیری در انتظار ارزیابی ۵۱ ثانیه پیش · DEMO-ENERGY-1405" [ref=e140] [cursor=pointer]:
+                - /url: /leads/fba7272e-6073-48e8-a5e2-d2340bbbaccd
+                - generic [ref=e141]:
+                  - generic [ref=e142]:
+                    - generic [ref=e143]: دو رویداد 0919377
+                    - generic [ref=e144]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e145]: 0912 091 9930
+                  - generic [ref=e146]: قابل‌پیگیری
+                - generic [ref=e147]:
+                  - generic [ref=e148]: در انتظار ارزیابی
+                  - generic [ref=e149]:
+                    - text: ۵۱ ثانیه پیش ·
+                    - generic [ref=e150]: DEMO-ENERGY-1405
+            - listitem [ref=e151]:
+              - link "دو رویداد 1576757 بدون سازمان · 0912 157 6892 قابل‌پیگیری در انتظار ارزیابی ۵۳ ثانیه پیش · DEMO-TECH-1405" [ref=e152] [cursor=pointer]:
+                - /url: /leads/a096df28-1213-44ee-8232-d14bee4607b8
+                - generic [ref=e153]:
+                  - generic [ref=e154]:
+                    - generic [ref=e155]: دو رویداد 1576757
+                    - generic [ref=e156]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e157]: 0912 157 6892
+                  - generic [ref=e158]: قابل‌پیگیری
+                - generic [ref=e159]:
+                  - generic [ref=e160]: در انتظار ارزیابی
+                  - generic [ref=e161]:
+                    - text: ۵۳ ثانیه پیش ·
+                    - generic [ref=e162]: DEMO-TECH-1405
+            - listitem [ref=e163]:
+              - link "دو رویداد 0919377 بدون سازمان · 0912 091 9930 قابل‌پیگیری در انتظار ارزیابی ۵۳ ثانیه پیش · DEMO-TECH-1405" [ref=e164] [cursor=pointer]:
+                - /url: /leads/b9340e3e-8e16-478f-855c-12ab249d9940
+                - generic [ref=e165]:
+                  - generic [ref=e166]:
+                    - generic [ref=e167]: دو رویداد 0919377
+                    - generic [ref=e168]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e169]: 0912 091 9930
+                  - generic [ref=e170]: قابل‌پیگیری
+                - generic [ref=e171]:
+                  - generic [ref=e172]: در انتظار ارزیابی
+                  - generic [ref=e173]:
+                    - text: ۵۳ ثانیه پیش ·
+                    - generic [ref=e174]: DEMO-TECH-1405
+            - listitem [ref=e175]:
+              - link "بدون پاسخ 7402972 بدون سازمان · 0912 750 1690 قابل‌پیگیری در انتظار ارزیابی ۵۸ ثانیه پیش · DEMO-TECH-1405" [ref=e176] [cursor=pointer]:
+                - /url: /leads/ffa9678c-f607-4953-8024-ebba182b7a69
+                - generic [ref=e177]:
+                  - generic [ref=e178]:
+                    - generic [ref=e179]: بدون پاسخ 7402972
+                    - generic [ref=e180]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e181]: 0912 750 1690
+                  - generic [ref=e182]: قابل‌پیگیری
+                - generic [ref=e183]:
+                  - generic [ref=e184]: در انتظار ارزیابی
+                  - generic [ref=e185]:
+                    - text: ۵۸ ثانیه پیش ·
+                    - generic [ref=e186]: DEMO-TECH-1405
+            - listitem [ref=e187]:
+              - link "بدون پاسخ 6910734 بدون سازمان · 0912 694 7840 قابل‌پیگیری در انتظار ارزیابی ۵۸ ثانیه پیش · DEMO-TECH-1405" [ref=e188] [cursor=pointer]:
+                - /url: /leads/01004ae2-15d9-49f2-bafd-75be846762c9
+                - generic [ref=e189]:
+                  - generic [ref=e190]:
+                    - generic [ref=e191]: بدون پاسخ 6910734
+                    - generic [ref=e192]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e193]: 0912 694 7840
+                  - generic [ref=e194]: قابل‌پیگیری
+                - generic [ref=e195]:
+                  - generic [ref=e196]: در انتظار ارزیابی
+                  - generic [ref=e197]:
+                    - text: ۵۸ ثانیه پیش ·
+                    - generic [ref=e198]: DEMO-TECH-1405
+            - listitem [ref=e199]:
+              - link "مالک پیش‌فرض 3795593 بدون سازمان · 0912 408 3543 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e200] [cursor=pointer]:
+                - /url: /leads/1f2705c2-3bfc-4ceb-9d74-d8d7a7c71450
+                - generic [ref=e201]:
+                  - generic [ref=e202]:
+                    - generic [ref=e203]: مالک پیش‌فرض 3795593
+                    - generic [ref=e204]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e205]: 0912 408 3543
+                  - generic [ref=e206]: قابل‌پیگیری
+                - generic [ref=e207]:
+                  - generic [ref=e208]: در انتظار ارزیابی
+                  - generic [ref=e209]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e210]: DEMO-TECH-1405
+            - listitem [ref=e211]:
+              - link "مالک پیش‌فرض 3251856 بدون سازمان · 0912 366 0150 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e212] [cursor=pointer]:
+                - /url: /leads/c1bd2909-654c-42fc-8eed-8c081de05985
+                - generic [ref=e213]:
+                  - generic [ref=e214]:
+                    - generic [ref=e215]: مالک پیش‌فرض 3251856
+                    - generic [ref=e216]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e217]: 0912 366 0150
+                  - generic [ref=e218]: قابل‌پیگیری
+                - generic [ref=e219]:
+                  - generic [ref=e220]: در انتظار ارزیابی
+                  - generic [ref=e221]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e222]: DEMO-TECH-1405
+            - listitem [ref=e223]:
+              - link "سریع 2 9815549 بدون سازمان · 0912 981 5486 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e224] [cursor=pointer]:
+                - /url: /leads/c8098542-9429-4bca-92ce-db135bddd3b4
+                - generic [ref=e225]:
+                  - generic [ref=e226]:
+                    - generic [ref=e227]: سریع 2 9815549
+                    - generic [ref=e228]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e229]: 0912 981 5486
+                  - generic [ref=e230]: قابل‌پیگیری
+                - generic [ref=e231]:
+                  - generic [ref=e232]: در انتظار ارزیابی
+                  - generic [ref=e233]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e234]: DEMO-TECH-1405
+            - listitem [ref=e235]:
+              - link "سریع 2 9359143 بدون سازمان · 0912 935 9836 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e236] [cursor=pointer]:
+                - /url: /leads/449894e0-4964-4075-bd34-591aea5aadd2
+                - generic [ref=e237]:
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: سریع 2 9359143
+                    - generic [ref=e240]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e241]: 0912 935 9836
+                  - generic [ref=e242]: قابل‌پیگیری
+                - generic [ref=e243]:
+                  - generic [ref=e244]: در انتظار ارزیابی
+                  - generic [ref=e245]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e246]: DEMO-TECH-1405
+            - listitem [ref=e247]:
+              - link "سریع 1 8951269 بدون سازمان · 0912 895 1248 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e248] [cursor=pointer]:
+                - /url: /leads/938ae2e7-a001-45bd-820a-85b340f702c9
+                - generic [ref=e249]:
+                  - generic [ref=e250]:
+                    - generic [ref=e251]: سریع 1 8951269
+                    - generic [ref=e252]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e253]: 0912 895 1248
+                  - generic [ref=e254]: قابل‌پیگیری
+                - generic [ref=e255]:
+                  - generic [ref=e256]: در انتظار ارزیابی
+                  - generic [ref=e257]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e258]: DEMO-TECH-1405
+            - listitem [ref=e259]:
+              - link "سریع 1 8566622 بدون سازمان · 0912 856 6612 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e260] [cursor=pointer]:
+                - /url: /leads/bfb2934f-369a-4bd0-90e2-e12c0ad2803c
+                - generic [ref=e261]:
+                  - generic [ref=e262]:
+                    - generic [ref=e263]: سریع 1 8566622
+                    - generic [ref=e264]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e265]: 0912 856 6612
+                  - generic [ref=e266]: قابل‌پیگیری
+                - generic [ref=e267]:
+                  - generic [ref=e268]: در انتظار ارزیابی
+                  - generic [ref=e269]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e270]: DEMO-TECH-1405
+            - listitem [ref=e271]:
+              - link "سریع 0 7215149 بدون سازمان · 0912 721 5236 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e272] [cursor=pointer]:
+                - /url: /leads/19deb0fb-b7a1-4ae1-9fbd-2c5365f950a4
+                - generic [ref=e273]:
+                  - generic [ref=e274]:
+                    - generic [ref=e275]: سریع 0 7215149
+                    - generic [ref=e276]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e277]: 0912 721 5236
+                  - generic [ref=e278]: قابل‌پیگیری
+                - generic [ref=e279]:
+                  - generic [ref=e280]: در انتظار ارزیابی
+                  - generic [ref=e281]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e282]: DEMO-TECH-1405
+            - listitem [ref=e283]:
+              - link "سریع 0 6857882 بدون سازمان · 0912 685 7612 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e284] [cursor=pointer]:
+                - /url: /leads/182b8dbb-ddc0-4ca1-b5fc-a6a5d3e87c00
+                - generic [ref=e285]:
+                  - generic [ref=e286]:
+                    - generic [ref=e287]: سریع 0 6857882
+                    - generic [ref=e288]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e289]: 0912 685 7612
+                  - generic [ref=e290]: قابل‌پیگیری
+                - generic [ref=e291]:
+                  - generic [ref=e292]: در انتظار ارزیابی
+                  - generic [ref=e293]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e294]: DEMO-TECH-1405
+            - listitem [ref=e295]:
+              - link "چندمحصولی 3788195 بدون سازمان · 0912 378 8540 جدی در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e296] [cursor=pointer]:
+                - /url: /leads/a24590e8-7947-4658-95dc-215ea9d9ef76
+                - generic [ref=e297]:
+                  - generic [ref=e298]:
+                    - generic [ref=e299]: چندمحصولی 3788195
+                    - generic [ref=e300]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e301]: 0912 378 8540
+                  - generic [ref=e302]: جدی
+                - generic [ref=e303]:
+                  - generic [ref=e304]: در انتظار ارزیابی
+                  - generic [ref=e305]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e306]: DEMO-TECH-1405
+            - listitem [ref=e307]:
+              - link "چندمحصولی 3418306 بدون سازمان · 0912 341 8212 جدی در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e308] [cursor=pointer]:
+                - /url: /leads/cc0913d2-d075-4eef-ab13-45246b8eb913
+                - generic [ref=e309]:
+                  - generic [ref=e310]:
+                    - generic [ref=e311]: چندمحصولی 3418306
+                    - generic [ref=e312]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e313]: 0912 341 8212
+                  - generic [ref=e314]: جدی
+                - generic [ref=e315]:
+                  - generic [ref=e316]: در انتظار ارزیابی
+                  - generic [ref=e317]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e318]: DEMO-TECH-1405
+            - listitem [ref=e319]:
+              - link "سلری ed82e بدون سازمان · 0912 000 4444 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e320] [cursor=pointer]:
+                - /url: /leads/039e666f-c05c-43ef-8cfd-43cd49fdfcca
+                - generic [ref=e321]:
+                  - generic [ref=e322]:
+                    - generic [ref=e323]: سلری ed82e
+                    - generic [ref=e324]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e325]: 0912 000 4444
+                  - generic [ref=e326]: قابل‌پیگیری
+                - generic [ref=e327]:
+                  - generic [ref=e328]: در انتظار ارزیابی
+                  - generic [ref=e329]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e330]: DEMO-TECH-1405
+            - listitem [ref=e331]:
+              - link "شخص حقیقی 4046750 بدون سازمان · 0912 404 5914 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e332] [cursor=pointer]:
+                - /url: /leads/2331c5d5-d03c-4c9a-b64f-301624d15e8d
+                - generic [ref=e333]:
+                  - generic [ref=e334]:
+                    - generic [ref=e335]: شخص حقیقی 4046750
+                    - generic [ref=e336]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e337]: 0912 404 5914
+                  - generic [ref=e338]: قابل‌پیگیری
+                - generic [ref=e339]:
+                  - generic [ref=e340]: در انتظار ارزیابی
+                  - generic [ref=e341]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e342]: DEMO-TECH-1405
+            - listitem [ref=e343]:
+              - link "شخص حقیقی 3100509 بدون سازمان · 0912 310 0845 قابل‌پیگیری در انتظار ارزیابی ۱ دقیقه پیش · DEMO-TECH-1405" [ref=e344] [cursor=pointer]:
+                - /url: /leads/3b51fec3-c9bf-432a-9446-0f0dc06b98a6
+                - generic [ref=e345]:
+                  - generic [ref=e346]:
+                    - generic [ref=e347]: شخص حقیقی 3100509
+                    - generic [ref=e348]:
+                      - text: بدون سازمان ·
+                      - generic [ref=e349]: 0912 310 0845
+                  - generic [ref=e350]: قابل‌پیگیری
+                - generic [ref=e351]:
+                  - generic [ref=e352]: در انتظار ارزیابی
+                  - generic [ref=e353]:
+                    - text: ۱ دقیقه پیش ·
+                    - generic [ref=e354]: DEMO-TECH-1405
+          - generic [ref=e355]:
+            - generic [ref=e356]: صفحه ۱ از ۴
+            - generic [ref=e357]:
+              - button "صفحه قبل" [disabled]:
+                - img
+              - button "صفحه بعد" [ref=e358]:
+                - img [ref=e359]
+  - navigation "ناوبری پایین" [ref=e361]:
+    - generic [ref=e362]:
+      - link "خانه" [ref=e363] [cursor=pointer]:
+        - /url: /
+        - img [ref=e364]
+        - text: خانه
+      - link "لیدها" [ref=e367] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e368]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e372]:
+        - img [ref=e373]
+      - link "کارتابل" [ref=e374] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e375]
+        - text: کارتابل
+      - button "بیشتر" [ref=e378]:
+        - img [ref=e379]
+        - text: بیشتر
+```

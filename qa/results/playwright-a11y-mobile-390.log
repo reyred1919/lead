@@ -1,0 +1,21 @@
+
+Running 13 tests using 1 worker
+
+  ✓   1 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe (1.0m)
+  ✓   2 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe (42.4s)
+  ✓   3 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe (34.5s)
+  ✓   4 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe (32.1s)
+  ✓   5 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe (32.6s)
+  ✓   6 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe (37.4s)
+  ✓   7 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX owner: route access, menu affordances, screenshots, overflow, axe (33.9s)
+  ✓   8 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe (31.8s)
+  ✓   9 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe (33.8s)
+  ✓  10 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe (28.2s)
+  ✓  11 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe (28.9s)
+  ✓  12 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts (8.9s)
+  -  13 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:143:1 › TC-VIS-JALALI date picker round-trips value and month/year navigation
+
+  Slow test file: [mobile-390] › qa-e2e/07-matrix-visual.spec.ts (6.8m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 skipped
+  12 passed (6.8m)

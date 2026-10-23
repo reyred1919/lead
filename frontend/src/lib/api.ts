@@ -1,3 +1,5 @@
+export const SESSION_EXPIRED_EVENT = "expo:session-expired";
+
 export class ApiError extends Error {
   status: number;
   data: any;
@@ -74,7 +76,13 @@ export async function api<T = any>(path: string, opts: Opts = {}): Promise<T> {
   } catch {
     data = text;
   }
-  if (!res.ok) throw new ApiError(res.status, data);
+  if (!res.ok) {
+    // 401 = no valid session (expired/logged out elsewhere). Let the auth layer redirect to login (QA-D-04).
+    if (res.status === 401 && !path.startsWith("/auth/login") && !path.startsWith("/auth/me")) {
+      window.dispatchEvent(new CustomEvent(SESSION_EXPIRED_EVENT));
+    }
+    throw new ApiError(res.status, data);
+  }
   return data as T;
 }
 

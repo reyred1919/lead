@@ -1,0 +1,26 @@
+
+Running 20 tests using 1 worker
+
+  ✓   1 [desktop-chromium] › e2e/core.spec.ts:6:1 › document is Persian RTL (3.4s)
+  ✓   2 [desktop-chromium] › e2e/core.spec.ts:12:1 › invalid login shows an error (1.8s)
+  ✓   3 [desktop-chromium] › e2e/core.spec.ts:21:3 › universal quick capture by specialist1 (2.7s)
+  ✓   4 [desktop-chromium] › e2e/core.spec.ts:21:3 › universal quick capture by dg (2.3s)
+  ✓   5 [desktop-chromium] › e2e/core.spec.ts:21:3 › universal quick capture by admin (3.3s)
+  ✓   6 [desktop-chromium] › e2e/core.spec.ts:32:1 › capture validation errors are shown (2.4s)
+  ✓   7 [desktop-chromium] › e2e/core.spec.ts:40:1 › offline capture is queued and synced without duplicates (24.6s)
+  ✓   8 [desktop-chromium] › e2e/core.spec.ts:59:1 › specialist cannot reach admin pages or APIs (1.6s)
+  ✓   9 [desktop-chromium] › e2e/core.spec.ts:67:1 › referral → accept → qualify → tag (7.1s)
+  ✓  10 [desktop-chromium] › e2e/core.spec.ts:91:1 › mobile layout has no horizontal overflow (5.7s)
+  ✓  11 [mobile-chromium] › e2e/core.spec.ts:6:1 › document is Persian RTL (659ms)
+  ✓  12 [mobile-chromium] › e2e/core.spec.ts:12:1 › invalid login shows an error (1.2s)
+  ✓  13 [mobile-chromium] › e2e/core.spec.ts:21:3 › universal quick capture by specialist1 (3.2s)
+  ✓  14 [mobile-chromium] › e2e/core.spec.ts:21:3 › universal quick capture by dg (3.0s)
+  ✓  15 [mobile-chromium] › e2e/core.spec.ts:21:3 › universal quick capture by admin (3.1s)
+  ✓  16 [mobile-chromium] › e2e/core.spec.ts:32:1 › capture validation errors are shown (2.3s)
+  ✓  17 [mobile-chromium] › e2e/core.spec.ts:40:1 › offline capture is queued and synced without duplicates (24.7s)
+  ✓  18 [mobile-chromium] › e2e/core.spec.ts:59:1 › specialist cannot reach admin pages or APIs (2.1s)
+  -  19 [mobile-chromium] › e2e/core.spec.ts:67:1 › referral → accept → qualify → tag
+  ✓  20 [mobile-chromium] › e2e/core.spec.ts:91:1 › mobile layout has no horizontal overflow (6.2s)
+
+  1 skipped
+  19 passed (1.7m)

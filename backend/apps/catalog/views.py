@@ -34,7 +34,7 @@ def _archive_toggle(request, obj, kind, archive):
 
 class PlanListView(APIView):
     def get(self, request):
-        qs = Plan.objects.all()
+        qs = Plan.objects.annotate(num_products=Count("products"))
         if request.query_params.get("status"):
             qs = qs.filter(status=request.query_params["status"])
         return Response(PlanSerializer(qs, many=True).data)

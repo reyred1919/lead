@@ -15,7 +15,7 @@ type Dash = { personal: any; aggregate: any | null; demo_data: boolean; generate
 
 const BLUE = "#2368E5";
 const GRID = "#EEF1F6";
-const AXIS = { fontSize: 12, fill: "#718198", fontFamily: "Vazirmatn" };
+const AXIS = { fontSize: 12, fill: "#5d6b81", fontFamily: "Vazirmatn" };
 
 function ChartTip({ active, payload, label, unit = "ثبت" }: any) {
   if (!active || !payload?.length) return null;
@@ -101,7 +101,7 @@ export function DashboardPage() {
               </div>
             </Card>
 
-            <div className="grid lg:grid-cols-2 gap-5">
+            <div className="grid grid-cols-[minmax(0,1fr)] lg:grid-cols-2 gap-5">
               <BarList title="علاقه به محصولات" rows={a.by_product.map((r: any) => ({ label: r.name_fa, value: r.count }))} />
               <Card>
                 <CardHeader title="مراحل فرصت" subtitle="فقط فرصت‌های ایجادشده با ارزیابی صریح" />
@@ -167,14 +167,14 @@ export function HomePage() {
         <Link to="/inbox?tab=tasks"><Stat label="وظایف باز من" value={faNum(counts?.tasks_open ?? 0)} icon={<CalendarClock className="size-4" />} tone={counts?.tasks_overdue ? "danger" : "default"} hint={counts?.tasks_overdue ? `${faNum(counts.tasks_overdue)} معوق` : undefined} /></Link>
         <Link to="/inbox?tab=actions"><Stat label="درخواست اقدام" value={faNum(counts?.actions_open ?? 0)} icon={<CircleUserRound className="size-4" />} /></Link>
       </div>
-      <div className="grid lg:grid-cols-2 gap-5">
+      <div className="grid grid-cols-[minmax(0,1fr)] lg:grid-cols-2 gap-5">
         <Card>
           <CardHeader title="آخرین ثبت‌های من" actions={<Link to="/leads?scope=mine" className="text-action text-[13px] font-semibold">همه</Link>} />
           {!p?.recent?.length ? <EmptyState title="هنوز ثبتی ندارید" body="ثبت سریع در کمتر از یک دقیقه انجام می‌شود." /> : (
             <ul className="divide-y divide-line-2">{p.recent.map((r: any) => (
               <li key={r.id}><Link to={`/leads/${r.id}`} className="px-5 py-3 flex items-center gap-3 hover:bg-canvas">
-                <span className="flex-1 min-w-0"><span className="font-semibold">{r.contact_name}</span>{r.account_name && <span className="text-muted text-[13px]"> · {r.account_name}</span>}</span>
-                <QualityBadge q={r.quality} /><span className="text-[12px] text-muted">{relTime(r.captured_at)}</span>
+                <span className="flex-1 min-w-0 [overflow-wrap:anywhere]"><span className="font-semibold">{r.contact_name}</span>{r.account_name && <span className="text-muted text-[13px]"> · {r.account_name}</span>}</span>
+                <QualityBadge q={r.quality} /><span className="text-[12px] text-muted shrink-0 whitespace-nowrap">{relTime(r.captured_at)}</span>
               </Link></li>
             ))}</ul>
           )}

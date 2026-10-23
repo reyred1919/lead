@@ -182,14 +182,14 @@ export function RolesPage() {
   return (
     <div>
       <PageHeader title="نقش‌ها و مجوزها" subtitle="نقش‌ها بسته‌های قابلیت‌اند و به‌صورت افزایشی ترکیب می‌شوند. عضویت فعال در رویداد فعال همیشه «ثبت لید» را مجاز می‌کند. ارزیابی مجوز همیشه در سرور انجام می‌شود." />
-      <Card className="overflow-x-auto">
+      <Card className="overflow-x-auto" tabIndex={0} role="region" aria-label="ماتریس نقش و قابلیت">
         <table className="w-full text-[12.5px]">
           <thead className="bg-canvas border-b border-line sticky top-0"><tr><th className="text-start px-3 h-10 min-w-[220px]">قابلیت</th>{roles.data?.map((r) => <th key={r.code} className="px-2 h-10 text-center font-semibold min-w-[90px]">{r.name_fa}<div className="text-[10.5px] text-muted font-normal">{r.scope === "GLOBAL" ? "سراسری" : "رویدادی"}</div></th>)}</tr></thead>
           <tbody className="divide-y divide-line-2">
             <tr><td className="px-3 py-2">ثبت لید (هر عضو فعال رویداد)</td>{roles.data?.map((r) => <td key={r.code} className="text-center text-muted">{r.scope === "EVENT" ? "✓" : "با عضویت"}</td>)}</tr>
             {caps.data?.filter((c) => c.code !== "interaction.create").map((c) => (
               <tr key={c.code}><td className="px-3 py-2">{c.label} <Ltr className="text-muted font-mono text-[11px]">{c.code}</Ltr></td>
-                {roles.data?.map((r) => <td key={r.code} className="text-center">{r.capabilities.includes(c.code) ? <span className="text-success font-bold" aria-label="دارد">✓</span> : <span className="text-line" aria-label="ندارد">—</span>}</td>)}</tr>
+                {roles.data?.map((r) => <td key={r.code} className="text-center">{r.capabilities.includes(c.code) ? <span className="text-success font-bold" aria-label="دارد">✓</span> : <span className="text-muted" aria-label="ندارد">—</span>}</td>)}</tr>
             ))}
           </tbody>
         </table>

@@ -1,0 +1,292 @@
+# Page snapshot
+
+```yaml
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - complementary:
+          - generic:
+            - generic:
+              - img:
+                - img
+              - generic:
+                - generic: سامانه لیدهای نمایشگاهی
+                - generic: همراه اول · نشان موقت
+          - button:
+            - img
+            - text: ثبت لید جدید
+          - navigation:
+            - link:
+              - /url: /
+              - img
+              - generic: خانه
+            - link:
+              - /url: /leads
+              - img
+              - generic: لیدها
+            - link:
+              - /url: /inbox
+              - img
+              - generic: کارتابل
+            - link:
+              - /url: /notifications
+              - img
+              - generic: اعلان‌ها
+              - generic: ۵
+            - link:
+              - /url: /dashboard
+              - img
+              - generic: داشبورد تحلیلی
+            - link:
+              - /url: /reports
+              - img
+              - generic: گزارش و خروجی
+            - link:
+              - /url: /messages
+              - img
+              - generic: پیام و درخواست اقدام
+            - generic: مدیریت و تنظیمات
+            - link:
+              - /url: /admin/events
+              - img
+              - generic: رویدادها و تیم‌ها
+            - link:
+              - /url: /admin/users
+              - img
+              - generic: کاربران
+            - link:
+              - /url: /admin/catalog
+              - img
+              - generic: طرح‌ها و محصولات
+            - link:
+              - /url: /admin/accounts
+              - img
+              - generic: سازمان‌ها و مخاطبان
+            - link:
+              - /url: /admin/duplicates
+              - img
+              - generic: بازبینی تکراری‌ها
+            - link:
+              - /url: /admin/quarantine
+              - img
+              - generic: ثبت‌های آفلاین معلق
+            - link:
+              - /url: /admin/tags
+              - img
+              - generic: برچسب‌های لید
+            - link:
+              - /url: /admin/notify
+              - img
+              - generic: اعلان، پیامک و ایمیل
+            - link:
+              - /url: /admin/branding
+              - img
+              - generic: هویت بصری
+            - link:
+              - /url: /admin/roles
+              - img
+              - generic: نقش‌ها و مجوزها
+            - link:
+              - /url: /admin/audit
+              - img
+              - generic: گزارش ممیزی
+          - generic:
+            - generic: م‌س
+            - link:
+              - /url: /profile
+              - generic: مدیر سامانه
+              - generic: مدیر سامانه — اداره توسعه بازار
+            - button:
+              - img
+      - generic:
+        - banner:
+          - generic:
+            - generic:
+              - generic:
+                - generic: نمایشگاه نمونه فناوری ۱۴۰۵
+                - generic: DEMO-TECH-1405
+            - generic:
+              - generic: DEMO · داده نمونه
+            - generic:
+              - button:
+                - img
+                - generic: همگام
+        - main:
+          - generic:
+            - generic:
+              - generic:
+                - heading [level=1]: رویدادها
+                - paragraph: هر رویداد تیم، محصولات، مسئولیت‌ها و گزارش مستقل دارد؛ پیکربندی رویداد آینده بدون تغییر کد انجام می‌شود.
+              - generic:
+                - button:
+                  - img
+                  - text: رویداد جدید
+            - radiogroup:
+              - radio [checked]: همه
+              - radio: پیش‌نویس
+              - radio: آماده
+              - radio: فعال
+              - radio: پایان‌یافته
+              - radio: بایگانی
+            - generic:
+              - link:
+                - /url: /admin/events/b4a5f03e-6a0e-41ed-a2b1-931b2e454152
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد آینده (پیش‌نویس)
+                    - generic: DEMO-NEXT-1406
+                  - generic: پیش‌نویس
+                - generic:
+                  - img
+                  - text: مشهد
+                - generic: ۱ دی ۱۴۰۵ تا ۴ دی ۱۴۰۵
+                - generic:
+                  - generic: ۰ عضو
+                  - generic: ۱ محصول
+                  - generic: ۰ ثبت
+              - link:
+                - /url: /admin/events/ba5f91ba-effc-4198-a9d0-f43a3ca0628e
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1JCVA-622
+                    - generic: QA-MVL1JCVA-622
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/76e11ca8-94ac-4472-b940-5ce2e8880875
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد موقت QA-MVL1J8EY-86
+                    - generic: QA-MVL1J8EY-86
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: —
+                - generic: ۱ آبان ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۱ ثبت
+              - link:
+                - /url: /admin/events/8ce60bd8-0577-41b7-b4f1-4e9fc75c44ff
+                - generic:
+                  - generic:
+                    - heading [level=2]: همایش نمونه انرژی هوشمند
+                    - generic: DEMO-ENERGY-1405
+                  - generic: فعال
+                - generic:
+                  - img
+                  - text: اصفهان · مرکز همایش نمونه
+                - generic: ۳۰ مهر ۱۴۰۵ تا ۲ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۴ عضو
+                  - generic: ۳ محصول
+                  - generic: ۱۲ ثبت
+              - link:
+                - /url: /admin/events/bc6d0b1b-dbe7-4c4f-916d-2c2192c69520
+                - generic:
+                  - generic:
+                    - heading [level=2]: نمایشگاه نمونه فناوری ۱۴۰۵
+                    - generic: DEMO-TECH-1405
+                  - generic: فعال
+                - generic:
+                  - img
+                  - text: تهران · سالن نمونه ۳۸
+                - generic: ۲۹ مهر ۱۴۰۵ تا ۳ آبان ۱۴۰۵
+                - generic:
+                  - generic: ۹ عضو
+                  - generic: ۴ محصول
+                  - generic: ۶۳ ثبت
+              - link:
+                - /url: /admin/events/d1ef34ac-c5aa-4594-9e34-e4ea368d14e4
+                - generic:
+                  - generic:
+                    - heading [level=2]: نمایشگاه نمونه ۱۴۰۴
+                    - generic: DEMO-EXPO-1404
+                  - generic: پایان‌یافته
+                - generic:
+                  - img
+                  - text: تهران · سالن نمونه ۳۱
+                - generic: ۲۲ شهریور ۱۴۰۵ تا ۲۵ شهریور ۱۴۰۵
+                - generic:
+                  - generic: ۳ عضو
+                  - generic: ۳ محصول
+                  - generic: ۹ ثبت
+              - link:
+                - /url: /admin/events/df788871-60bd-4b2b-894c-8994e8c9ff1e
+                - generic:
+                  - generic:
+                    - heading [level=2]: رویداد بایگانی‌شده نمونه
+                    - generic: DEMO-OLD-1403
+                  - generic: بایگانی
+                - generic:
+                  - img
+                  - text: شیراز
+                - generic: ۲۷ شهریور ۱۴۰۴ تا ۳۰ شهریور ۱۴۰۴
+                - generic:
+                  - generic: ۱ عضو
+                  - generic: ۱ محصول
+                  - generic: ۰ ثبت
+  - dialog "رویداد جدید" [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - heading "رویداد جدید" [level=2] [ref=e5]
+        - paragraph [ref=e6]: رویداد جدید
+      - button "بستن" [ref=e7]:
+        - img [ref=e8]
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]:
+          - text: کد رویداد (تغییرناپذیر)*
+          - generic [ref=e15]: (الزامی)
+        - textbox "کد رویداد (تغییرناپذیر) (الزامی)" [ref=e16]:
+          - /placeholder: EXPO-1405
+          - text: UI-MVL1JXX7
+        - paragraph [ref=e17]: حروف لاتین، عدد و خط تیره
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - text: نام نمایشی*
+          - generic [ref=e20]: (الزامی)
+        - textbox "نام نمایشی (الزامی)" [active] [ref=e21]: رویداد رابط کاربری UI-MVL1JXX7
+      - generic [ref=e22]:
+        - generic [ref=e23]: شهر
+        - textbox "شهر" [ref=e24]
+      - generic [ref=e25]:
+        - generic [ref=e26]: محل برگزاری
+        - textbox "محل برگزاری" [ref=e27]
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - text: شروع*
+          - generic [ref=e30]: (الزامی)
+        - button "شروع (الزامی)" [ref=e31]:
+          - img [ref=e32]
+          - generic [ref=e34]: انتخاب تاریخ
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - text: پایان*
+          - generic [ref=e37]: (الزامی)
+        - button "پایان (الزامی)" [ref=e38]:
+          - img [ref=e39]
+          - generic [ref=e41]: انتخاب تاریخ
+      - generic [ref=e42]:
+        - generic [ref=e43]: مهلت همگام‌سازی آفلاین پس از پایان (ساعت)
+        - spinbutton "مهلت همگام‌سازی آفلاین پس از پایان (ساعت)" [ref=e44]: "24"
+        - paragraph [ref=e45]: ثبت‌های آفلاینِ زمان رویداد تا این مهلت پذیرفته و پس از آن برای بازبینی مدیر نگه داشته می‌شوند.
+      - generic [ref=e46]:
+        - generic [ref=e47]: SLA پذیرش ارجاع (ساعت، اختیاری)
+        - spinbutton "SLA پذیرش ارجاع (ساعت، اختیاری)" [ref=e48]
+      - generic [ref=e49]:
+        - generic [ref=e50]: توضیحات
+        - textbox "توضیحات" [ref=e51]
+    - generic [ref=e52]:
+      - button "انصراف" [ref=e53]
+      - button "ذخیره" [ref=e54]
+```

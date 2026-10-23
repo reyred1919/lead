@@ -1,0 +1,70 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - img "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [active] [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل ۱۱" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+        - generic [ref=e34]: ۱۱
+      - link "اعلان‌ها ۱۸" [ref=e35] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e36]
+        - generic [ref=e39]: اعلان‌ها
+        - generic [ref=e40]: ۱۸
+      - link "داشبورد تحلیلی" [ref=e41] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e42]
+        - generic [ref=e44]: داشبورد تحلیلی
+      - link "گزارش و خروجی" [ref=e45] [cursor=pointer]:
+        - /url: /reports
+        - img [ref=e46]
+        - generic [ref=e50]: گزارش و خروجی
+      - link "پیام و درخواست اقدام" [ref=e51] [cursor=pointer]:
+        - /url: /messages
+        - img [ref=e52]
+        - generic [ref=e55]: پیام و درخواست اقدام
+    - generic [ref=e56]:
+      - generic [ref=e57]: پ‌ب
+      - link "پرهام برنامه‌ریز مدیر طرح شهر هوشمند" [ref=e58] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e59]: پرهام برنامه‌ریز
+        - generic [ref=e60]: مدیر طرح شهر هوشمند
+      - button "خروج" [ref=e61]:
+        - img [ref=e62]
+  - generic [ref=e65]:
+    - banner [ref=e66]:
+      - generic [ref=e67]:
+        - generic "رویداد فعال" [ref=e69]:
+          - generic [ref=e71]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e72]: DEMO-TECH-1405
+        - generic [ref=e74]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: آفلاین" [ref=e76]':
+          - img [ref=e77]
+          - generic [ref=e81]: آفلاین
+    - main [ref=e82]:
+      - generic [ref=e84]:
+        - img [ref=e86]
+        - heading "اطلاعات رویداد بارگذاری نشد" [level=3] [ref=e90]
+        - paragraph [ref=e91]: این دستگاه آفلاین است و اطلاعات رویداد هنوز روی آن ذخیره نشده است. یک‌بار با اتصال اینترنت وارد شوید تا ثبت آفلاین فعال شود.
+        - button "تلاش دوباره" [ref=e92]
+```

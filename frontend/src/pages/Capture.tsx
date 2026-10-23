@@ -48,6 +48,9 @@ export function useMyEvents() {
   return useQuery({
     queryKey: ["my-events"],
     enabled: !!me,
+    // Offline the default "online" mode pauses the query without data or error, which rendered as
+    // "not a member" (QA-D-19); the query function itself falls back to the encrypted local cache.
+    networkMode: "always",
     queryFn: async () => {
       try {
         const data = await get<MyEvent[]>("/events/mine");
@@ -177,6 +180,17 @@ export function CapturePage() {
   };
 
   if (events.isLoading) return <Card className="p-6"><div className="skeleton h-8 w-1/2 mb-4" /><div className="skeleton h-12 mb-3" /><div className="skeleton h-12" /></Card>;
+  if (!event && events.isError) {
+    // Could not load event context (offline with no cached context, or server error): say so truthfully
+    // instead of claiming the user has no membership (QA-D-19).
+    return (
+      <Card>
+        <EmptyState icon={<CloudOff className="size-6" />} title="اطلاعات رویداد بارگذاری نشد"
+          body={online ? "دریافت رویدادها و محصولات از سرور ناموفق بود. دوباره تلاش کنید." : "این دستگاه آفلاین است و اطلاعات رویداد هنوز روی آن ذخیره نشده است. یک‌بار با اتصال اینترنت وارد شوید تا ثبت آفلاین فعال شود."}
+          action={<Button variant="secondary" onClick={() => events.refetch()}>تلاش دوباره</Button>} />
+      </Card>
+    );
+  }
   if (!event) {
     return (
       <Card>
@@ -224,10 +238,13 @@ export function CapturePage() {
               {captureEvents.map((e) => <option key={e.id} value={e.id}>{e.display_name}</option>)}
             </select>
           ) : (
-            <div className="font-bold text-[16px] truncate flex items-center gap-1.5">{event.display_name}<Lock className="size-3.5 text-muted" aria-label="رویداد قفل‌شده" /></div>
+            <div className="font-bold text-[16px] leading-7 flex items-start gap-1.5">
+              <span className="line-clamp-2 break-words">{event.display_name}</span>
+              <Lock className="size-3.5 text-muted shrink-0 mt-1.5" role="img" aria-label="رویداد قفل‌شده" />
+            </div>
           )}
         </div>
-        <Ltr className="text-[12px] text-muted font-mono bg-line-2 px-2 py-1 rounded-md">{event.code}</Ltr>
+        <Ltr className="hidden sm:inline-block text-[12px] text-muted font-mono bg-line-2 px-2 py-1 rounded-md shrink-0">{event.code}</Ltr>
       </div>
       {!online && (
         <div role="status" className="rounded-[14px] bg-warning-soft text-warning px-4 py-3 text-[13.5px] flex gap-2 items-start"><CloudOff className="size-4 mt-0.5 shrink-0" />آفلاین هستید. ثبت روی همین دستگاه رمزنگاری و ذخیره می‌شود و بعداً ارسال خواهد شد.</div>
@@ -368,9 +385,9 @@ function RecentCaptures({ data }: { data: any }) {
         {items.slice(0, 3).map((r: any) => (
           <li key={r.id}><Link to={`/leads/${r.id}`} className="px-5 py-3 flex items-center gap-3 hover:bg-line-2/50">
             <CheckCircle2 className="size-4 text-success" />
-            <span className="flex-1 min-w-0"><span className="font-semibold">{r.contact_name}</span>{r.account_name && <span className="text-muted text-[13px]"> · {r.account_name}</span>}</span>
+            <span className="flex-1 min-w-0 [overflow-wrap:anywhere]"><span className="font-semibold">{r.contact_name}</span>{r.account_name && <span className="text-muted text-[13px]"> · {r.account_name}</span>}</span>
             <QualityBadge q={r.quality} />
-            <span className="text-[12px] text-muted">{relTime(r.captured_at)}</span>
+            <span className="text-[12px] text-muted shrink-0 whitespace-nowrap">{relTime(r.captured_at)}</span>
           </Link></li>
         ))}
       </ul>

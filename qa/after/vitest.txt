@@ -1,0 +1,10 @@
+
+ RUN  v3.2.7 /home/user/lead/frontend
+
+ ✓ src/lib/offline.test.ts (7 tests) 59ms
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  16:06:03
+   Duration  846ms (transform 137ms, setup 46ms, collect 115ms, tests 59ms, environment 358ms, prepare 69ms)
+

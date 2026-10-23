@@ -1,0 +1,118 @@
+
+Running 67 tests using 2 workers
+
+  ✓   1 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:5:3 › Auth & session › TC-AUTH-01 invalid password shows error, no session (3.8s)
+  ✓   2 [desktop-1440] › qa-e2e/02-capture.spec.ts:23:1 › TC-CAP-01 existing organization chosen from search suggestion (7.6s)
+  ✓   3 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:13:3 › Auth & session › TC-AUTH-02 login then logout clears session and protected routes redirect (7.6s)
+  ✓   5 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:28:3 › Auth & session › TC-AUTH-03 login rate-limit message is shown for HTTP 429 (UI mapping; server limit covered in pytest) (3.3s)
+  ✓   4 [desktop-1440] › qa-e2e/02-capture.spec.ts:39:1 › TC-CAP-02 inline new organization and TC-CAP-05 Persian digits are normalized (7.0s)
+  ✓   6 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:35:3 › Auth & session › TC-AUTH-04 expired session during use redirects to login (4.3s)
+  ✓   7 [desktop-1440] › qa-e2e/02-capture.spec.ts:53:1 › TC-CAP-03 individual without organization; TC-CAP-04 Arabic-Indic digits (5.7s)
+  ✓   8 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login (4.1s)
+  ✓   9 [desktop-1440] › qa-e2e/02-capture.spec.ts:67:1 › TC-CAP-06 validation: required fields, invalid mobile, invalid email (5.0s)
+  ✓  10 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works (7.9s)
+  ✓  11 [desktop-1440] › qa-e2e/02-capture.spec.ts:85:1 › TC-CAP-07 multi-product limited to event offerings, quality and note (6.1s)
+  ✓  12 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:79:3 › Event context › TC-CTX-01 single active membership: event is locked in capture (3.3s)
+  ✓  13 [desktop-1440] › qa-e2e/02-capture.spec.ts:105:1 › TC-CAP-08 rapid consecutive entry with 'next' loop (8.2s)
+  ✓  14 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:87:3 › Event context › TC-CTX-02 two active events: selector switches products and persists across reload (5.3s)
+  ✓  16 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:100:3 › Event context › TC-CTX-03 no membership: capture disabled with explanation (3.0s)
+  ✓  15 [desktop-1440] › qa-e2e/02-capture.spec.ts:125:1 › TC-CAP-09 captured_by stays separate from assignee (default owner mapping) (7.8s)
+  ✓  17 [desktop-1440] › qa-e2e/01-auth-context.spec.ts:109:3 › Event context › TC-CTX-04 only closed/archived events: capture blocked, home explains (6.0s)
+  ✓  18 [desktop-1440] › qa-e2e/02-capture.spec.ts:141:1 › TC-CAP-10 lost response then retry creates exactly one record (idempotency) (8.0s)
+  ✓  20 [desktop-1440] › qa-e2e/02-capture.spec.ts:163:1 › TC-CAP-11 same contact at two events links one contact, shows cross-event history (14.7s)
+  ✓  21 [desktop-1440] › qa-e2e/02-capture.spec.ts:184:1 › TC-CAP-12 keyboard-only capture (5.5s)
+  ✓  22 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:5:3 › Lead lists › TC-LST-01 pagination across >25 leads (4.3s)
+  ✓  19 [desktop-1440] › qa-e2e/03-referral.spec.ts:20:1 › TC-REF-01..05 create → accept → qualify → task → complete (UI on this device) (34.6s)
+  ✓  23 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:18:3 › Lead lists › TC-LST-02 search by name and by Persian-digit mobile fragment (4.6s)
+  ✓  25 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:27:3 › Lead lists › TC-LST-03 filters (quality, stage) and empty state (6.6s)
+  ✓  26 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:38:3 › Lead lists › TC-LST-04 long and mixed-direction names render without overflow (5.9s)
+  ✓  27 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order (4.3s)
+  ✓  24 [desktop-1440] › qa-e2e/03-referral.spec.ts:78:1 › TC-REF-03/04 return with mandatory reason, returned box, reassign keeps history (18.6s)
+  ✓  28 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:63:3 › Lead lists › TC-LST-06 scope: booth specialist sees only own leads (3.9s)
+  ✓  29 [desktop-1440] › qa-e2e/03-referral.spec.ts:111:1 › TC-REF-06 negative: specialist has no referral affordance and API refuses (6.9s)
+  ✓  31 [desktop-1440] › qa-e2e/03-referral.spec.ts:125:1 › TC-REF-08 overdue task is flagged in inbox (8.9s)
+  ✓  30 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:73:3 › Enrichment & opportunity detail › TC-ENR-01 enrichment after event closure with field history (12.8s)
+  ✓  33 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:98:3 › Enrichment & opportunity detail › TC-ENR-02 field-level authorization: viewer & creator read-only (9.3s)
+  ✓  32 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:5:3 › Admin CRUD › TC-ADM-01 create event via UI (Jalali dates), add product and member, activate (17.3s)
+  ✓  34 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:117:3 › Enrichment & opportunity detail › TC-ENR-03 concurrent edit shows conflict instead of overwriting (9.4s)
+  ✓  35 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:48:3 › Admin CRUD › TC-ADM-02 clone event copies configuration, never leads (6.9s)
+  ✓  36 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:138:3 › Enrichment & opportunity detail › TC-ENR-04 tags: add/remove on qualified lead, archived tag label, stage change (9.9s)
+  ✓  37 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:67:3 › Admin CRUD › TC-ADM-03 user creation requires valid mobile; activation link issued (5.9s)
+  ✓  38 [desktop-1440] › qa-e2e/04-leads-enrichment.spec.ts:158:1 › TC-LST-07 unbroken long lead name does not widen Home or Leads (bottom nav stays reachable) (6.0s)
+  ✓  39 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:89:3 › Admin CRUD › TC-ADM-04 tag taxonomy: create, archive; archived not selectable (5.4s)
+  ✓  40 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:5:3 › Exports › TC-EXP-01 JSON export via UI is scoped, versioned and masks unauthorized PII (4.7s)
+  ✓  41 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:107:3 › Admin CRUD › TC-ADM-05 logo upload: SVG rejected, PNG accepted, reset (5.0s)
+  ✓  42 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:23:3 › Exports › TC-EXP-02 CSV keeps Persian text (UTF-8 BOM) and neutralizes formulas (1.6s)
+  ✓  44 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:41:3 › Exports › TC-EXP-03 download link is owner-only (2.8s)
+  ✓  45 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:55:3 › Offline › TC-OFF-01/02 offline capture: encrypted at rest, exactly one sync upload, one record (6.4s)
+  ✓  43 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:132:3 › Notification & action center › TC-NTF-01/02 action request: reading ≠ completing; completion tracked for requester (12.9s)
+  ✓  46 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:88:3 › Offline › TC-OFF-03 switching event while a record is queued never retags it (5.4s)
+  ✓  47 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:172:3 › Notification & action center › TC-NTF-03 mock SMS test send reported as SIMULATED, never delivered (5.7s)
+  ✓  49 [desktop-1440] › qa-e2e/05-admin-notify.spec.ts:182:3 › Notification & action center › TC-NTF-04 delivery log never shows mock attempts as delivered (3.5s)
+  ✓  48 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:109:3 › Offline › TC-OFF-04 logout with pending queue warns; discard wipes device; next user sees nothing (7.5s)
+  ✓  51 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:143:3 › Offline › TC-OFF-05 offline capture synced after closure beyond grace goes to admin review (27.7s)
+  ✘  52 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture (13.3s)
+  ✓  53 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:189:3 › Browser-level security › TC-SEC-01 stored XSS payload in lead fields renders as text (4.7s)
+  ✓  54 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:203:3 › Browser-level security › TC-SEC-02 CSRF required for state-changing API calls (874ms)
+  ✓  55 [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:211:3 › Browser-level security › TC-SEC-03 security headers on API responses (301ms)
+  ✓  50 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe (1.2m)
+  ✓  56 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe (39.9s)
+  ✓  57 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe (37.1s)
+  ✓  58 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe (34.9s)
+  ✓  59 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe (35.2s)
+  ✓  60 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe (39.0s)
+  ✓  61 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX owner: route access, menu affordances, screenshots, overflow, axe (35.7s)
+  ✓  62 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe (35.5s)
+  ✓  63 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe (36.5s)
+  ✓  64 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe (30.4s)
+  ✓  65 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe (31.6s)
+  ✓  66 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts (9.0s)
+  ✓  67 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:143:1 › TC-VIS-JALALI date picker round-trips value and month/year navigation (2.3s)
+
+
+  1) [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#contact_name')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('#contact_name')[22m
+
+
+      180 |   else await press(info, page.locator("nav[aria-label='ناوبری پایین']").getByRole("button", { name: "ثبت لید جدید" }));
+      181 |   await expect(page).toHaveURL(/\/capture/);
+    > 182 |   await expect(page.locator("#contact_name")).toBeVisible();
+          |                                               ^
+      183 |   await expect(page.getByText(/عضو فعال هیچ رویدادی نیستید/)).toHaveCount(0);
+      184 |   await shot(page, info, "planmgr", "/capture", "offline-first-open", "TC-OFF-06");
+      185 |   await context.setOffline(false);
+        at /home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts:182:47
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-desktop-1440/06-export-offline-security-9ff4d--login-still-allows-capture-desktop-1440/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-desktop-1440/06-export-offline-security-9ff4d--login-still-allows-capture-desktop-1440/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/after-desktop-1440/06-export-offline-security-9ff4d--login-still-allows-capture-desktop-1440/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-desktop-1440/06-export-offline-security-9ff4d--login-still-allows-capture-desktop-1440/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/after-desktop-1440/06-export-offline-security-9ff4d--login-still-allows-capture-desktop-1440/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts (7.3m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  1 failed
+    [desktop-1440] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture 
+  66 passed (10.4m)

@@ -1,0 +1,70 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+      - link "داشبورد تحلیلی" [ref=e39] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e40]
+        - generic [ref=e42]: داشبورد تحلیلی
+      - link "گزارش و خروجی" [ref=e43] [cursor=pointer]:
+        - /url: /reports
+        - img [ref=e44]
+        - generic [ref=e48]: گزارش و خروجی
+      - link "پیام و درخواست اقدام" [ref=e49] [cursor=pointer]:
+        - /url: /messages
+        - img [ref=e50]
+        - generic [ref=e53]: پیام و درخواست اقدام
+    - generic [ref=e54]:
+      - generic [ref=e55]: پ‌ب
+      - link "پرهام برنامه‌ریز مدیر طرح شهر هوشمند" [ref=e56] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e57]: پرهام برنامه‌ریز
+        - generic [ref=e58]: مدیر طرح شهر هوشمند
+      - button "خروج" [ref=e59]:
+        - img [ref=e60]
+  - generic [ref=e63]:
+    - banner [ref=e64]:
+      - generic [ref=e65]:
+        - generic "رویداد فعال" [ref=e67]:
+          - generic [ref=e69]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e70]: DEMO-TECH-1405
+        - generic [ref=e72]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: آفلاین" [ref=e74]':
+          - img [ref=e75]
+          - generic [ref=e79]: آفلاین
+    - main [ref=e80]:
+      - generic [ref=e82]:
+        - img [ref=e84]
+        - heading "ثبت لید در دسترس نیست" [level=3] [ref=e87]
+        - paragraph [ref=e88]: شما عضو فعال هیچ رویدادی نیستید. برای ثبت لید، مدیر سامانه باید شما را به تیم رویداد اضافه کند.
+        - link "مشاهده لیدها" [ref=e89] [cursor=pointer]:
+          - /url: /leads
+          - button "مشاهده لیدها" [ref=e90]
+```

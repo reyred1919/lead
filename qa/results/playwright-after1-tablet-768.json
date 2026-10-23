@@ -1,0 +1,3482 @@
+{
+  "config": {
+    "configFile": "/home/user/lead/frontend/qa.config.ts",
+    "rootDir": "/home/user/lead/frontend/qa-e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../qa/results/playwright-after-tablet-768.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/after-tablet-768",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "desktop-1440",
+        "name": "desktop-1440",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/after-tablet-768",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "desktop-1920",
+        "name": "desktop-1920",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/after-tablet-768",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "tablet-768",
+        "name": "tablet-768",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/after-tablet-768",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "tablet-1024",
+        "name": "tablet-1024",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/after-tablet-768",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "mobile-390",
+        "name": "mobile-390",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/home/user/lead/qa/traces/test-output/after-tablet-768",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "mobile-375",
+        "name": "mobile-375",
+        "testDir": "/home/user/lead/frontend/qa-e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 2,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "01-auth-context.spec.ts",
+      "file": "01-auth-context.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Auth & session",
+          "file": "01-auth-context.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-AUTH-01 invalid password shows error, no session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-AUTH-01\",\"role\":\"anonymous\",\"route\":\"/login\",\"action\":\"login invalid\",\"req\":\"§2 auth\",\"expected\":\"error + stays on login\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2652,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:04.516Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-AUTH-01\",\"role\":\"anonymous\",\"route\":\"/login\",\"action\":\"login invalid\",\"req\":\"§2 auth\",\"expected\":\"error + stays on login\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-d075940cda379699e692",
+              "file": "01-auth-context.spec.ts",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC-AUTH-02 login then logout clears session and protected routes redirect",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-AUTH-02\",\"role\":\"specialist1\",\"route\":\"/\",\"action\":\"login/logout\",\"expected\":\"logout returns to /login; /leads redirects\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5778,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:07.280Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-AUTH-02\",\"role\":\"specialist1\",\"route\":\"/\",\"action\":\"login/logout\",\"expected\":\"logout returns to /login; /leads redirects\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-06bb316609cb851cb40d",
+              "file": "01-auth-context.spec.ts",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "TC-AUTH-03 login rate-limit message is shown for HTTP 429 (UI mapping; server limit covered in pytest)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-AUTH-03\",\"role\":\"anonymous\",\"route\":\"/login\",\"action\":\"rate limit UI\",\"expected\":\"Persian throttle message\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2511,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:13.131Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-AUTH-03\",\"role\":\"anonymous\",\"route\":\"/login\",\"action\":\"rate limit UI\",\"expected\":\"Persian throttle message\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-60674709bbf80ab0321f",
+              "file": "01-auth-context.spec.ts",
+              "line": 28,
+              "column": 3
+            },
+            {
+              "title": "TC-AUTH-04 expired session during use redirects to login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-AUTH-04\",\"role\":\"planmgr\",\"route\":\"/leads\",\"action\":\"session expiry\",\"expected\":\"redirect to /login with next\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6612,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:15.658Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-AUTH-04\",\"role\":\"planmgr\",\"route\":\"/leads\",\"action\":\"session expiry\",\"expected\":\"redirect to /login with next\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-ca98616db2df80b4908e",
+              "file": "01-auth-context.spec.ts",
+              "line": 35,
+              "column": 3
+            },
+            {
+              "title": "TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-AUTH-05\",\"role\":\"planmgr\",\"route\":\"/leads→/inbox\",\"action\":\"session expiry SPA\",\"expected\":\"redirect to /login, not an error card\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3142,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:22.322Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-AUTH-05\",\"role\":\"planmgr\",\"route\":\"/leads→/inbox\",\"action\":\"session expiry SPA\",\"expected\":\"redirect to /login, not an error card\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-60a9050640283fb1b8e5",
+              "file": "01-auth-context.spec.ts",
+              "line": 44,
+              "column": 3
+            },
+            {
+              "title": "TC-AUTH-06 activation/reset link: set password, link is single-use, new password works",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-AUTH-06\",\"role\":\"admin→new user\",\"route\":\"/reset-password\",\"action\":\"activation\",\"expected\":\"single-use, new password works\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8086,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:25.499Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-AUTH-06\",\"role\":\"admin→new user\",\"route\":\"/reset-password\",\"action\":\"activation\",\"expected\":\"single-use, new password works\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-74f570b199c5d5d03ac4",
+              "file": "01-auth-context.spec.ts",
+              "line": 53,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Event context",
+          "file": "01-auth-context.spec.ts",
+          "line": 78,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-CTX-01 single active membership: event is locked in capture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CTX-01\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"event context\",\"expected\":\"locked single event\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2658,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:33.602Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-CTX-01\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"event context\",\"expected\":\"locked single event\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-ad96c2842b070e5be0c1",
+              "file": "01-auth-context.spec.ts",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "TC-CTX-02 two active events: selector switches products and persists across reload",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CTX-02\",\"role\":\"qa_dual\",\"route\":\"/capture\",\"action\":\"event selector\",\"expected\":\"products follow selected event; persists in session\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5548,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:36.276Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-CTX-02\",\"role\":\"qa_dual\",\"route\":\"/capture\",\"action\":\"event selector\",\"expected\":\"products follow selected event; persists in session\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-d9aa498de0a79afb38b6",
+              "file": "01-auth-context.spec.ts",
+              "line": 87,
+              "column": 3
+            },
+            {
+              "title": "TC-CTX-03 no membership: capture disabled with explanation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CTX-03\",\"role\":\"qa_nomember\",\"route\":\"/capture\",\"action\":\"capture without membership\",\"expected\":\"disabled + message; API 403\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2312,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:41.848Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-CTX-03\",\"role\":\"qa_nomember\",\"route\":\"/capture\",\"action\":\"capture without membership\",\"expected\":\"disabled + message; API 403\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-f6cd34ae522c6929be8b",
+              "file": "01-auth-context.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "TC-CTX-04 only closed/archived events: capture blocked, home explains",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CTX-04\",\"role\":\"qa_closed\",\"route\":\"/\",\"action\":\"closed event context\",\"expected\":\"no active event; capture unavailable\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4598,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:13:44.221Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-CTX-04\",\"role\":\"qa_closed\",\"route\":\"/\",\"action\":\"closed event context\",\"expected\":\"no active event; capture unavailable\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3197b39ab1c0cac3d32d-cbbc51ee77b7497f3810",
+              "file": "01-auth-context.spec.ts",
+              "line": 109,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "02-capture.spec.ts",
+      "file": "02-capture.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-CAP-01 existing organization chosen from search suggestion",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-01\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"capture existing org\",\"req\":\"§5\",\"expected\":\"linked to existing account\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 4457,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:04.487Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-01\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"capture existing org\",\"req\":\"§5\",\"expected\":\"linked to existing account\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-932902294c5a88748d12",
+          "file": "02-capture.spec.ts",
+          "line": 29,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-02 inline new organization and TC-CAP-05 Persian digits are normalized",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-02\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"capture new org + Persian digits\",\"expected\":\"new account; mobile +98\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 6652,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:09.117Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-02\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"capture new org + Persian digits\",\"expected\":\"new account; mobile +98\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-3c4435b6232c4a4aea64",
+          "file": "02-capture.spec.ts",
+          "line": 56,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-03 individual without organization; TC-CAP-04 Arabic-Indic digits",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-03\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"individual\",\"expected\":\"no account\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 8141,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:15.792Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-03\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"individual\",\"expected\":\"no account\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-914e0ccda018868ff4cd",
+          "file": "02-capture.spec.ts",
+          "line": 76,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-06 validation: required fields, invalid mobile, invalid email",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-06\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"validation\",\"expected\":\"inline errors, no submit\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5911,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:23.983Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-06\",\"role\":\"specialist1\",\"route\":\"/capture\",\"action\":\"validation\",\"expected\":\"inline errors, no submit\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-f850e9316df8fe3f0ee8",
+          "file": "02-capture.spec.ts",
+          "line": 98,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-07 multi-product limited to event offerings, quality and note",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-07\",\"role\":\"dg\",\"route\":\"/capture\",\"action\":\"multi-product capture by DG\",\"req\":\"§21\",\"expected\":\"2 products, only event offerings\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5681,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:29.923Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-07\",\"role\":\"dg\",\"route\":\"/capture\",\"action\":\"multi-product capture by DG\",\"req\":\"§21\",\"expected\":\"2 products, only event offerings\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-0c69b4980876ad2c746f",
+          "file": "02-capture.spec.ts",
+          "line": 124,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-08 rapid consecutive entry with 'next' loop",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-08\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"3 consecutive captures\",\"expected\":\"3 distinct leads, form resets\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7513,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:35.641Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-08\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"3 consecutive captures\",\"expected\":\"3 distinct leads, form resets\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-7c4b3fef3c9259792728",
+          "file": "02-capture.spec.ts",
+          "line": 159,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-09 captured_by stays separate from assignee (default owner mapping)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-09\",\"role\":\"specialist1\",\"route\":\"/leads/:id\",\"action\":\"creator vs owner\",\"req\":\"§21\",\"expected\":\"creator=specialist, pending referral to product owner\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5018,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:43.165Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-09\",\"role\":\"specialist1\",\"route\":\"/leads/:id\",\"action\":\"creator vs owner\",\"req\":\"§21\",\"expected\":\"creator=specialist, pending referral to product owner\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-fcd8970fcf52aab6e77e",
+          "file": "02-capture.spec.ts",
+          "line": 189,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-10 lost response then retry creates exactly one record (idempotency)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-10\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"network loss after server commit\",\"expected\":\"queued then DUPLICATE on sync, one record\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7831,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:48.196Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-10\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"network loss after server commit\",\"expected\":\"queued then DUPLICATE on sync, one record\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-d31d7af728db0e8feeb5",
+          "file": "02-capture.spec.ts",
+          "line": 216,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-11 same contact at two events links one contact, shows cross-event history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-CAP-11\",\"role\":\"qa_dual\",\"route\":\"/leads/:id\",\"action\":\"repeat encounter\",\"expected\":\"same contact id, other interaction listed\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 12163,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:56.048Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-CAP-11\",\"role\":\"qa_dual\",\"route\":\"/leads/:id\",\"action\":\"repeat encounter\",\"expected\":\"same contact id, other interaction listed\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-fd348de9441ed67ff83c",
+          "file": "02-capture.spec.ts",
+          "line": 250,
+          "column": 1
+        },
+        {
+          "title": "TC-CAP-12 keyboard-only capture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "keyboard path verified on desktop projects",
+                  "location": {
+                    "file": "/home/user/lead/frontend/qa-e2e/02-capture.spec.ts",
+                    "line": 185,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 317,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:14:08.224Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "keyboard path verified on desktop projects",
+                      "location": {
+                        "file": "/home/user/lead/frontend/qa-e2e/02-capture.spec.ts",
+                        "line": 185,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "cbab70c5aca541e7a7ad-933ad25ec5d775d9e8a9",
+          "file": "02-capture.spec.ts",
+          "line": 283,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "03-referral.spec.ts",
+      "file": "03-referral.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-REF-01..05 create → accept → qualify → task → complete (UI on this device)",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-REF-01\",\"role\":\"mdm→planmgr\",\"route\":\"/leads/:id\",\"action\":\"referral lifecycle\",\"req\":\"§7\",\"expected\":\"full lifecycle on device\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 37375,
+                  "error": {
+                    "message": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ/ })\u001b[22m\n",
+                    "stack": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ/ })\u001b[22m\n\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)\n    at /home/user/lead/frontend/qa-e2e/03-referral.spec.ts:56:9",
+                    "location": {
+                      "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                      "column": 13,
+                      "line": 24
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39msupport.ts:24\n\n  22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */\n  23 | export async function press(info: TestInfo, loc: Locator) {\n> 24 |   await loc.scrollIntoViewIfNeeded();\n     |             ^\n  25 |   if (isTouch(info)) await loc.tap();\n  26 |   else await loc.click();\n  27 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                        "column": 13,
+                        "line": 24
+                      },
+                      "message": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ/ })\u001b[22m\n\n\n   at support.ts:24\n\n  22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */\n  23 | export async function press(info: TestInfo, loc: Locator) {\n> 24 |   await loc.scrollIntoViewIfNeeded();\n     |             ^\n  25 |   if (isTouch(info)) await loc.tap();\n  26 |   else await loc.click();\n  27 | }\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)\n    at /home/user/lead/frontend/qa-e2e/03-referral.spec.ts:56:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:13:48.852Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-REF-01\",\"role\":\"mdm→planmgr\",\"route\":\"/leads/:id\",\"action\":\"referral lifecycle\",\"req\":\"§7\",\"expected\":\"full lifecycle on device\"}"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-768/test-failed-2.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-768/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-768/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-768/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                    "column": 13,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9d43fab454d4bdfea1ba-fdb9ad86a15ef724b259",
+          "file": "03-referral.spec.ts",
+          "line": 20,
+          "column": 1
+        },
+        {
+          "title": "TC-REF-03/04 return with mandatory reason, returned box, reassign keeps history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-REF-03\",\"role\":\"mdm→owner→planmgr\",\"route\":\"/inbox\",\"action\":\"return + reassign\",\"expected\":\"reason required; history kept\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 15037,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:14:28.385Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-REF-03\",\"role\":\"mdm→owner→planmgr\",\"route\":\"/inbox\",\"action\":\"return + reassign\",\"expected\":\"reason required; history kept\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d43fab454d4bdfea1ba-6fb9c4d0b80a590a9177",
+          "file": "03-referral.spec.ts",
+          "line": 78,
+          "column": 1
+        },
+        {
+          "title": "TC-REF-06 negative: specialist has no referral affordance and API refuses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-REF-06\",\"role\":\"specialist1\",\"route\":\"/leads/:id\",\"action\":\"refer (forbidden)\",\"expected\":\"no button; API 403\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6982,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:14:43.556Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-REF-06\",\"role\":\"specialist1\",\"route\":\"/leads/:id\",\"action\":\"refer (forbidden)\",\"expected\":\"no button; API 403\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d43fab454d4bdfea1ba-2e1e6640ccefa783a398",
+          "file": "03-referral.spec.ts",
+          "line": 111,
+          "column": 1
+        },
+        {
+          "title": "TC-REF-08 overdue task is flagged in inbox",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-REF-08\",\"role\":\"planmgr\",\"route\":\"/inbox?tab=tasks\",\"action\":\"overdue\",\"expected\":\"معوق badge\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:14:50.552Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-REF-08\",\"role\":\"planmgr\",\"route\":\"/inbox?tab=tasks\",\"action\":\"overdue\",\"expected\":\"معوق badge\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9d43fab454d4bdfea1ba-a8da07243429d084eae7",
+          "file": "03-referral.spec.ts",
+          "line": 125,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "04-leads-enrichment.spec.ts",
+      "file": "04-leads-enrichment.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-LST-07 unbroken long lead name does not widen Home or Leads (bottom nav stays reachable)",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-LST-07\",\"role\":\"specialist1\",\"route\":\"/ + /leads\",\"action\":\"long unbroken name\",\"req\":\"§20 RTL/responsive\",\"expected\":\"no horizontal overflow\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 7477,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:15:29.477Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-LST-07\",\"role\":\"specialist1\",\"route\":\"/ + /leads\",\"action\":\"long unbroken name\",\"req\":\"§20 RTL/responsive\",\"expected\":\"no horizontal overflow\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8280253eb2671475a083-ac4e6320d5695aa8fcd5",
+          "file": "04-leads-enrichment.spec.ts",
+          "line": 158,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "Lead lists",
+          "file": "04-leads-enrichment.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-LST-01 pagination across >25 leads",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-LST-01\",\"role\":\"admin\",\"route\":\"/leads\",\"action\":\"paginate\",\"expected\":\"page 2 differs from page 1\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 18795,
+                      "error": {
+                        "message": "TimeoutError: locator.tap: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'صفحه بعد' })\u001b[22m\n\u001b[2m    - locator resolved to <button aria-label=\"صفحه بعد\" class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-[background,box-shadow,color,transform] duration-150 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none text-ink-2 hover:bg-line-2 h-9 w-9 rounded-[10px]\">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <button aria-label=\"بیشتر\" class=\"flex flex-col items-center gap-0.5 text-[11px] text-muted\">…</button> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    7 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button aria-label=\"بیشتر\" class=\"flex flex-col items-center gap-0.5 text-[11px] text-muted\">…</button> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n",
+                        "stack": "TimeoutError: locator.tap: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'صفحه بعد' })\u001b[22m\n\u001b[2m    - locator resolved to <button aria-label=\"صفحه بعد\" class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-[background,box-shadow,color,transform] duration-150 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none text-ink-2 hover:bg-line-2 h-9 w-9 rounded-[10px]\">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <button aria-label=\"بیشتر\" class=\"flex flex-col items-center gap-0.5 text-[11px] text-muted\">…</button> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    7 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button aria-label=\"بیشتر\" class=\"flex flex-col items-center gap-0.5 text-[11px] text-muted\">…</button> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:25:32)\n    at /home/user/lead/frontend/qa-e2e/04-leads-enrichment.spec.ts:12:5",
+                        "location": {
+                          "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                          "column": 32,
+                          "line": 25
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39msupport.ts:25\n\n  23 | export async function press(info: TestInfo, loc: Locator) {\n  24 |   await loc.scrollIntoViewIfNeeded();\n> 25 |   if (isTouch(info)) await loc.tap();\n     |                                ^\n  26 |   else await loc.click();\n  27 | }\n  28 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                            "column": 32,
+                            "line": 25
+                          },
+                          "message": "TimeoutError: locator.tap: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'صفحه بعد' })\u001b[22m\n\u001b[2m    - locator resolved to <button aria-label=\"صفحه بعد\" class=\"inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-[background,box-shadow,color,transform] duration-150 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none text-ink-2 hover:bg-line-2 h-9 w-9 rounded-[10px]\">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying tap action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <button aria-label=\"بیشتر\" class=\"flex flex-col items-center gap-0.5 text-[11px] text-muted\">…</button> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying tap action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    7 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button aria-label=\"بیشتر\" class=\"flex flex-col items-center gap-0.5 text-[11px] text-muted\">…</button> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"grid grid-cols-5 h-16 items-center\">…</div> from <nav aria-label=\"ناوبری پایین\" class=\"lg:hidden fixed bottom-0 inset-x-0 z-40 glass border-t border-line pb-[env(safe-area-inset-bottom)]\">…</nav> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying tap action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\n\n   at support.ts:25\n\n  23 | export async function press(info: TestInfo, loc: Locator) {\n  24 |   await loc.scrollIntoViewIfNeeded();\n> 25 |   if (isTouch(info)) await loc.tap();\n     |                                ^\n  26 |   else await loc.click();\n  27 | }\n  28 |\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:25:32)\n    at /home/user/lead/frontend/qa-e2e/04-leads-enrichment.spec.ts:12:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:08.580Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-LST-01\",\"role\":\"admin\",\"route\":\"/leads\",\"action\":\"paginate\",\"expected\":\"page 2 differs from page 1\"}"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/04-leads-enrichment-Lead-l-80fba--pagination-across-25-leads-tablet-768/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                        "column": 32,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "8280253eb2671475a083-6d7d63cd2fb6f803f61d",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC-LST-02 search by name and by Persian-digit mobile fragment",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-LST-02\",\"role\":\"qa_dual\",\"route\":\"/leads\",\"action\":\"search\",\"expected\":\"matches by name and digits\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 4207,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:29.058Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-LST-02\",\"role\":\"qa_dual\",\"route\":\"/leads\",\"action\":\"search\",\"expected\":\"matches by name and digits\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-d619d87e3940ccce12fe",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "TC-LST-03 filters (quality, stage) and empty state",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-LST-03\",\"role\":\"mdm\",\"route\":\"/leads\",\"action\":\"filter + empty\",\"expected\":\"filtered rows; empty-state copy\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5442,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:33.429Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-LST-03\",\"role\":\"mdm\",\"route\":\"/leads\",\"action\":\"filter + empty\",\"expected\":\"filtered rows; empty-state copy\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-cdc6a6619d65d4fd1208",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 27,
+              "column": 3
+            },
+            {
+              "title": "TC-LST-04 long and mixed-direction names render without overflow",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-LST-04\",\"role\":\"qa_dual\",\"route\":\"/leads + /leads/:id\",\"action\":\"long text\",\"expected\":\"no horizontal overflow; LTR isolation\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5984,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:38.962Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-LST-04\",\"role\":\"qa_dual\",\"route\":\"/leads + /leads/:id\",\"action\":\"long text\",\"expected\":\"no horizontal overflow; LTR isolation\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-08146af498e42898efcd",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "TC-LST-05 sorting control exists and changes order",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-LST-05\",\"role\":\"admin\",\"route\":\"/leads\",\"action\":\"sort\",\"req\":\"QA Phase B.5\",\"expected\":\"user can sort list\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5541,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:44.977Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-LST-05\",\"role\":\"admin\",\"route\":\"/leads\",\"action\":\"sort\",\"req\":\"QA Phase B.5\",\"expected\":\"user can sort list\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-b8938a4b5964bf3423d1",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 54,
+              "column": 3
+            },
+            {
+              "title": "TC-LST-06 scope: booth specialist sees only own leads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-LST-06\",\"role\":\"specialist2\",\"route\":\"/leads\",\"action\":\"row scope\",\"expected\":\"all rows created by self\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3743,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:50.540Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-LST-06\",\"role\":\"specialist2\",\"route\":\"/leads\",\"action\":\"row scope\",\"expected\":\"all rows created by self\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-a8d2cad1ba1d5495f0fa",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 63,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Enrichment & opportunity detail",
+          "file": "04-leads-enrichment.spec.ts",
+          "line": 72,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-ENR-01 enrichment after event closure with field history",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ENR-01\",\"role\":\"planmgr\",\"route\":\"/leads/:id\",\"action\":\"enrich closed-event lead\",\"req\":\"§15\",\"expected\":\"saved; history from→to\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 11450,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:54.312Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ENR-01\",\"role\":\"planmgr\",\"route\":\"/leads/:id\",\"action\":\"enrich closed-event lead\",\"req\":\"§15\",\"expected\":\"saved; history from→to\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-7a2d9aef550bfb384339",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 73,
+              "column": 3
+            },
+            {
+              "title": "TC-ENR-02 field-level authorization: viewer & creator read-only",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ENR-02\",\"role\":\"exec/specialist1\",\"route\":\"/leads/:id\",\"action\":\"enrich forbidden\",\"expected\":\"no edit affordance; API 403; masked PII for exec\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 8388,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:05.781Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ENR-02\",\"role\":\"exec/specialist1\",\"route\":\"/leads/:id\",\"action\":\"enrich forbidden\",\"expected\":\"no edit affordance; API 403; masked PII for exec\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-88f1b727225e8a1b7d5b",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 98,
+              "column": 3
+            },
+            {
+              "title": "TC-ENR-03 concurrent edit shows conflict instead of overwriting",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ENR-03\",\"role\":\"planmgr vs mdm\",\"route\":\"/leads/:id\",\"action\":\"conflict\",\"expected\":\"409 surfaced; no silent overwrite\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6852,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:14.182Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ENR-03\",\"role\":\"planmgr vs mdm\",\"route\":\"/leads/:id\",\"action\":\"conflict\",\"expected\":\"409 surfaced; no silent overwrite\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-acecfc6b21d3d783ff5a",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 117,
+              "column": 3
+            },
+            {
+              "title": "TC-ENR-04 tags: add/remove on qualified lead, archived tag label, stage change",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ENR-04\",\"role\":\"planmgr\",\"route\":\"/leads/:id\",\"action\":\"tags + stage\",\"req\":\"§23.3\",\"expected\":\"chips update; history\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 8423,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:21.044Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ENR-04\",\"role\":\"planmgr\",\"route\":\"/leads/:id\",\"action\":\"tags + stage\",\"req\":\"§23.3\",\"expected\":\"chips update; history\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "8280253eb2671475a083-193a2b88b0defdfe994a",
+              "file": "04-leads-enrichment.spec.ts",
+              "line": 138,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "05-admin-notify.spec.ts",
+      "file": "05-admin-notify.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin CRUD",
+          "file": "05-admin-notify.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-ADM-01 create event via UI (Jalali dates), add product and member, activate",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ADM-01\",\"role\":\"admin\",\"route\":\"/admin/events\",\"action\":\"create+activate event\",\"expected\":\"ACTIVE event with product & member\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 19494,
+                      "error": {
+                        "message": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ|^شروع$|^پایان$/ }).first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ|^شروع$|^پایان$/ }).first()\u001b[22m\n\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)\n    at /home/user/lead/frontend/qa-e2e/05-admin-notify.spec.ts:14:13",
+                        "location": {
+                          "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                          "column": 13,
+                          "line": 24
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39msupport.ts:24\n\n  22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */\n  23 | export async function press(info: TestInfo, loc: Locator) {\n> 24 |   await loc.scrollIntoViewIfNeeded();\n     |             ^\n  25 |   if (isTouch(info)) await loc.tap();\n  26 |   else await loc.click();\n  27 | }"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                            "column": 13,
+                            "line": 24
+                          },
+                          "message": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ|^شروع$|^پایان$/ }).first()\u001b[22m\n\n\n   at support.ts:24\n\n  22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */\n  23 | export async function press(info: TestInfo, loc: Locator) {\n> 24 |   await loc.scrollIntoViewIfNeeded();\n     |             ^\n  25 |   if (isTouch(info)) await loc.tap();\n  26 |   else await loc.click();\n  27 | }\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)\n    at /home/user/lead/frontend/qa-e2e/05-admin-notify.spec.ts:14:13"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:14:56.667Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ADM-01\",\"role\":\"admin\",\"route\":\"/admin/events\",\"action\":\"create+activate event\",\"expected\":\"ACTIVE event with product & member\"}"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-768/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-768/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-768/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-768/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                        "column": 13,
+                        "line": 24
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-cc6c873a900a343efc46",
+              "file": "05-admin-notify.spec.ts",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC-ADM-02 clone event copies configuration, never leads",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ADM-02\",\"role\":\"admin\",\"route\":\"/admin/events/:id\",\"action\":\"clone\",\"expected\":\"DRAFT clone, 0 interactions\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4598,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:18.314Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ADM-02\",\"role\":\"admin\",\"route\":\"/admin/events/:id\",\"action\":\"clone\",\"expected\":\"DRAFT clone, 0 interactions\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-2c1a05b8011f079c5072",
+              "file": "05-admin-notify.spec.ts",
+              "line": 48,
+              "column": 3
+            },
+            {
+              "title": "TC-ADM-03 user creation requires valid mobile; activation link issued",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ADM-03\",\"role\":\"admin\",\"route\":\"/admin/users\",\"action\":\"create user\",\"expected\":\"mobile required; normalized; activation\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6825,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:23.173Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ADM-03\",\"role\":\"admin\",\"route\":\"/admin/users\",\"action\":\"create user\",\"expected\":\"mobile required; normalized; activation\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-e03c6f900f0fb9e0da81",
+              "file": "05-admin-notify.spec.ts",
+              "line": 67,
+              "column": 3
+            },
+            {
+              "title": "TC-ADM-04 tag taxonomy: create, archive; archived not selectable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ADM-04\",\"role\":\"mdm\",\"route\":\"/admin/tags\",\"action\":\"tag CRUD\",\"req\":\"§23.2\",\"expected\":\"archived hidden from active list\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6325,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:30.019Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ADM-04\",\"role\":\"mdm\",\"route\":\"/admin/tags\",\"action\":\"tag CRUD\",\"req\":\"§23.2\",\"expected\":\"archived hidden from active list\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-cc38b8bcba6ddbfd5631",
+              "file": "05-admin-notify.spec.ts",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "TC-ADM-05 logo upload: SVG rejected, PNG accepted, reset",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-ADM-05\",\"role\":\"admin\",\"route\":\"/admin/branding\",\"action\":\"logo upload\",\"req\":\"§23.1\",\"expected\":\"SVG rejected with message; PNG shown\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6924,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:36.362Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-ADM-05\",\"role\":\"admin\",\"route\":\"/admin/branding\",\"action\":\"logo upload\",\"req\":\"§23.1\",\"expected\":\"SVG rejected with message; PNG shown\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-0059abd7c374e071f2a3",
+              "file": "05-admin-notify.spec.ts",
+              "line": 107,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Notification & action center",
+          "file": "05-admin-notify.spec.ts",
+          "line": 131,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-NTF-01/02 action request: reading ≠ completing; completion tracked for requester",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-NTF-02\",\"role\":\"mdm→specialist2\",\"route\":\"/messages + /inbox\",\"action\":\"action request\",\"req\":\"§17\",\"expected\":\"stays OPEN after read; DONE after explicit action\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 14427,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:43.301Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-NTF-02\",\"role\":\"mdm→specialist2\",\"route\":\"/messages + /inbox\",\"action\":\"action request\",\"req\":\"§17\",\"expected\":\"stays OPEN after read; DONE after explicit action\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-62c93752cf071d2c88f3",
+              "file": "05-admin-notify.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "TC-NTF-03 mock SMS test send reported as SIMULATED, never delivered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-NTF-03\",\"role\":\"admin\",\"route\":\"/admin/notify\",\"action\":\"provider test\",\"req\":\"§22.5\",\"expected\":\"SIMULATED wording\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4812,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:57.744Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-NTF-03\",\"role\":\"admin\",\"route\":\"/admin/notify\",\"action\":\"provider test\",\"req\":\"§22.5\",\"expected\":\"SIMULATED wording\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-69c1497302aa8e7e49e6",
+              "file": "05-admin-notify.spec.ts",
+              "line": 172,
+              "column": 3
+            },
+            {
+              "title": "TC-NTF-04 delivery log never shows mock attempts as delivered",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-NTF-04\",\"role\":\"admin\",\"route\":\"/admin/notify\",\"action\":\"logs\",\"expected\":\"SMS rows SIMULATED/SKIPPED/FAILED only\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3363,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:16:02.566Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-NTF-04\",\"role\":\"admin\",\"route\":\"/admin/notify\",\"action\":\"logs\",\"expected\":\"SMS rows SIMULATED/SKIPPED/FAILED only\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0e90110c9654c7f110fe-f934676e6fabd58f3d8e",
+              "file": "05-admin-notify.spec.ts",
+              "line": 182,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "06-export-offline-security.spec.ts",
+      "file": "06-export-offline-security.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-OFF-06 first visit to capture while offline (after online login) still allows capture",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-OFF-06\",\"role\":\"planmgr\",\"route\":\"/capture\",\"action\":\"offline first open\",\"req\":\"§22.4\",\"expected\":\"form with event products, not 'no membership'\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 13495,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#contact_name')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#contact_name')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#contact_name')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#contact_name')\u001b[22m\n\n    at /home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts:182:47",
+                    "location": {
+                      "file": "/home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts",
+                      "column": 47,
+                      "line": 182
+                    },
+                    "snippet": "  180 |   else await press(info, page.locator(\"nav[aria-label='ناوبری پایین']\").getByRole(\"button\", { name: \"ثبت لید جدید\" }));\n  181 |   await expect(page).toHaveURL(/\\/capture/);\n> 182 |   await expect(page.locator(\"#contact_name\")).toBeVisible();\n      |                                               ^\n  183 |   await expect(page.getByText(/عضو فعال هیچ رویدادی نیستید/)).toHaveCount(0);\n  184 |   await shot(page, info, \"planmgr\", \"/capture\", \"offline-first-open\", \"TC-OFF-06\");\n  185 |   await context.setOffline(false);"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts",
+                        "column": 47,
+                        "line": 182
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#contact_name')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#contact_name')\u001b[22m\n\n\n  180 |   else await press(info, page.locator(\"nav[aria-label='ناوبری پایین']\").getByRole(\"button\", { name: \"ثبت لید جدید\" }));\n  181 |   await expect(page).toHaveURL(/\\/capture/);\n> 182 |   await expect(page.locator(\"#contact_name\")).toBeVisible();\n      |                                               ^\n  183 |   await expect(page.getByText(/عضو فعال هیچ رویدادی نیستید/)).toHaveCount(0);\n  184 |   await shot(page, info, \"planmgr\", \"/capture\", \"offline-first-open\", \"TC-OFF-06\");\n  185 |   await context.setOffline(false);\n    at /home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts:182:47"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:16:36.330Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-OFF-06\",\"role\":\"planmgr\",\"route\":\"/capture\",\"action\":\"offline first open\",\"req\":\"§22.4\",\"expected\":\"form with event products, not 'no membership'\"}"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-768/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts",
+                    "column": 47,
+                    "line": 182
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "bc3b01da45ea698b74bb-b6b0f42b93bbb9d4fe77",
+          "file": "06-export-offline-security.spec.ts",
+          "line": 173,
+          "column": 1
+        }
+      ],
+      "suites": [
+        {
+          "title": "Exports",
+          "file": "06-export-offline-security.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-EXP-01 JSON export via UI is scoped, versioned and masks unauthorized PII",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-EXP-01\",\"role\":\"planmgr\",\"route\":\"/reports\",\"action\":\"export JSON\",\"req\":\"§16\",\"expected\":\"schema 1.0; only in-scope events\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5909,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:36.984Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-EXP-01\",\"role\":\"planmgr\",\"route\":\"/reports\",\"action\":\"export JSON\",\"req\":\"§16\",\"expected\":\"schema 1.0; only in-scope events\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-604d4515933c6c44f447",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "TC-EXP-02 CSV keeps Persian text (UTF-8 BOM) and neutralizes formulas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-EXP-02\",\"role\":\"mdm\",\"route\":\"/reports\",\"action\":\"export CSV\",\"expected\":\"BOM; =,+,-,@ prefixed\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1599,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:42.905Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-EXP-02\",\"role\":\"mdm\",\"route\":\"/reports\",\"action\":\"export CSV\",\"expected\":\"BOM; =,+,-,@ prefixed\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-c88463d1974e8133dad9",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 23,
+              "column": 3
+            },
+            {
+              "title": "TC-EXP-03 download link is owner-only",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-EXP-03\",\"role\":\"mdm vs dg\",\"route\":\"/api/v1/exports/:id/download\",\"action\":\"cross-user download\",\"expected\":\"404 for non-owner\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 3196,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:44.529Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-EXP-03\",\"role\":\"mdm vs dg\",\"route\":\"/api/v1/exports/:id/download\",\"action\":\"cross-user download\",\"expected\":\"404 for non-owner\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-9cbdd523835f48940795",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 41,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Offline",
+          "file": "06-export-offline-security.spec.ts",
+          "line": 54,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-OFF-01/02 offline capture: encrypted at rest, exactly one sync upload, one record",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-OFF-01\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"offline→online\",\"req\":\"§22.4\",\"expected\":\"1 sync request, 1 record, no plaintext PII in IndexedDB\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 6892,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:47.741Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-OFF-01\",\"role\":\"specialist2\",\"route\":\"/capture\",\"action\":\"offline→online\",\"req\":\"§22.4\",\"expected\":\"1 sync request, 1 record, no plaintext PII in IndexedDB\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-55d65958472fb6418060",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "TC-OFF-03 switching event while a record is queued never retags it",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-OFF-03\",\"role\":\"qa_dual\",\"route\":\"/capture\",\"action\":\"switch event while queued\",\"expected\":\"record keeps original event\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5166,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:54.645Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-OFF-03\",\"role\":\"qa_dual\",\"route\":\"/capture\",\"action\":\"switch event while queued\",\"expected\":\"record keeps original event\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-eeefc9258228cb1a1d5c",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 88,
+              "column": 3
+            },
+            {
+              "title": "TC-OFF-04 logout with pending queue warns; discard wipes device; next user sees nothing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-OFF-04\",\"role\":\"specialist2→specialist1\",\"route\":\"/\",\"action\":\"logout wipe\",\"expected\":\"warning; IndexedDB empty; no cross-account leakage\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 7097,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:15:59.844Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-OFF-04\",\"role\":\"specialist2→specialist1\",\"route\":\"/\",\"action\":\"logout wipe\",\"expected\":\"warning; IndexedDB empty; no cross-account leakage\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-d8f833a2d1257d195174",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "TC-OFF-05 offline capture synced after closure beyond grace goes to admin review",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-OFF-05\",\"role\":\"qa_dual + admin\",\"route\":\"/capture/queue + /admin/quarantine\",\"action\":\"closure grace\",\"expected\":\"QUARANTINED, approvable, original event\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 29353,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:16:06.963Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-OFF-05\",\"role\":\"qa_dual + admin\",\"route\":\"/capture/queue + /admin/quarantine\",\"action\":\"closure grace\",\"expected\":\"QUARANTINED, approvable, original event\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-0fb99af391f3be3ec6fa",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 143,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Browser-level security",
+          "file": "06-export-offline-security.spec.ts",
+          "line": 188,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-SEC-01 stored XSS payload in lead fields renders as text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-SEC-01\",\"role\":\"specialist1\",\"route\":\"/leads/:id\",\"action\":\"XSS\",\"expected\":\"no script execution\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5699,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:16:50.968Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-SEC-01\",\"role\":\"specialist1\",\"route\":\"/leads/:id\",\"action\":\"XSS\",\"expected\":\"no script execution\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-e5cfbb0e5d5f3fad3fba",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 189,
+              "column": 3
+            },
+            {
+              "title": "TC-SEC-02 CSRF required for state-changing API calls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-SEC-02\",\"role\":\"specialist1\",\"route\":\"/api/v1/interactions\",\"action\":\"POST without CSRF\",\"expected\":\"403\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 561,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:16:56.772Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-SEC-02\",\"role\":\"specialist1\",\"route\":\"/api/v1/interactions\",\"action\":\"POST without CSRF\",\"expected\":\"403\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-07257c9a9b9bce8d31ed",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 203,
+              "column": 3
+            },
+            {
+              "title": "TC-SEC-03 security headers on API responses",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-SEC-03\",\"role\":\"anonymous\",\"route\":\"/api/v1/branding\",\"action\":\"headers\",\"expected\":\"nosniff, DENY\"}"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "tablet-768",
+                  "projectName": "tablet-768",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 374,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-23T14:16:57.342Z",
+                      "annotations": [
+                        {
+                          "type": "case",
+                          "description": "{\"id\":\"TC-SEC-03\",\"role\":\"anonymous\",\"route\":\"/api/v1/branding\",\"action\":\"headers\",\"expected\":\"nosniff, DENY\"}"
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "bc3b01da45ea698b74bb-d19472fc81f8c46f748b",
+              "file": "06-export-offline-security.spec.ts",
+              "line": 211,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "07-matrix-visual.spec.ts",
+      "file": "07-matrix-visual.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC-MTX admin: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-admin\",\"role\":\"admin\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 79604,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:16:06.268Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-admin\",\"role\":\"admin\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-4c681f32f94c5da7f394",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-mdm\",\"role\":\"mdm\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 46812,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:17:25.898Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-mdm\",\"role\":\"mdm\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-1cf254e52a225916741d",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX dg: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-dg\",\"role\":\"dg\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 41098,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:18:12.727Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-dg\",\"role\":\"dg\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-8f90454e759ba66426aa",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX exec: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-exec\",\"role\":\"exec\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38908,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:18:53.835Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-exec\",\"role\":\"exec\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-90a683df80d91a6902f3",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-evmgr\",\"role\":\"evmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39391,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:19:32.754Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-evmgr\",\"role\":\"evmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-f248ae3af7bdfe43924f",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-planmgr\",\"role\":\"planmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 44258,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:20:12.159Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-planmgr\",\"role\":\"planmgr\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-c46bf74169f5fc1f5f52",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX owner: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-owner\",\"role\":\"owner\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39342,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:20:56.437Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-owner\",\"role\":\"owner\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-633e2a009b6ca8ae2c27",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-specialist1\",\"role\":\"specialist1\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38620,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:21:35.790Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-specialist1\",\"role\":\"specialist1\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-2e569c930037526f4bb7",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-qa_dual\",\"role\":\"qa_dual\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 51871,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:22:14.433Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-qa_dual\",\"role\":\"qa_dual\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-40e2967a3fc2052ff8b4",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-qa_nomember\",\"role\":\"qa_nomember\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 39734,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:23:06.317Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-qa_nomember\",\"role\":\"qa_nomember\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-64598eabfffa5ac4d561",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 240000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-MTX-qa_closed\",\"role\":\"qa_closed\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 38890,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:23:46.074Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-MTX-qa_closed\",\"role\":\"qa_closed\",\"route\":\"*\",\"action\":\"route matrix\",\"expected\":\"matches permissions matrix\"}"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "808262a518b8d0464077-f279d240f0f38c187daa",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 51,
+          "column": 3
+        },
+        {
+          "title": "TC-VIS-STATES loading, error, offline banner, popovers and toasts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "case",
+                  "description": "{\"id\":\"TC-VIS-STATES\",\"role\":\"planmgr\",\"route\":\"various\",\"action\":\"state gallery\",\"expected\":\"every state renders without overflow\"}"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 22678,
+                  "error": {
+                    "message": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /انتخاب تاریخ/ }).first()\u001b[22m\n",
+                    "stack": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /انتخاب تاریخ/ }).first()\u001b[22m\n\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)\n    at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:121:9",
+                    "location": {
+                      "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                      "column": 13,
+                      "line": 24
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39msupport.ts:24\n\n  22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */\n  23 | export async function press(info: TestInfo, loc: Locator) {\n> 24 |   await loc.scrollIntoViewIfNeeded();\n     |             ^\n  25 |   if (isTouch(info)) await loc.tap();\n  26 |   else await loc.click();\n  27 | }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                        "column": 13,
+                        "line": 24
+                      },
+                      "message": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /انتخاب تاریخ/ }).first()\u001b[22m\n\n\n   at support.ts:24\n\n  22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */\n  23 | export async function press(info: TestInfo, loc: Locator) {\n> 24 |   await loc.scrollIntoViewIfNeeded();\n     |             ^\n  25 |   if (isTouch(info)) await loc.tap();\n  26 |   else await loc.click();\n  27 | }\n    at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)\n    at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:121:9"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:24:24.984Z",
+                  "annotations": [
+                    {
+                      "type": "case",
+                      "description": "{\"id\":\"TC-VIS-STATES\",\"role\":\"planmgr\",\"route\":\"various\",\"action\":\"state gallery\",\"expected\":\"every state renders without overflow\"}"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/home/user/lead/qa/traces/test-output/after-tablet-768/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-tablet-768/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/home/user/lead/frontend/qa-e2e/support.ts",
+                    "column": 13,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "808262a518b8d0464077-90f0ed157763fab486ec",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 103,
+          "column": 1
+        },
+        {
+          "title": "TC-VIS-JALALI date picker round-trips value and month/year navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "logic check on one viewport",
+                  "location": {
+                    "file": "/home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts",
+                    "line": 144,
+                    "column": 8
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "tablet-768",
+              "projectName": "tablet-768",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-23T14:24:49.671Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "logic check on one viewport",
+                      "location": {
+                        "file": "/home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts",
+                        "line": 144,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "808262a518b8d0464077-e2b5f9f202693d059bc4",
+          "file": "07-matrix-visual.spec.ts",
+          "line": 143,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-23T14:13:03.473Z",
+    "duration": 706746.518,
+    "expected": 60,
+    "skipped": 2,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

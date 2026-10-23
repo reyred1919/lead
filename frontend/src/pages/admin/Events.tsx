@@ -33,7 +33,7 @@ export function EventsPage() {
         actions={can("event.manage") && <Button onClick={() => setCreate(true)}><CalendarPlus className="size-4" />رویداد جدید</Button>} />
       <Segmented label="وضعیت" value={status} onChange={setStatus} className="mb-4" options={[{ value: "", label: "همه" }, ...Object.entries(EVENT_STATUS).map(([value, label]) => ({ value, label }))]} />
       {q.isLoading ? <Card><LoadingRows /></Card> : q.isError ? <Card><ErrorState error={q.error} /></Card> : !q.data?.results.length ? <Card><EmptyState title="رویدادی وجود ندارد" /></Card> : (
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div className="grid grid-cols-[minmax(0,1fr)] md:grid-cols-2 xl:grid-cols-3 gap-4">
           {q.data.results.map((e) => (
             <Link key={e.id} to={`/admin/events/${e.id}`} className="card p-5 hover:shadow-[var(--shadow-pop)] transition-shadow flex flex-col gap-3">
               <div className="flex items-start justify-between gap-2">

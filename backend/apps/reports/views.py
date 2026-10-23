@@ -12,6 +12,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from apps.common.audit import audit
+from apps.common.dates import day_range, display_tz, local_today
 from apps.common.models import AuditLog
 from apps.common.pagination import StandardPagination
 from apps.crm.models import Interaction, InteractionProduct, Opportunity, Referral, Task
@@ -125,11 +126,11 @@ class DashboardView(APIView):
         user = request.user
         az = authz_for(user)
         now = timezone.now()
-        today = now.date()
+        today_start, today_end = day_range(local_today())
         mine = Interaction.objects.filter(created_by=user)
         personal = {
             "my_captures_total": mine.count(),
-            "my_captures_today": mine.filter(captured_at__date=today).count(),
+            "my_captures_today": mine.filter(captured_at__gte=today_start, captured_at__lt=today_end).count(),
             "my_pending_referrals": Referral.objects.filter(to_user=user, status="PENDING").count(),
             "my_open_tasks": Task.objects.filter(owner=user, status="OPEN").count(),
             "my_overdue_tasks": Task.objects.filter(owner=user, status="OPEN", due_at__lt=now).count(),
@@ -183,7 +184,7 @@ class DashboardView(APIView):
             "by_product": [{"product_id": str(r["product_id"]), "code": r["product_code"], "name_fa": r["product__name_fa"], "count": r["n"]} for r in by_product],
             "by_event": [{"event_id": str(r["event_id"]), "code": r["event_code"], "name": r["event__display_name"], "count": r["n"]}
                          for r in base.values("event_id", "event_code", "event__display_name").annotate(n=Count("id")).order_by("-n")[:12]],
-            "by_day": [{"date": r["d"].isoformat(), "count": r["n"]} for r in base.annotate(d=TruncDate("captured_at")).values("d").annotate(n=Count("id")).order_by("d") if r["d"]][-60:],
+            "by_day": [{"date": r["d"].isoformat(), "count": r["n"]} for r in base.annotate(d=TruncDate("captured_at", tzinfo=display_tz())).values("d").annotate(n=Count("id")).order_by("d") if r["d"]][-60:],
             "by_creator": [{"user_id": str(r["created_by_id"]), "name": f"{r['created_by__first_name']} {r['created_by__last_name']}", "count": r["n"]}
                            for r in base.values("created_by_id", "created_by__first_name", "created_by__last_name").annotate(n=Count("id")).order_by("-n")[:10]],
             "ownerless_sample": [{"id": str(i.id), "contact_name": i.contact.full_name, "event_code": i.event_code, "captured_at": i.captured_at}

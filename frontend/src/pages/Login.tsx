@@ -52,7 +52,7 @@ export function LoginPage() {
           <h1 className="text-[40px] font-extrabold leading-[1.25] tracking-tight">هر گفت‌وگوی غرفه،<br />یک فرصت قابل‌پیگیری.</h1>
           <p className="text-white/70 mt-5 text-[16px] leading-8">ثبت سریع در غرفه، ارجاع شفاف به مسئول پیگیری، تکمیل اطلاعات پس از رویداد و گزارش تجمیعی بین رویدادها — در یک سامانه مستقل.</p>
         </div>
-        <div className="text-white/40 text-[12.5px]">{brand.data?.footer_label || "اداره توسعه بازار و مدیریت کانال‌های فروش راهکارهای هوشمند"}</div>
+        <div className="text-white/60 text-[12.5px]">{brand.data?.footer_label || "اداره توسعه بازار و مدیریت کانال‌های فروش راهکارهای هوشمند"}</div>
       </section>
       <section className="flex flex-col items-center justify-center p-5 md:p-10">
         <div className="lg:hidden mb-8"><BrandLogo height={40} /></div>

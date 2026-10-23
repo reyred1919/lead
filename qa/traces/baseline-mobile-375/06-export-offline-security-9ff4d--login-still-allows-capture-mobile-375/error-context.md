@@ -1,0 +1,153 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: آفلاین" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e24] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e25]
+    - main [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e31]:
+          - generic [ref=e32]: عصر بخیر
+          - heading "پرهام برنامه‌ریز" [level=1] [ref=e33]
+          - paragraph [ref=e34]: مدیر طرح شهر هوشمند
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: رویداد فعال
+            - heading "نمایشگاه نمونه فناوری ۱۴۰۵" [level=2] [ref=e41]
+            - paragraph [ref=e42]:
+              - text: تهران · سالن نمونه ۳۸ ·
+              - generic [ref=e43]: DEMO-TECH-1405
+          - link "ثبت لید جدید" [ref=e44] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e45]:
+              - img [ref=e46]
+              - text: ثبت لید جدید
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: ثبت‌های امروز من
+              - img [ref=e52]
+            - generic [ref=e54]: ۲۶
+            - generic [ref=e55]: "مجموع: ۳۵"
+          - link "ارجاع در انتظار من ۹ پذیرش یا بازگرداندن" [ref=e56] [cursor=pointer]:
+            - /url: /inbox
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]: ارجاع در انتظار من
+                - img [ref=e61]
+              - generic [ref=e64]: ۹
+              - generic [ref=e65]: پذیرش یا بازگرداندن
+          - link "وظایف باز من ۱۰ ۱۰ معوق" [ref=e66] [cursor=pointer]:
+            - /url: /inbox?tab=tasks
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - generic [ref=e69]: وظایف باز من
+                - img [ref=e71]
+              - generic [ref=e75]: ۱۰
+              - generic [ref=e76]: ۱۰ معوق
+          - link "درخواست اقدام ۰" [ref=e77] [cursor=pointer]:
+            - /url: /inbox?tab=actions
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - generic [ref=e80]: درخواست اقدام
+                - img [ref=e82]
+              - generic [ref=e86]: ۰
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - heading "آخرین ثبت‌های من" [level=2] [ref=e91]
+              - link "همه" [ref=e93] [cursor=pointer]:
+                - /url: /leads?scope=mine
+            - list [ref=e94]:
+              - listitem [ref=e95]:
+                - link "لید QA 8217439 قابل‌پیگیری ۴۱ ثانیه پیش" [ref=e96] [cursor=pointer]:
+                  - /url: /leads/e1bca93b-867d-4700-85ba-71797bfe581b
+                  - generic [ref=e97]: لید QA 8217439
+                  - generic [ref=e98]: قابل‌پیگیری
+                  - generic [ref=e99]: ۴۱ ثانیه پیش
+              - listitem [ref=e100]:
+                - link "لید QA 3262611 · سازمان تعارض 2900 قابل‌پیگیری ۴۶ ثانیه پیش" [ref=e101] [cursor=pointer]:
+                  - /url: /leads/0625e017-8e9a-4f91-88ed-7ebfda6535c2
+                  - generic [ref=e102]:
+                    - text: لید QA 3262611
+                    - generic [ref=e103]: · سازمان تعارض 2900
+                  - generic [ref=e104]: قابل‌پیگیری
+                  - generic [ref=e105]: ۴۶ ثانیه پیش
+              - listitem [ref=e106]:
+                - link "پس از رویداد QA-MVL15JJB-249 · سازمان QA-MVL15JJB-249 قابل‌پیگیری ۵۶ ثانیه پیش" [ref=e107] [cursor=pointer]:
+                  - /url: /leads/41e94364-019e-463b-8b25-302337db9de8
+                  - generic [ref=e108]:
+                    - text: پس از رویداد QA-MVL15JJB-249
+                    - generic [ref=e109]: · سازمان QA-MVL15JJB-249
+                  - generic [ref=e110]: قابل‌پیگیری
+                  - generic [ref=e111]: ۵۶ ثانیه پیش
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]:
+                - heading "نمای کلی محدوده من" [level=2] [ref=e115]
+                - paragraph [ref=e116]: داده نمونه (DEMO)
+              - link "داشبورد" [ref=e118] [cursor=pointer]:
+                - /url: /dashboard
+                - text: داشبورد
+                - img [ref=e119]
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - generic [ref=e123]: تعاملات
+                - generic [ref=e124]: ۹۸
+              - generic [ref=e125]:
+                - generic [ref=e126]: مخاطبان یکتا
+                - generic [ref=e127]: ۹۵
+              - generic [ref=e128]:
+                - generic [ref=e129]: فرصت‌ها
+                - generic [ref=e130]: ۲۱
+              - generic [ref=e131]:
+                - generic [ref=e132]: بدون مسئول
+                - generic [ref=e133]: ۵۴
+            - generic [ref=e134]:
+              - generic [ref=e135]:
+                - img [ref=e136]
+                - text: پیگیری‌های معوق تیم
+              - list [ref=e140]:
+                - listitem [ref=e141]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e142] [cursor=pointer]:
+                    - /url: /leads/94e16b49-c138-464e-8f47-db5fd927f417
+                - listitem [ref=e143]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e144] [cursor=pointer]:
+                    - /url: /leads/acd115af-7975-4ac4-a637-53e3d2c251b4
+                - listitem [ref=e145]:
+                  - link "تماس پیگیری با مخاطب · پرهام برنامه‌ریز" [ref=e146] [cursor=pointer]:
+                    - /url: /leads/22610009-6407-49b5-a20e-c0720465fb66
+                - listitem [ref=e147]:
+                  - link "معوق QA 66307 · پرهام برنامه‌ریز" [ref=e148] [cursor=pointer]:
+                    - /url: /leads/96261622-c65c-4de9-b332-da5f454c2cf5
+  - navigation "ناوبری پایین" [ref=e149]:
+    - generic [ref=e150]:
+      - link "خانه" [ref=e151] [cursor=pointer]:
+        - /url: /
+        - img [ref=e152]
+        - text: خانه
+      - link "لیدها" [ref=e155] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e156]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e160]:
+        - img [ref=e161]
+      - link "کارتابل ۱۹" [ref=e162] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e163]
+        - text: کارتابل
+        - generic [ref=e166]: ۱۹
+      - button "بیشتر" [ref=e167]:
+        - img [ref=e168]
+        - text: بیشتر
+```

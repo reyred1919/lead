@@ -1,0 +1,809 @@
+
+Running 65 tests using 2 workers
+
+  ✓   1 [mobile-390] › qa-e2e/01-auth-context.spec.ts:5:3 › Auth & session › TC-AUTH-01 invalid password shows error, no session (3.1s)
+  ✓   2 [mobile-390] › qa-e2e/02-capture.spec.ts:23:1 › TC-CAP-01 existing organization chosen from search suggestion (7.1s)
+  ✓   3 [mobile-390] › qa-e2e/01-auth-context.spec.ts:13:3 › Auth & session › TC-AUTH-02 login then logout clears session and protected routes redirect (6.2s)
+  ✓   5 [mobile-390] › qa-e2e/01-auth-context.spec.ts:28:3 › Auth & session › TC-AUTH-03 login rate-limit message is shown for HTTP 429 (UI mapping; server limit covered in pytest) (3.3s)
+  ✓   4 [mobile-390] › qa-e2e/02-capture.spec.ts:39:1 › TC-CAP-02 inline new organization and TC-CAP-05 Persian digits are normalized (7.2s)
+  ✓   6 [mobile-390] › qa-e2e/01-auth-context.spec.ts:35:3 › Auth & session › TC-AUTH-04 expired session during use redirects to login (4.9s)
+  ✓   7 [mobile-390] › qa-e2e/02-capture.spec.ts:53:1 › TC-CAP-03 individual without organization; TC-CAP-04 Arabic-Indic digits (6.4s)
+  ✓   9 [mobile-390] › qa-e2e/02-capture.spec.ts:67:1 › TC-CAP-06 validation: required fields, invalid mobile, invalid email (4.7s)
+  ✓  10 [mobile-390] › qa-e2e/02-capture.spec.ts:85:1 › TC-CAP-07 multi-product limited to event offerings, quality and note (4.2s)
+  ✘   8 [mobile-390] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login (14.8s)
+  ✓  11 [mobile-390] › qa-e2e/02-capture.spec.ts:105:1 › TC-CAP-08 rapid consecutive entry with 'next' loop (5.5s)
+  ✓  13 [mobile-390] › qa-e2e/02-capture.spec.ts:125:1 › TC-CAP-09 captured_by stays separate from assignee (default owner mapping) (4.3s)
+  ✓  14 [mobile-390] › qa-e2e/02-capture.spec.ts:141:1 › TC-CAP-10 lost response then retry creates exactly one record (idempotency) (4.1s)
+  ✘  12 [mobile-390] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works (13.3s)
+  ✓  15 [mobile-390] › qa-e2e/02-capture.spec.ts:163:1 › TC-CAP-11 same contact at two events links one contact, shows cross-event history (8.8s)
+  -  17 [mobile-390] › qa-e2e/02-capture.spec.ts:184:1 › TC-CAP-12 keyboard-only capture
+  ✘  16 [mobile-390] › qa-e2e/01-auth-context.spec.ts:79:3 › Event context › TC-CTX-01 single active membership: event is locked in capture (13.3s)
+  ✓  19 [mobile-390] › qa-e2e/01-auth-context.spec.ts:87:3 › Event context › TC-CTX-02 two active events: selector switches products and persists across reload (5.9s)
+  ✓  20 [mobile-390] › qa-e2e/01-auth-context.spec.ts:100:3 › Event context › TC-CTX-03 no membership: capture disabled with explanation (3.6s)
+  ✓  18 [mobile-390] › qa-e2e/03-referral.spec.ts:20:1 › TC-REF-01..05 create → accept → qualify → task → complete (UI on this device) (24.6s)
+  ✓  21 [mobile-390] › qa-e2e/01-auth-context.spec.ts:109:3 › Event context › TC-CTX-04 only closed/archived events: capture blocked, home explains (4.9s)
+  ✓  23 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:5:3 › Lead lists › TC-LST-01 pagination across >25 leads (4.4s)
+  ✓  24 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:18:3 › Lead lists › TC-LST-02 search by name and by Persian-digit mobile fragment (4.1s)
+  ✓  22 [mobile-390] › qa-e2e/03-referral.spec.ts:78:1 › TC-REF-03/04 return with mandatory reason, returned box, reassign keeps history (15.8s)
+  ✓  25 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:27:3 › Lead lists › TC-LST-03 filters (quality, stage) and empty state (5.4s)
+  ✓  27 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:38:3 › Lead lists › TC-LST-04 long and mixed-direction names render without overflow (4.2s)
+  ✓  26 [mobile-390] › qa-e2e/03-referral.spec.ts:111:1 › TC-REF-06 negative: specialist has no referral affordance and API refuses (4.5s)
+  ✓  29 [mobile-390] › qa-e2e/03-referral.spec.ts:125:1 › TC-REF-08 overdue task is flagged in inbox (3.8s)
+  ✓  30 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:5:3 › Admin CRUD › TC-ADM-01 create event via UI (Jalali dates), add product and member, activate (10.6s)
+  ✘  28 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order (14.3s)
+  ✓  31 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:48:3 › Admin CRUD › TC-ADM-02 clone event copies configuration, never leads (5.6s)
+  ✓  32 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:63:3 › Lead lists › TC-LST-06 scope: booth specialist sees only own leads (3.9s)
+  ✓  33 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:67:3 › Admin CRUD › TC-ADM-03 user creation requires valid mobile; activation link issued (5.7s)
+  ✓  34 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:73:3 › Enrichment & opportunity detail › TC-ENR-01 enrichment after event closure with field history (10.7s)
+  ✓  35 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:89:3 › Admin CRUD › TC-ADM-04 tag taxonomy: create, archive; archived not selectable (6.4s)
+  ✓  37 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:107:3 › Admin CRUD › TC-ADM-05 logo upload: SVG rejected, PNG accepted, reset (6.7s)
+  ✓  36 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:98:3 › Enrichment & opportunity detail › TC-ENR-02 field-level authorization: viewer & creator read-only (10.3s)
+  ✓  39 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:117:3 › Enrichment & opportunity detail › TC-ENR-03 concurrent edit shows conflict instead of overwriting (8.9s)
+  ✓  38 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:132:3 › Notification & action center › TC-NTF-01/02 action request: reading ≠ completing; completion tracked for requester (11.8s)
+  ✓  41 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:170:3 › Notification & action center › TC-NTF-03 mock SMS test send reported as SIMULATED, never delivered (4.9s)
+  ✓  42 [mobile-390] › qa-e2e/05-admin-notify.spec.ts:180:3 › Notification & action center › TC-NTF-04 delivery log never shows mock attempts as delivered (3.0s)
+  ✓  40 [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:138:3 › Enrichment & opportunity detail › TC-ENR-04 tags: add/remove on qualified lead, archived tag label, stage change (9.0s)
+  ✓  43 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:5:3 › Exports › TC-EXP-01 JSON export via UI is scoped, versioned and masks unauthorized PII (3.7s)
+  ✓  45 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:23:3 › Exports › TC-EXP-02 CSV keeps Persian text (UTF-8 BOM) and neutralizes formulas (1.7s)
+  ✓  46 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:41:3 › Exports › TC-EXP-03 download link is owner-only (1.6s)
+  ✓  47 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:55:3 › Offline › TC-OFF-01/02 offline capture: encrypted at rest, exactly one sync upload, one record (7.6s)
+  ✓  48 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:88:3 › Offline › TC-OFF-03 switching event while a record is queued never retags it (4.9s)
+  ✓  49 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:109:3 › Offline › TC-OFF-04 logout with pending queue warns; discard wipes device; next user sees nothing (7.3s)
+  ✓  50 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:143:3 › Offline › TC-OFF-05 offline capture synced after closure beyond grace goes to admin review (24.5s)
+  ✓  51 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:174:3 › Browser-level security › TC-SEC-01 stored XSS payload in lead fields renders as text (4.4s)
+  ✓  52 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:187:3 › Browser-level security › TC-SEC-02 CSRF required for state-changing API calls (749ms)
+  ✓  53 [mobile-390] › qa-e2e/06-export-offline-security.spec.ts:195:3 › Browser-level security › TC-SEC-03 security headers on API responses (194ms)
+  ✘  44 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe (1.3m)
+  ✘  54 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe (17.1s)
+  ✘  55 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe (47.7s)
+  ✓  56 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe (43.8s)
+  ✘  57 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe (39.7s)
+  ✘  58 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe (51.7s)
+  ✓  59 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX owner: route access, menu affordances, screenshots, overflow, axe (43.4s)
+  ✓  60 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe (32.4s)
+  ✓  61 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe (32.5s)
+  ✓  62 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe (29.0s)
+  ✓  63 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe (35.0s)
+  ✘  64 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts (24.1s)
+  -  65 [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:143:1 › TC-VIS-JALALI date picker round-trips value and month/year navigation
+
+
+  1) [mobile-390] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveURL[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Expected pattern: [32m/\/login/[39m
+    Received string:  [31m"http://localhost:5174/leads"[39m
+    Timeout: 10000ms
+
+    Call log:
+    [2m  - Expect "toHaveURL" with timeout 10000ms[22m
+    [2m    14 × unexpected value "http://localhost:5174/leads"[22m
+
+
+      48 |     const nav = page.getByRole("link", { name: /^لیدها/ }).first();
+      49 |     await nav.click();
+    > 50 |     await expect(page).toHaveURL(/\/login/, { timeout: 10_000 });
+         |                        ^
+      51 |   });
+      52 |
+      53 |   test("TC-AUTH-06 activation/reset link: set password, link is single-use, new password works", async ({ page, browser }, info) => {
+        at /home/user/lead/frontend/qa-e2e/01-auth-context.spec.ts:50:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-mobile-390/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-2d75e-o-reload-redirects-to-login-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [mobile-390] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByRole('heading', { name: 'فعال‌سازی حساب' })
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByRole('heading', { name: 'فعال‌سازی حساب' })[22m
+
+
+      62 |     const url = `${info.project.use.baseURL}${link.pathname}${link.search}`;
+      63 |     await p.goto(url);
+    > 64 |     await expect(p.getByRole("heading", { name: "فعال‌سازی حساب" })).toBeVisible();
+         |                                                                      ^
+      65 |     const newPw = `Qa-${Date.now()}-Pass!`;
+      66 |     await p.fill("#np", newPw);
+      67 |     await p.fill("#npc", newPw);
+        at /home/user/lead/frontend/qa-e2e/01-auth-context.spec.ts:64:70
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-mobile-390/test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-mobile-390/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Auth-sessi-f9303-ngle-use-new-password-works-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [mobile-390] › qa-e2e/01-auth-context.spec.ts:79:3 › Event context › TC-CTX-01 single active membership: event is locked in capture 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByLabel('رویداد قفل‌شده')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByLabel('رویداد قفل‌شده')[22m
+    [2m    12 × locator resolved to <svg width="24" height="24" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-label="رویداد قفل‌شده" xmlns="http://www.w3.org/2000/svg" class="lucide lucide-lock size-3.5 text-muted">…</svg>[22m
+    [2m       - unexpected value "hidden"[22m
+
+
+      80 |     tc(info, "TC-CTX-01", { role: "specialist1", route: "/capture", action: "event context", expected: "locked single event" });
+      81 |     await loginAs(page, "specialist1", "/capture");
+    > 82 |     await expect(page.getByLabel("رویداد قفل‌شده")).toBeVisible();
+         |                                                     ^
+      83 |     await expect(page.locator("main").getByLabel("رویداد", { exact: true })).toHaveCount(0);
+      84 |     await expectNoOverflow(page, "capture");
+      85 |   });
+        at /home/user/lead/frontend/qa-e2e/01-auth-context.spec.ts:82:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Event-cont-1f09a--event-is-locked-in-capture-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Event-cont-1f09a--event-is-locked-in-capture-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Event-cont-1f09a--event-is-locked-in-capture-mobile-390/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Event-cont-1f09a--event-is-locked-in-capture-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/01-auth-context-Event-cont-1f09a--event-is-locked-in-capture-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: getByLabel('مرتب‌سازی')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for getByLabel('مرتب‌سازی')[22m
+
+
+      56 |     await loginAs(page, "admin", "/leads");
+      57 |     const sort = page.getByLabel("مرتب‌سازی");
+    > 58 |     await expect(sort).toBeVisible();
+         |                        ^
+      59 |     await sort.selectOption("captured_at");
+      60 |     await expect(page).toHaveURL(/ordering=captured_at/);
+      61 |   });
+        at /home/user/lead/frontend/qa-e2e/04-leads-enrichment.spec.ts:58:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-mobile-390/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/04-leads-enrichment-Lead-l-18923-ol-exists-and-changes-order-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe 
+
+    Error: admin overflow /leads/:id on mobile-390: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m35[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    Error: admin overflow /reports on mobile-390: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m31[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-2.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-3.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #6: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-4.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #7: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-6.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #8: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-7.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #9: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-8.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #10: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-5.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #11: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-10.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #12: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-11.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #13: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-9.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #14: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-12.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #15: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-13.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #16: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-14.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #17: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-17.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #18: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-15.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #19: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-18.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #20: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-19.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #21: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-20.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #22: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-21.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #23: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-16.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #24: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/video-22.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/error-context.md
+
+    attachment #26: trace (application/zip) ────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ad-143c7-es-screenshots-overflow-axe-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe 
+
+    TimeoutError: locator.tap: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: 'بیشتر' })[22m
+    [2m    - locator resolved to <button aria-label="بیشتر" class="flex flex-col items-center gap-0.5 text-[11px] text-muted">…</button>[22m
+    [2m  - attempting tap action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <span class="text-[12px] text-muted">۲ دقیقه پیش</span> from <div class="min-w-0 flex flex-col">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <span class="text-[12px] text-muted">۲ دقیقه پیش</span> from <div class="min-w-0 flex flex-col">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 100ms[22m
+    [2m    29 × waiting for element to be visible, enabled and stable[22m
+    [2m       - element is visible, enabled and stable[22m
+    [2m       - scrolling into view if needed[22m
+    [2m       - done scrolling[22m
+    [2m       - <span class="text-[12px] text-muted">۲ دقیقه پیش</span> from <div class="min-w-0 flex flex-col">…</div> subtree intercepts pointer events[22m
+    [2m     - retrying tap action[22m
+    [2m       - waiting 500ms[22m
+
+
+       at support.ts:25
+
+      23 | export async function press(info: TestInfo, loc: Locator) {
+      24 |   await loc.scrollIntoViewIfNeeded();
+    > 25 |   if (isTouch(info)) await loc.tap();
+         |                                ^
+      26 |   else await loc.click();
+      27 | }
+      28 |
+        at press (/home/user/lead/frontend/qa-e2e/support.ts:25:32)
+        at menuHrefs (/home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:44:3)
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:61:19
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-c2db8-es-screenshots-overflow-axe-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-c2db8-es-screenshots-overflow-axe-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-c2db8-es-screenshots-overflow-axe-mobile-390/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-c2db8-es-screenshots-overflow-axe-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-c2db8-es-screenshots-overflow-axe-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe 
+
+    Error: dg overflow /reports on mobile-390: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m31[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-3.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-4.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-6.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #6: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-7.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #7: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-9.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #8: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-5.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #9: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-11.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #10: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-12.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #11: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-10.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #12: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-2.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #13: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video-8.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #14: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/error-context.md
+
+    attachment #16: trace (application/zip) ────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-dg-50288-es-screenshots-overflow-axe-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe 
+
+    Error: evmgr overflow /reports on mobile-390: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m31[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/video-3.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/video-2.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/error-context.md
+
+    attachment #7: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-ev-11838-es-screenshots-overflow-axe-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  9) [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe 
+
+    Error: planmgr overflow /reports on mobile-390: ["div.","div.min-h-dvh lg:grid lg:grid-cols-[280px_1fr]","div.min-w-0 flex flex-col","header.sticky top-0 z-30 glass border-b border-line","div.flex items-center gap-3 px-4 md:px-6 h-14","div.lg:hidden shrink-0"]
+
+    [2mexpect([22m[31mreceived[39m[2m).[22mtoBeLessThanOrEqual[2m([22m[32mexpected[39m[2m)[22m
+
+    Expected: <= [32m1[39m
+    Received:    [31m31[39m
+
+       96 |       expect.soft(observed, `${persona} ${r.path} on ${dev}`).toBe(expected);
+       97 |       expect.soft(menuOk, `${persona} menu ${r.path} on ${dev}: ${menu}`).toBe(true);
+    >  98 |       expect.soft(o.overflow, `${persona} overflow ${r.path} on ${dev}: ${JSON.stringify(o.offenders)}`).toBeLessThanOrEqual(1);
+          |                                                                                                          ^
+       99 |     }
+      100 |   });
+      101 | }
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:98:106
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-4.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-5.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-2.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-3.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #6: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-6.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #7: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-7.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #8: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-8.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #9: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-9.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #10: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-11.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #11: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #12: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-10.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #13: video (video/webm) ─────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/video-1.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/error-context.md
+
+    attachment #15: trace (application/zip) ────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-pl-28984-es-screenshots-overflow-axe-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10) [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts 
+
+    TimeoutError: locator.tap: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('button', { name: 'ماه بعد' })[22m
+    [2m    - locator resolved to <button aria-label="ماه بعد" class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-[background,box-shadow,color,transform] duration-150 active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none select-none text-ink-2 hover:bg-line-2 h-9 w-9 rounded-[10px]">…</button>[22m
+    [2m  - attempting tap action[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div dir="rtl" role="dialog" tabindex="-1" data-side="top" id="radix-_r_6_" data-state="open" data-align="start" class="z-50 bg-panel rounded-[16px] border border-line shadow-[var(--shadow-pop)] outline-none animate-rise w-[min(92vw,330px)] p-3">…</div> intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m    - waiting 20ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 100ms[22m
+    [2m    2 × waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div dir="rtl" role="dialog" tabindex="-1" data-side="top" id="radix-_r_6_" data-state="open" data-align="start" class="z-50 bg-panel rounded-[16px] border border-line shadow-[var(--shadow-pop)] outline-none animate-rise w-[min(92vw,330px)] p-3">…</div> intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m  - retrying tap action[22m
+    [2m    - waiting 500ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - <div class="px-5 pb-5 space-y-5">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m  3 × retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m    - retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div dir="rtl" role="dialog" tabindex="-1" data-side="top" id="radix-_r_6_" data-state="open" data-align="start" class="z-50 bg-panel rounded-[16px] border border-line shadow-[var(--shadow-pop)] outline-none animate-rise w-[min(92vw,330px)] p-3">…</div> intercepts pointer events[22m
+    [2m  3 × retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m  - retrying tap action[22m
+    [2m    - waiting 500ms[22m
+    [2m    - waiting for element to be visible, enabled and stable[22m
+    [2m    - element is visible, enabled and stable[22m
+    [2m    - scrolling into view if needed[22m
+    [2m    - done scrolling[22m
+    [2m    - <div class="px-5 pb-5 space-y-5">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m  2 × retrying tap action[22m
+    [2m      - waiting 500ms[22m
+    [2m      - waiting for element to be visible, enabled and stable[22m
+    [2m      - element is visible, enabled and stable[22m
+    [2m      - scrolling into view if needed[22m
+    [2m      - done scrolling[22m
+    [2m      - <div class="flex flex-wrap gap-2">…</div> from <div id="root">…</div> subtree intercepts pointer events[22m
+    [2m  - retrying tap action[22m
+    [2m    - waiting 500ms[22m
+
+
+       at support.ts:25
+
+      23 | export async function press(info: TestInfo, loc: Locator) {
+      24 |   await loc.scrollIntoViewIfNeeded();
+    > 25 |   if (isTouch(info)) await loc.tap();
+         |                                ^
+      26 |   else await loc.click();
+      27 | }
+      28 |
+        at press (/home/user/lead/frontend/qa-e2e/support.ts:25:32)
+        at /home/user/lead/frontend/qa-e2e/07-matrix-visual.spec.ts:125:3
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-mobile-390/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-mobile-390/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-mobile-390/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-mobile-390/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-VIS-ST-056b2--banner-popovers-and-toasts-mobile-390/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  10 failed
+    [mobile-390] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login 
+    [mobile-390] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works 
+    [mobile-390] › qa-e2e/01-auth-context.spec.ts:79:3 › Event context › TC-CTX-01 single active membership: event is locked in capture 
+    [mobile-390] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order 
+    [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe 
+    [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe 
+    [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe 
+    [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe 
+    [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe 
+    [mobile-390] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts 
+  2 skipped
+  53 passed (11.0m)

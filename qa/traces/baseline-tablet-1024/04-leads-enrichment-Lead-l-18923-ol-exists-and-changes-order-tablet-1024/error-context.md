@@ -1,0 +1,637 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها ۵" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+        - generic [ref=e39]: ۵
+      - link "داشبورد تحلیلی" [ref=e40] [cursor=pointer]:
+        - /url: /dashboard
+        - img [ref=e41]
+        - generic [ref=e43]: داشبورد تحلیلی
+      - link "گزارش و خروجی" [ref=e44] [cursor=pointer]:
+        - /url: /reports
+        - img [ref=e45]
+        - generic [ref=e49]: گزارش و خروجی
+      - link "پیام و درخواست اقدام" [ref=e50] [cursor=pointer]:
+        - /url: /messages
+        - img [ref=e51]
+        - generic [ref=e54]: پیام و درخواست اقدام
+      - generic [ref=e55]: مدیریت و تنظیمات
+      - link "رویدادها و تیم‌ها" [ref=e56] [cursor=pointer]:
+        - /url: /admin/events
+        - img [ref=e57]
+        - generic [ref=e59]: رویدادها و تیم‌ها
+      - link "کاربران" [ref=e60] [cursor=pointer]:
+        - /url: /admin/users
+        - img [ref=e61]
+        - generic [ref=e66]: کاربران
+      - link "طرح‌ها و محصولات" [ref=e67] [cursor=pointer]:
+        - /url: /admin/catalog
+        - img [ref=e68]
+        - generic [ref=e72]: طرح‌ها و محصولات
+      - link "سازمان‌ها و مخاطبان" [ref=e73] [cursor=pointer]:
+        - /url: /admin/accounts
+        - img [ref=e74]
+        - generic [ref=e78]: سازمان‌ها و مخاطبان
+      - link "بازبینی تکراری‌ها" [ref=e79] [cursor=pointer]:
+        - /url: /admin/duplicates
+        - img [ref=e80]
+        - generic [ref=e83]: بازبینی تکراری‌ها
+      - link "ثبت‌های آفلاین معلق" [ref=e84] [cursor=pointer]:
+        - /url: /admin/quarantine
+        - img [ref=e85]
+        - generic [ref=e89]: ثبت‌های آفلاین معلق
+      - link "برچسب‌های لید" [ref=e90] [cursor=pointer]:
+        - /url: /admin/tags
+        - img [ref=e91]
+        - generic [ref=e95]: برچسب‌های لید
+      - link "اعلان، پیامک و ایمیل" [ref=e96] [cursor=pointer]:
+        - /url: /admin/notify
+        - img [ref=e97]
+        - generic [ref=e99]: اعلان، پیامک و ایمیل
+      - link "هویت بصری" [ref=e100] [cursor=pointer]:
+        - /url: /admin/branding
+        - img [ref=e101]
+        - generic [ref=e107]: هویت بصری
+      - link "نقش‌ها و مجوزها" [ref=e108] [cursor=pointer]:
+        - /url: /admin/roles
+        - img [ref=e109]
+        - generic [ref=e118]: نقش‌ها و مجوزها
+      - link "گزارش ممیزی" [ref=e119] [cursor=pointer]:
+        - /url: /admin/audit
+        - img [ref=e120]
+        - generic [ref=e123]: گزارش ممیزی
+    - generic [ref=e124]:
+      - generic [ref=e125]: م‌س
+      - link "مدیر سامانه مدیر سامانه — اداره توسعه بازار" [ref=e126] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e127]: مدیر سامانه
+        - generic [ref=e128]: مدیر سامانه — اداره توسعه بازار
+      - button "خروج" [ref=e129]:
+        - img [ref=e130]
+  - generic [ref=e133]:
+    - banner [ref=e134]:
+      - generic [ref=e135]:
+        - generic "رویداد فعال" [ref=e137]:
+          - generic [ref=e139]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e140]: DEMO-TECH-1405
+        - generic [ref=e142]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e144]':
+          - img [ref=e145]
+          - generic [ref=e148]: همگام
+    - main [ref=e149]:
+      - generic [ref=e150]:
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - heading "لیدها" [level=1] [ref=e153]
+            - paragraph [ref=e154]: ۱۶۲ لید در محدوده دسترسی شما
+          - link "ثبت لید جدید" [ref=e156] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e157]
+        - generic [ref=e158]:
+          - radiogroup "محدوده" [ref=e159]:
+            - radio "همه در محدوده من" [checked] [ref=e160]
+            - radio "ثبت‌های من" [ref=e161]
+            - radio "مسئولیت من" [ref=e162]
+            - radio "بدون مسئول" [ref=e163]
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - img [ref=e166]
+              - textbox "جست‌وجو" [ref=e169]:
+                - /placeholder: نام مخاطب، سازمان یا شماره موبایل
+            - button "فیلترها" [ref=e170]:
+              - img [ref=e171]
+        - generic [ref=e173]:
+          - table [ref=e175]:
+            - rowgroup [ref=e176]:
+              - row "انتخاب همه مخاطب رویداد محصول کیفیت مرحله ثبت‌کننده مسئول پیگیری برچسب زمان ثبت" [ref=e177]:
+                - columnheader "انتخاب همه" [ref=e178]:
+                  - checkbox "انتخاب همه" [ref=e179]
+                - columnheader "مخاطب" [ref=e180]
+                - columnheader "رویداد" [ref=e181]
+                - columnheader "محصول" [ref=e182]
+                - columnheader "کیفیت" [ref=e183]
+                - columnheader "مرحله" [ref=e184]
+                - columnheader "ثبت‌کننده" [ref=e185]
+                - columnheader "مسئول پیگیری" [ref=e186]
+                - columnheader "برچسب" [ref=e187]
+                - columnheader "زمان ثبت" [ref=e188]
+            - rowgroup [ref=e189]:
+              - row "انتخاب ردیف بازگشت tablet-1024 50347 شخص حقیقی / بدون سازمان DEMO-TECH-1405 پارکینگ هوشمند قابل‌پیگیری در انتظار ارزیابی مریم توسعه‌بازار در انتظار پرهام برنامه‌ریز ۱۰ ثانیه پیش" [ref=e190] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e191]:
+                  - checkbox "انتخاب ردیف" [ref=e192]
+                - cell "بازگشت tablet-1024 50347 شخص حقیقی / بدون سازمان" [ref=e193]:
+                  - generic [ref=e194]:
+                    - generic [ref=e195]: بازگشت tablet-1024 50347
+                    - generic [ref=e196]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e197]:
+                  - generic [ref=e198]: DEMO-TECH-1405
+                - cell "پارکینگ هوشمند" [ref=e199]:
+                  - generic [ref=e200]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e201]:
+                  - generic [ref=e202]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e203]:
+                  - generic [ref=e204]: در انتظار ارزیابی
+                - cell "مریم توسعه‌بازار" [ref=e205]
+                - cell "در انتظار پرهام برنامه‌ریز" [ref=e206]:
+                  - generic [ref=e207]: در انتظار پرهام برنامه‌ریز
+                - cell [ref=e208]
+                - cell "۱۰ ثانیه پیش" [ref=e209]
+              - row "انتخاب ردیف ارجاع دستگاه tablet-1024 27518 شخص حقیقی / بدون سازمان DEMO-TECH-1405 پارکینگ هوشمند قابل‌پیگیری تخصیص‌یافته مریم توسعه‌بازار پرهام برنامه‌ریز ۳۳ ثانیه پیش" [ref=e210] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e211]:
+                  - checkbox "انتخاب ردیف" [ref=e212]
+                - cell "ارجاع دستگاه tablet-1024 27518 شخص حقیقی / بدون سازمان" [ref=e213]:
+                  - generic [ref=e214]:
+                    - generic [ref=e215]: ارجاع دستگاه tablet-1024 27518
+                    - generic [ref=e216]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e217]:
+                  - generic [ref=e218]: DEMO-TECH-1405
+                - cell "پارکینگ هوشمند" [ref=e219]:
+                  - generic [ref=e220]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e221]:
+                  - generic [ref=e222]: قابل‌پیگیری
+                - cell "تخصیص‌یافته" [ref=e223]:
+                  - generic [ref=e224]: تخصیص‌یافته
+                - cell "مریم توسعه‌بازار" [ref=e226]
+                - cell "پرهام برنامه‌ریز" [ref=e227]
+                - cell [ref=e228]
+                - cell "۳۳ ثانیه پیش" [ref=e229]
+              - row "انتخاب ردیف دو رویداد 0693559 شخص حقیقی / بدون سازمان DEMO-ENERGY-1405 سامانه مدیریت انرژی ابری قابل‌پیگیری در انتظار ارزیابی دونا دورویدادی بدون مسئول ۳۷ ثانیه پیش" [ref=e230] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e231]:
+                  - checkbox "انتخاب ردیف" [ref=e232]
+                - cell "دو رویداد 0693559 شخص حقیقی / بدون سازمان" [ref=e233]:
+                  - generic [ref=e234]:
+                    - generic [ref=e235]: دو رویداد 0693559
+                    - generic [ref=e236]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-ENERGY-1405" [ref=e237]:
+                  - generic [ref=e238]: DEMO-ENERGY-1405
+                - cell "سامانه مدیریت انرژی ابری" [ref=e239]:
+                  - generic [ref=e240]: سامانه مدیریت انرژی ابری
+                - cell "قابل‌پیگیری" [ref=e241]:
+                  - generic [ref=e242]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e243]:
+                  - generic [ref=e244]: در انتظار ارزیابی
+                - cell "دونا دورویدادی" [ref=e245]
+                - cell "بدون مسئول" [ref=e246]
+                - cell [ref=e247]
+                - cell "۳۷ ثانیه پیش" [ref=e248]
+              - row "انتخاب ردیف دو رویداد 0693559 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی دونا دورویدادی بدون مسئول ۳۸ ثانیه پیش" [ref=e249] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e250]:
+                  - checkbox "انتخاب ردیف" [ref=e251]
+                - cell "دو رویداد 0693559 شخص حقیقی / بدون سازمان" [ref=e252]:
+                  - generic [ref=e253]:
+                    - generic [ref=e254]: دو رویداد 0693559
+                    - generic [ref=e255]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e256]:
+                  - generic [ref=e257]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e258]:
+                  - generic [ref=e259]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e260]:
+                  - generic [ref=e261]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e262]:
+                  - generic [ref=e263]: در انتظار ارزیابی
+                - cell "دونا دورویدادی" [ref=e264]
+                - cell "بدون مسئول" [ref=e265]
+                - cell [ref=e266]
+                - cell "۳۸ ثانیه پیش" [ref=e267]
+              - row "انتخاب ردیف بدون پاسخ 6682293 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سمیرا غرفه‌دار بدون مسئول ۴۳ ثانیه پیش" [ref=e268] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e269]:
+                  - checkbox "انتخاب ردیف" [ref=e270]
+                - cell "بدون پاسخ 6682293 شخص حقیقی / بدون سازمان" [ref=e271]:
+                  - generic [ref=e272]:
+                    - generic [ref=e273]: بدون پاسخ 6682293
+                    - generic [ref=e274]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e275]:
+                  - generic [ref=e276]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e277]:
+                  - generic [ref=e278]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e279]:
+                  - generic [ref=e280]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e281]:
+                  - generic [ref=e282]: در انتظار ارزیابی
+                - cell "سمیرا غرفه‌دار" [ref=e283]
+                - cell "بدون مسئول" [ref=e284]
+                - cell [ref=e285]
+                - cell "۴۳ ثانیه پیش" [ref=e286]
+              - row "انتخاب ردیف مالک پیش‌فرض 2499282 شخص حقیقی / بدون سازمان DEMO-TECH-1405 پایش هوشمند ناوگان قابل‌پیگیری در انتظار ارزیابی سینا غرفه‌دار در انتظار اوستا محصول‌محور ۴۷ ثانیه پیش" [ref=e287] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e288]:
+                  - checkbox "انتخاب ردیف" [ref=e289]
+                - cell "مالک پیش‌فرض 2499282 شخص حقیقی / بدون سازمان" [ref=e290]:
+                  - generic [ref=e291]:
+                    - generic [ref=e292]: مالک پیش‌فرض 2499282
+                    - generic [ref=e293]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e294]:
+                  - generic [ref=e295]: DEMO-TECH-1405
+                - cell "پایش هوشمند ناوگان" [ref=e296]:
+                  - generic [ref=e297]: پایش هوشمند ناوگان
+                - cell "قابل‌پیگیری" [ref=e298]:
+                  - generic [ref=e299]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e300]:
+                  - generic [ref=e301]: در انتظار ارزیابی
+                - cell "سینا غرفه‌دار" [ref=e302]
+                - cell "در انتظار اوستا محصول‌محور" [ref=e303]:
+                  - generic [ref=e304]: در انتظار اوستا محصول‌محور
+                - cell [ref=e305]
+                - cell "۴۷ ثانیه پیش" [ref=e306]
+              - row "انتخاب ردیف سریع 2 8839974 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سمیرا غرفه‌دار بدون مسئول ۵۲ ثانیه پیش" [ref=e307] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e308]:
+                  - checkbox "انتخاب ردیف" [ref=e309]
+                - cell "سریع 2 8839974 شخص حقیقی / بدون سازمان" [ref=e310]:
+                  - generic [ref=e311]:
+                    - generic [ref=e312]: سریع 2 8839974
+                    - generic [ref=e313]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e314]:
+                  - generic [ref=e315]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e316]:
+                  - generic [ref=e317]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e318]:
+                  - generic [ref=e319]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e320]:
+                  - generic [ref=e321]: در انتظار ارزیابی
+                - cell "سمیرا غرفه‌دار" [ref=e322]
+                - cell "بدون مسئول" [ref=e323]
+                - cell [ref=e324]
+                - cell "۵۲ ثانیه پیش" [ref=e325]
+              - row "انتخاب ردیف سریع 1 8207359 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سمیرا غرفه‌دار بدون مسئول ۵۲ ثانیه پیش" [ref=e326] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e327]:
+                  - checkbox "انتخاب ردیف" [ref=e328]
+                - cell "سریع 1 8207359 شخص حقیقی / بدون سازمان" [ref=e329]:
+                  - generic [ref=e330]:
+                    - generic [ref=e331]: سریع 1 8207359
+                    - generic [ref=e332]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e333]:
+                  - generic [ref=e334]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e335]:
+                  - generic [ref=e336]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e337]:
+                  - generic [ref=e338]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e339]:
+                  - generic [ref=e340]: در انتظار ارزیابی
+                - cell "سمیرا غرفه‌دار" [ref=e341]
+                - cell "بدون مسئول" [ref=e342]
+                - cell [ref=e343]
+                - cell "۵۲ ثانیه پیش" [ref=e344]
+              - row "انتخاب ردیف سریع 0 6509804 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سمیرا غرفه‌دار بدون مسئول ۵۳ ثانیه پیش" [ref=e345] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e346]:
+                  - checkbox "انتخاب ردیف" [ref=e347]
+                - cell "سریع 0 6509804 شخص حقیقی / بدون سازمان" [ref=e348]:
+                  - generic [ref=e349]:
+                    - generic [ref=e350]: سریع 0 6509804
+                    - generic [ref=e351]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e352]:
+                  - generic [ref=e353]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e354]:
+                  - generic [ref=e355]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e356]:
+                  - generic [ref=e357]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e358]:
+                  - generic [ref=e359]: در انتظار ارزیابی
+                - cell "سمیرا غرفه‌دار" [ref=e360]
+                - cell "بدون مسئول" [ref=e361]
+                - cell [ref=e362]
+                - cell "۵۳ ثانیه پیش" [ref=e363]
+              - row "انتخاب ردیف چندمحصولی 3248207 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی، روشنایی هوشمند معابر جدی در انتظار ارزیابی داود مدیرکل بدون مسئول ۵۷ ثانیه پیش" [ref=e364] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e365]:
+                  - checkbox "انتخاب ردیف" [ref=e366]
+                - cell "چندمحصولی 3248207 شخص حقیقی / بدون سازمان" [ref=e367]:
+                  - generic [ref=e368]:
+                    - generic [ref=e369]: چندمحصولی 3248207
+                    - generic [ref=e370]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e371]:
+                  - generic [ref=e372]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی، روشنایی هوشمند معابر" [ref=e373]:
+                  - generic [ref=e374]: دروازه IoT صنعتی، روشنایی هوشمند معابر
+                - cell "جدی" [ref=e375]:
+                  - generic [ref=e376]: جدی
+                - cell "در انتظار ارزیابی" [ref=e377]:
+                  - generic [ref=e378]: در انتظار ارزیابی
+                - cell "داود مدیرکل" [ref=e379]
+                - cell "بدون مسئول" [ref=e380]
+                - cell [ref=e381]
+                - cell "۵۷ ثانیه پیش" [ref=e382]
+              - row "انتخاب ردیف شخص حقیقی 4520328 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سمیرا غرفه‌دار بدون مسئول ۱ دقیقه پیش" [ref=e383] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e384]:
+                  - checkbox "انتخاب ردیف" [ref=e385]
+                - cell "شخص حقیقی 4520328 شخص حقیقی / بدون سازمان" [ref=e386]:
+                  - generic [ref=e387]:
+                    - generic [ref=e388]: شخص حقیقی 4520328
+                    - generic [ref=e389]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e390]:
+                  - generic [ref=e391]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e392]:
+                  - generic [ref=e393]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e394]:
+                  - generic [ref=e395]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e396]:
+                  - generic [ref=e397]: در انتظار ارزیابی
+                - cell "سمیرا غرفه‌دار" [ref=e398]
+                - cell "بدون مسئول" [ref=e399]
+                - cell [ref=e400]
+                - cell "۱ دقیقه پیش" [ref=e401]
+              - row "انتخاب ردیف مخاطب جدید 9210644 سازمان تازه QA 9210298 DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سینا غرفه‌دار بدون مسئول ۱ دقیقه پیش" [ref=e402] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e403]:
+                  - checkbox "انتخاب ردیف" [ref=e404]
+                - cell "مخاطب جدید 9210644 سازمان تازه QA 9210298" [ref=e405]:
+                  - generic [ref=e406]:
+                    - generic [ref=e407]: مخاطب جدید 9210644
+                    - generic [ref=e408]: سازمان تازه QA 9210298
+                - cell "DEMO-TECH-1405" [ref=e409]:
+                  - generic [ref=e410]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e411]:
+                  - generic [ref=e412]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e413]:
+                  - generic [ref=e414]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e415]:
+                  - generic [ref=e416]: در انتظار ارزیابی
+                - cell "سینا غرفه‌دار" [ref=e417]
+                - cell "بدون مسئول" [ref=e418]
+                - cell [ref=e419]
+                - cell "۱ دقیقه پیش" [ref=e420]
+              - row "انتخاب ردیف مخاطب سازمان موجود 3772232 شرکت نمونه آلفا DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سینا غرفه‌دار بدون مسئول ۱ دقیقه پیش" [ref=e421] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e422]:
+                  - checkbox "انتخاب ردیف" [ref=e423]
+                - cell "مخاطب سازمان موجود 3772232 شرکت نمونه آلفا" [ref=e424]:
+                  - generic [ref=e425]:
+                    - generic [ref=e426]: مخاطب سازمان موجود 3772232
+                    - generic [ref=e427]: شرکت نمونه آلفا
+                - cell "DEMO-TECH-1405" [ref=e428]:
+                  - generic [ref=e429]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e430]:
+                  - generic [ref=e431]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e432]:
+                  - generic [ref=e433]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e434]:
+                  - generic [ref=e435]: در انتظار ارزیابی
+                - cell "سینا غرفه‌دار" [ref=e436]
+                - cell "بدون مسئول" [ref=e437]
+                - cell [ref=e438]
+                - cell "۱ دقیقه پیش" [ref=e439]
+              - row "انتخاب ردیف <img src=x onerror=\"window.__xss=1\"> 6698860 <script>window.__xss=2</script> DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سینا غرفه‌دار بدون مسئول ۲ دقیقه پیش" [ref=e440] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e441]:
+                  - checkbox "انتخاب ردیف" [ref=e442]
+                - cell "<img src=x onerror=\"window.__xss=1\"> 6698860 <script>window.__xss=2</script>" [ref=e443]:
+                  - generic [ref=e444]:
+                    - generic [ref=e445]: <img src=x onerror="window.__xss=1"> 6698860
+                    - generic [ref=e446]: <script>window.__xss=2</script>
+                - cell "DEMO-TECH-1405" [ref=e447]:
+                  - generic [ref=e448]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e449]:
+                  - generic [ref=e450]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e451]:
+                  - generic [ref=e452]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e453]:
+                  - generic [ref=e454]: در انتظار ارزیابی
+                - cell "سینا غرفه‌دار" [ref=e455]
+                - cell "بدون مسئول" [ref=e456]
+                - cell [ref=e457]
+                - cell "۲ دقیقه پیش" [ref=e458]
+              - row "انتخاب ردیف قرنطینه 7764361 ثبت آفلاین شخص حقیقی / بدون سازمان QA-MVL0QUFY-751 پارکینگ هوشمند قابل‌پیگیری در انتظار ارزیابی دونا دورویدادی بدون مسئول ۳ دقیقه پیش" [ref=e459] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e460]:
+                  - checkbox "انتخاب ردیف" [ref=e461]
+                - cell "قرنطینه 7764361 ثبت آفلاین شخص حقیقی / بدون سازمان" [ref=e462]:
+                  - generic [ref=e463]:
+                    - generic [ref=e464]:
+                      - text: قرنطینه 7764361
+                      - img "ثبت آفلاین" [ref=e465]
+                    - generic [ref=e469]: شخص حقیقی / بدون سازمان
+                - cell "QA-MVL0QUFY-751" [ref=e470]:
+                  - generic [ref=e471]: QA-MVL0QUFY-751
+                - cell "پارکینگ هوشمند" [ref=e472]:
+                  - generic [ref=e473]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e474]:
+                  - generic [ref=e475]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e476]:
+                  - generic [ref=e477]: در انتظار ارزیابی
+                - cell "دونا دورویدادی" [ref=e478]
+                - cell "بدون مسئول" [ref=e479]
+                - cell [ref=e480]
+                - cell "۳ دقیقه پیش" [ref=e481]
+              - row "انتخاب ردیف صف تعویض 6019745 ثبت آفلاین شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی دونا دورویدادی بدون مسئول ۳ دقیقه پیش" [ref=e482] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e483]:
+                  - checkbox "انتخاب ردیف" [ref=e484]
+                - cell "صف تعویض 6019745 ثبت آفلاین شخص حقیقی / بدون سازمان" [ref=e485]:
+                  - generic [ref=e486]:
+                    - generic [ref=e487]:
+                      - text: صف تعویض 6019745
+                      - img "ثبت آفلاین" [ref=e488]
+                    - generic [ref=e492]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e493]:
+                  - generic [ref=e494]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e495]:
+                  - generic [ref=e496]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e497]:
+                  - generic [ref=e498]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e499]:
+                  - generic [ref=e500]: در انتظار ارزیابی
+                - cell "دونا دورویدادی" [ref=e501]
+                - cell "بدون مسئول" [ref=e502]
+                - cell [ref=e503]
+                - cell "۳ دقیقه پیش" [ref=e504]
+              - row "انتخاب ردیف =HYPERLINK(\"http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"QA\") شخص حقیقی / بدون سازمان DEMO-TECH-1405 پارکینگ هوشمند قابل‌پیگیری در انتظار ارزیابی سینا غرفه‌دار بدون مسئول ۳ دقیقه پیش" [ref=e505] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e506]:
+                  - checkbox "انتخاب ردیف" [ref=e507]
+                - cell "=HYPERLINK(\"http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"QA\") شخص حقیقی / بدون سازمان" [ref=e508]:
+                  - generic [ref=e509]:
+                    - generic [ref=e510]: =HYPERLINK("http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","QA")
+                    - generic [ref=e511]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e512]:
+                  - generic [ref=e513]: DEMO-TECH-1405
+                - cell "پارکینگ هوشمند" [ref=e514]:
+                  - generic [ref=e515]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e516]:
+                  - generic [ref=e517]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e518]:
+                  - generic [ref=e519]: در انتظار ارزیابی
+                - cell "سینا غرفه‌دار" [ref=e520]
+                - cell "بدون مسئول" [ref=e521]
+                - cell [ref=e522]
+                - cell "۳ دقیقه پیش" [ref=e523]
+              - row "انتخاب ردیف آفلاین QA 0455786 ثبت آفلاین شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی سمیرا غرفه‌دار بدون مسئول ۳ دقیقه پیش" [ref=e524] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e525]:
+                  - checkbox "انتخاب ردیف" [ref=e526]
+                - cell "آفلاین QA 0455786 ثبت آفلاین شخص حقیقی / بدون سازمان" [ref=e527]:
+                  - generic [ref=e528]:
+                    - generic [ref=e529]:
+                      - text: آفلاین QA 0455786
+                      - img "ثبت آفلاین" [ref=e530]
+                    - generic [ref=e534]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e535]:
+                  - generic [ref=e536]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e537]:
+                  - generic [ref=e538]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e539]:
+                  - generic [ref=e540]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e541]:
+                  - generic [ref=e542]: در انتظار ارزیابی
+                - cell "سمیرا غرفه‌دار" [ref=e543]
+                - cell "بدون مسئول" [ref=e544]
+                - cell [ref=e545]
+                - cell "۳ دقیقه پیش" [ref=e546]
+              - row "انتخاب ردیف لید QA 7954239 شخص حقیقی / بدون سازمان DEMO-TECH-1405 پارکینگ هوشمند قابل‌پیگیری در حال پیگیری پرهام برنامه‌ریز بدون مسئول ۳ دقیقه پیش" [ref=e547] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e548]:
+                  - checkbox "انتخاب ردیف" [ref=e549]
+                - cell "لید QA 7954239 شخص حقیقی / بدون سازمان" [ref=e550]:
+                  - generic [ref=e551]:
+                    - generic [ref=e552]: لید QA 7954239
+                    - generic [ref=e553]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e554]:
+                  - generic [ref=e555]: DEMO-TECH-1405
+                - cell "پارکینگ هوشمند" [ref=e556]:
+                  - generic [ref=e557]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e558]:
+                  - generic [ref=e559]: قابل‌پیگیری
+                - cell "در حال پیگیری" [ref=e560]:
+                  - generic [ref=e561]: در حال پیگیری
+                - cell "پرهام برنامه‌ریز" [ref=e563]
+                - cell "بدون مسئول" [ref=e564]
+                - cell [ref=e565]
+                - cell "۳ دقیقه پیش" [ref=e566]
+              - row "انتخاب ردیف =HYPERLINK(\"http://evil.invalid\",\"x\") 5910605 شخص حقیقی / بدون سازمان DEMO-TECH-1405 دروازه IoT صنعتی قابل‌پیگیری در انتظار ارزیابی مریم توسعه‌بازار بدون مسئول ۳ دقیقه پیش" [ref=e567] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e568]:
+                  - checkbox "انتخاب ردیف" [ref=e569]
+                - cell "=HYPERLINK(\"http://evil.invalid\",\"x\") 5910605 شخص حقیقی / بدون سازمان" [ref=e570]:
+                  - generic [ref=e571]:
+                    - generic [ref=e572]: =HYPERLINK("http://evil.invalid","x") 5910605
+                    - generic [ref=e573]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e574]:
+                  - generic [ref=e575]: DEMO-TECH-1405
+                - cell "دروازه IoT صنعتی" [ref=e576]:
+                  - generic [ref=e577]: دروازه IoT صنعتی
+                - cell "قابل‌پیگیری" [ref=e578]:
+                  - generic [ref=e579]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e580]:
+                  - generic [ref=e581]: در انتظار ارزیابی
+                - cell "مریم توسعه‌بازار" [ref=e582]
+                - cell "بدون مسئول" [ref=e583]
+                - cell [ref=e584]
+                - cell "۳ دقیقه پیش" [ref=e585]
+              - row "انتخاب ردیف لید QA 1616573 سازمان تعارض 81466 DEMO-TECH-1405 پارکینگ هوشمند قابل‌پیگیری در انتظار ارزیابی پرهام برنامه‌ریز بدون مسئول ۳ دقیقه پیش" [ref=e586] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e587]:
+                  - checkbox "انتخاب ردیف" [ref=e588]
+                - cell "لید QA 1616573 سازمان تعارض 81466" [ref=e589]:
+                  - generic [ref=e590]:
+                    - generic [ref=e591]: لید QA 1616573
+                    - generic [ref=e592]: سازمان تعارض 81466
+                - cell "DEMO-TECH-1405" [ref=e593]:
+                  - generic [ref=e594]: DEMO-TECH-1405
+                - cell "پارکینگ هوشمند" [ref=e595]:
+                  - generic [ref=e596]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e597]:
+                  - generic [ref=e598]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e599]:
+                  - generic [ref=e600]: در انتظار ارزیابی
+                - cell "پرهام برنامه‌ریز" [ref=e601]
+                - cell "بدون مسئول" [ref=e602]
+                - cell [ref=e603]
+                - cell "۳ دقیقه پیش" [ref=e604]
+              - row "انتخاب ردیف لید QA 4054790 شخص حقیقی / بدون سازمان DEMO-TECH-1405 پایش هوشمند ناوگان قابل‌پیگیری در انتظار ارزیابی سینا غرفه‌دار در انتظار اوستا محصول‌محور ۳ دقیقه پیش" [ref=e605] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e606]:
+                  - checkbox "انتخاب ردیف" [ref=e607]
+                - cell "لید QA 4054790 شخص حقیقی / بدون سازمان" [ref=e608]:
+                  - generic [ref=e609]:
+                    - generic [ref=e610]: لید QA 4054790
+                    - generic [ref=e611]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e612]:
+                  - generic [ref=e613]: DEMO-TECH-1405
+                - cell "پایش هوشمند ناوگان" [ref=e614]:
+                  - generic [ref=e615]: پایش هوشمند ناوگان
+                - cell "قابل‌پیگیری" [ref=e616]:
+                  - generic [ref=e617]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e618]:
+                  - generic [ref=e619]: در انتظار ارزیابی
+                - cell "سینا غرفه‌دار" [ref=e620]
+                - cell "در انتظار اوستا محصول‌محور" [ref=e621]:
+                  - generic [ref=e622]: در انتظار اوستا محصول‌محور
+                - cell [ref=e623]
+                - cell "۳ دقیقه پیش" [ref=e624]
+              - row "انتخاب ردیف پس از رویداد QA-MVL0PZ52-932 سازمان QA-MVL0PZ52-932 QA-MVL0PZ52-932 پارکینگ هوشمند قابل‌پیگیری در انتظار ارزیابی پرهام برنامه‌ریز بدون مسئول ۳ دقیقه پیش" [ref=e625] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e626]:
+                  - checkbox "انتخاب ردیف" [ref=e627]
+                - cell "پس از رویداد QA-MVL0PZ52-932 سازمان QA-MVL0PZ52-932" [ref=e628]:
+                  - generic [ref=e629]:
+                    - generic [ref=e630]: پس از رویداد QA-MVL0PZ52-932
+                    - generic [ref=e631]: سازمان QA-MVL0PZ52-932
+                - cell "QA-MVL0PZ52-932" [ref=e632]:
+                  - generic [ref=e633]: QA-MVL0PZ52-932
+                - cell "پارکینگ هوشمند" [ref=e634]:
+                  - generic [ref=e635]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e636]:
+                  - generic [ref=e637]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e638]:
+                  - generic [ref=e639]: در انتظار ارزیابی
+                - cell "پرهام برنامه‌ریز" [ref=e640]
+                - cell "بدون مسئول" [ref=e641]
+                - cell [ref=e642]
+                - cell "۳ دقیقه پیش" [ref=e643]
+              - row "انتخاب ردیف لید QA 0980583 شخص حقیقی / بدون سازمان DEMO-TECH-1405 پارکینگ هوشمند قابل‌پیگیری در انتظار ارزیابی پرهام برنامه‌ریز بدون مسئول ۴ دقیقه پیش" [ref=e644] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e645]:
+                  - checkbox "انتخاب ردیف" [ref=e646]
+                - cell "لید QA 0980583 شخص حقیقی / بدون سازمان" [ref=e647]:
+                  - generic [ref=e648]:
+                    - generic [ref=e649]: لید QA 0980583
+                    - generic [ref=e650]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e651]:
+                  - generic [ref=e652]: DEMO-TECH-1405
+                - cell "پارکینگ هوشمند" [ref=e653]:
+                  - generic [ref=e654]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e655]:
+                  - generic [ref=e656]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e657]:
+                  - generic [ref=e658]: در انتظار ارزیابی
+                - cell "پرهام برنامه‌ریز" [ref=e659]
+                - cell "بدون مسئول" [ref=e660]
+                - cell [ref=e661]
+                - cell "۴ دقیقه پیش" [ref=e662]
+              - row "انتخاب ردیف لید QA 8447791 شخص حقیقی / بدون سازمان DEMO-TECH-1405 پارکینگ هوشمند قابل‌پیگیری در انتظار ارزیابی سینا غرفه‌دار بدون مسئول ۴ دقیقه پیش" [ref=e663] [cursor=pointer]:
+                - cell "انتخاب ردیف" [ref=e664]:
+                  - checkbox "انتخاب ردیف" [ref=e665]
+                - cell "لید QA 8447791 شخص حقیقی / بدون سازمان" [ref=e666]:
+                  - generic [ref=e667]:
+                    - generic [ref=e668]: لید QA 8447791
+                    - generic [ref=e669]: شخص حقیقی / بدون سازمان
+                - cell "DEMO-TECH-1405" [ref=e670]:
+                  - generic [ref=e671]: DEMO-TECH-1405
+                - cell "پارکینگ هوشمند" [ref=e672]:
+                  - generic [ref=e673]: پارکینگ هوشمند
+                - cell "قابل‌پیگیری" [ref=e674]:
+                  - generic [ref=e675]: قابل‌پیگیری
+                - cell "در انتظار ارزیابی" [ref=e676]:
+                  - generic [ref=e677]: در انتظار ارزیابی
+                - cell "سینا غرفه‌دار" [ref=e678]
+                - cell "بدون مسئول" [ref=e679]
+                - cell [ref=e680]
+                - cell "۴ دقیقه پیش" [ref=e681]
+          - generic [ref=e682]:
+            - generic [ref=e683]: صفحه ۱ از ۷
+            - generic [ref=e684]:
+              - button "صفحه قبل" [disabled]:
+                - img
+              - button "صفحه بعد" [ref=e685]:
+                - img [ref=e686]
+```

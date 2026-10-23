@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { ApiError, get, post } from "./api";
+import { ApiError, SESSION_EXPIRED_EVENT, get, post } from "./api";
 import { offlineQueue } from "./offline";
 
 export type EventCtx = {
@@ -41,6 +41,12 @@ type AuthState = {
 };
 
 const Ctx = createContext<AuthState | null>(null);
+
+/** Caches event/product context right after login so booth capture works offline even if the
+ *  capture page was never opened online on this device (QA-D-19). */
+function prefetchCaptureContext(userId: string) {
+  get("/events/mine").then((events) => offlineQueue.cacheEvents(userId, events)).catch(() => undefined);
+}
 const EVENT_KEY = "expo.activeEvent";
 
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -61,6 +67,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setMe(data);
       offlineQueue.setUser(data.user.id);
       offlineQueue.cacheContext(data.user.id, data).catch(() => undefined);
+      prefetchCaptureContext(data.user.id);
     } catch (e) {
       if (e instanceof ApiError && e.isNetwork) {
         // Offline start: use the last cached identity so booth capture keeps working.
@@ -76,6 +83,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     load();
   }, [load]);
+
+  // Session expired mid-use: drop identity so <Protected> redirects to /login?next=… (offline queue is kept).
+  useEffect(() => {
+    const onExpired = () => {
+      qc.clear();
+      setMe(null);
+    };
+    window.addEventListener(SESSION_EXPIRED_EVENT, onExpired);
+    return () => window.removeEventListener(SESSION_EXPIRED_EVENT, onExpired);
+  }, [qc]);
 
   // Event context rules: single active capture membership → locked default.
   useEffect(() => {
@@ -117,6 +134,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setMe(data);
         offlineQueue.setUser(data.user.id);
         offlineQueue.cacheContext(data.user.id, data).catch(() => undefined);
+      prefetchCaptureContext(data.user.id);
         qc.clear();
       },
       logout: async (opts) => {

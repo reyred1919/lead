@@ -92,7 +92,7 @@ export function BrandingAdminPage() {
     <div className="max-w-4xl space-y-5">
       <PageHeader title="هویت بصری" subtitle="نشان رسمی سازمان را بارگذاری کنید. PNG یا WebP (حداکثر ۲ مگابایت). SVG به دلیل محتوای فعال پذیرفته نمی‌شود؛ هر فایل بررسی محتوا و بازکدگذاری می‌شود." />
       {s.placeholder && <div className="rounded-[14px] bg-warning-soft text-warning px-4 py-3 text-[14px]">نشان رسمی هنوز بارگذاری نشده است؛ یک نشان موقت خنثی با برچسب «نشان موقت» نمایش داده می‌شود.</div>}
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-[minmax(0,1fr)] md:grid-cols-2 gap-5">
         {(["LIGHT", "DARK"] as const).map((variant) => {
           const asset = variant === "LIGHT" ? s.light : s.dark;
           return (
