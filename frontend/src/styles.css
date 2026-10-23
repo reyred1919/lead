@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "@fontsource/vazirmatn/400.css";
+@import "@fontsource/vazirmatn/500.css";
+@import "@fontsource/vazirmatn/600.css";
+@import "@fontsource/vazirmatn/700.css";
+@import "@fontsource/vazirmatn/800.css";
+
+/* Approved Apple-inspired premium direction: warm white, navy, precise blue accent.
+   Peyda is not supplied/licensed in this repository; Vazirmatn (OFL) is used with matching metrics. */
+@theme {
+  --font-sans: "Peyda", "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --color-canvas: #fafbfd;
+  --color-panel: #ffffff;
+  --color-ink: #142847;
+  --color-ink-2: #44546d;
+  --color-muted: #718198;
+  --color-line: #e5eaf1;
+  --color-line-2: #eef1f6;
+  --color-navy: #10294c;
+  --color-navy-2: #1b3a66;
+  --color-action: #2368e5;
+  --color-action-2: #1a56c4;
+  --color-action-soft: #eaf1fd;
+  --color-success: #127a4a;
+  --color-success-soft: #e7f6ee;
+  --color-warning: #9a5b00;
+  --color-warning-soft: #fdf3e2;
+  --color-danger: #b42318;
+  --color-danger-soft: #fdecea;
+  --color-info: #1f5fb8;
+  --color-info-soft: #e8f0fb;
+  --radius-card: 18px;
+  --radius-field: 12px;
+  --shadow-card: 0 1px 2px rgb(16 41 76 / 0.04), 0 4px 16px rgb(16 41 76 / 0.04);
+  --shadow-pop: 0 12px 40px rgb(16 41 76 / 0.14), 0 2px 6px rgb(16 41 76 / 0.06);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-canvas text-ink font-sans;
+    font-feature-settings: "ss01";
+    min-height: 100dvh;
+  }
+  :focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--color-action) 55%, transparent);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+  ::selection {
+    background: var(--color-action-soft);
+  }
+  input, textarea, select, button {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-panel border border-line rounded-[var(--radius-card)] shadow-[var(--shadow-card)];
+  }
+  .ltr {
+    direction: ltr;
+    unicode-bidi: isolate;
+    display: inline-block;
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .glass {
+    background: color-mix(in srgb, var(--color-panel) 78%, transparent);
+    backdrop-filter: saturate(180%) blur(18px);
+    -webkit-backdrop-filter: saturate(180%) blur(18px);
+  }
+  .skeleton {
+    @apply rounded-lg bg-line-2;
+    background-image: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.7), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+.animate-rise {
+  animation: rise 200ms var(--ease-out-soft);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

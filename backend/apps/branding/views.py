@@ -53,6 +53,7 @@ def settings_data(s):
         "logo_scale": s.logo_scale, "show_on_exports": s.show_on_exports, "revision": s.revision, "updated_at": s.updated_at,
         "light": asset_data(s.light_asset), "dark": asset_data(s.dark_asset),
         "placeholder": not (s.light_asset_id or s.dark_asset_id),
+        "demo_mode": settings.DEMO_MODE,
     }
 
 
