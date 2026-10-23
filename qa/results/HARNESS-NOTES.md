@@ -15,3 +15,9 @@
 - At 768px Home shows both the hero CTA and the bottom-nav button named "ثبت لید جدید"; the test chose by
   width ≥1024 only and hit a strict-mode violation. Fixed in the test (scope to the bottom navigation on
   touch layouts) after the baseline runs; not a product defect.
+
+## H-03 — TC-SEC-01 used `events/mine[0]` (test defect, inconclusive result on tablet-1024)
+- After TC-ENR-01 created temporary (then closed) events, `events/mine[0]` for specialist1 could be a closed
+  event; the API correctly refused the capture (422 `event_not_active`) and the test then looked for a lead page
+  that did not exist. No script execution was observed, but the run is **inconclusive**, not a PASS.
+- Fix: the test selects the active demo event and asserts 201 before checking rendering; re-run on all projects.
