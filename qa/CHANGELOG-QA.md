@@ -3,7 +3,7 @@
 Branch `qa/audit-c6a1c88` (base `ccr-c989dc1b-w7didd`). Baseline evidence was recorded **before** any fix was
 loaded: the QA API process (`runserver --noreload`, started 13:14:27 UTC) predates the first backend fix edit
 (13:19:38 UTC) and still answered unauthenticated requests with 403 during all baseline runs; the baseline UI
-dev server served `c6a1c88` frontend sources (fixes were developed in a separate worktree on `qa/frontend-fixes` and cherry-picked; after-fix code = `d97226a`).
+dev server served `c6a1c88` frontend sources (fixes were developed in a separate worktree on `qa/frontend-fixes` and cherry-picked; interim after-fix code `d97226a`, final after-fix code `4c81bad`).
 
 ## Product fixes (each with a regression test)
 | Commit | Defects | Change | Regression test |
@@ -17,12 +17,14 @@ dev server served `c6a1c88` frontend sources (fixes were developed in a separate
 | `cef25e4` | QA-D-19 | Event context prefetched at login; truthful offline/error state | TC-OFF-06 |
 | `a4f1e7a` | QA-D-20 | Long unbroken names cannot widen Home/Dashboard/admin grids | TC-LST-07 |
 | `d97226a` | QA-D-09 | Select chevron uses accessible muted colour | axe |
+| `a665d76` | QA-D-19 | Events query uses `networkMode: "always"` so the offline cache is reached (first fix was incomplete — caught by the interim after-run) | TC-OFF-04, TC-OFF-06 |
+| `4c81bad` | QA-D-21 | `scroll-padding` keeps focused/scrolled elements clear of sticky header and mobile tab bar | TC-LST-01 (touch) |
 
 ## QA tooling (no product behaviour)
 - `95f380f`, `885eac6`, `abf1f05` and later `qa:` commits: isolated QA stack (`qa/scripts/qa-stack.sh`), synthetic
   personas (`seed_qa`), Playwright QA suite (`frontend/qa-e2e/`, `frontend/qa.config.ts`), backend audit suite,
   report generators, baseline/after evidence.
-- Harness incidents and test-only corrections are listed in `qa/results/HARNESS-NOTES.md` (H-01..H-03).
+- Harness incidents and test-only corrections are listed in `qa/results/HARNESS-NOTES.md` (H-01..H-04).
 
 ## Not changed (residual risks, see SECURITY-RELIABILITY-REPORT.fa.md §4)
 QA-R-01..R-06.
