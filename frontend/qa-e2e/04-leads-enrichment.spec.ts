@@ -154,3 +154,19 @@ test.describe("Enrichment & opportunity detail", () => {
     await expect(page.locator("ol").getByText("حذف برچسب")).toBeVisible();
   });
 });
+
+test("TC-LST-07 unbroken long lead name does not widen Home or Leads (bottom nav stays reachable)", async ({ page }, info) => {
+  tc(info, "TC-LST-07", { role: "specialist1", route: "/ + /leads", action: "long unbroken name", req: "§20 RTL/responsive", expected: "no horizontal overflow" });
+  await apiLogin(page, "specialist1");
+  await newLeadViaApi(page, "DEMO-TECH-1405", { contact_name: `=HYPERLINK("http://example.invalid/${"x".repeat(60)}","QA")` });
+  for (const route of ["/", "/leads"]) {
+    await page.goto(route);
+    await expect(page.locator("main#main")).toBeVisible();
+    await page.waitForLoadState("networkidle").catch(() => undefined);
+    await expectNoOverflow(page, `specialist1 ${route}`);
+  }
+  if ((page.viewportSize()?.width ?? 1440) < 1024) {
+    await press(info, page.getByRole("button", { name: "بیشتر" }));
+    await expect(page.getByRole("dialog")).toBeVisible();
+  }
+});

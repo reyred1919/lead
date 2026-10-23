@@ -31,9 +31,9 @@ def walk(suite, path=()):
 
 
 def tests_csv(label):
-    data = json.loads((RES / f"playwright-{label}.json").read_text())
+    files = sorted(RES.glob(f"playwright-{label}-*.json")) or [RES / f"playwright-{label}.json"]
     rows = []
-    for path, spec, t in walk(data):
+    for path, spec, t in (x for f in files for x in walk(json.loads(f.read_text()))):
         res = t["results"][-1] if t["results"] else {}
         status = {"passed": "PASS", "failed": "FAIL", "timedOut": "FAIL", "skipped": "SKIP", "interrupted": "BLOCKED"}.get(res.get("status", "skipped"), res.get("status"))
         if t.get("expectedStatus") == "skipped":
@@ -48,6 +48,8 @@ def tests_csv(label):
         err = ""
         if res.get("errors"):
             err = (res["errors"][0].get("message") or "").splitlines()[0][:300]
+        if status == "SKIP":
+            err = next((a.get("description", "") for a in t.get("annotations", []) + res.get("annotations", []) if a.get("type") == "skip"), "") or err
         attachments = [a.get("path", "") for a in res.get("attachments", []) if a.get("path")]
         rows.append({
             "case_id": meta.get("id") or spec["title"].split(" ")[0], "title": spec["title"], "file": spec.get("file"),

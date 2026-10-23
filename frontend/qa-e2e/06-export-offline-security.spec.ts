@@ -170,6 +170,21 @@ test.describe("Offline", () => {
   });
 });
 
+test("TC-OFF-06 first visit to capture while offline (after online login) still allows capture", async ({ page, context }, info) => {
+  tc(info, "TC-OFF-06", { role: "planmgr", route: "/capture", action: "offline first open", req: "§22.4", expected: "form with event products, not 'no membership'" });
+  await loginAs(page, "planmgr", "/");
+  await page.waitForLoadState("networkidle");
+  await context.setOffline(true);
+  await page.evaluate(() => window.dispatchEvent(new Event("offline")));
+  if ((page.viewportSize()?.width ?? 1440) >= 1024) await page.getByRole("button", { name: "ثبت لید جدید" }).first().click();
+  else await press(info, page.getByRole("button", { name: "ثبت لید جدید" }));
+  await expect(page).toHaveURL(/\/capture/);
+  await expect(page.locator("#contact_name")).toBeVisible();
+  await expect(page.getByText(/عضو فعال هیچ رویدادی نیستید/)).toHaveCount(0);
+  await shot(page, info, "planmgr", "/capture", "offline-first-open", "TC-OFF-06");
+  await context.setOffline(false);
+});
+
 test.describe("Browser-level security", () => {
   test("TC-SEC-01 stored XSS payload in lead fields renders as text", async ({ page }, info) => {
     tc(info, "TC-SEC-01", { role: "specialist1", route: "/leads/:id", action: "XSS", expected: "no script execution" });
