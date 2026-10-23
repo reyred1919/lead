@@ -1,11 +1,14 @@
 import { expect, test, type Page, type TestInfo } from "@playwright/test";
-import { api, expectNoOverflow, loginAs, mobileNo, press, shot, tc, uniq } from "./support";
+import { api, expectNoOverflow, loginAs, mobileNo, press, shot, tc, uniq, selectFirstProduct } from "./support";
 
 async function fillBasics(page: Page, info: TestInfo, name: string, mobile: string, productIdx = [0]) {
   await page.fill("#contact_name", name);
   await page.fill("#mobile", mobile);
   const group = page.getByRole("group", { name: "محصولات" });
-  for (const i of productIdx) await press(info, group.getByRole("button").nth(i));
+  for (const i of productIdx) {
+    const chip = group.getByRole("button").nth(i);
+    if ((await chip.getAttribute("aria-pressed")) !== "true") await press(info, chip);
+  }
 }
 async function submit(page: Page, info: TestInfo) {
   await press(info, page.getByRole("button", { name: /^(ثبت لید|ذخیره آفلاین)$/ }));

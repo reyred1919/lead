@@ -29,7 +29,7 @@ if (has("firefox")) projects.push({ name: "firefox-desktop", use: { ...common, b
 
 export default defineConfig({
   testDir: "qa-e2e",
-  outputDir: "../qa/traces/test-output",
+  outputDir: process.env.QA_OUT ?? "../qa/traces/test-output",
   timeout: 90_000,
   expect: { timeout: 10_000 },
   workers: Number(process.env.QA_WORKERS ?? 2),

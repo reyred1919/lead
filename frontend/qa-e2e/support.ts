@@ -165,3 +165,10 @@ export async function closeEvent(admin: Page, eventId: string, graceHours?: numb
   const t = await api(admin, "POST", `/events/${eventId}/transition`, { status: "CLOSED", version: d.version });
   expect(t.status, JSON.stringify(t.body)).toBe(200);
 }
+
+/** Ensures the first product chip of the capture form is selected (single-product events pre-select it). */
+export async function selectFirstProduct(page: Page, info: TestInfo) {
+  const chip = page.getByRole("group", { name: "محصولات" }).getByRole("button").first();
+  if ((await chip.getAttribute("aria-pressed")) !== "true") await press(info, chip);
+  await expect(chip).toHaveAttribute("aria-pressed", "true");
+}

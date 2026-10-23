@@ -29,10 +29,10 @@ test.describe("Admin CRUD", () => {
     await press(info, page.getByRole("button", { name: "افزودن عضو" }));
     const m = page.getByRole("dialog");
     const settled = page.waitForResponse((r) => r.url().includes("/api/v1/users") && r.url().includes("q="));
-    await m.getByLabel("جست‌وجوی کاربر").fill("سمیرا");
+    await m.getByLabel("جست‌وجوی کاربر").fill("الناز");
     await settled;
     await page.waitForTimeout(150);
-    await press(info, m.getByRole("option", { name: /سمیرا/ }));
+    await press(info, m.getByRole("option", { name: /الناز/ }));
     await press(info, m.getByRole("checkbox", { name: "کارشناس غرفه" }));
     await press(info, m.getByRole("button", { name: "ذخیره" }));
     await expect(page.getByText("عضویت ذخیره شد")).toBeVisible();
@@ -79,7 +79,7 @@ test.describe("Admin CRUD", () => {
     await shot(page, info, "admin", "/admin/users", "create-validation", "TC-ADM-03");
     await dlg.getByPlaceholder("0912 345 6789").fill("۰۹۱۲ ۱۲۳ ۴۵۶۷");
     await press(info, dlg.getByRole("button", { name: /ایجاد و ارسال/ }));
-    await expect(page.getByRole("dialog").getByText("لینک فعال‌سازی/بازنشانی صادر شد")).toBeVisible();
+    await expect(page.getByRole("heading", { name: "لینک فعال‌سازی/بازنشانی صادر شد" })).toBeVisible();
     await expect(page.getByRole("dialog").getByText(/شبیه‌سازی/).first()).toBeVisible();
     const u = (await api(page, "GET", `/users?q=${uname}`)).body.results[0];
     expect(u.mobile).toBe("+989121234567");
@@ -158,6 +158,8 @@ test.describe("Notification & action center", () => {
     await sp.goto("/inbox?tab=actions");
     const card = sp.locator("li", { hasText: subject });
     await press(info, card.getByRole("button", { name: "دیدم" }));
+    await expect(card.getByText("دیده‌شده")).toBeVisible();
+    await sp.waitForLoadState("networkidle");
     await press(info, card.getByRole("button", { name: "انجام شد" }));
     await sp.getByRole("dialog").getByLabel("توضیح").fill("بارگذاری شد");
     await press(info, sp.getByRole("dialog").getByRole("button", { name: "ثبت" }));

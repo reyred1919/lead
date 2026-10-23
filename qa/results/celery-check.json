@@ -1,0 +1,1 @@
+{"outbox_statuses": ["PROCESSED"], "jobs": [["IN_APP", "DELIVERED"], ["SMS", "SIMULATED"]], "jobs_after_rerun": 2, "jobs_before_rerun": 2, "in_app_notifications_for_recipient": true, "worker_log_mentions_task": true}
