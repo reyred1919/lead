@@ -255,7 +255,7 @@ function TemplateDialog({ t, vars, onClose }: { t: any | null; vars: { name: str
   return (
     <Dialog open onOpenChange={(o) => !o && onClose()} title={t ? "ویرایش قالب" : "قالب جدید"} size="xl"
       footer={<><Button variant="secondary" loading={preview.isPending} onClick={() => preview.mutate()}>پیش‌نمایش</Button><Button loading={save.isPending} onClick={() => save.mutate()}>ذخیره</Button></>}>
-      <div className="grid lg:grid-cols-[1fr_280px] gap-5">
+      <div className="grid grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_280px] gap-5">
         <div className="space-y-4">
           <div className="grid sm:grid-cols-3 gap-3">
             <Field label="کد"><Input dir="ltr" disabled={!!t} value={v.code} onChange={(e) => setV({ ...v, code: e.target.value })} /></Field>
