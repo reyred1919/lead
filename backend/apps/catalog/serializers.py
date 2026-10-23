@@ -21,7 +21,8 @@ class PlanSerializer(serializers.ModelSerializer):
         read_only_fields = ["id", "status", "version", "created_at", "updated_at"]
 
     def get_product_count(self, obj):
-        return obj.products.count()
+        annotated = getattr(obj, "num_products", None)
+        return annotated if annotated is not None else obj.products.count()
 
     def validate_code(self, value):
         value = _code(value)

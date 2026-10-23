@@ -56,7 +56,8 @@ class UserSerializer(serializers.ModelSerializer):
         read_only_fields = ["id", "mobile_verified_at", "email_verified_at", "must_change_password", "last_login", "created_at", "updated_at", "version"]
 
     def get_global_roles(self, obj):
-        return [{"code": a.role.code, "name_fa": a.role.name_fa} for a in obj.global_roles.select_related("role").all()]
+        # Uses the view's prefetch_related("global_roles__role") — no per-row query (QA-D-06).
+        return [{"code": a.role.code, "name_fa": a.role.name_fa} for a in obj.global_roles.all()]
 
     def get_has_password(self, obj):
         return obj.has_usable_password()
