@@ -64,7 +64,7 @@ export function LeadDetailPage() {
           <Avatar name={l.contact.full_name} size={56} />
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-2">
-              <h1 className="text-[24px] font-extrabold leading-tight">{l.contact.full_name}</h1>
+              <h1 className="text-[24px] font-extrabold leading-tight [overflow-wrap:anywhere]">{l.contact.full_name}</h1>
               <QualityBadge q={l.quality} />
               <StageBadge s={opp?.stage} />
               {l.captured_offline && <Badge tone="neutral"><CloudOff className="size-3" />ثبت آفلاین</Badge>}
@@ -89,7 +89,7 @@ export function LeadDetailPage() {
         </div>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-5">
+      <div className="grid grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_360px] gap-5">
         <div className="space-y-5 min-w-0">
           {/* Attribution: creator vs follow-up owner are distinct identities */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

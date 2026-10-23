@@ -35,7 +35,7 @@ export function ReportsPage() {
   return (
     <div>
       <PageHeader title="گزارش و خروجی داده" subtitle="خروجی ساختاریافته با شناسه‌های پایدار، زمان UTC، کدهای استاندارد و فرهنگ داده نسخه‌دار — با همان محدوده مجوز صفحه‌ها." />
-      <div className="grid lg:grid-cols-[1fr_380px] gap-5">
+      <div className="grid grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_380px] gap-5">
         <Card>
           <CardHeader title="خروجی جدید" />
           <div className="px-5 pb-5 space-y-5">

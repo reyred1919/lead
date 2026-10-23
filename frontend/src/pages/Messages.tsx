@@ -50,7 +50,7 @@ export function MessagesPage() {
   return (
     <div>
       <PageHeader title="پیام و درخواست اقدام" subtitle="پیام دستی یا درخواست اقدام برای همکاران در محدوده مجاز شما. پیامک/ایمیل فقط خلاصه و لینک امن دارد؛ اقدام در سامانه انجام می‌شود. ارسال به مشتریان در این فاز غیرفعال است." />
-      <div className="grid lg:grid-cols-[1fr_420px] gap-5">
+      <div className="grid grid-cols-[minmax(0,1fr)] lg:grid-cols-[minmax(0,1fr)_420px] gap-5">
         <Card className="p-5 space-y-5">
           <Segmented label="نوع پیام" value={kind} onChange={setKind} options={[{ value: "INFORMATION", label: "اطلاع‌رسانی" }, { value: "ACTION_REQUEST", label: "درخواست اقدام" }]} />
           <Field label="موضوع" required htmlFor="m-subject"><Input id="m-subject" value={subject} onChange={(e) => setSubject(e.target.value)} /></Field>

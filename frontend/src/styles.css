@@ -44,6 +44,8 @@
   }
   body {
     @apply bg-canvas text-ink font-sans;
+    /* Long unbroken user input (URLs, codes, pasted tokens) wraps instead of widening the page (QA-D-17). */
+    overflow-wrap: anywhere;
     font-feature-settings: "ss01";
     min-height: 100dvh;
   }
