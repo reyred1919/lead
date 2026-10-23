@@ -33,6 +33,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@playwright/test": "^1.56.1",
     "@tailwindcss/vite": "^4.3.3",
     "@types/jalaali-js": "^1.2.0",

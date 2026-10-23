@@ -11,3 +11,5 @@ frontend/playwright-report/
 .env
 *.log
 .pytest_cache/
+qa/traces/test-output/
+qa/results/*.jsonl
