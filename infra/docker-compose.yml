@@ -12,6 +12,7 @@ x-backend-env: &backend-env
   CELERY_BROKER_URL: redis://redis:6379/0
   DEMO_MODE: ${DEMO_MODE:-false}
   SECURE_COOKIES: ${SECURE_COOKIES:-true}
+  DJANGO_NUM_PROXIES: "1"   # nginx (service `web`) is the single trusted proxy hop
   MEDIA_ROOT: /data/media
   EXPORT_ROOT: /data/exports
 

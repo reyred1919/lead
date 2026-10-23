@@ -120,13 +120,21 @@ if not DEBUG:
 FIELD_ENCRYPTION_KEY = os.environ.get("FIELD_ENCRYPTION_KEY", "")
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": ["rest_framework.authentication.SessionAuthentication"],
+    "DEFAULT_AUTHENTICATION_CLASSES": ["apps.common.authentication.SessionAuthentication401"],
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
     "DEFAULT_PAGINATION_CLASS": "apps.common.pagination.StandardPagination",
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
-    "DEFAULT_THROTTLE_RATES": {"login": os.environ.get("LOGIN_THROTTLE", "10/min"), "password_reset": "5/hour"},
+    "DEFAULT_THROTTLE_RATES": {
+        "login": os.environ.get("LOGIN_THROTTLE", "10/min"),
+        "password_forgot": os.environ.get("PASSWORD_FORGOT_THROTTLE", "10/hour"),  # per client IP
+        "password_reset_token": "10/hour",  # per reset token (submission attempts)
+        "password_reset_ip": os.environ.get("PASSWORD_RESET_IP_THROTTLE", "300/hour"),  # coarse per-IP ceiling (office NAT safe)
+    },
     "EXCEPTION_HANDLER": "apps.common.exceptions.exception_handler",
     "UNAUTHENTICATED_USER": "django.contrib.auth.models.AnonymousUser",
+    # Number of trusted reverse-proxy hops in front of the API (nginx in infra/ = 1). Used for client IP
+    # in throttling and audit logs; leave unset when the API is reached directly.
+    "NUM_PROXIES": int(os.environ["DJANGO_NUM_PROXIES"]) if os.environ.get("DJANGO_NUM_PROXIES") else None,
 }
 
 SPECTACULAR_SETTINGS = {

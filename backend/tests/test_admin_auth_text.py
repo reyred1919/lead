@@ -150,7 +150,7 @@ def test_login_logout_and_csrf_enforced():
     assert c.get("/api/v1/auth/me").status_code == 200
     token = c.cookies["csrftoken"].value
     assert c.post("/api/v1/auth/logout", HTTP_X_CSRFTOKEN=token).status_code == 200
-    assert c.get("/api/v1/auth/me").status_code == 403
+    assert c.get("/api/v1/auth/me").status_code == 401  # anonymous → 401 (QA-D-04), forbidden stays 403
     assert AuditLog.objects.filter(action="auth.login_failed").exists()
 
 

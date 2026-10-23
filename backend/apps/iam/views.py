@@ -9,7 +9,7 @@ from rest_framework import status
 from rest_framework.exceptions import NotFound, PermissionDenied, ValidationError
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
-from rest_framework.throttling import AnonRateThrottle
+from rest_framework.throttling import AnonRateThrottle, SimpleRateThrottle
 from rest_framework.views import APIView
 
 from apps.common.audit import audit, diff
@@ -27,8 +27,26 @@ class LoginThrottle(AnonRateThrottle):
     scope = "login"
 
 
-class ResetThrottle(AnonRateThrottle):
-    scope = "password_reset"
+class ForgotThrottle(AnonRateThrottle):
+    scope = "password_forgot"
+
+
+class ResetIpThrottle(AnonRateThrottle):
+    """Coarse per-IP ceiling for token checks/submissions; sized so a whole office behind one NAT can onboard."""
+
+    scope = "password_reset_ip"
+
+
+class ResetTokenThrottle(SimpleRateThrottle):
+    """Limits password submissions per token (the 256-bit token itself is the secret; IP sharing doesn't matter)."""
+
+    scope = "password_reset_token"
+
+    def get_cache_key(self, request, view):
+        if request.method != "POST":
+            return None
+        token = str(request.data.get("token", "")) if hasattr(request, "data") else ""
+        return self.cache_format % {"scope": self.scope, "ident": PasswordResetToken.hash(token)}
 
 
 def me_payload(user):
@@ -152,7 +170,7 @@ def _deliver_reset_link(user, raw_token, purpose, actor=None):
 @method_decorator(csrf_protect, name="dispatch")
 class ForgotPasswordView(APIView):
     permission_classes = [AllowAny]
-    throttle_classes = [ResetThrottle]
+    throttle_classes = [ForgotThrottle]
 
     def post(self, request):
         username = normalize_digits(str(request.data.get("username", ""))).strip().lower()
@@ -168,7 +186,7 @@ class ForgotPasswordView(APIView):
 @method_decorator(csrf_protect, name="dispatch")
 class ResetPasswordView(APIView):
     permission_classes = [AllowAny]
-    throttle_classes = [ResetThrottle]
+    throttle_classes = [ResetIpThrottle, ResetTokenThrottle]
 
     def get(self, request):
         token = PasswordResetToken.lookup(request.query_params.get("token", ""))
