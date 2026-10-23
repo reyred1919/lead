@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
 import {
   Bell, BarChart3, Building2, CalendarRange, ClipboardList, CloudOff, CloudUpload, Copy, FileDown, Fingerprint, Home, Inbox, LayoutGrid,
@@ -146,8 +146,27 @@ export function useLogout() {
   return { start, node };
 }
 
+/** Scrolls a keyboard-focused control out from under the sticky header / fixed tab bar (WCAG 2.4.11, QA-D-21). */
+function useFocusNotObscured() {
+  useEffect(() => {
+    const onFocus = (e: FocusEvent) => {
+      const el = e.target;
+      if (!(el instanceof HTMLElement) || el.closest("header, nav[aria-label='ناوبری پایین'], [role='dialog']")) return;
+      const header = document.querySelector("header")?.getBoundingClientRect().bottom ?? 0;
+      const tabs = document.querySelector("nav[aria-label='ناوبری پایین']")?.getBoundingClientRect();
+      const bottom = tabs && tabs.height > 0 ? tabs.top : window.innerHeight;
+      const r = el.getBoundingClientRect();
+      if (r.bottom > bottom) window.scrollBy({ top: r.bottom - bottom + 12 });
+      else if (r.top < header) window.scrollBy({ top: r.top - header - 12 });
+    };
+    document.addEventListener("focusin", onFocus);
+    return () => document.removeEventListener("focusin", onFocus);
+  }, []);
+}
+
 export function AppShell() {
   const { me } = useAuth();
+  useFocusNotObscured();
   const { main, admin, canCapture } = useNav();
   const { start: logout, node: logoutDialog } = useLogout();
   const [moreOpen, setMoreOpen] = useState(false);
@@ -185,7 +204,7 @@ export function AppShell() {
           </div>
         </header>
 
-        <main id="main" className={cn("flex-1 w-full mx-auto px-4 md:px-6 lg:px-8 py-5 md:py-8 pb-28 lg:pb-10", isCapture ? "max-w-2xl" : "max-w-[1240px]")}>
+        <main id="main" className={cn("flex-1 w-full mx-auto px-4 md:px-6 lg:px-8 pt-5 md:pt-8 pb-28 lg:pb-10", isCapture ? "max-w-2xl" : "max-w-[1240px]")}>
           <Outlet />
         </main>
       </div>
