@@ -203,7 +203,7 @@ function Info({ label, value, wide }: { label: string; value?: ReactNode; wide?:
   return (
     <div className={cn(wide && "sm:col-span-2")}>
       <dt className="text-[12.5px] text-muted mb-0.5">{label}</dt>
-      <dd className={cn("leading-7", !value && "text-muted/70 text-[13.5px]")}>{value || "ثبت نشده"}</dd>
+      <dd className={cn("leading-7", !value && "text-muted text-[13.5px]")}>{value || "ثبت نشده"}</dd>
     </div>
   );
 }

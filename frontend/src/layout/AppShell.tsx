@@ -166,10 +166,10 @@ export function AppShell() {
         </Button>
         <nav className="flex-1 overflow-y-auto scrollbar-thin -mx-1 px-1 space-y-1">
           {main.map((i) => <NavItem key={i.to} item={i} />)}
-          {!!admin.length && <div className="pt-4 pb-1 px-3 text-[11.5px] font-bold tracking-wide text-white/40">مدیریت و تنظیمات</div>}
+          {!!admin.length && <div className="pt-4 pb-1 px-3 text-[11.5px] font-bold tracking-wide text-white/60">مدیریت و تنظیمات</div>}
           {admin.map((i) => <NavItem key={i.to} item={i} />)}
         </nav>
-        {brand.data?.footer_label && <div className="text-[11px] text-white/40 px-2">{brand.data.footer_label}</div>}
+        {brand.data?.footer_label && <div className="text-[11px] text-white/60 px-2">{brand.data.footer_label}</div>}
         <UserMenu onLogout={logout} />
       </aside></div>
 

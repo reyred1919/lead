@@ -1,4 +1,4 @@
-import { forwardRef, type ButtonHTMLAttributes, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes, type TextareaHTMLAttributes } from "react";
+import { cloneElement, forwardRef, isValidElement, useId, type ButtonHTMLAttributes, type InputHTMLAttributes, type ReactNode, type SelectHTMLAttributes, type TextareaHTMLAttributes } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -15,7 +15,7 @@ const button = cva(
         navy: "bg-navy text-white hover:bg-navy-2",
         secondary: "bg-panel text-ink border border-line hover:bg-line-2",
         ghost: "text-ink-2 hover:bg-line-2",
-        soft: "bg-action-soft text-action hover:bg-[#dde8fc]",
+        soft: "bg-action-soft text-action-2 hover:bg-[#dde8fc]",
         danger: "bg-danger text-white hover:brightness-95",
         "danger-soft": "bg-danger-soft text-danger hover:brightness-95",
       },
@@ -48,10 +48,12 @@ const fieldBase =
 export const Input = forwardRef<HTMLInputElement, InputHTMLAttributes<HTMLInputElement>>(function Input({ className, ...p }, ref) {
   return <input ref={ref} className={cn(fieldBase, "h-12", className)} {...p} />;
 });
+Input.displayName = "Input";
 
 export const Textarea = forwardRef<HTMLTextAreaElement, TextareaHTMLAttributes<HTMLTextAreaElement>>(function Textarea({ className, ...p }, ref) {
   return <textarea ref={ref} className={cn(fieldBase, "py-3 min-h-[88px] leading-7", className)} {...p} />;
 });
+Textarea.displayName = "Textarea";
 
 export const Select = forwardRef<HTMLSelectElement, SelectHTMLAttributes<HTMLSelectElement>>(function Select({ className, children, ...p }, ref) {
   return (
@@ -61,8 +63,20 @@ export const Select = forwardRef<HTMLSelectElement, SelectHTMLAttributes<HTMLSel
     </select>
   );
 });
+Select.displayName = "Select";
+
+const LABELLABLE = new Set(["input", "select", "textarea", "Input", "Select", "Textarea", "JalaliDatePicker"]);
 
 export function Field({ label, hint, error, required, children, htmlFor, className }: { label: ReactNode; hint?: ReactNode; error?: string; required?: boolean; children: ReactNode; htmlFor?: string; className?: string }) {
+  // Bind the visible label to its control when the caller didn't pass htmlFor/id (WCAG 1.3.1 / 4.1.2, QA-A11Y).
+  const autoId = useId();
+  const type = isValidElement(children) ? (children.type as any) : null;
+  const typeName = typeof type === "string" ? type : type?.displayName ?? type?.render?.displayName ?? type?.name;
+  const bindable = isValidElement(children) && !htmlFor && !(children.props as any).id && LABELLABLE.has(typeName);
+  if (bindable) {
+    children = cloneElement(children as React.ReactElement<any>, { id: autoId });
+    htmlFor = autoId;
+  }
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
       <label htmlFor={htmlFor} className="text-[13px] font-semibold text-ink-2">
@@ -89,7 +103,7 @@ const badge = cva("inline-flex items-center gap-1 rounded-full font-medium white
       warning: "bg-warning-soft text-warning border-[#f5e0b8]",
       danger: "bg-danger-soft text-danger border-[#f6cdc9]",
       navy: "bg-navy text-white border-navy",
-      action: "bg-action-soft text-action border-[#d3e2fb]",
+      action: "bg-action-soft text-action-2 border-[#d3e2fb]",
     },
     size: { sm: "h-6 px-2 text-[12px]", md: "h-7 px-2.5 text-[13px]" },
   },

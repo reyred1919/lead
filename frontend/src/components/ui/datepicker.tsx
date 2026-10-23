@@ -33,7 +33,7 @@ export function JalaliDatePicker({ value, onChange, withTime = true, placeholder
   return (
     <Popover open={open} onOpenChange={setOpen} className="w-[min(92vw,330px)] p-3"
       trigger={
-        <button id={id} type="button" aria-label={label ?? placeholder}
+        <button id={id} type="button" aria-label={label}
           className="h-12 w-full flex items-center gap-2 px-3.5 rounded-[var(--radius-field)] border border-line bg-panel text-start hover:border-[#d5dce7] focus:outline-none focus:border-action">
           <CalendarDays className="size-4 text-muted" />
           <span className={cn("flex-1 text-[15px]", !value && "text-muted")}>{value ? (withTime ? fmtDateTime(value) : fmtDateTime(value).split("،")[0]) : placeholder}</span>
@@ -81,3 +81,5 @@ export function JalaliDatePicker({ value, onChange, withTime = true, placeholder
     </Popover>
   );
 }
+
+JalaliDatePicker.displayName = "JalaliDatePicker";

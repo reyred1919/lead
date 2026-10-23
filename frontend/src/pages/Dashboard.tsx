@@ -15,7 +15,7 @@ type Dash = { personal: any; aggregate: any | null; demo_data: boolean; generate
 
 const BLUE = "#2368E5";
 const GRID = "#EEF1F6";
-const AXIS = { fontSize: 12, fill: "#718198", fontFamily: "Vazirmatn" };
+const AXIS = { fontSize: 12, fill: "#5d6b81", fontFamily: "Vazirmatn" };
 
 function ChartTip({ active, payload, label, unit = "ثبت" }: any) {
   if (!active || !payload?.length) return null;

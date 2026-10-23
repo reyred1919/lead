@@ -189,7 +189,7 @@ export function RolesPage() {
             <tr><td className="px-3 py-2">ثبت لید (هر عضو فعال رویداد)</td>{roles.data?.map((r) => <td key={r.code} className="text-center text-muted">{r.scope === "EVENT" ? "✓" : "با عضویت"}</td>)}</tr>
             {caps.data?.filter((c) => c.code !== "interaction.create").map((c) => (
               <tr key={c.code}><td className="px-3 py-2">{c.label} <Ltr className="text-muted font-mono text-[11px]">{c.code}</Ltr></td>
-                {roles.data?.map((r) => <td key={r.code} className="text-center">{r.capabilities.includes(c.code) ? <span className="text-success font-bold" aria-label="دارد">✓</span> : <span className="text-line" aria-label="ندارد">—</span>}</td>)}</tr>
+                {roles.data?.map((r) => <td key={r.code} className="text-center">{r.capabilities.includes(c.code) ? <span className="text-success font-bold" aria-label="دارد">✓</span> : <span className="text-muted" aria-label="ندارد">—</span>}</td>)}</tr>
             ))}
           </tbody>
         </table>

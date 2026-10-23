@@ -224,10 +224,13 @@ export function CapturePage() {
               {captureEvents.map((e) => <option key={e.id} value={e.id}>{e.display_name}</option>)}
             </select>
           ) : (
-            <div className="font-bold text-[16px] truncate flex items-center gap-1.5">{event.display_name}<Lock className="size-3.5 text-muted" aria-label="رویداد قفل‌شده" /></div>
+            <div className="font-bold text-[16px] leading-7 flex items-start gap-1.5">
+              <span className="line-clamp-2 break-words">{event.display_name}</span>
+              <Lock className="size-3.5 text-muted shrink-0 mt-1.5" role="img" aria-label="رویداد قفل‌شده" />
+            </div>
           )}
         </div>
-        <Ltr className="text-[12px] text-muted font-mono bg-line-2 px-2 py-1 rounded-md">{event.code}</Ltr>
+        <Ltr className="hidden sm:inline-block text-[12px] text-muted font-mono bg-line-2 px-2 py-1 rounded-md shrink-0">{event.code}</Ltr>
       </div>
       {!online && (
         <div role="status" className="rounded-[14px] bg-warning-soft text-warning px-4 py-3 text-[13.5px] flex gap-2 items-start"><CloudOff className="size-4 mt-0.5 shrink-0" />آفلاین هستید. ثبت روی همین دستگاه رمزنگاری و ذخیره می‌شود و بعداً ارسال خواهد شد.</div>
