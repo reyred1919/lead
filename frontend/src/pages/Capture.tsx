@@ -177,6 +177,17 @@ export function CapturePage() {
   };
 
   if (events.isLoading) return <Card className="p-6"><div className="skeleton h-8 w-1/2 mb-4" /><div className="skeleton h-12 mb-3" /><div className="skeleton h-12" /></Card>;
+  if (!event && events.isError) {
+    // Could not load event context (offline with no cached context, or server error): say so truthfully
+    // instead of claiming the user has no membership (QA-D-19).
+    return (
+      <Card>
+        <EmptyState icon={<CloudOff className="size-6" />} title="اطلاعات رویداد بارگذاری نشد"
+          body={online ? "دریافت رویدادها و محصولات از سرور ناموفق بود. دوباره تلاش کنید." : "این دستگاه آفلاین است و اطلاعات رویداد هنوز روی آن ذخیره نشده است. یک‌بار با اتصال اینترنت وارد شوید تا ثبت آفلاین فعال شود."}
+          action={<Button variant="secondary" onClick={() => events.refetch()}>تلاش دوباره</Button>} />
+      </Card>
+    );
+  }
   if (!event) {
     return (
       <Card>
