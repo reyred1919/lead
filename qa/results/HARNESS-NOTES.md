@@ -10,3 +10,8 @@
   the case is re-run in isolation and both results are reported.
 - Mitigation: no edits under `frontend/` while a run is in progress; for the "after" runs the Vite dev server
   ignores `qa-e2e/**`, `e2e/**` and `*.config.ts` changes (`server.watch.ignored`).
+
+## H-02 — TC-OFF-06 locator ambiguous on tablet-768 (test defect)
+- At 768px Home shows both the hero CTA and the bottom-nav button named "ثبت لید جدید"; the test chose by
+  width ≥1024 only and hit a strict-mode violation. Fixed in the test (scope to the bottom navigation on
+  touch layouts) after the baseline runs; not a product defect.
