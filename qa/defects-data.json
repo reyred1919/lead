@@ -60,7 +60,7 @@
   "evidence": "qa/traces/test-output/baseline-*/01-auth-context-*-o-reload-redirects-to-login-*/ (trace.zip, video.webm, test-failed-1.png)",
   "code": "backend DRF SessionAuthentication (403); frontend/src/lib/api.ts, auth.tsx",
   "root_cause": "SessionAuthentication has no authenticate_header → DRF converts NotAuthenticated to 403; SPA has no global handler.",
-  "fix": "SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, 7c2273c).",
+  "fix": "SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, fa14bcf).",
   "retest": "PASS"
  },
  {
@@ -108,7 +108,7 @@
   "evidence": "qa/traces/test-output/baseline-*/04-leads-enrichment-*-ol-exists-and-changes-order-*/",
   "code": "frontend/src/pages/Leads.tsx",
   "root_cause": "Not implemented in UI.",
-  "fix": "Sort select (newest/oldest/last changed) bound to ?ordering (commit 7c2273c).",
+  "fix": "Sort select (newest/oldest/last changed) bound to ?ordering (commit fa14bcf).",
   "retest": "PASS"
  },
  {
@@ -124,7 +124,7 @@
   "evidence": "qa/traces/test-output/baseline-mobile-390/01-auth-context-Event-cont-*-mobile-390/test-failed-1.png",
   "code": "frontend/src/pages/Capture.tsx header",
   "root_cause": "truncate on the flex row containing the lock icon; event code chip consumes width.",
-  "fix": "Two-line clamp, lock shrink-0, code chip hidden < sm (commit 7c2273c).",
+  "fix": "Two-line clamp, lock shrink-0, code chip hidden < sm (commit fa14bcf).",
   "retest": "PASS"
  },
  {
@@ -140,7 +140,7 @@
   "evidence": "qa/results/axe-summary-baseline.json",
   "code": "frontend/src/styles.css --color-muted; primitives.tsx soft/action tones",
   "root_cause": "Design token below AA.",
-  "fix": "Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit 7c2273c).",
+  "fix": "Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit fa14bcf).",
   "retest": "see axe-summary-after.json"
  },
  {
@@ -156,7 +156,7 @@
   "evidence": "qa/results/axe-summary-baseline.json",
   "code": "frontend/src/components/ui/pickers.tsx; components/tags/Tags.tsx",
   "root_cause": "Implicit listitem role between listbox and option.",
-  "fix": "li role=none (commit 7c2273c).",
+  "fix": "li role=none (commit fa14bcf).",
   "retest": "see axe-summary-after.json"
  },
  {
@@ -172,7 +172,7 @@
   "evidence": "qa/results/axe-summary-baseline.json; qa/traces/.../05-admin-notify-*-activate-*/",
   "code": "frontend/src/components/ui/primitives.tsx Field; datepicker.tsx",
   "root_cause": "Field label without htmlFor; picker aria-label overrides label.",
-  "fix": "Field auto-binds label → control id; picker uses label (commit 7c2273c).",
+  "fix": "Field auto-binds label → control id; picker uses label (commit fa14bcf).",
   "retest": "see axe-summary-after.json"
  },
  {
@@ -188,7 +188,7 @@
   "evidence": "qa/results/axe-summary-baseline.json",
   "code": "frontend/src/components/brand/BrandLogo.tsx",
   "root_cause": "Missing role.",
-  "fix": "role=img (commit 7c2273c).",
+  "fix": "role=img (commit fa14bcf).",
   "retest": "see axe-summary-after.json"
  },
  {
@@ -204,7 +204,7 @@
   "evidence": "frontend/src/lib/offline.test.ts",
   "code": "frontend/src/lib/offline.ts cachedContext; auth.tsx",
   "root_cause": "No expiry on cached context.",
-  "fix": "cachedAt + 12h max age (commit 6e1a3d6).",
+  "fix": "cachedAt + 12h max age (commit 8e43a73).",
   "retest": "PASS"
  },
  {
@@ -220,7 +220,7 @@
   "evidence": "qa/screenshots/c6a1c88/admin/mobile-390/leads_id__ready.png; qa/results/matrix-mobile-390.jsonl",
   "code": "frontend/src/pages/LeadDetail.tsx; styles.css",
   "root_cause": "No overflow-wrap for unbroken tokens.",
-  "fix": "overflow-wrap:anywhere globally + on heading (commit dd4735c).",
+  "fix": "overflow-wrap:anywhere globally + on heading (commit 3a4da09).",
   "retest": "pending"
  },
  {
@@ -236,7 +236,7 @@
   "evidence": "qa/screenshots/c6a1c88/admin/mobile-390/reports__ready.png; qa/results/matrix-mobile-390.jsonl",
   "code": "frontend/src/pages/Reports.tsx (also Messages, LeadDetail, Notify grids)",
   "root_cause": "Grid item min-width:auto expands to the no-wrap format selector.",
-  "fix": "grid-cols-[minmax(0,1fr)] (commit dd4735c).",
+  "fix": "grid-cols-[minmax(0,1fr)] (commit 3a4da09).",
   "retest": "pending"
  },
  {
@@ -252,7 +252,7 @@
   "evidence": "qa/traces/test-output/baseline-desktop-1440/*TC-VIS-ST*/test-failed-1.png",
   "code": "frontend/src/pages/Capture.tsx; frontend/src/lib/auth.tsx",
   "root_cause": "Event context cached only when /capture was opened online; a failed /events/mine query was rendered as 'no membership'.",
-  "fix": "Prefetch+cache event context at login; truthful offline/retry state on load failure (commit 0ab3cf7).",
+  "fix": "Prefetch+cache event context at login; truthful offline/retry state on load failure (commit cef25e4).",
   "retest": "pending"
  },
  {
@@ -268,7 +268,7 @@
   "evidence": "qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-*/test-failed-1.png; qa/traces/test-output/baseline-mobile-375/02-capture-TC-CAP-01-*/test-failed-1.png",
   "code": "frontend/src/pages/Dashboard.tsx, Capture.tsx, admin/Events.tsx, Notify.tsx, Settings.tsx",
   "root_cause": "Implicit auto grid track + non-wrapping flex child sized to min-content of the unbroken string.",
-  "fix": "overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit 3af511f).",
+  "fix": "overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a).",
   "retest": "pending"
  }
 ]

@@ -7,20 +7,20 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 | QA-D-01 | P1 | Privacy / cross-event exposure | Full name, organization and masked mobile of event-E contact returned (enumeration by mobile number). | Suggestions limited to contacts reachable through visible_interactions(user); global lead.view.all unchanged; exact-match linking on capture still server-side (commit 0651019). | PASS |
 | QA-D-02 | P1 | Auth / onboarding | After 5 requests/hour per IP (token GET counted) all further activations return 429; UI shows the throttle text under the password field. | Per-token throttle on submit, per-IP on forgot, coarse 300/h per-IP ceiling; GET check no longer consumes the strict budget (commit cf6c845). | PASS |
 | QA-D-03 | P1 | Security / deployment | NUM_PROXIES not configured anywhere → all booth users share one login limit and audit IP is the proxy. | DJANGO_NUM_PROXIES → REST_FRAMEWORK.NUM_PROXIES; compose sets 1; audit uses same rule (commit cf6c845). | PASS |
-| QA-D-04 | P2 | Auth / UX | Stays on /leads showing 'بارگذاری ناموفق بود' cards; API returns 403 indistinguishable from 'forbidden'. | SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, 7c2273c). | PASS |
+| QA-D-04 | P2 | Auth / UX | Stays on /leads showing 'بارگذاری ناموفق بود' cards; API returns 403 indistinguishable from 'forbidden'. | SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, fa14bcf). | PASS |
 | QA-D-05 | P2 | Reporting correctness | UTC day used: yesterday-evening lead counted as today; early-morning lead excluded from today's filter; daily trend buckets shifted 3.5h. | apps/common/dates.py local-day ranges + TruncDate(tzinfo=Asia/Tehran) (commit 0651019). | PASS |
 | QA-D-06 | P3 | Performance | users: 21→28 queries; plans: 6→18 (one per row). | Use prefetched relation; annotate product count (commit 00fd106). | PASS |
-| QA-D-07 | P2 | Functional gap | No sort control; API ordering parameter unused by the UI. | Sort select (newest/oldest/last changed) bound to ?ordering (commit 7c2273c). | PASS |
-| QA-D-08 | P3 | UX / mobile | Event name truncated ('…فناوری' loses '۱۴۰۵') and lock icon clipped out of view. | Two-line clamp, lock shrink-0, code chip hidden < sm (commit 7c2273c). | PASS |
-| QA-D-09 | P2 | Accessibility (WCAG 1.4.3) | Muted text #718198 at 3.5–3.97:1 on 22 routes; blue on blue-soft 4.42:1. | Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit 7c2273c). | see axe-summary-after.json |
-| QA-D-10 | P2 | Accessibility (4.1.2) | role=option buttons wrapped in plain <li> (critical). | li role=none (commit 7c2273c). | see axe-summary-after.json |
-| QA-D-11 | P2 | Accessibility (1.3.1/4.1.2) | Selects/inputs unnamed; every date picker named 'انتخاب تاریخ' (start/end indistinguishable). | Field auto-binds label → control id; picker uses label (commit 7c2273c). | see axe-summary-after.json |
-| QA-D-12 | P3 | Accessibility | aria-label on a role-less span. | role=img (commit 7c2273c). | see axe-summary-after.json |
-| QA-D-16 | P2 | Offline / shared device | Cached identity of A loaded indefinitely when offline; A's queued leads visible. | cachedAt + 12h max age (commit 6e1a3d6). | PASS |
-| QA-D-17 | P2 | UX / mobile overflow | Page scrolls horizontally by 35px; heading clipped. | overflow-wrap:anywhere globally + on heading (commit dd4735c). | pending |
-| QA-D-18 | P2 | UX / mobile overflow | Export card 31px wider than the viewport; whole page scrolls sideways. | grid-cols-[minmax(0,1fr)] (commit dd4735c). | pending |
-| QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state on load failure (commit 0ab3cf7). | pending |
-| QA-D-20 | P1 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user. | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit 3af511f). | pending |
+| QA-D-07 | P2 | Functional gap | No sort control; API ordering parameter unused by the UI. | Sort select (newest/oldest/last changed) bound to ?ordering (commit fa14bcf). | PASS |
+| QA-D-08 | P3 | UX / mobile | Event name truncated ('…فناوری' loses '۱۴۰۵') and lock icon clipped out of view. | Two-line clamp, lock shrink-0, code chip hidden < sm (commit fa14bcf). | PASS |
+| QA-D-09 | P2 | Accessibility (WCAG 1.4.3) | Muted text #718198 at 3.5–3.97:1 on 22 routes; blue on blue-soft 4.42:1. | Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit fa14bcf). | see axe-summary-after.json |
+| QA-D-10 | P2 | Accessibility (4.1.2) | role=option buttons wrapped in plain <li> (critical). | li role=none (commit fa14bcf). | see axe-summary-after.json |
+| QA-D-11 | P2 | Accessibility (1.3.1/4.1.2) | Selects/inputs unnamed; every date picker named 'انتخاب تاریخ' (start/end indistinguishable). | Field auto-binds label → control id; picker uses label (commit fa14bcf). | see axe-summary-after.json |
+| QA-D-12 | P3 | Accessibility | aria-label on a role-less span. | role=img (commit fa14bcf). | see axe-summary-after.json |
+| QA-D-16 | P2 | Offline / shared device | Cached identity of A loaded indefinitely when offline; A's queued leads visible. | cachedAt + 12h max age (commit 8e43a73). | PASS |
+| QA-D-17 | P2 | UX / mobile overflow | Page scrolls horizontally by 35px; heading clipped. | overflow-wrap:anywhere globally + on heading (commit 3a4da09). | pending |
+| QA-D-18 | P2 | UX / mobile overflow | Export card 31px wider than the viewport; whole page scrolls sideways. | grid-cols-[minmax(0,1fr)] (commit 3a4da09). | pending |
+| QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state on load failure (commit cef25e4). | pending |
+| QA-D-20 | P1 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user. | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a). | pending |
 
 ## QA-D-01 — Privacy / cross-event exposure (P1, priority High)
 
@@ -71,7 +71,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/traces/test-output/baseline-*/01-auth-context-*-o-reload-redirects-to-login-*/ (trace.zip, video.webm, test-failed-1.png)
 - **Code:** backend DRF SessionAuthentication (403); frontend/src/lib/api.ts, auth.tsx
 - **Root Cause:** SessionAuthentication has no authenticate_header → DRF converts NotAuthenticated to 403; SPA has no global handler.
-- **Fix:** SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, 7c2273c).
+- **Fix:** SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, fa14bcf).
 - **Retest:** PASS
 
 ## QA-D-05 — Reporting correctness (P2, priority Medium)
@@ -110,7 +110,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/traces/test-output/baseline-*/04-leads-enrichment-*-ol-exists-and-changes-order-*/
 - **Code:** frontend/src/pages/Leads.tsx
 - **Root Cause:** Not implemented in UI.
-- **Fix:** Sort select (newest/oldest/last changed) bound to ?ordering (commit 7c2273c).
+- **Fix:** Sort select (newest/oldest/last changed) bound to ?ordering (commit fa14bcf).
 - **Retest:** PASS
 
 ## QA-D-08 — UX / mobile (P3, priority Medium)
@@ -123,7 +123,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/traces/test-output/baseline-mobile-390/01-auth-context-Event-cont-*-mobile-390/test-failed-1.png
 - **Code:** frontend/src/pages/Capture.tsx header
 - **Root Cause:** truncate on the flex row containing the lock icon; event code chip consumes width.
-- **Fix:** Two-line clamp, lock shrink-0, code chip hidden < sm (commit 7c2273c).
+- **Fix:** Two-line clamp, lock shrink-0, code chip hidden < sm (commit fa14bcf).
 - **Retest:** PASS
 
 ## QA-D-09 — Accessibility (WCAG 1.4.3) (P2, priority Medium)
@@ -136,7 +136,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/results/axe-summary-baseline.json
 - **Code:** frontend/src/styles.css --color-muted; primitives.tsx soft/action tones
 - **Root Cause:** Design token below AA.
-- **Fix:** Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit 7c2273c).
+- **Fix:** Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit fa14bcf).
 - **Retest:** see axe-summary-after.json
 
 ## QA-D-10 — Accessibility (4.1.2) (P2, priority Medium)
@@ -149,7 +149,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/results/axe-summary-baseline.json
 - **Code:** frontend/src/components/ui/pickers.tsx; components/tags/Tags.tsx
 - **Root Cause:** Implicit listitem role between listbox and option.
-- **Fix:** li role=none (commit 7c2273c).
+- **Fix:** li role=none (commit fa14bcf).
 - **Retest:** see axe-summary-after.json
 
 ## QA-D-11 — Accessibility (1.3.1/4.1.2) (P2, priority Medium)
@@ -162,7 +162,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/results/axe-summary-baseline.json; qa/traces/.../05-admin-notify-*-activate-*/
 - **Code:** frontend/src/components/ui/primitives.tsx Field; datepicker.tsx
 - **Root Cause:** Field label without htmlFor; picker aria-label overrides label.
-- **Fix:** Field auto-binds label → control id; picker uses label (commit 7c2273c).
+- **Fix:** Field auto-binds label → control id; picker uses label (commit fa14bcf).
 - **Retest:** see axe-summary-after.json
 
 ## QA-D-12 — Accessibility (P3, priority Low)
@@ -175,7 +175,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/results/axe-summary-baseline.json
 - **Code:** frontend/src/components/brand/BrandLogo.tsx
 - **Root Cause:** Missing role.
-- **Fix:** role=img (commit 7c2273c).
+- **Fix:** role=img (commit fa14bcf).
 - **Retest:** see axe-summary-after.json
 
 ## QA-D-16 — Offline / shared device (P2, priority Medium)
@@ -188,7 +188,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** frontend/src/lib/offline.test.ts
 - **Code:** frontend/src/lib/offline.ts cachedContext; auth.tsx
 - **Root Cause:** No expiry on cached context.
-- **Fix:** cachedAt + 12h max age (commit 6e1a3d6).
+- **Fix:** cachedAt + 12h max age (commit 8e43a73).
 - **Retest:** PASS
 
 ## QA-D-17 — UX / mobile overflow (P2, priority Medium)
@@ -201,7 +201,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/screenshots/c6a1c88/admin/mobile-390/leads_id__ready.png; qa/results/matrix-mobile-390.jsonl
 - **Code:** frontend/src/pages/LeadDetail.tsx; styles.css
 - **Root Cause:** No overflow-wrap for unbroken tokens.
-- **Fix:** overflow-wrap:anywhere globally + on heading (commit dd4735c).
+- **Fix:** overflow-wrap:anywhere globally + on heading (commit 3a4da09).
 - **Retest:** pending
 
 ## QA-D-18 — UX / mobile overflow (P2, priority Medium)
@@ -214,7 +214,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/screenshots/c6a1c88/admin/mobile-390/reports__ready.png; qa/results/matrix-mobile-390.jsonl
 - **Code:** frontend/src/pages/Reports.tsx (also Messages, LeadDetail, Notify grids)
 - **Root Cause:** Grid item min-width:auto expands to the no-wrap format selector.
-- **Fix:** grid-cols-[minmax(0,1fr)] (commit dd4735c).
+- **Fix:** grid-cols-[minmax(0,1fr)] (commit 3a4da09).
 - **Retest:** pending
 
 ## QA-D-19 — Offline / capture (P2, priority High)
@@ -227,7 +227,7 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/traces/test-output/baseline-desktop-1440/*TC-VIS-ST*/test-failed-1.png
 - **Code:** frontend/src/pages/Capture.tsx; frontend/src/lib/auth.tsx
 - **Root Cause:** Event context cached only when /capture was opened online; a failed /events/mine query was rendered as 'no membership'.
-- **Fix:** Prefetch+cache event context at login; truthful offline/retry state on load failure (commit 0ab3cf7).
+- **Fix:** Prefetch+cache event context at login; truthful offline/retry state on load failure (commit cef25e4).
 - **Retest:** pending
 
 ## QA-D-20 — UX / mobile overflow (P1, priority High)
@@ -240,5 +240,5 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Evidence:** qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-*/test-failed-1.png; qa/traces/test-output/baseline-mobile-375/02-capture-TC-CAP-01-*/test-failed-1.png
 - **Code:** frontend/src/pages/Dashboard.tsx, Capture.tsx, admin/Events.tsx, Notify.tsx, Settings.tsx
 - **Root Cause:** Implicit auto grid track + non-wrapping flex child sized to min-content of the unbroken string.
-- **Fix:** overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit 3af511f).
+- **Fix:** overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a).
 - **Retest:** pending
