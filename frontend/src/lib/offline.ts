@@ -59,6 +59,8 @@ type Listener = () => void;
 type Sender = (records: CapturePayload[]) => Promise<{ results: any[] }>;
 
 const SYNCED_TTL_MS = 24 * 3600 * 1000;
+/** Matches the server's SESSION_COOKIE_AGE (12h). */
+export const OFFLINE_IDENTITY_MAX_AGE_MS = 12 * 3600 * 1000;
 
 export function createOfflineQueue(opts: { dbName?: string; send?: Sender } = {}) {
   const dbName = opts.dbName ?? "expo-leads-offline";
@@ -226,11 +228,14 @@ export function createOfflineQueue(opts: { dbName?: string; send?: Sender } = {}
     },
     async cacheContext(uid: string, data: unknown) {
       const enc = await encrypt(uid, data);
-      await (await db()).put("context", { uid, ...enc }, "me");
+      await (await db()).put("context", { uid, cachedAt: Date.now(), ...enc }, "me");
     },
-    async cachedContext(): Promise<any | null> {
-      const rec = (await (await db()).get("context", "me")) as { uid: string; iv: Uint8Array; cipher: ArrayBuffer } | undefined;
+    /** Offline identity fallback. Expires with the server session lifetime so a shared device does not
+     *  keep opening as the previous user indefinitely (QA-D-16). */
+    async cachedContext(maxAgeMs = OFFLINE_IDENTITY_MAX_AGE_MS): Promise<any | null> {
+      const rec = (await (await db()).get("context", "me")) as { uid: string; cachedAt?: number; iv: Uint8Array; cipher: ArrayBuffer } | undefined;
       if (!rec) return null;
+      if (!rec.cachedAt || Date.now() - rec.cachedAt > maxAgeMs) return null;
       return decrypt(rec.uid, rec.iv, rec.cipher);
     },
     async cacheEvents(uid: string, events: unknown) {
