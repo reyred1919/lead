@@ -70,9 +70,13 @@ def tests_csv(label):
     return rows
 
 
+LABEL_DIR = None  # qa/results/jsonl-<label>/ when the run's JSONL logs were archived per label
+
+
 def jsonl(prefix):
     rows = []
-    for f in sorted(RES.glob(f"{prefix}-*.jsonl")):
+    src = LABEL_DIR if LABEL_DIR and LABEL_DIR.is_dir() else RES
+    for f in sorted(src.glob(f"{prefix}-*.jsonl")):
         rows += [json.loads(l) for l in f.read_text().splitlines() if l.strip()]
     return rows
 
@@ -152,7 +156,13 @@ def contact_sheets(sha, by):
 
 
 def axe_summary(label):
-    rows = jsonl("axe")
+    # Parallel workers can scan the same route twice; keep one scan per (rule, route, viewport).
+    best = {}
+    for r in jsonl("axe"):
+        k = (r["id"], r["route"], r["viewport"])
+        if k not in best or r["nodes"] > best[k]["nodes"]:
+            best[k] = r
+    rows = list(best.values())
     agg = defaultdict(lambda: {"impact": "", "help": "", "nodes": 0, "routes": set(), "viewports": set(), "sample": ""})
     for r in rows:
         a = agg[r["id"]]
@@ -169,7 +179,9 @@ def axe_summary(label):
 
 
 def main():
+    global LABEL_DIR
     label, sha = sys.argv[1], sys.argv[2]
+    LABEL_DIR = RES / f"jsonl-{label}"
     tests = tests_csv(label)
     matrix = matrix_csv(label)
     shots, by = screenshots(sha)
