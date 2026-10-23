@@ -147,7 +147,12 @@ def create_campaign(sender, data, request=None):
         if campaign.status == "DRAFT":
             _dispatch(campaign)
     if campaign.status == "SENT":
-        transaction.on_commit(lambda: process_jobs())
+        try:
+            process_jobs()
+        except Exception:  # noqa: BLE001 - delivery problems never fail the send request
+            import logging
+
+            logging.getLogger(__name__).exception("inline job processing failed")
     return campaign
 
 

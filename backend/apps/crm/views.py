@@ -56,7 +56,8 @@ def _list_queryset(user):
 
 
 def apply_lead_filters(qs, params, user):
-    p = params
+    # Accept QueryDicts and JSON filter dicts (list values become comma-separated).
+    p = {k: (",".join(map(str, v)) if isinstance(v, (list, tuple)) else v) for k, v in params.items()}
     if p.get("event_id"):
         qs = qs.filter(event_id__in=[e for e in p["event_id"].split(",") if e])
     if p.get("product_id"):
