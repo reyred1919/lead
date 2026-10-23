@@ -38,6 +38,9 @@
 
 @layer base {
   html {
+    /* Keep scrolled-to / focused elements clear of the sticky header and the fixed mobile tab bar (WCAG 2.4.11, QA-D-21). */
+    scroll-padding-top: 4.5rem;
+    scroll-padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
     -webkit-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -106,4 +109,9 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Desktop has no bottom tab bar. */
+@media (min-width: 1024px) {
+  html { scroll-padding-bottom: 1rem; }
 }
