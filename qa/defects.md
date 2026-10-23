@@ -1,6 +1,6 @@
 # Defect register
 
-Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
+Total: 18 — P0: 0, P1: 4, P2: 10, P3: 4 (IDs QA-D-13..15 unused)
 
 | ID | Sev | Category | Summary | Fix | Retest |
 |---|---|---|---|---|---|
@@ -19,8 +19,9 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 | QA-D-16 | P2 | Offline / shared device | Cached identity of A loaded indefinitely when offline; A's queued leads visible. | cachedAt + 12h max age (commit 8e43a73). | PASS |
 | QA-D-17 | P2 | UX / mobile overflow | Page scrolls horizontally by 35px; heading clipped. | overflow-wrap:anywhere globally + on heading (commit 3a4da09). | pending |
 | QA-D-18 | P2 | UX / mobile overflow | Export card 31px wider than the viewport; whole page scrolls sideways. | grid-cols-[minmax(0,1fr)] (commit 3a4da09). | pending |
-| QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state on load failure (commit cef25e4). | pending |
+| QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run). | pending |
 | QA-D-20 | P1 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user. | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a). | pending |
+| QA-D-21 | P3 | Accessibility (WCAG 2.2 2.4.11) | Control lands under the fixed bottom tab bar; tap intercepted by `nav[aria-label='ناوبری پایین']`. | html scroll-padding-top/bottom (bottom reduced on ≥1024px) (commit 4c81bad). | pending |
 
 ## QA-D-01 — Privacy / cross-event exposure (P1, priority High)
 
@@ -226,8 +227,8 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Actual:** 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member.
 - **Evidence:** qa/traces/test-output/baseline-desktop-1440/*TC-VIS-ST*/test-failed-1.png
 - **Code:** frontend/src/pages/Capture.tsx; frontend/src/lib/auth.tsx
-- **Root Cause:** Event context cached only when /capture was opened online; a failed /events/mine query was rendered as 'no membership'.
-- **Fix:** Prefetch+cache event context at login; truthful offline/retry state on load failure (commit cef25e4).
+- **Root Cause:** Event context cached only when /capture was opened online, and React Query's default networkMode 'online' paused the events query offline with neither data nor error, which the page rendered as 'no membership'.
+- **Fix:** Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run).
 - **Retest:** pending
 
 ## QA-D-20 — UX / mobile overflow (P1, priority High)
@@ -241,4 +242,17 @@ Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/pages/Dashboard.tsx, Capture.tsx, admin/Events.tsx, Notify.tsx, Settings.tsx
 - **Root Cause:** Implicit auto grid track + non-wrapping flex child sized to min-content of the unbroken string.
 - **Fix:** overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a).
+- **Retest:** pending
+
+## QA-D-21 — Accessibility (WCAG 2.2 2.4.11) (P3, priority Low)
+
+- **Scenario:** TC-LST-01 tablet-768 (interim after-run)
+- **Env:** Chromium 768×1024 touch emulation
+- **Steps:** Open /leads on a tablet/phone; move to the pagination control by keyboard focus or programmatic scroll.
+- **Expected:** The focused/scrolled control is fully visible.
+- **Actual:** Control lands under the fixed bottom tab bar; tap intercepted by `nav[aria-label='ناوبری پایین']`.
+- **Evidence:** qa/traces/test-output/after-tablet-768/*LST-01*/
+- **Code:** frontend/src/styles.css
+- **Root Cause:** No scroll-padding for the sticky header / fixed tab bar.
+- **Fix:** html scroll-padding-top/bottom (bottom reduced on ≥1024px) (commit 4c81bad).
 - **Retest:** pending

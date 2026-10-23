@@ -28,7 +28,7 @@ test("TC-CAP-01 existing organization chosen from search suggestion", async ({ p
   await page.fill("#org", "نمونه آلفا");
   const option = page.getByRole("list", { name: "سازمان‌های موجود" }).getByRole("button", { name: /شرکت نمونه آلفا/ });
   await press(info, option);
-  await expect(page.getByText("سازمان موجود")).toBeVisible();
+  await expect(page.getByText("سازمان موجود", { exact: true })).toBeVisible();
   await submit(page, info);
   const id = await detailFromSuccess(page, info);
   const lead = (await api(page, "GET", `/interactions/${id}`)).body;

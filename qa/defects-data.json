@@ -251,8 +251,8 @@
   "actual": "'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member.",
   "evidence": "qa/traces/test-output/baseline-desktop-1440/*TC-VIS-ST*/test-failed-1.png",
   "code": "frontend/src/pages/Capture.tsx; frontend/src/lib/auth.tsx",
-  "root_cause": "Event context cached only when /capture was opened online; a failed /events/mine query was rendered as 'no membership'.",
-  "fix": "Prefetch+cache event context at login; truthful offline/retry state on load failure (commit cef25e4).",
+  "root_cause": "Event context cached only when /capture was opened online, and React Query's default networkMode 'online' paused the events query offline with neither data nor error, which the page rendered as 'no membership'.",
+  "fix": "Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run).",
   "retest": "pending"
  },
  {
@@ -269,6 +269,22 @@
   "code": "frontend/src/pages/Dashboard.tsx, Capture.tsx, admin/Events.tsx, Notify.tsx, Settings.tsx",
   "root_cause": "Implicit auto grid track + non-wrapping flex child sized to min-content of the unbroken string.",
   "fix": "overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a).",
+  "retest": "pending"
+ },
+ {
+  "id": "QA-D-21",
+  "severity": "P3",
+  "priority": "Low",
+  "category": "Accessibility (WCAG 2.2 2.4.11)",
+  "scenario": "TC-LST-01 tablet-768 (interim after-run)",
+  "env": "Chromium 768×1024 touch emulation",
+  "steps": "Open /leads on a tablet/phone; move to the pagination control by keyboard focus or programmatic scroll.",
+  "expected": "The focused/scrolled control is fully visible.",
+  "actual": "Control lands under the fixed bottom tab bar; tap intercepted by `nav[aria-label='ناوبری پایین']`.",
+  "evidence": "qa/traces/test-output/after-tablet-768/*LST-01*/",
+  "code": "frontend/src/styles.css",
+  "root_cause": "No scroll-padding for the sticky header / fixed tab bar.",
+  "fix": "html scroll-padding-top/bottom (bottom reduced on ≥1024px) (commit 4c81bad).",
   "retest": "pending"
  }
 ]

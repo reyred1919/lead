@@ -118,7 +118,7 @@ test("TC-VIS-STATES loading, error, offline banner, popovers and toasts", async 
   await page.unrouteAll({ behavior: "ignoreErrors" });
   // filters panel + Jalali date picker popover
   await page.goto("/reports");
-  await press(info, page.getByRole("button", { name: /انتخاب تاریخ/ }).first());
+  await press(info, page.locator("main button:has(svg.lucide-calendar-days)").first());
   await expect(page.getByRole("grid")).toBeVisible();
   const before = await page.getByRole("button", { name: /ماه/ }).first().isVisible();
   expect(before).toBe(true);
@@ -145,7 +145,7 @@ test("TC-VIS-JALALI date picker round-trips value and month/year navigation", as
   tc(info, "TC-VIS-JALALI", { role: "planmgr", route: "/reports", action: "jalali picker", expected: "selected Jalali day shown identically after pick" });
   await apiLogin(page, "planmgr");
   await page.goto("/reports");
-  const trigger = page.getByRole("button", { name: /انتخاب تاریخ/ }).first();
+  const trigger = page.locator("main button:has(svg.lucide-calendar-days)").first();
   await press(info, trigger);
   await page.getByLabel("سال").selectOption({ index: 5 });
   await press(info, page.getByRole("button", { name: "ماه بعد" }));
@@ -153,7 +153,7 @@ test("TC-VIS-JALALI date picker round-trips value and month/year navigation", as
   const label = await day.getAttribute("aria-label");
   await press(info, day);
   const [d, month, year] = (label ?? "").split(" ");
-  const triggerText = await page.locator("main").getByRole("button", { name: /از تاریخ|انتخاب تاریخ/ }).first().innerText().catch(() => "");
+  const triggerText = await page.locator("main button:has(svg.lucide-calendar-days)").first().innerText().catch(() => "");
   const shown = await page.locator("main").innerText();
   expect(shown, `picked ${label}, trigger: ${triggerText}`).toContain(`${d} ${month} ${year}`);
 });

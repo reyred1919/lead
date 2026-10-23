@@ -53,7 +53,7 @@ test("TC-REF-01..05 create → accept → qualify → task → complete (UI on t
   await press(info, pm.page.getByRole("button", { name: "وظیفه", exact: true }));
   const tdlg = pm.page.getByRole("dialog");
   await tdlg.locator("#task-title").fill("تماس پیگیری QA");
-  await press(info, tdlg.getByRole("button", { name: /انتخاب تاریخ/ }));
+  await press(info, tdlg.locator("button:has(svg.lucide-calendar-days)").first());
   await press(info, pm.page.getByRole("button", { name: "ماه بعد" }));
   await press(info, pm.page.getByRole("grid").getByRole("button").nth(9));
   await press(info, pm.page.getByRole("button", { name: "تأیید" }));

@@ -11,7 +11,7 @@ test.describe("Admin CRUD", () => {
     await dlg.getByPlaceholder("EXPO-1405").fill(code);
     await dlg.locator("input").nth(1).fill(`رویداد رابط کاربری ${code}`);
     for (const [i, label] of ["شروع", "پایان"].entries()) {
-      await press(info, dlg.getByRole("button", { name: /انتخاب تاریخ|^شروع$|^پایان$/ }).nth(i));
+      await press(info, dlg.locator("button:has(svg.lucide-calendar-days)").nth(i));
       const cal = page.getByRole("grid");
       await press(info, cal.getByRole("button").nth(i === 0 ? 2 : 6));
       await press(info, page.getByRole("button", { name: "تأیید" }));

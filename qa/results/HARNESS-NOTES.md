@@ -21,3 +21,14 @@
   event; the API correctly refused the capture (422 `event_not_active`) and the test then looked for a lead page
   that did not exist. No script execution was observed, but the run is **inconclusive**, not a PASS.
 - Fix: the test selects the active demo event and asserts 201 before checking rendering; re-run on all projects.
+
+## H-04 — Interim after-run (`after1`, code `d97226a`) — test selector corrections
+- Date-picker triggers are now named by their field label (accessibility fix in `fa14bcf`); tests that looked
+  for the placeholder name "انتخاب تاریخ" (TC-REF-01..05, TC-ADM-01, TC-VIS-STATES, TC-VIS-JALALI) now locate the
+  trigger by its calendar icon. Not a product regression: the accessible name is now the visible label.
+- TC-AUTH-05 picked a hidden sidebar link on 375 px (now `visible=true`); TC-CAP-01 `getByText` matched a lead
+  named "… سازمان موجود …" once the list fit the screen (now `exact`).
+- Real findings from `after1`, fixed and re-run: QA-D-19 still reproduced (React Query paused offline → fixed in
+  `a665d76`); QA-D-21 (focus/scroll target under the mobile tab bar → `4c81bad`).
+- `after1` evidence is kept under `qa/results/playwright-after1-*`, `qa/results/jsonl-after1/`,
+  `qa/traces/test-output/after1-*`; final numbers come from the `after` run on `4c81bad`.

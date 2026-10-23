@@ -45,7 +45,7 @@ test.describe("Auth & session", () => {
     tc(info, "TC-AUTH-05", { role: "planmgr", route: "/leads→/inbox", action: "session expiry SPA", expected: "redirect to /login, not an error card" });
     await loginAs(page, "planmgr", "/");
     await context.clearCookies();
-    const nav = page.getByRole("link", { name: /^لیدها/ }).first();
+    const nav = page.getByRole("link", { name: /^لیدها/ }).locator("visible=true").first();
     await nav.click();
     await expect(page).toHaveURL(/\/login/, { timeout: 10_000 });
   });
