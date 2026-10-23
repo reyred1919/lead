@@ -109,6 +109,17 @@ describe("offline queue", () => {
     }
   });
 
+  it("concurrent first writes share one key, so everything cached at login stays readable (QA-D-22)", async () => {
+    const { q } = queue();
+    await Promise.all([
+      q.cacheContext("user-1", { user: { id: "user-1", full_name: "کاربر" } }),
+      q.cacheEvents("user-1", [{ id: "evt-1", can_capture: true }]),
+      q.enqueue(payload(), "EVT"),
+    ]);
+    expect((await q.cachedContext())?.user.full_name).toBe("کاربر");
+    expect(await q.cachedEvents()).toEqual([{ id: "evt-1", can_capture: true }]);
+  });
+
   it("isolates records per user and clears everything on logout", async () => {
     const { q } = queue();
     await q.enqueue(payload(), "E");

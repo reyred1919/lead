@@ -81,13 +81,31 @@ export function createOfflineQueue(opts: { dbName?: string; send?: Sender } = {}
 
   const emit = () => listeners.forEach((l) => l());
 
-  async function key(uid: string): Promise<CryptoKey> {
-    const d = await db();
-    const existing = (await d.get("keys", uid)) as CryptoKey | undefined;
-    if (existing) return existing;
-    const k = await crypto.subtle.generateKey({ name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
-    await d.put("keys", k, uid);
-    return k;
+  // One in-flight key lookup per user: concurrent first writes (e.g. context + events cached at login)
+  // must not each generate a key and overwrite the other's, which made earlier ciphertext undecryptable (QA-D-22).
+  const keyPromises = new Map<string, Promise<CryptoKey>>();
+  function key(uid: string): Promise<CryptoKey> {
+    let p = keyPromises.get(uid);
+    if (!p) {
+      p = (async () => {
+        const d = await db();
+        const existing = (await d.get("keys", uid)) as CryptoKey | undefined;
+        if (existing) return existing;
+        const k = await crypto.subtle.generateKey({ name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
+        try {
+          await d.add("keys", k, uid);
+          return k;
+        } catch {
+          // Another tab created the key first; use the stored one.
+          const stored = (await d.get("keys", uid)) as CryptoKey | undefined;
+          if (stored) return stored;
+          throw new Error("offline key unavailable");
+        }
+      })();
+      keyPromises.set(uid, p);
+      p.catch(() => keyPromises.delete(uid));
+    }
+    return p;
   }
 
   async function encrypt(uid: string, data: unknown) {
@@ -251,6 +269,7 @@ export function createOfflineQueue(opts: { dbName?: string; send?: Sender } = {}
       const d = await db();
       await d.clear("queue");
       await d.clear("keys");
+      keyPromises.clear();
       await d.clear("context");
       userId = null;
       emit();
