@@ -182,7 +182,7 @@ export function RolesPage() {
   return (
     <div>
       <PageHeader title="نقش‌ها و مجوزها" subtitle="نقش‌ها بسته‌های قابلیت‌اند و به‌صورت افزایشی ترکیب می‌شوند. عضویت فعال در رویداد فعال همیشه «ثبت لید» را مجاز می‌کند. ارزیابی مجوز همیشه در سرور انجام می‌شود." />
-      <Card className="overflow-x-auto">
+      <Card className="overflow-x-auto" tabIndex={0} role="region" aria-label="ماتریس نقش و قابلیت">
         <table className="w-full text-[12.5px]">
           <thead className="bg-canvas border-b border-line sticky top-0"><tr><th className="text-start px-3 h-10 min-w-[220px]">قابلیت</th>{roles.data?.map((r) => <th key={r.code} className="px-2 h-10 text-center font-semibold min-w-[90px]">{r.name_fa}<div className="text-[10.5px] text-muted font-normal">{r.scope === "GLOBAL" ? "سراسری" : "رویدادی"}</div></th>)}</tr></thead>
           <tbody className="divide-y divide-line-2">

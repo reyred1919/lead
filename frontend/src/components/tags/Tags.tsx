@@ -29,7 +29,7 @@ export function TagChip({ tag, onRemove, size = "md" }: { tag: TagT; onRemove?: 
     >
       <span className="size-1.5 rounded-full shrink-0" style={{ background: s.dot }} aria-hidden />
       <span className="truncate">{label}</span>
-      {tag.status === "ARCHIVED" && <span className="text-[10.5px] opacity-70 font-medium">(بایگانی)</span>}
+      {tag.status === "ARCHIVED" && <span className="text-[10.5px] font-medium">(بایگانی)</span>}
       {onRemove && (
         <button type="button" onClick={onRemove} aria-label={`حذف برچسب ${label}`}
           className="relative -me-1 size-5 grid place-items-center rounded-full hover:bg-black/5 before:absolute before:-inset-3 before:content-['']">
