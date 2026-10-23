@@ -81,7 +81,7 @@ test.describe("Enrichment & opportunity detail", () => {
     await closeEvent(admin, ev.id);
     await actx.close();
     await page.goto(`/leads/${lead.id}`);
-    await expect(page.getByText(/رویداد موقت/).first()).toBeVisible();
+    await expect(page.getByText(/رویداد موقت/).locator("visible=true").first()).toBeVisible();
     await press(info, page.getByRole("button", { name: "تکمیل اطلاعات لید" }));
     const dlg = page.getByRole("dialog");
     const industry = `صنعت QA ${Date.now() % 10000}`;

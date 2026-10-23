@@ -31,4 +31,12 @@
 - Real findings from `after1`, fixed and re-run: QA-D-19 still reproduced (React Query paused offline → fixed in
   `a665d76`); QA-D-21 (focus/scroll target under the mobile tab bar → `4c81bad`).
 - `after1` evidence is kept under `qa/results/playwright-after1-*`, `qa/results/jsonl-after1/`,
-  `qa/traces/test-output/after1-*`; final numbers come from the `after` run on `4c81bad`.
+  `qa/traces/test-output/after1-*`; final numbers come from the `after` run on `e661188` (see H-05).
+
+## H-05 — Source edited during the `after2` desktop-1920 run (my error)
+- While `after2` (code `4c81bad`) desktop-1920 was still running, I edited `frontend/src` (QA-D-22/D-21 work);
+  `qa/results/ui-vite.log` shows HMR updates from 15:04:29. desktop-1920 results after that time are
+  contaminated (e.g. TC-MTX qa_dual). `after2` is therefore archived as interim evidence only and **all six
+  projects were re-run** as the final `after` run on `e661188`.
+- Real findings from `after2`: QA-D-22 (offline key race) and the true root cause of QA-D-21 (tablet bottom padding).
+  TC-ENR-01 tablet-768 matched a hidden `<option>` first (selector now `visible=true`).

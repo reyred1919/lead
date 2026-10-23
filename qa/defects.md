@@ -1,6 +1,6 @@
 # Defect register
 
-Total: 18 — P0: 0, P1: 4, P2: 10, P3: 4 (IDs QA-D-13..15 unused)
+Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 
 | ID | Sev | Category | Summary | Fix | Retest |
 |---|---|---|---|---|---|
@@ -21,7 +21,8 @@ Total: 18 — P0: 0, P1: 4, P2: 10, P3: 4 (IDs QA-D-13..15 unused)
 | QA-D-18 | P2 | UX / mobile overflow | Export card 31px wider than the viewport; whole page scrolls sideways. | grid-cols-[minmax(0,1fr)] (commit 3a4da09). | pending |
 | QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run). | pending |
 | QA-D-20 | P1 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user. | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a). | pending |
-| QA-D-21 | P3 | Accessibility (WCAG 2.2 2.4.11) | Control lands under the fixed bottom tab bar; tap intercepted by `nav[aria-label='ناوبری پایین']`. | html scroll-padding-top/bottom (bottom reduced on ≥1024px) (commit 4c81bad). | pending |
+| QA-D-21 | P2 | Accessibility (WCAG 2.2 2.4.11) | At 768–1023 px the end of every page (e.g. list pagination) stays under the fixed bottom tab bar even at maximum scroll; taps are intercepted by `nav[aria-label='ناوبری پایین']` and keyboard focus is obscured. | Separate top/bottom padding (`pt-5 md:pt-8 pb-28 lg:pb-10`), html scroll-padding, focus-in guard in AppShell (commits 4c81bad, e661188). | pending |
+| QA-D-22 | P2 | Offline / data integrity | Each concurrent write generated its own AES key and the later put overwrote the earlier key; the earlier ciphertext became undecryptable ('اطلاعات رویداد بارگذاری نشد'). The same race could make a queued lead unreadable. | One in-flight key promise per user + add() with re-read on conflict (commit ec513af). Regression test fails on the previous code. | pending |
 
 ## QA-D-01 — Privacy / cross-event exposure (P1, priority High)
 
@@ -244,15 +245,28 @@ Total: 18 — P0: 0, P1: 4, P2: 10, P3: 4 (IDs QA-D-13..15 unused)
 - **Fix:** overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a).
 - **Retest:** pending
 
-## QA-D-21 — Accessibility (WCAG 2.2 2.4.11) (P3, priority Low)
+## QA-D-21 — Accessibility (WCAG 2.2 2.4.11) (P2, priority Medium)
 
-- **Scenario:** TC-LST-01 tablet-768 (interim after-run)
+- **Scenario:** TC-LST-01 tablet-768 (after1 and after2 runs)
 - **Env:** Chromium 768×1024 touch emulation
 - **Steps:** Open /leads on a tablet/phone; move to the pagination control by keyboard focus or programmatic scroll.
 - **Expected:** The focused/scrolled control is fully visible.
-- **Actual:** Control lands under the fixed bottom tab bar; tap intercepted by `nav[aria-label='ناوبری پایین']`.
+- **Actual:** At 768–1023 px the end of every page (e.g. list pagination) stays under the fixed bottom tab bar even at maximum scroll; taps are intercepted by `nav[aria-label='ناوبری پایین']` and keyboard focus is obscured.
 - **Evidence:** qa/traces/test-output/after-tablet-768/*LST-01*/
 - **Code:** frontend/src/styles.css
-- **Root Cause:** No scroll-padding for the sticky header / fixed tab bar.
-- **Fix:** html scroll-padding-top/bottom (bottom reduced on ≥1024px) (commit 4c81bad).
+- **Root Cause:** `md:py-8` on <main> overrode `pb-28` (bottom padding fell to 32 px under a 64 px bar); no scroll padding for sticky/fixed bars.
+- **Fix:** Separate top/bottom padding (`pt-5 md:pt-8 pb-28 lg:pb-10`), html scroll-padding, focus-in guard in AppShell (commits 4c81bad, e661188).
+- **Retest:** pending
+
+## QA-D-22 — Offline / data integrity (P2, priority High)
+
+- **Scenario:** TC-OFF-06 desktop-1440 (after2 run); vitest 'concurrent first writes share one key'
+- **Env:** Chromium; vitest + fake-indexeddb
+- **Steps:** First login on a device: context and event list are encrypted concurrently; go offline; open capture.
+- **Expected:** Both cached records decrypt with the user's single key.
+- **Actual:** Each concurrent write generated its own AES key and the later put overwrote the earlier key; the earlier ciphertext became undecryptable ('اطلاعات رویداد بارگذاری نشد'). The same race could make a queued lead unreadable.
+- **Evidence:** qa/traces/test-output/after2-desktop-1440/*login-still-allows-capture*/test-failed-1.png; frontend/src/lib/offline.test.ts
+- **Code:** frontend/src/lib/offline.ts key()
+- **Root Cause:** Non-atomic read→generate→put of the per-user key (pre-existing; made frequent by the login prefetch added for QA-D-19).
+- **Fix:** One in-flight key promise per user + add() with re-read on conflict (commit ec513af). Regression test fails on the previous code.
 - **Retest:** pending
