@@ -30,7 +30,7 @@ export function UserPicker({ value, onChange, eventId, placeholder = "جست‌�
       </div>
       <ul role="listbox" aria-label="کاربران" className="max-h-60 overflow-y-auto scrollbar-thin p-1">
         {users.map((u) => (
-          <li key={u.id}>
+          <li key={u.id} role="none">
             <button type="button" role="option" aria-selected={value?.id === u.id} onClick={() => onChange(value?.id === u.id ? null : u)}
               className={cn("w-full flex items-center gap-3 px-2.5 py-2 rounded-[10px] text-start min-h-12", value?.id === u.id ? "bg-action-soft" : "hover:bg-line-2")}>
               <Avatar name={u.full_name} size={32} />
@@ -42,7 +42,7 @@ export function UserPicker({ value, onChange, eventId, placeholder = "جست‌�
             </button>
           </li>
         ))}
-        {!users.length && !isFetching && <li className="text-center text-[13px] text-muted py-6">کاربری یافت نشد.</li>}
+        {!users.length && !isFetching && <li role="none" className="text-center text-[13px] text-muted py-6">کاربری یافت نشد.</li>}
       </ul>
     </div>
   );

@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { ApiError, get, post } from "./api";
+import { ApiError, SESSION_EXPIRED_EVENT, get, post } from "./api";
 import { offlineQueue } from "./offline";
 
 export type EventCtx = {
@@ -76,6 +76,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     load();
   }, [load]);
+
+  // Session expired mid-use: drop identity so <Protected> redirects to /login?next=… (offline queue is kept).
+  useEffect(() => {
+    const onExpired = () => {
+      qc.clear();
+      setMe(null);
+    };
+    window.addEventListener(SESSION_EXPIRED_EVENT, onExpired);
+    return () => window.removeEventListener(SESSION_EXPIRED_EVENT, onExpired);
+  }, [qc]);
 
   // Event context rules: single active capture membership → locked default.
   useEffect(() => {

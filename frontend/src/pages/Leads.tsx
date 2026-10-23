@@ -42,8 +42,9 @@ export function LeadsPage() {
   const [showFilters, setShowFilters] = useState(false);
   const page = Number(params.get("page") || 1);
   const dq = useDebounced(q, 300);
+  const ordering = params.get("ordering") || "-captured_at";
   const filters = {
-    q: dq, page, page_size: 25,
+    q: dq, page, page_size: 25, ordering,
     event_id: params.get("event_id") ?? "", quality: params.get("quality") ?? "", stage: params.get("stage") ?? "", tag_id: params.get("tag_id") ?? "",
     created_by: scope === "mine" ? "me" : undefined, owner_id: scope === "owned" ? "me" : undefined, ownerless: scope === "ownerless" ? "1" : undefined,
   };
@@ -113,6 +114,11 @@ export function LeadsPage() {
             <Search className="absolute start-3.5 top-3.5 size-5 text-muted" />
             <Input aria-label="جست‌وجو" className="ps-11" value={q} onChange={(e) => { setQ(e.target.value); set("q", e.target.value); }} placeholder="نام مخاطب، سازمان یا شماره موبایل" />
           </div>
+          <Select aria-label="مرتب‌سازی" value={ordering} onChange={(e) => set("ordering", e.target.value)} className="w-auto max-w-[44%] sm:max-w-none shrink-0">
+            <option value="-captured_at">جدیدترین ثبت</option>
+            <option value="captured_at">قدیمی‌ترین ثبت</option>
+            <option value="-updated_at">آخرین تغییر</option>
+          </Select>
           <Button variant="secondary" size="icon" aria-label="فیلترها" aria-expanded={showFilters} onClick={() => setShowFilters(!showFilters)}><Filter className="size-5" /></Button>
         </div>
         {showFilters && (
