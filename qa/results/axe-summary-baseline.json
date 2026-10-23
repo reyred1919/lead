@@ -1,0 +1,82 @@
+[
+ {
+  "rule": "color-contrast",
+  "impact": "serious",
+  "help": "Elements must meet minimum color contrast ratio thresholds",
+  "nodes": 1920,
+  "routes": 22,
+  "viewports": "desktop-1440,mobile-390,tablet-768",
+  "route_list": "/ /admin/accounts /admin/audit /admin/branding /admin/catalog /admin/duplicates /admin/events /admin/notify /admin/quarantine /admin/roles /admin/tags /admin/users /capture /capture/queue /dashboard /inbox /leads /leads/:id /messages /notifications /profile /reports",
+  "sample": ".sm\\:inline; .text-\\[14px\\].mt-1; bdi[dir=\"ltr\"]"
+ },
+ {
+  "rule": "aria-prohibited-attr",
+  "impact": "serious",
+  "help": "Elements must only use permitted ARIA attributes",
+  "nodes": 120,
+  "routes": 22,
+  "viewports": "desktop-1440,mobile-390,tablet-768",
+  "route_list": "/ /admin/accounts /admin/audit /admin/branding /admin/catalog /admin/duplicates /admin/events /admin/notify /admin/quarantine /admin/roles /admin/tags /admin/users /capture /capture/queue /dashboard /inbox /leads /leads/:id /messages /notifications /profile /reports",
+  "sample": ".bg-white\\/10"
+ },
+ {
+  "rule": "aria-required-parent",
+  "impact": "critical",
+  "help": "Certain ARIA roles must be contained by particular parents",
+  "nodes": 36,
+  "routes": 1,
+  "viewports": "desktop-1440,mobile-390,tablet-768",
+  "route_list": "/messages",
+  "sample": "li:nth-child(1) > .py-2.text-start[role=\"option\"]; li:nth-child(2) > .py-2.text-start[role=\"option\"]; li:nth-child(3) > .py-2.text-start[role=\"option\"]"
+ },
+ {
+  "rule": "listitem",
+  "impact": "serious",
+  "help": "<li> elements must be contained in a <ul> or <ol>",
+  "nodes": 36,
+  "routes": 1,
+  "viewports": "desktop-1440,mobile-390,tablet-768",
+  "route_list": "/messages",
+  "sample": ".max-h-60 > li:nth-child(1); .max-h-60 > li:nth-child(2); li:nth-child(3)"
+ },
+ {
+  "rule": "select-name",
+  "impact": "critical",
+  "help": "Select element must have an accessible name",
+  "nodes": 15,
+  "routes": 2,
+  "viewports": "desktop-1440,mobile-390,tablet-768",
+  "route_list": "/messages /reports",
+  "sample": ".gap-1\\.5.flex-col:nth-child(1) > select; .gap-1\\.5.flex-col:nth-child(2) > select"
+ },
+ {
+  "rule": "label",
+  "impact": "critical",
+  "help": "Form elements must have labels",
+  "nodes": 12,
+  "routes": 1,
+  "viewports": "desktop-1440,mobile-390,tablet-768",
+  "route_list": "/admin/branding",
+  "sample": "input[value=\"سامانه لیدهای نمایشگاهی\"]; input[value=\"همراه اول\"]; input[value=\"نشان سازمان\"]"
+ },
+ {
+  "rule": "aria-required-children",
+  "impact": "critical",
+  "help": "Certain ARIA roles must contain particular children",
+  "nodes": 3,
+  "routes": 1,
+  "viewports": "desktop-1440,mobile-390,tablet-768",
+  "route_list": "/messages",
+  "sample": ".max-h-60"
+ },
+ {
+  "rule": "scrollable-region-focusable",
+  "impact": "serious",
+  "help": "Scrollable region must have keyboard access",
+  "nodes": 3,
+  "routes": 2,
+  "viewports": "mobile-390,tablet-768",
+  "route_list": "/admin/roles /leads",
+  "sample": ".card"
+ }
+]

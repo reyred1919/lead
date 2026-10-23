@@ -1,0 +1,65 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e18]: DEMO-TECH-1405
+        - generic [ref=e20]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e22]':
+          - img [ref=e23]
+          - generic [ref=e26]: همگام
+        - link "اعلان‌ها" [ref=e27] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e28]
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - heading "لیدها" [level=1] [ref=e35]
+            - paragraph [ref=e36]: تعاملات ثبت‌شده و فرصت‌های پیگیری
+          - link "ثبت لید جدید" [ref=e38] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e39]
+        - generic [ref=e40]:
+          - radiogroup "محدوده" [ref=e41]:
+            - radio "همه در محدوده من" [checked] [ref=e42]
+            - radio "ثبت‌های من" [ref=e43]
+            - radio "مسئولیت من" [ref=e44]
+            - radio "بدون مسئول" [ref=e45]
+          - generic [ref=e46]:
+            - generic [ref=e47]:
+              - img [ref=e48]
+              - textbox "جست‌وجو" [ref=e51]:
+                - /placeholder: نام مخاطب، سازمان یا شماره موبایل
+            - button "فیلترها" [ref=e52]:
+              - img [ref=e53]
+        - generic [ref=e56]:
+          - heading "دسترسی مجاز نیست" [level=3] [ref=e57]
+          - paragraph [ref=e58]: اطلاعات برای اعتبارسنجی ارسال نشده است.
+  - navigation "ناوبری پایین" [ref=e59]:
+    - generic [ref=e60]:
+      - link "خانه" [ref=e61] [cursor=pointer]:
+        - /url: /
+        - img [ref=e62]
+        - text: خانه
+      - link "لیدها" [active] [ref=e65] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e66]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e70]:
+        - img [ref=e71]
+      - link "کارتابل ۱۳" [ref=e72] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e73]
+        - text: کارتابل
+        - generic [ref=e76]: ۱۳
+      - button "بیشتر" [ref=e77]:
+        - img [ref=e78]
+        - text: بیشتر
+```

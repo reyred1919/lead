@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e29]:
+        - heading "یافت نشد" [level=3] [ref=e30]
+        - paragraph [ref=e31]: <!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <title>Page not found at /api/v1/interactions/undefined</title> <meta name="robots" co
+        - button "تلاش دوباره" [ref=e32]
+  - navigation "ناوبری پایین" [ref=e33]:
+    - generic [ref=e34]:
+      - link "خانه" [ref=e35] [cursor=pointer]:
+        - /url: /
+        - img [ref=e36]
+        - text: خانه
+      - link "لیدها" [ref=e39] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e40]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e44]:
+        - img [ref=e45]
+      - link "کارتابل" [ref=e46] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e47]
+        - text: کارتابل
+      - button "بیشتر" [ref=e50]:
+        - img [ref=e51]
+        - text: بیشتر
+```

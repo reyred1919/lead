@@ -3,7 +3,7 @@
 Branch `qa/audit-c6a1c88` (base `ccr-c989dc1b-w7didd`). Baseline evidence was recorded **before** any fix was
 loaded: the QA API process (`runserver --noreload`, started 13:14:27 UTC) predates the first backend fix edit
 (13:19:38 UTC) and still answered unauthenticated requests with 403 during all baseline runs; the baseline UI
-dev server served `c6a1c88` frontend sources (fixes were developed in a separate worktree on `qa/frontend-fixes` and cherry-picked; interim after-fix code `d97226a`, second interim `4c81bad`, final after-fix code `e661188`).
+dev server served `c6a1c88` frontend sources (fixes were developed in a separate worktree on `qa/frontend-fixes` and cherry-picked; interim after-fix code `d97226a`, second interim `4c81bad`, final after-fix code `e661188`, accessibility follow-up `d478da7`).
 
 ## Product fixes (each with a regression test)
 | Commit | Defects | Change | Regression test |
@@ -20,6 +20,7 @@ dev server served `c6a1c88` frontend sources (fixes were developed in a separate
 | `a665d76` | QA-D-19 | Events query uses `networkMode: "always"` so the offline cache is reached (first fix was incomplete — caught by the interim after-run) | TC-OFF-04, TC-OFF-06 |
 | `4c81bad`, `e661188` | QA-D-21 | Tablet bottom padding no longer overridden by `md:py-8`; scroll padding and focus-in guard keep controls clear of the sticky header / tab bar | TC-LST-01 (touch) |
 | `ec513af` | QA-D-22 | One in-flight offline key per user (concurrent first writes no longer overwrite the key) | vitest `concurrent first writes share one key`, TC-OFF-06 |
+| `d478da7` | QA-D-23 | `role=img` on unread dot, archived-tag suffix contrast, focusable role-matrix scroller | axe in TC-MTX (targeted re-run, 66 scans, 0 violations) |
 
 ## QA tooling (no product behaviour)
 - `95f380f`, `885eac6`, `abf1f05` and later `qa:` commits: isolated QA stack (`qa/scripts/qa-stack.sh`), synthetic

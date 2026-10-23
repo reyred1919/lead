@@ -1,0 +1,178 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - img "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic [ref=e15]:
+          - generic [ref=e17]: رویداد فعال برای ثبت
+          - combobox "رویداد فعال برای ثبت" [ref=e18]:
+            - option "رویداد موقت QA-MVL33G00-65 (QA-MVL33G00-65)" [selected]
+            - option "نمایشگاه نمونه فناوری ۱۴۰۵ (DEMO-TECH-1405)"
+        - generic [ref=e20]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e22]':
+          - img [ref=e23]
+          - generic [ref=e26]: همگام
+        - link "اعلان‌ها" [ref=e27] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e28]
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - link "بازگشت به لیدها" [ref=e33] [cursor=pointer]:
+          - /url: /leads
+          - img [ref=e34]
+          - text: بازگشت به لیدها
+        - generic [ref=e37]:
+          - generic [ref=e38]: پ‌ا
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - heading "پس از رویداد QA-MVL33EV8-883" [level=1] [ref=e41]
+              - generic [ref=e42]: قابل‌پیگیری
+              - generic [ref=e43]: در انتظار ارزیابی
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - img [ref=e46]
+                - text: سازمان QA-MVL33EV8-883
+              - generic [ref=e50]:
+                - text: رویداد موقت QA-MVL33EV8-883
+                - generic [ref=e51]: QA-MVL33EV8-883
+              - generic [ref=e52]: ۱ آبان ۱۴۰۵ ساعت ۱۸:۱۷
+            - generic [ref=e54]: پارکینگ هوشمند
+          - generic [ref=e55]:
+            - button "تکمیل اطلاعات لید" [ref=e56]:
+              - img [ref=e57]
+              - text: تکمیل اطلاعات لید
+            - button "ارزیابی و ایجاد فرصت" [ref=e60]:
+              - img [ref=e61]
+              - text: ارزیابی و ایجاد فرصت
+            - button "ارجاع" [ref=e64]:
+              - img [ref=e65]
+              - text: ارجاع
+            - button "وظیفه" [ref=e68]:
+              - img [ref=e69]
+              - text: وظیفه
+            - button "یادداشت" [ref=e72]:
+              - img [ref=e73]
+              - text: یادداشت
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]:
+                - generic [ref=e79]: پ‌ب
+                - generic [ref=e80]:
+                  - generic [ref=e81]: ثبت‌کننده
+                  - generic [ref=e82]: پرهام برنامه‌ریز
+              - generic [ref=e83]:
+                - img [ref=e85]
+                - generic [ref=e88]:
+                  - generic [ref=e89]: مسئول پیگیری
+                  - generic [ref=e90]: تعیین نشده
+              - generic [ref=e91]:
+                - img [ref=e93]
+                - generic [ref=e96]:
+                  - generic [ref=e97]: ارزیاب
+                  - generic [ref=e98]: هنوز ارزیابی نشده
+            - generic [ref=e99]:
+              - heading "برچسب‌ها" [level=2] [ref=e100]
+              - paragraph [ref=e101]: برچسب‌گذاری پس از ارزیابی و ایجاد فرصت فعال می‌شود.
+            - generic [ref=e102]:
+              - heading "اطلاعات تماس و سازمان" [level=2] [ref=e105]
+              - generic [ref=e106]:
+                - generic [ref=e107]:
+                  - term [ref=e108]: موبایل
+                  - definition [ref=e109]:
+                    - link "0912 000 7777" [ref=e110] [cursor=pointer]:
+                      - /url: tel:+989120007777
+                      - img [ref=e111]
+                      - generic [ref=e113]: 0912 000 7777
+                - generic [ref=e114]:
+                  - term [ref=e115]: ایمیل
+                  - definition [ref=e116]: ثبت نشده
+                - generic [ref=e117]:
+                  - term [ref=e118]: سمت
+                  - definition [ref=e119]: ثبت نشده
+                - generic [ref=e120]:
+                  - term [ref=e121]: تلفن جایگزین
+                  - definition [ref=e122]: ثبت نشده
+                - generic [ref=e123]:
+                  - term [ref=e124]: صنعت
+                  - definition [ref=e125]: ثبت نشده
+                - generic [ref=e126]:
+                  - term [ref=e127]: شهر
+                  - definition [ref=e128]: ثبت نشده
+                - generic [ref=e129]:
+                  - term [ref=e130]: وب‌سایت
+                  - definition [ref=e131]: ثبت نشده
+                - generic [ref=e132]:
+                  - term [ref=e133]: نام رسمی سازمان
+                  - definition [ref=e134]: ثبت نشده
+            - generic [ref=e135]:
+              - generic [ref=e137]:
+                - heading "یادداشت غرفه و ثبت اولیه" [level=2] [ref=e138]
+                - paragraph [ref=e139]: داده واردشده در غرفه بدون تغییر نگهداری می‌شود.
+              - generic [ref=e140]:
+                - paragraph [ref=e141]: یادداشتی ثبت نشده است.
+                - generic [ref=e142]:
+                  - text: "ثبت اولیه: پس از رویداد QA-MVL33EV8-883 · سازمان QA-MVL33EV8-883 ·"
+                  - generic [ref=e143]: "09120007777"
+                  - text: ·
+                  - generic [ref=e144]: ثبت‌شده
+            - generic [ref=e145]:
+              - generic [ref=e147]:
+                - heading "تاریخچه" [level=2] [ref=e148]
+                - paragraph [ref=e149]: همه تغییرات با نام انجام‌دهنده و زمان ثبت می‌شوند.
+              - list [ref=e150]:
+                - listitem [ref=e151]:
+                  - img [ref=e153]
+                  - generic [ref=e155]:
+                    - text: ثبت در غرفه
+                    - generic [ref=e156]: · پرهام برنامه‌ریز · ۳ ثانیه پیش
+          - complementary [ref=e157]:
+            - generic [ref=e158]:
+              - generic [ref=e159]:
+                - heading "کامل بودن اطلاعات" [level=2] [ref=e160]
+                - generic [ref=e161]: ۲۳٪
+              - progressbar "درصد تکمیل" [ref=e162]
+              - paragraph [ref=e164]: "موارد ثبت‌نشده (نامعلوم، نه منفی):"
+              - generic [ref=e165]:
+                - generic [ref=e166]: سمت مخاطب
+                - generic [ref=e167]: ایمیل کاری
+                - generic [ref=e168]: صنعت
+                - generic [ref=e169]: شهر
+                - generic [ref=e170]: وب‌سایت
+                - generic [ref=e171]: ارزیابی
+                - generic [ref=e172]: مسئله کسب‌وکار
+                - generic [ref=e173]: فوریت
+                - generic [ref=e174]: اقدام بعدی
+                - generic [ref=e175]: مسئول پیگیری
+              - button "تکمیل اطلاعات" [ref=e176]
+            - generic [ref=e177]:
+              - heading "ارجاع‌ها" [level=2] [ref=e180]
+              - paragraph [ref=e181]: ارجاعی ثبت نشده است.
+            - generic [ref=e182]:
+              - heading "وظایف پیگیری" [level=2] [ref=e185]
+              - paragraph [ref=e186]: وظیفه‌ای تعریف نشده است.
+  - navigation "ناوبری پایین" [ref=e187]:
+    - generic [ref=e188]:
+      - link "خانه" [ref=e189] [cursor=pointer]:
+        - /url: /
+        - img [ref=e190]
+        - text: خانه
+      - link "لیدها" [ref=e193] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e194]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e198]:
+        - img [ref=e199]
+      - link "کارتابل ۱۵" [ref=e200] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e201]
+        - text: کارتابل
+        - generic [ref=e204]: ۱۵
+      - button "بیشتر" [ref=e205]:
+        - img [ref=e206]
+        - text: بیشتر
+```

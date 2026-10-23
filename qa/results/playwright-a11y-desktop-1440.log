@@ -1,0 +1,20 @@
+
+Running 13 tests using 1 worker
+
+  ✓   1 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe (58.0s)
+  ✓   2 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe (34.9s)
+  ✓   3 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe (33.3s)
+  ✓   4 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe (29.9s)
+  ✓   5 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe (31.4s)
+  ✓   6 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe (36.3s)
+  ✓   7 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX owner: route access, menu affordances, screenshots, overflow, axe (32.6s)
+  ✓   8 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe (32.1s)
+  ✓   9 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe (33.5s)
+  ✓  10 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe (27.9s)
+  ✓  11 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe (28.4s)
+  ✓  12 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts (7.7s)
+  ✓  13 [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts:143:1 › TC-VIS-JALALI date picker round-trips value and month/year navigation (2.0s)
+
+  Slow test file: [desktop-1440] › qa-e2e/07-matrix-visual.spec.ts (6.5m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  13 passed (6.5m)

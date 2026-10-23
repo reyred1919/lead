@@ -1,0 +1,190 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - img "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e18]: DEMO-TECH-1405
+        - generic [ref=e20]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e22]':
+          - img [ref=e23]
+          - generic [ref=e26]: همگام
+        - link "اعلان‌ها" [ref=e27] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e28]
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - link "بازگشت به لیدها" [ref=e33] [cursor=pointer]:
+          - /url: /leads
+          - img [ref=e34]
+          - text: بازگشت به لیدها
+        - generic [ref=e37]:
+          - generic [ref=e38]: ا‌د
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - heading "ارجاع دستگاه tablet-768 32104" [level=1] [ref=e41]
+              - generic [ref=e42]: قابل‌پیگیری
+              - generic [ref=e43]: در انتظار ارزیابی
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - img [ref=e46]
+                - text: شخص حقیقی / بدون سازمان
+              - generic [ref=e50]:
+                - text: نمایشگاه نمونه فناوری ۱۴۰۵
+                - generic [ref=e51]: DEMO-TECH-1405
+              - generic [ref=e52]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۴۳
+            - generic [ref=e54]: پارکینگ هوشمند
+          - generic [ref=e55]:
+            - button "تکمیل اطلاعات لید" [ref=e56]:
+              - img [ref=e57]
+              - text: تکمیل اطلاعات لید
+            - button "ارزیابی و ایجاد فرصت" [ref=e60]:
+              - img [ref=e61]
+              - text: ارزیابی و ایجاد فرصت
+            - button "ارجاع" [ref=e64]:
+              - img [ref=e65]
+              - text: ارجاع
+            - button "وظیفه" [ref=e68]:
+              - img [ref=e69]
+              - text: وظیفه
+            - button "یادداشت" [ref=e72]:
+              - img [ref=e73]
+              - text: یادداشت
+            - button "اصلاح ثبت" [ref=e75]
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - generic [ref=e80]: م‌ت
+                - generic [ref=e81]:
+                  - generic [ref=e82]: ثبت‌کننده
+                  - generic [ref=e83]: مریم توسعه‌بازار
+              - generic [ref=e84]:
+                - img [ref=e86]
+                - generic [ref=e89]:
+                  - generic [ref=e90]: مسئول پیگیری
+                  - generic [ref=e91]: تعیین نشده
+              - generic [ref=e92]:
+                - img [ref=e94]
+                - generic [ref=e97]:
+                  - generic [ref=e98]: ارزیاب
+                  - generic [ref=e99]: هنوز ارزیابی نشده
+            - generic [ref=e100]:
+              - heading "برچسب‌ها" [level=2] [ref=e101]
+              - paragraph [ref=e102]: برچسب‌گذاری پس از ارزیابی و ایجاد فرصت فعال می‌شود.
+            - generic [ref=e103]:
+              - heading "اطلاعات تماس و سازمان" [level=2] [ref=e106]
+              - generic [ref=e107]:
+                - generic [ref=e108]:
+                  - term [ref=e109]: موبایل
+                  - definition [ref=e110]:
+                    - link "0912 245 3113" [ref=e111] [cursor=pointer]:
+                      - /url: tel:+989122453113
+                      - img [ref=e112]
+                      - generic [ref=e114]: 0912 245 3113
+                - generic [ref=e115]:
+                  - term [ref=e116]: ایمیل
+                  - definition [ref=e117]: ثبت نشده
+                - generic [ref=e118]:
+                  - term [ref=e119]: سمت
+                  - definition [ref=e120]: ثبت نشده
+                - generic [ref=e121]:
+                  - term [ref=e122]: تلفن جایگزین
+                  - definition [ref=e123]: ثبت نشده
+                - generic [ref=e124]:
+                  - term [ref=e125]: صنعت
+                  - definition [ref=e126]: ثبت نشده
+                - generic [ref=e127]:
+                  - term [ref=e128]: شهر
+                  - definition [ref=e129]: ثبت نشده
+                - generic [ref=e130]:
+                  - term [ref=e131]: وب‌سایت
+                  - definition [ref=e132]: ثبت نشده
+                - generic [ref=e133]:
+                  - term [ref=e134]: نام رسمی سازمان
+                  - definition [ref=e135]: ثبت نشده
+            - generic [ref=e136]:
+              - generic [ref=e138]:
+                - heading "یادداشت غرفه و ثبت اولیه" [level=2] [ref=e139]
+                - paragraph [ref=e140]: داده واردشده در غرفه بدون تغییر نگهداری می‌شود.
+              - generic [ref=e141]:
+                - paragraph [ref=e142]: یادداشتی ثبت نشده است.
+                - generic [ref=e143]:
+                  - text: "ثبت اولیه: ارجاع دستگاه tablet-768 32104 ·"
+                  - generic [ref=e144]: "09122453113"
+                  - text: ·
+                  - generic [ref=e145]: ثبت‌شده
+            - generic [ref=e146]:
+              - generic [ref=e148]:
+                - heading "تاریخچه" [level=2] [ref=e149]
+                - paragraph [ref=e150]: همه تغییرات با نام انجام‌دهنده و زمان ثبت می‌شوند.
+              - list [ref=e151]:
+                - listitem [ref=e152]:
+                  - img [ref=e155]
+                  - generic [ref=e158]:
+                    - text: ارجاع
+                    - generic [ref=e159]: · مریم توسعه‌بازار · ۱ ثانیه پیش
+                  - paragraph [ref=e160]: لطفاً ارزیابی شود — QA
+                  - paragraph [ref=e161]: به پرهام برنامه‌ریز
+                - listitem [ref=e162]:
+                  - img [ref=e164]
+                  - generic [ref=e166]:
+                    - text: ثبت در غرفه
+                    - generic [ref=e167]: · مریم توسعه‌بازار · ۷ ثانیه پیش
+          - complementary [ref=e168]:
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - heading "کامل بودن اطلاعات" [level=2] [ref=e171]
+                - generic [ref=e172]: ۱۵٪
+              - progressbar "درصد تکمیل" [ref=e173]
+              - paragraph [ref=e175]: "موارد ثبت‌نشده (نامعلوم، نه منفی):"
+              - generic [ref=e176]:
+                - generic [ref=e177]: سمت مخاطب
+                - generic [ref=e178]: ایمیل کاری
+                - generic [ref=e179]: سازمان
+                - generic [ref=e180]: صنعت
+                - generic [ref=e181]: شهر
+                - generic [ref=e182]: وب‌سایت
+                - generic [ref=e183]: ارزیابی
+                - generic [ref=e184]: مسئله کسب‌وکار
+                - generic [ref=e185]: فوریت
+                - generic [ref=e186]: اقدام بعدی
+                - generic [ref=e187]: مسئول پیگیری
+              - button "تکمیل اطلاعات" [ref=e188]
+            - generic [ref=e189]:
+              - heading "ارجاع‌ها" [level=2] [ref=e192]
+              - list [ref=e193]:
+                - listitem [ref=e194]:
+                  - generic [ref=e195]:
+                    - generic [ref=e196]: مریم توسعه‌بازار ← پرهام برنامه‌ریز
+                    - generic [ref=e197]: در انتظار پذیرش
+                  - generic [ref=e199]: ارزیابی · ۱ ثانیه پیش · مهلت ۳ آبان ۱۴۰۵ ساعت ۱۷:۴۳
+                  - generic [ref=e200]: «لطفاً ارزیابی شود — QA»
+            - generic [ref=e201]:
+              - heading "وظایف پیگیری" [level=2] [ref=e204]
+              - paragraph [ref=e205]: وظیفه‌ای تعریف نشده است.
+  - navigation "ناوبری پایین" [ref=e206]:
+    - generic [ref=e207]:
+      - link "خانه" [ref=e208] [cursor=pointer]:
+        - /url: /
+        - img [ref=e209]
+        - text: خانه
+      - link "لیدها" [ref=e212] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e213]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e217]:
+        - img [ref=e218]
+      - link "کارتابل" [ref=e219] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e220]
+        - text: کارتابل
+      - button "بیشتر" [ref=e223]:
+        - img [ref=e224]
+        - text: بیشتر
+```

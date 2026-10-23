@@ -40,11 +40,16 @@ cd backend && ../.venv/bin/python -m pytest tests/test_qa_audit.py -rf     # QA 
 ## 3. QA browser suite (6 Chromium projects)
 
 ```bash
-cd frontend
-QA_SHA=<commit> PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers QA_JSON=../qa/results/playwright-<label>.json \
-  npx playwright test -c qa.config.ts > ../qa/results/playwright-<label>.log
-python3 ../qa/scripts/report.py <label> <commit>
+qa/scripts/qa-stack.sh start && qa/scripts/qa-stack.sh reseed   # isolated API :8001 / UI :5174 on db expo_leads_qa (destructive reseed — QA DB only)
+qa/scripts/run-project.sh <label> <commit> <project> 2          # one project at a time; e.g. after e661188 mobile-375
+#   → qa/results/playwright-<label>-<project>.{json,log}, failure evidence in qa/traces/test-output/<label>-<project>/
+mkdir -p qa/results/jsonl-<label> && mv qa/results/{matrix,axe,screenshots}-*.jsonl qa/results/jsonl-<label>/
+python3 qa/scripts/report.py <label> <commit>                   # CSVs, matrix, screenshot index/manifest, contact sheets, axe summary
+python3 qa/scripts/defects.py                                   # defects.md/csv from defects-data.json
 ```
+
+Do **not** edit `frontend/src` while a run is in progress — the Vite dev server hot-reloads open pages (H-01/H-05).
+Enable WebKit/Firefox where installation is allowed: `npx playwright install webkit firefox`; `qa.config.ts` adds those projects automatically.
 
 Projects: `desktop-1440` (1440×900), `desktop-1920` (1920×1080), `tablet-768` (768×1024, touch), `tablet-1024` (1024×768, touch), `mobile-390` (390×844, touch, DPR 2), `mobile-375` (375×667, touch, DPR 2). Locale `fa-IR`, timezone `Asia/Tehran`. Traces/videos are retained on failure under `qa/traces/`. Motion is disabled only at screenshot time (style injection), not during interaction.
 
@@ -52,5 +57,7 @@ Projects: `desktop-1440` (1440×900), `desktop-1920` (1920×1080), `tablet-768` 
 
 ```bash
 python3 qa/scripts/perf.py          # P50/P95 latency against the local dev server (NOT production numbers)
+cd frontend && npm run build && BACKEND_URL=http://127.0.0.1:8001 npx vite preview --port 4173 &
+QA_BASE_URL=http://localhost:4173 node frontend/qa-perf.mjs   # mobile LCP, CPU 4x / 1.6 Mbps / 150 ms (lab)
 qa/scripts/celery-check.sh          # real Celery worker + Redis: outbox → job → mock delivery, no double send
 ```

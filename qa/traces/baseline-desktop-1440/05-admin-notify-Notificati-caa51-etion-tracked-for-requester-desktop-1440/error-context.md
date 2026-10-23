@@ -1,0 +1,227 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - complementary "ناوبری اصلی" [ref=e5]:
+      - generic [ref=e7]:
+        - generic "نشان موقت (جایگزین)" [ref=e8]:
+          - img [ref=e9]
+        - generic [ref=e13]:
+          - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+          - generic [ref=e15]: همراه اول · نشان موقت
+      - button "ثبت لید جدید" [ref=e16]:
+        - img [ref=e17]
+        - text: ثبت لید جدید
+      - navigation [ref=e18]:
+        - link "خانه" [ref=e19] [cursor=pointer]:
+          - /url: /
+          - img [ref=e20]
+          - generic [ref=e23]: خانه
+        - link "لیدها" [ref=e24] [cursor=pointer]:
+          - /url: /leads
+          - img [ref=e25]
+          - generic [ref=e28]: لیدها
+        - link "کارتابل" [ref=e29] [cursor=pointer]:
+          - /url: /inbox
+          - img [ref=e30]
+          - generic [ref=e33]: کارتابل
+        - link "اعلان‌ها ۹" [ref=e34] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e35]
+          - generic [ref=e38]: اعلان‌ها
+          - generic [ref=e39]: ۹
+        - link "داشبورد تحلیلی" [ref=e40] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e41]
+          - generic [ref=e43]: داشبورد تحلیلی
+        - link "گزارش و خروجی" [ref=e44] [cursor=pointer]:
+          - /url: /reports
+          - img [ref=e45]
+          - generic [ref=e49]: گزارش و خروجی
+        - link "پیام و درخواست اقدام" [ref=e50] [cursor=pointer]:
+          - /url: /messages
+          - img [ref=e51]
+          - generic [ref=e54]: پیام و درخواست اقدام
+        - generic [ref=e55]: مدیریت و تنظیمات
+        - link "رویدادها و تیم‌ها" [ref=e56] [cursor=pointer]:
+          - /url: /admin/events
+          - img [ref=e57]
+          - generic [ref=e59]: رویدادها و تیم‌ها
+        - link "طرح‌ها و محصولات" [ref=e60] [cursor=pointer]:
+          - /url: /admin/catalog
+          - img [ref=e61]
+          - generic [ref=e65]: طرح‌ها و محصولات
+        - link "سازمان‌ها و مخاطبان" [ref=e66] [cursor=pointer]:
+          - /url: /admin/accounts
+          - img [ref=e67]
+          - generic [ref=e71]: سازمان‌ها و مخاطبان
+        - link "بازبینی تکراری‌ها" [ref=e72] [cursor=pointer]:
+          - /url: /admin/duplicates
+          - img [ref=e73]
+          - generic [ref=e76]: بازبینی تکراری‌ها
+        - link "ثبت‌های آفلاین معلق" [ref=e77] [cursor=pointer]:
+          - /url: /admin/quarantine
+          - img [ref=e78]
+          - generic [ref=e82]: ثبت‌های آفلاین معلق
+        - link "برچسب‌های لید" [ref=e83] [cursor=pointer]:
+          - /url: /admin/tags
+          - img [ref=e84]
+          - generic [ref=e88]: برچسب‌های لید
+        - link "اعلان، پیامک و ایمیل" [ref=e89] [cursor=pointer]:
+          - /url: /admin/notify
+          - img [ref=e90]
+          - generic [ref=e92]: اعلان، پیامک و ایمیل
+        - link "هویت بصری" [ref=e93] [cursor=pointer]:
+          - /url: /admin/branding
+          - img [ref=e94]
+          - generic [ref=e100]: هویت بصری
+        - link "گزارش ممیزی" [ref=e101] [cursor=pointer]:
+          - /url: /admin/audit
+          - img [ref=e102]
+          - generic [ref=e105]: گزارش ممیزی
+      - generic [ref=e106]:
+        - generic [ref=e107]: م‌ت
+        - link "مریم توسعه‌بازار مدیر توسعه بازار" [ref=e108] [cursor=pointer]:
+          - /url: /profile
+          - generic [ref=e109]: مریم توسعه‌بازار
+          - generic [ref=e110]: مدیر توسعه بازار
+        - button "خروج" [ref=e111]:
+          - img [ref=e112]
+    - generic [ref=e115]:
+      - banner [ref=e116]:
+        - generic [ref=e117]:
+          - generic "رویداد فعال" [ref=e119]:
+            - generic [ref=e121]: نمایشگاه نمونه فناوری ۱۴۰۵
+            - generic [ref=e122]: DEMO-TECH-1405
+          - generic [ref=e124]: DEMO · داده نمونه
+          - 'button "وضعیت همگام‌سازی: همگام" [ref=e126]':
+            - img [ref=e127]
+            - generic [ref=e130]: همگام
+      - main [ref=e131]:
+        - generic [ref=e132]:
+          - generic [ref=e134]:
+            - heading "پیام و درخواست اقدام" [level=1] [ref=e135]
+            - paragraph [ref=e136]: پیام دستی یا درخواست اقدام برای همکاران در محدوده مجاز شما. پیامک/ایمیل فقط خلاصه و لینک امن دارد؛ اقدام در سامانه انجام می‌شود. ارسال به مشتریان در این فاز غیرفعال است.
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - radiogroup "نوع پیام" [ref=e139]:
+                - radio "اطلاع‌رسانی" [ref=e140]
+                - radio "درخواست اقدام" [checked] [ref=e141]
+              - generic [ref=e142]:
+                - generic [ref=e143]:
+                  - text: موضوع*
+                  - generic [ref=e144]: (الزامی)
+                - textbox "موضوع (الزامی)" [ref=e145]
+              - generic [ref=e146]:
+                - generic [ref=e147]:
+                  - text: متن / دستورالعمل*
+                  - generic [ref=e148]: (الزامی)
+                - textbox "متن / دستورالعمل (الزامی)" [ref=e149]
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - generic [ref=e152]: نوع اقدام
+                  - combobox [ref=e153]:
+                    - option "تأیید دریافت"
+                    - option "پذیرش ارجاع"
+                    - option "بازبینی" [selected]
+                    - option "به‌روزرسانی لید"
+                    - option "تماس با مخاطب"
+                    - option "هماهنگی جلسه"
+                    - option "ارائه گزارش"
+                    - option "سایر"
+                - generic [ref=e154]:
+                  - generic [ref=e155]: مهلت (اختیاری)
+                  - button "انتخاب تاریخ" [ref=e156]:
+                    - img [ref=e157]
+                    - generic [ref=e159]: انتخاب تاریخ
+              - generic [ref=e160]:
+                - generic [ref=e161]:
+                  - generic [ref=e162]: اولویت
+                  - combobox [ref=e163]:
+                    - option "کم"
+                    - option "عادی" [selected]
+                    - option "زیاد"
+                    - option "فوری"
+                - generic [ref=e164]:
+                  - generic [ref=e165]: زمان ارسال
+                  - button "ارسال فوری" [ref=e166]:
+                    - img [ref=e167]
+                    - generic [ref=e169]: ارسال فوری
+                  - paragraph [ref=e170]: خالی = ارسال فوری
+              - generic [ref=e171]:
+                - generic [ref=e172]: کانال‌ها
+                - generic [ref=e173]:
+                  - generic [ref=e174] [cursor=pointer]:
+                    - checkbox "درون‌برنامه" [checked] [ref=e175]
+                    - generic [ref=e176]: درون‌برنامه
+                  - generic [ref=e177] [cursor=pointer]:
+                    - checkbox "پیامک" [ref=e178]
+                    - generic [ref=e179]: پیامک
+                  - generic [ref=e180] [cursor=pointer]:
+                    - checkbox "ایمیل" [ref=e181]
+                    - generic [ref=e182]: ایمیل
+                - paragraph [ref=e183]: اعلان درون‌برنامه همیشه ارسال می‌شود.
+              - generic [ref=e184]:
+                - heading "گیرندگان" [level=3] [ref=e185]
+                - generic [ref=e186]:
+                  - generic [ref=e187]:
+                    - generic [ref=e188]: تیم رویداد
+                    - combobox [ref=e189]:
+                      - option "—" [selected]
+                      - option "نمایشگاه نمونه فناوری ۱۴۰۵"
+                      - option "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)"
+                      - option "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)"
+                  - generic [ref=e190]:
+                    - generic [ref=e191]: نقش
+                    - combobox [ref=e192]:
+                      - option "افزودن نقش…" [selected]
+                      - option "مالک محصول/پروژه"
+                      - option "مدیر رویداد"
+                      - option "مدیر طرح/برنامه"
+                      - option "کارشناس غرفه"
+                      - option "مدیر توسعه بازار"
+                      - option "مدیر سامانه (اداره توسعه بازار)"
+                      - option "مدیرکل"
+                      - option "ناظر اجرایی (فقط‌خواندنی)"
+                - generic [ref=e193]:
+                  - generic [ref=e194]: افراد مشخص
+                  - generic [ref=e195]:
+                    - generic [ref=e196]:
+                      - img [ref=e197]
+                      - textbox "جست‌وجوی کاربر" [ref=e200]:
+                        - /placeholder: جست‌وجوی نام کاربر…
+                        - text: سمیرا
+                    - listbox "کاربران" [ref=e201]:
+                      - listitem [ref=e202]:
+                        - option "سمیرا غرفه‌دار کارشناس غرفه" [ref=e203]:
+                          - generic [ref=e204]: س‌غ
+                          - generic [ref=e205]:
+                            - generic [ref=e206]: سمیرا غرفه‌دار
+                            - generic [ref=e207]: کارشناس غرفه
+              - button "پیش‌نمایش و ارسال" [disabled]:
+                - img
+                - text: پیش‌نمایش و ارسال
+            - generic [ref=e208]:
+              - heading "ارسال‌های اخیر" [level=2] [ref=e211]
+              - list [ref=e212]:
+                - listitem [ref=e213]:
+                  - generic [ref=e214]:
+                    - generic [ref=e215]: درخواست QA desktop-1440 14680
+                    - generic [ref=e216]: ارسال‌شده
+                  - generic [ref=e217]: درخواست اقدام · ۱ گیرنده · ۱ آبان ۱۴۰۵ ساعت ۱۶:۵۶
+                  - generic [ref=e219]: "باز: ۱"
+                  - generic [ref=e221]: "درون‌برنامه: تحویل‌شده ۱"
+                - listitem [ref=e222]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: درخواست QA mobile-390 5271
+                    - generic [ref=e225]: ارسال‌شده
+                  - generic [ref=e226]: درخواست اقدام · ۱ گیرنده · ۱ آبان ۱۴۰۵ ساعت ۱۶:۵۶
+                  - generic [ref=e228]: "انجام‌شده: ۱"
+                  - generic [ref=e230]: "درون‌برنامه: تحویل‌شده ۱"
+  - status [ref=e231]:
+    - img [ref=e232]
+    - generic [ref=e236]: برای ۱ نفر ارسال شد
+    - button "بستن" [ref=e237]:
+      - img [ref=e238]
+```

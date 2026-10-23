@@ -1,0 +1,44 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e18]: DEMO-TECH-1405
+        - generic [ref=e20]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e22]':
+          - img [ref=e23]
+          - generic [ref=e26]: همگام
+        - link "اعلان‌ها" [ref=e27] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e28]
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - heading "دسترسی مجاز نیست" [level=3] [ref=e33]
+        - paragraph [ref=e34]: این بخش در محدوده مجوزهای شما نیست. مجوزها در سرور نیز بررسی می‌شوند.
+  - navigation "ناوبری پایین" [ref=e35]:
+    - generic [ref=e36]:
+      - link "خانه" [ref=e37] [cursor=pointer]:
+        - /url: /
+        - img [ref=e38]
+        - text: خانه
+      - link "لیدها" [ref=e41] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e42]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e46]:
+        - img [ref=e47]
+      - link "کارتابل ۱۷" [ref=e48] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e49]
+        - text: کارتابل
+        - generic [ref=e52]: ۱۷
+      - button "بیشتر" [ref=e53]:
+        - img [ref=e54]
+        - text: بیشتر
+```

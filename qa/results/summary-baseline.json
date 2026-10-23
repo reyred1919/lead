@@ -1,0 +1,160 @@
+{
+ "label": "baseline",
+ "sha": "c6a1c88",
+ "tests": {
+  "PASS": 322,
+  "FAIL": 62,
+  "SKIP": 12,
+  "BLOCKED": 3
+ },
+ "tests_by_project": {
+  "desktop-1440": {
+   "PASS": 60,
+   "FAIL": 5
+  },
+  "desktop-1920": {
+   "PASS": 59,
+   "FAIL": 4,
+   "SKIP": 2
+  },
+  "firefox-desktop": {
+   "BLOCKED": 1
+  },
+  "mobile-375": {
+   "PASS": 45,
+   "FAIL": 19,
+   "SKIP": 3
+  },
+  "mobile-390": {
+   "PASS": 53,
+   "FAIL": 10,
+   "SKIP": 2
+  },
+  "tablet-1024": {
+   "PASS": 51,
+   "FAIL": 13,
+   "SKIP": 3
+  },
+  "tablet-768": {
+   "PASS": 54,
+   "FAIL": 11,
+   "SKIP": 2
+  },
+  "webkit-desktop": {
+   "BLOCKED": 1
+  },
+  "webkit-mobile": {
+   "BLOCKED": 1
+  }
+ },
+ "matrix_rows": 1364,
+ "matrix": {
+  "PASS": 1318,
+  "SKIP": 12,
+  "FAIL": 34
+ },
+ "screenshots": 809,
+ "contact_sheets": 56,
+ "axe_rules_violated": 8,
+ "axe_nodes": 2145,
+ "failed_cases": [
+  "TC-AUTH-02 [mobile-375]",
+  "TC-AUTH-05 [desktop-1440]",
+  "TC-AUTH-05 [desktop-1920]",
+  "TC-AUTH-05 [mobile-375]",
+  "TC-AUTH-05 [mobile-390]",
+  "TC-AUTH-05 [tablet-1024]",
+  "TC-AUTH-05 [tablet-768]",
+  "TC-AUTH-06 [desktop-1440]",
+  "TC-AUTH-06 [desktop-1920]",
+  "TC-AUTH-06 [mobile-375]",
+  "TC-AUTH-06 [mobile-390]",
+  "TC-AUTH-06 [tablet-1024]",
+  "TC-AUTH-06 [tablet-768]",
+  "TC-CAP-01 [mobile-375]",
+  "TC-CAP-02 [mobile-375]",
+  "TC-CAP-06 [mobile-375]",
+  "TC-CAP-09 [mobile-375]",
+  "TC-CTX-01 [mobile-375]",
+  "TC-CTX-01 [mobile-390]",
+  "TC-LST-01 [tablet-768]",
+  "TC-LST-05 [desktop-1440]",
+  "TC-LST-05 [desktop-1920]",
+  "TC-LST-05 [mobile-375]",
+  "TC-LST-05 [mobile-390]",
+  "TC-LST-05 [tablet-1024]",
+  "TC-LST-05 [tablet-768]",
+  "TC-LST-07 [mobile-375]",
+  "TC-LST-07 [tablet-1024]",
+  "TC-LST-07 [tablet-768]",
+  "TC-MTX-admin [mobile-375]",
+  "TC-MTX-admin [mobile-390]",
+  "TC-MTX-admin [tablet-1024]",
+  "TC-MTX-admin [tablet-768]",
+  "TC-MTX-dg [mobile-375]",
+  "TC-MTX-dg [mobile-390]",
+  "TC-MTX-dg [tablet-1024]",
+  "TC-MTX-evmgr [mobile-375]",
+  "TC-MTX-evmgr [mobile-390]",
+  "TC-MTX-evmgr [tablet-1024]",
+  "TC-MTX-exec [mobile-375]",
+  "TC-MTX-exec [tablet-1024]",
+  "TC-MTX-exec [tablet-768]",
+  "TC-MTX-mdm [mobile-375]",
+  "TC-MTX-mdm [mobile-390]",
+  "TC-MTX-mdm [tablet-1024]",
+  "TC-MTX-planmgr [mobile-375]",
+  "TC-MTX-planmgr [mobile-390]",
+  "TC-MTX-planmgr [tablet-1024]",
+  "TC-MTX-planmgr [tablet-768]",
+  "TC-MTX-specialist1 [mobile-375]",
+  "TC-MTX-specialist1 [tablet-1024]",
+  "TC-MTX-specialist1 [tablet-768]",
+  "TC-NTF-02 [desktop-1440]",
+  "TC-OFF-06 [mobile-375]",
+  "TC-OFF-06 [tablet-1024]",
+  "TC-OFF-06 [tablet-768]",
+  "TC-REF-03 [desktop-1920]",
+  "TC-SEC-01 [mobile-375]",
+  "TC-SEC-01 [tablet-1024]",
+  "TC-VIS-STATES [desktop-1440]",
+  "TC-VIS-STATES [mobile-390]",
+  "TC-VIS-STATES [tablet-768]"
+ ],
+ "matrix_failures": [
+  "admin /leads/:id mobile-375: exp ALLOW obs ALLOW menu n/a overflow 869",
+  "admin /dashboard mobile-375: exp ALLOW obs ALLOW menu shown overflow 505",
+  "admin /reports mobile-375: exp ALLOW obs ALLOW menu shown overflow 45",
+  "dg /dashboard mobile-375: exp ALLOW obs ALLOW menu shown overflow 505",
+  "dg /reports mobile-375: exp ALLOW obs ALLOW menu shown overflow 45",
+  "exec /dashboard mobile-375: exp ALLOW obs ALLOW menu shown overflow 505",
+  "evmgr /reports mobile-375: exp ALLOW obs ALLOW menu shown overflow 45",
+  "planmgr /leads/:id mobile-375: exp ALLOW obs ALLOW menu n/a overflow 869",
+  "planmgr /dashboard mobile-375: exp ALLOW obs ALLOW menu shown overflow 505",
+  "planmgr /reports mobile-375: exp ALLOW obs ALLOW menu shown overflow 45",
+  "admin /leads/:id mobile-390: exp ALLOW obs ALLOW menu n/a overflow 35",
+  "admin /reports mobile-390: exp ALLOW obs ALLOW menu shown overflow 31",
+  "dg /reports mobile-390: exp ALLOW obs ALLOW menu shown overflow 31",
+  "evmgr /reports mobile-390: exp ALLOW obs ALLOW menu shown overflow 31",
+  "planmgr /reports mobile-390: exp ALLOW obs ALLOW menu shown overflow 31",
+  "admin /dashboard tablet-1024: exp ALLOW obs ALLOW menu shown overflow 482",
+  "admin /reports tablet-1024: exp ALLOW obs ALLOW menu shown overflow 92",
+  "mdm /dashboard tablet-1024: exp ALLOW obs ALLOW menu shown overflow 482",
+  "mdm /reports tablet-1024: exp ALLOW obs ALLOW menu shown overflow 92",
+  "dg /dashboard tablet-1024: exp ALLOW obs ALLOW menu shown overflow 482",
+  "dg /reports tablet-1024: exp ALLOW obs ALLOW menu shown overflow 92",
+  "exec /dashboard tablet-1024: exp ALLOW obs ALLOW menu shown overflow 482",
+  "evmgr /reports tablet-1024: exp ALLOW obs ALLOW menu shown overflow 92",
+  "planmgr /leads/:id tablet-1024: exp ALLOW obs ALLOW menu n/a overflow 592",
+  "planmgr /dashboard tablet-1024: exp ALLOW obs ALLOW menu shown overflow 482",
+  "planmgr /reports tablet-1024: exp ALLOW obs ALLOW menu shown overflow 92",
+  "specialist1 / tablet-1024: exp ALLOW obs ALLOW menu shown overflow 106",
+  "specialist1 /capture tablet-1024: exp ALLOW obs ALLOW menu n/a overflow 170",
+  "specialist1 /leads/:id tablet-1024: exp ALLOW obs ALLOW menu n/a overflow 592",
+  "admin /dashboard tablet-768: exp ALLOW obs ALLOW menu shown overflow 120",
+  "exec /leads/:id tablet-768: exp ALLOW obs ALLOW menu n/a overflow 560",
+  "exec /dashboard tablet-768: exp ALLOW obs ALLOW menu shown overflow 120",
+  "planmgr /leads/:id tablet-768: exp ALLOW obs ALLOW menu n/a overflow 560",
+  "planmgr /dashboard tablet-768: exp ALLOW obs ALLOW menu shown overflow 120"
+ ]
+}

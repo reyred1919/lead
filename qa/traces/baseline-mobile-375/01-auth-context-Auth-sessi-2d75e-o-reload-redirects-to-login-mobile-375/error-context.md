@@ -1,0 +1,62 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - heading "لیدها" [level=1] [ref=e31]
+            - paragraph [ref=e32]: تعاملات ثبت‌شده و فرصت‌های پیگیری
+          - link "ثبت لید جدید" [ref=e34] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e35]
+        - generic [ref=e36]:
+          - radiogroup "محدوده" [ref=e37]:
+            - radio "همه در محدوده من" [checked] [ref=e38]
+            - radio "ثبت‌های من" [ref=e39]
+            - radio "مسئولیت من" [ref=e40]
+            - radio "بدون مسئول" [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - img [ref=e44]
+              - textbox "جست‌وجو" [ref=e47]:
+                - /placeholder: نام مخاطب، سازمان یا شماره موبایل
+            - button "فیلترها" [ref=e48]:
+              - img [ref=e49]
+        - generic [ref=e52]:
+          - heading "دسترسی مجاز نیست" [level=3] [ref=e53]
+          - paragraph [ref=e54]: اطلاعات برای اعتبارسنجی ارسال نشده است.
+  - navigation "ناوبری پایین" [ref=e55]:
+    - generic [ref=e56]:
+      - link "خانه" [ref=e57] [cursor=pointer]:
+        - /url: /
+        - img [ref=e58]
+        - text: خانه
+      - link "لیدها" [active] [ref=e61] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e62]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e66]:
+        - img [ref=e67]
+      - link "کارتابل ۱۷" [ref=e68] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e69]
+        - text: کارتابل
+        - generic [ref=e72]: ۱۷
+      - button "بیشتر" [ref=e73]:
+        - img [ref=e74]
+        - text: بیشتر
+```

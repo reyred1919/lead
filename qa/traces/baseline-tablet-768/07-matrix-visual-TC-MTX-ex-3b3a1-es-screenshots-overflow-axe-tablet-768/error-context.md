@@ -1,0 +1,41 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic [ref=e15]: رویداد فعالی برای ثبت لید به شما اختصاص داده نشده است.
+        - generic [ref=e17]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+          - generic [ref=e23]: همگام
+        - link "اعلان‌ها" [ref=e24] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e25]
+    - main [ref=e28]:
+      - generic [ref=e29]:
+        - heading "دسترسی مجاز نیست" [level=3] [ref=e30]
+        - paragraph [ref=e31]: این بخش در محدوده مجوزهای شما نیست. مجوزها در سرور نیز بررسی می‌شوند.
+  - navigation "ناوبری پایین" [ref=e32]:
+    - generic [ref=e33]:
+      - link "خانه" [ref=e34] [cursor=pointer]:
+        - /url: /
+        - img [ref=e35]
+        - text: خانه
+      - link "لیدها" [ref=e38] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e39]
+        - text: لیدها
+      - button "ثبت لید جدید" [disabled] [ref=e43]:
+        - img [ref=e44]
+      - link "کارتابل" [ref=e45] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e46]
+        - text: کارتابل
+      - button "بیشتر" [ref=e49]:
+        - img [ref=e50]
+        - text: بیشتر
+```

@@ -1,0 +1,199 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - img "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e18]: DEMO-TECH-1405
+        - generic [ref=e20]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e22]':
+          - img [ref=e23]
+          - generic [ref=e26]: همگام
+        - link "اعلان‌ها" [ref=e27] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e28]
+    - main [ref=e31]:
+      - generic [ref=e32]:
+        - generic [ref=e34]:
+          - heading "گزارش و خروجی داده" [level=1] [ref=e35]
+          - paragraph [ref=e36]: خروجی ساختاریافته با شناسه‌های پایدار، زمان UTC، کدهای استاندارد و فرهنگ داده نسخه‌دار — با همان محدوده مجوز صفحه‌ها.
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - heading "خروجی جدید" [level=2] [ref=e41]
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - generic [ref=e44]: قالب
+                - radiogroup "قالب خروجی" [ref=e45]:
+                  - radio "Excel" [checked] [ref=e46]:
+                    - img [ref=e47]
+                    - text: Excel
+                  - radio "CSV (UTF‑8 BOM)" [ref=e50]:
+                    - img [ref=e51]
+                    - text: CSV (UTF‑8 BOM)
+                  - radio "JSON" [ref=e54]:
+                    - img [ref=e55]
+                    - text: JSON
+              - generic [ref=e60]:
+                - generic [ref=e61]: رویدادها
+                - generic [ref=e62]:
+                  - button "رویداد موقت QA-MVL28IGX-410" [ref=e63]
+                  - button "رویداد موقت QA-MVL1XIUF-240" [ref=e64]
+                  - button "رویداد موقت QA-MVL1X0K3-978" [ref=e65]
+                  - button "رویداد موقت QA-MVL1JCVA-622" [ref=e66]
+                  - button "رویداد موقت QA-MVL1J8EY-86" [ref=e67]
+                  - button "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)" [ref=e68]
+                  - button "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)" [ref=e69]
+                  - button "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)" [ref=e70]
+                  - button "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)" [ref=e71]
+                  - button "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)" [ref=e72]
+                  - button "نمایشگاه نمونه فناوری ۱۴۰۵" [ref=e73]
+                  - button "نمایشگاه نمونه ۱۴۰۴" [ref=e74]
+                - paragraph [ref=e75]: خالی = همه رویدادهای مجاز (تجمیع بین‌رویدادی)
+              - generic [ref=e76]:
+                - generic [ref=e77]:
+                  - generic [ref=e78]: کیفیت
+                  - combobox "کیفیت" [ref=e79]:
+                    - option "همه" [selected]
+                    - option "جدی"
+                    - option "قابل‌پیگیری"
+                    - option "آشنایی"
+                - generic [ref=e80]:
+                  - generic [ref=e81]: مرحله
+                  - combobox "مرحله" [ref=e82]:
+                    - option "همه" [selected]
+                    - option "در انتظار ارزیابی"
+                    - option "واجد شرایط"
+                    - option "تخصیص‌یافته"
+                    - option "در حال پیگیری"
+                    - option "موفق"
+                    - option "ناموفق"
+                    - option "پرورش"
+                - generic [ref=e83]:
+                  - generic [ref=e84]: از تاریخ
+                  - button "از تاریخ" [ref=e85]:
+                    - img [ref=e86]
+                    - generic [ref=e88]: انتخاب تاریخ
+                - generic [ref=e89]:
+                  - generic [ref=e90]: تا تاریخ
+                  - button "تا تاریخ" [ref=e91]:
+                    - img [ref=e92]
+                    - generic [ref=e94]: انتخاب تاریخ
+              - generic [ref=e95]:
+                - generic [ref=e96]: مجموعه داده‌ها
+                - generic [ref=e97]:
+                  - generic [ref=e98] [cursor=pointer]:
+                    - checkbox "جدول تحلیلی تجمیعی (fact)" [checked] [ref=e99]
+                    - generic [ref=e100]: جدول تحلیلی تجمیعی (fact)
+                  - generic [ref=e101] [cursor=pointer]:
+                    - checkbox "سازمان‌ها" [checked] [ref=e102]
+                    - generic [ref=e103]: سازمان‌ها
+                  - generic [ref=e104] [cursor=pointer]:
+                    - checkbox "مخاطبان" [checked] [ref=e105]
+                    - generic [ref=e106]: مخاطبان
+                  - generic [ref=e107] [cursor=pointer]:
+                    - checkbox "تعاملات" [checked] [ref=e108]
+                    - generic [ref=e109]: تعاملات
+                  - generic [ref=e110] [cursor=pointer]:
+                    - checkbox "علاقه به محصولات" [checked] [ref=e111]
+                    - generic [ref=e112]: علاقه به محصولات
+                  - generic [ref=e113] [cursor=pointer]:
+                    - checkbox "فرصت‌ها" [checked] [ref=e114]
+                    - generic [ref=e115]: فرصت‌ها
+                  - generic [ref=e116] [cursor=pointer]:
+                    - checkbox "برچسب‌ها" [checked] [ref=e117]
+                    - generic [ref=e118]: برچسب‌ها
+                  - generic [ref=e119] [cursor=pointer]:
+                    - checkbox "ارجاع‌ها" [checked] [ref=e120]
+                    - generic [ref=e121]: ارجاع‌ها
+                  - generic [ref=e122] [cursor=pointer]:
+                    - checkbox "وظایف" [checked] [ref=e123]
+                    - generic [ref=e124]: وظایف
+                  - generic [ref=e125] [cursor=pointer]:
+                    - checkbox "فعالیت‌ها" [checked] [ref=e126]
+                    - generic [ref=e127]: فعالیت‌ها
+                - paragraph [ref=e128]: در Excel هر مجموعه یک برگه است؛ در CSV چند مجموعه به‌صورت ZIP
+              - button "ایجاد خروجی" [ref=e129]:
+                - img [ref=e130]
+                - text: ایجاد خروجی
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - generic [ref=e135]:
+                - img [ref=e136]
+                - text: حفاظت از داده
+              - paragraph [ref=e139]: مقادیر متنی که با = + - @ آغاز می‌شوند برای جلوگیری از تزریق فرمول در Excel با علامت ' پیشوند می‌گیرند.
+              - paragraph [ref=e140]: شماره و ایمیل مخاطبان خارج از مجوز شما پوشانده می‌شود. لینک دریافت فقط برای شما، با توکن یکتا و دارای انقضا است و هر دریافت ممیزی می‌شود.
+              - paragraph [ref=e141]: "نسخه طرح داده: 1.0 — فرهنگ ستون‌ها داخل هر فایل قرار دارد."
+            - generic [ref=e142]:
+              - heading "خروجی‌های اخیر من" [level=2] [ref=e145]
+              - list [ref=e146]:
+                - listitem [ref=e147]:
+                  - generic [ref=e148]:
+                    - generic [ref=e149]: JSON · ۶۹۸ ردیف
+                    - generic [ref=e150]: آماده دریافت
+                  - generic [ref=e151]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۵۴ · ۳۶۴٫۳ کیلوبایت · PII پوشانده · انقضا ۲ آبان ۱۴۰۵ ساعت ۱۷:۵۴
+                  - link "دریافت expo-leads-20261023-1424.json" [ref=e152] [cursor=pointer]:
+                    - /url: /api/v1/exports/105a800e-0c96-4684-a530-123c34d31829/download?token=X9VQ_vx1OHWEjjznLctCov6fdu754bxiAddXn6KBG24
+                    - img [ref=e153]
+                    - text: دریافت expo-leads-20261023-1424.json
+                - listitem [ref=e156]:
+                  - generic [ref=e157]:
+                    - generic [ref=e158]: JSON · ۶۱۷ ردیف
+                    - generic [ref=e159]: آماده دریافت
+                  - generic [ref=e160]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۴۵ · ۳۲۳٫۵ کیلوبایت · PII پوشانده · انقضا ۲ آبان ۱۴۰۵ ساعت ۱۷:۴۵
+                  - link "دریافت expo-leads-20261023-1415.json" [ref=e161] [cursor=pointer]:
+                    - /url: /api/v1/exports/63b9dbcc-a47d-423b-b229-f50111306f41/download?token=yzk20E5QmCfAYiEerAKf-H9P6AfO1jwouSOCapF3B1w
+                    - img [ref=e162]
+                    - text: دریافت expo-leads-20261023-1415.json
+                - listitem [ref=e165]:
+                  - generic [ref=e166]:
+                    - generic [ref=e167]: JSON · ۶۰۲ ردیف
+                    - generic [ref=e168]: آماده دریافت
+                  - generic [ref=e169]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۴۵ · ۳۱۶ کیلوبایت · PII پوشانده · انقضا ۲ آبان ۱۴۰۵ ساعت ۱۷:۴۵
+                  - link "دریافت expo-leads-20261023-1415.json" [ref=e170] [cursor=pointer]:
+                    - /url: /api/v1/exports/5fed73d6-53db-4f94-933c-32c91e2cd59b/download?token=cOql011SClYvJlDkJpRhINWUrZkNoOQ1YPYD3Glea4g
+                    - img [ref=e171]
+                    - text: دریافت expo-leads-20261023-1415.json
+                - listitem [ref=e174]:
+                  - generic [ref=e175]:
+                    - generic [ref=e176]: JSON · ۴۵۵ ردیف
+                    - generic [ref=e177]: آماده دریافت
+                  - generic [ref=e178]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۳۴ · ۲۴۲٫۱ کیلوبایت · PII پوشانده · انقضا ۲ آبان ۱۴۰۵ ساعت ۱۷:۳۴
+                  - link "دریافت expo-leads-20261023-1404.json" [ref=e179] [cursor=pointer]:
+                    - /url: /api/v1/exports/46325b6f-f78d-47e3-843b-3dfaba85620e/download?token=uIyptNC-TQpNEnnE5x-fAciDVpqDV8q9LP2ZqY-WZ2U
+                    - img [ref=e180]
+                    - text: دریافت expo-leads-20261023-1404.json
+                - listitem [ref=e183]:
+                  - generic [ref=e184]:
+                    - generic [ref=e185]: JSON · ۴۵۵ ردیف
+                    - generic [ref=e186]: آماده دریافت
+                  - generic [ref=e187]: ۱ آبان ۱۴۰۵ ساعت ۱۷:۳۴ · ۲۴۲٫۱ کیلوبایت · PII پوشانده · انقضا ۲ آبان ۱۴۰۵ ساعت ۱۷:۳۴
+                  - link "دریافت expo-leads-20261023-1404.json" [ref=e188] [cursor=pointer]:
+                    - /url: /api/v1/exports/8f113af7-06c0-477d-af1e-391b07e08058/download?token=i_PKfqx93o5HrS1OEOMFjADKnEq9IILaXJcRmPzVT0Q
+                    - img [ref=e189]
+                    - text: دریافت expo-leads-20261023-1404.json
+  - navigation "ناوبری پایین" [ref=e192]:
+    - generic [ref=e193]:
+      - link "خانه" [ref=e194] [cursor=pointer]:
+        - /url: /
+        - img [ref=e195]
+        - text: خانه
+      - link "لیدها" [ref=e198] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e199]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e203]:
+        - img [ref=e204]
+      - link "کارتابل ۱۷" [ref=e205] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e206]
+        - text: کارتابل
+        - generic [ref=e209]: ۱۷
+      - button "بیشتر" [ref=e210]:
+        - img [ref=e211]
+        - text: بیشتر
+```

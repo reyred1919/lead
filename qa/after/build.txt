@@ -40,18 +40,18 @@ dist/assets/vazirmatn-arabic-600-normal-CWYTfCgi.woff         27.89 kB
 dist/assets/vazirmatn-arabic-700-normal-B5nPuCFv.woff         27.89 kB
 dist/assets/vazirmatn-arabic-800-normal-BH12s3-y.woff         27.99 kB
 dist/assets/vazirmatn-arabic-500-normal-Dqq3-xo3.woff         28.01 kB
-dist/assets/index-BN5jFnv9.css                                54.02 kB │ gzip:  10.11 kB
-dist/assets/index-CPPxl1Tu.js                              1,232.38 kB │ gzip: 356.66 kB
+dist/assets/index-DujcqL0t.css                                54.16 kB │ gzip:  10.17 kB
+dist/assets/index-CyeStGuJ.js                              1,233.33 kB │ gzip: 357.00 kB
 
 (!) Some chunks are larger than 500 kB after minification. Consider:
 - Using dynamic import() to code-split the application
 - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
 - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
-✓ built in 6.94s
+✓ built in 6.60s
 
 PWA v1.3.0
 mode      generateSW
-precache  24 entries (1498.17 KiB)
+precache  24 entries (1499.25 KiB)
 files generated
   dist/sw.js
   dist/workbox-9c191d2f.js

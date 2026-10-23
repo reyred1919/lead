@@ -1,28 +1,29 @@
 # Defect register
 
-Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
+Total: 20 — P0: 0, P1: 4, P2: 12, P3: 4 (IDs QA-D-13..15 unused)
 
 | ID | Sev | Category | Summary | Fix | Retest |
 |---|---|---|---|---|---|
-| QA-D-01 | P1 | Privacy / cross-event exposure | Full name, organization and masked mobile of event-E contact returned (enumeration by mobile number). | Suggestions limited to contacts reachable through visible_interactions(user); global lead.view.all unchanged; exact-match linking on capture still server-side (commit 0651019). | PASS |
-| QA-D-02 | P1 | Auth / onboarding | After 5 requests/hour per IP (token GET counted) all further activations return 429; UI shows the throttle text under the password field. | Per-token throttle on submit, per-IP on forgot, coarse 300/h per-IP ceiling; GET check no longer consumes the strict budget (commit cf6c845). | PASS |
-| QA-D-03 | P1 | Security / deployment | NUM_PROXIES not configured anywhere → all booth users share one login limit and audit IP is the proxy. | DJANGO_NUM_PROXIES → REST_FRAMEWORK.NUM_PROXIES; compose sets 1; audit uses same rule (commit cf6c845). | PASS |
-| QA-D-04 | P2 | Auth / UX | Stays on /leads showing 'بارگذاری ناموفق بود' cards; API returns 403 indistinguishable from 'forbidden'. | SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, fa14bcf). | PASS |
-| QA-D-05 | P2 | Reporting correctness | UTC day used: yesterday-evening lead counted as today; early-morning lead excluded from today's filter; daily trend buckets shifted 3.5h. | apps/common/dates.py local-day ranges + TruncDate(tzinfo=Asia/Tehran) (commit 0651019). | PASS |
-| QA-D-06 | P3 | Performance | users: 21→28 queries; plans: 6→18 (one per row). | Use prefetched relation; annotate product count (commit 00fd106). | PASS |
-| QA-D-07 | P2 | Functional gap | No sort control; API ordering parameter unused by the UI. | Sort select (newest/oldest/last changed) bound to ?ordering (commit fa14bcf). | PASS |
-| QA-D-08 | P3 | UX / mobile | Event name truncated ('…فناوری' loses '۱۴۰۵') and lock icon clipped out of view. | Two-line clamp, lock shrink-0, code chip hidden < sm (commit fa14bcf). | PASS |
-| QA-D-09 | P2 | Accessibility (WCAG 1.4.3) | Muted text #718198 at 3.5–3.97:1 on 22 routes; blue on blue-soft 4.42:1. | Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit fa14bcf). | see axe-summary-after.json |
-| QA-D-10 | P2 | Accessibility (4.1.2) | role=option buttons wrapped in plain <li> (critical). | li role=none (commit fa14bcf). | see axe-summary-after.json |
-| QA-D-11 | P2 | Accessibility (1.3.1/4.1.2) | Selects/inputs unnamed; every date picker named 'انتخاب تاریخ' (start/end indistinguishable). | Field auto-binds label → control id; picker uses label (commit fa14bcf). | see axe-summary-after.json |
-| QA-D-12 | P3 | Accessibility | aria-label on a role-less span. | role=img (commit fa14bcf). | see axe-summary-after.json |
-| QA-D-16 | P2 | Offline / shared device | Cached identity of A loaded indefinitely when offline; A's queued leads visible. | cachedAt + 12h max age (commit 8e43a73). | PASS |
-| QA-D-17 | P2 | UX / mobile overflow | Page scrolls horizontally by 35px; heading clipped. | overflow-wrap:anywhere globally + on heading (commit 3a4da09). | pending |
-| QA-D-18 | P2 | UX / mobile overflow | Export card 31px wider than the viewport; whole page scrolls sideways. | grid-cols-[minmax(0,1fr)] (commit 3a4da09). | pending |
-| QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run). | pending |
-| QA-D-20 | P1 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user. | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a). | pending |
-| QA-D-21 | P2 | Accessibility (WCAG 2.2 2.4.11) | At 768–1023 px the end of every page (e.g. list pagination) stays under the fixed bottom tab bar even at maximum scroll; taps are intercepted by `nav[aria-label='ناوبری پایین']` and keyboard focus is obscured. | Separate top/bottom padding (`pt-5 md:pt-8 pb-28 lg:pb-10`), html scroll-padding, focus-in guard in AppShell (commits 4c81bad, e661188). | pending |
-| QA-D-22 | P2 | Offline / data integrity | Each concurrent write generated its own AES key and the later put overwrote the earlier key; the earlier ciphertext became undecryptable ('اطلاعات رویداد بارگذاری نشد'). The same race could make a queued lead unreadable. | One in-flight key promise per user + add() with re-read on conflict (commit ec513af). Regression test fails on the previous code. | pending |
+| QA-D-01 | P1 | Privacy / cross-event exposure | Full name, organization and masked mobile of event-E contact returned (enumeration by mobile number). | Suggestions limited to contacts reachable through visible_interactions(user); global lead.view.all unchanged; exact-match linking on capture still server-side (commit 0651019). | PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects) |
+| QA-D-02 | P1 | Auth / onboarding | After 5 requests/hour per IP (token GET counted) all further activations return 429; UI shows the throttle text under the password field. | Per-token throttle on submit, per-IP on forgot, coarse 300/h per-IP ceiling; GET check no longer consumes the strict budget (commit cf6c845). | PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects) |
+| QA-D-03 | P1 | Security / deployment | NUM_PROXIES not configured anywhere → all booth users share one login limit and audit IP is the proxy. | DJANGO_NUM_PROXIES → REST_FRAMEWORK.NUM_PROXIES; compose sets 1; audit uses same rule (commit cf6c845). | PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects) |
+| QA-D-04 | P2 | Auth / UX | Stays on /leads showing 'بارگذاری ناموفق بود' cards; API returns 403 indistinguishable from 'forbidden'. | SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, fa14bcf). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-05 | P2 | Reporting correctness | UTC day used: yesterday-evening lead counted as today; early-morning lead excluded from today's filter; daily trend buckets shifted 3.5h. | apps/common/dates.py local-day ranges + TruncDate(tzinfo=Asia/Tehran) (commit 0651019). | PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects) |
+| QA-D-06 | P3 | Performance | users: 21→28 queries; plans: 6→18 (one per row). | Use prefetched relation; annotate product count (commit 00fd106). | PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects) |
+| QA-D-07 | P2 | Functional gap | No sort control; API ordering parameter unused by the UI. | Sort select (newest/oldest/last changed) bound to ?ordering (commit fa14bcf). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-08 | P3 | UX / mobile | Event name truncated ('…فناوری' loses '۱۴۰۵') and lock icon clipped out of view. | Two-line clamp, lock shrink-0, code chip hidden < sm (commit fa14bcf). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-09 | P2 | Accessibility (WCAG 1.4.3) | Muted text #718198 at 3.5–3.97:1 on 22 routes; blue on blue-soft 4.42:1. | Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit fa14bcf). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-10 | P2 | Accessibility (4.1.2) | role=option buttons wrapped in plain <li> (critical). | li role=none (commit fa14bcf). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-11 | P2 | Accessibility (1.3.1/4.1.2) | Selects/inputs unnamed; every date picker named 'انتخاب تاریخ' (start/end indistinguishable). | Field auto-binds label → control id; picker uses label (commit fa14bcf). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-12 | P3 | Accessibility | aria-label on a role-less span. | role=img (commit fa14bcf). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-16 | P2 | Offline / shared device | Cached identity of A loaded indefinitely when offline; A's queued leads visible. | cachedAt + 12h max age (commit 8e43a73). | PASS (vitest offline.test.ts 7/7; TC-OFF-04 on 6 projects) |
+| QA-D-17 | P2 | UX / mobile overflow | Page scrolls horizontally by 35px; heading clipped. | overflow-wrap:anywhere globally + on heading (commit 3a4da09). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-18 | P2 | UX / mobile overflow | Export card 31px wider than the viewport; whole page scrolls sideways. | grid-cols-[minmax(0,1fr)] (commit 3a4da09). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-20 | P1 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user. | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-21 | P2 | Accessibility (WCAG 2.2 2.4.11) | At 768–1023 px the end of every page (e.g. list pagination) stays under the fixed bottom tab bar even at maximum scroll; taps are intercepted by `nav[aria-label='ناوبری پایین']` and keyboard focus is obscured. | Separate top/bottom padding (`pt-5 md:pt-8 pb-28 lg:pb-10`), html scroll-padding, focus-in guard in AppShell (commits 4c81bad, e661188). | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-22 | P2 | Offline / data integrity | Each concurrent write generated its own AES key and the later put overwrote the earlier key; the earlier ciphertext became undecryptable ('اطلاعات رویداد بارگذاری نشد'). The same race could make a queued lead unreadable. | One in-flight key promise per user + add() with re-read on conflict (commit ec513af). Regression test fails on the previous code. | PASS (final after-run e661188, 6 Chromium projects) |
+| QA-D-23 | P3 | Accessibility (WCAG 1.4.3 / 2.1.1 / 4.1.2) | aria-label on a role-less span (unread dot, 15 nodes); archived-tag suffix at 70% opacity below 4.5:1 (8 nodes); horizontally scrollable role matrix not keyboard-focusable (2 nodes). | role=img on the dot, full-opacity suffix, tabIndex+role=region+aria-label on the scroller (commit d478da7). | PASS (07-matrix-visual on d478da7: 66 axe scans, 0 violations; 3 reference viewports) |
 
 ## QA-D-01 — Privacy / cross-event exposure (P1, priority High)
 
@@ -35,7 +36,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** backend/apps/crm/services.py:suggest_contacts; backend/apps/crm/views.py:ContactSearchView
 - **Root Cause:** Suggestion query searched the whole master contact table without row-level scope.
 - **Fix:** Suggestions limited to contacts reachable through visible_interactions(user); global lead.view.all unchanged; exact-match linking on capture still server-side (commit 0651019).
-- **Retest:** PASS
+- **Retest:** PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)
 
 ## QA-D-02 — Auth / onboarding (P1, priority High)
 
@@ -48,7 +49,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** backend/apps/iam/views.py ResetThrottle (scope password_reset 5/hour)
 - **Root Cause:** Single per-IP AnonRateThrottle shared by forgot, token check and submit.
 - **Fix:** Per-token throttle on submit, per-IP on forgot, coarse 300/h per-IP ceiling; GET check no longer consumes the strict budget (commit cf6c845).
-- **Retest:** PASS
+- **Retest:** PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)
 
 ## QA-D-03 — Security / deployment (P1, priority High)
 
@@ -61,7 +62,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** backend/config/settings.py REST_FRAMEWORK; backend/apps/common/audit.py client_ip; infra/docker-compose.yml
 - **Root Cause:** Trusted proxy hop count not declared for the documented deployment topology.
 - **Fix:** DJANGO_NUM_PROXIES → REST_FRAMEWORK.NUM_PROXIES; compose sets 1; audit uses same rule (commit cf6c845).
-- **Retest:** PASS
+- **Retest:** PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)
 
 ## QA-D-04 — Auth / UX (P2, priority High)
 
@@ -74,7 +75,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** backend DRF SessionAuthentication (403); frontend/src/lib/api.ts, auth.tsx
 - **Root Cause:** SessionAuthentication has no authenticate_header → DRF converts NotAuthenticated to 403; SPA has no global handler.
 - **Fix:** SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, fa14bcf).
-- **Retest:** PASS
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-05 — Reporting correctness (P2, priority Medium)
 
@@ -87,7 +88,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** backend/apps/reports/views.py DashboardView; backend/apps/crm/views.py apply_lead_filters
 - **Root Cause:** captured_at__date and TruncDate evaluated in TIME_ZONE=UTC.
 - **Fix:** apps/common/dates.py local-day ranges + TruncDate(tzinfo=Asia/Tehran) (commit 0651019).
-- **Retest:** PASS
+- **Retest:** PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)
 
 ## QA-D-06 — Performance (P3, priority Low)
 
@@ -100,7 +101,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** backend/apps/iam/serializers.py get_global_roles; backend/apps/catalog/serializers.py get_product_count
 - **Root Cause:** select_related inside serializer method bypassed prefetch; per-row count().
 - **Fix:** Use prefetched relation; annotate product count (commit 00fd106).
-- **Retest:** PASS
+- **Retest:** PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)
 
 ## QA-D-07 — Functional gap (P2, priority Medium)
 
@@ -113,7 +114,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/pages/Leads.tsx
 - **Root Cause:** Not implemented in UI.
 - **Fix:** Sort select (newest/oldest/last changed) bound to ?ordering (commit fa14bcf).
-- **Retest:** PASS
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-08 — UX / mobile (P3, priority Medium)
 
@@ -126,7 +127,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/pages/Capture.tsx header
 - **Root Cause:** truncate on the flex row containing the lock icon; event code chip consumes width.
 - **Fix:** Two-line clamp, lock shrink-0, code chip hidden < sm (commit fa14bcf).
-- **Retest:** PASS
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-09 — Accessibility (WCAG 1.4.3) (P2, priority Medium)
 
@@ -139,7 +140,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/styles.css --color-muted; primitives.tsx soft/action tones
 - **Root Cause:** Design token below AA.
 - **Fix:** Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit fa14bcf).
-- **Retest:** see axe-summary-after.json
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-10 — Accessibility (4.1.2) (P2, priority Medium)
 
@@ -152,7 +153,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/components/ui/pickers.tsx; components/tags/Tags.tsx
 - **Root Cause:** Implicit listitem role between listbox and option.
 - **Fix:** li role=none (commit fa14bcf).
-- **Retest:** see axe-summary-after.json
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-11 — Accessibility (1.3.1/4.1.2) (P2, priority Medium)
 
@@ -165,7 +166,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/components/ui/primitives.tsx Field; datepicker.tsx
 - **Root Cause:** Field label without htmlFor; picker aria-label overrides label.
 - **Fix:** Field auto-binds label → control id; picker uses label (commit fa14bcf).
-- **Retest:** see axe-summary-after.json
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-12 — Accessibility (P3, priority Low)
 
@@ -178,7 +179,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/components/brand/BrandLogo.tsx
 - **Root Cause:** Missing role.
 - **Fix:** role=img (commit fa14bcf).
-- **Retest:** see axe-summary-after.json
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-16 — Offline / shared device (P2, priority Medium)
 
@@ -191,7 +192,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/lib/offline.ts cachedContext; auth.tsx
 - **Root Cause:** No expiry on cached context.
 - **Fix:** cachedAt + 12h max age (commit 8e43a73).
-- **Retest:** PASS
+- **Retest:** PASS (vitest offline.test.ts 7/7; TC-OFF-04 on 6 projects)
 
 ## QA-D-17 — UX / mobile overflow (P2, priority Medium)
 
@@ -204,7 +205,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/pages/LeadDetail.tsx; styles.css
 - **Root Cause:** No overflow-wrap for unbroken tokens.
 - **Fix:** overflow-wrap:anywhere globally + on heading (commit 3a4da09).
-- **Retest:** pending
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-18 — UX / mobile overflow (P2, priority Medium)
 
@@ -217,7 +218,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/pages/Reports.tsx (also Messages, LeadDetail, Notify grids)
 - **Root Cause:** Grid item min-width:auto expands to the no-wrap format selector.
 - **Fix:** grid-cols-[minmax(0,1fr)] (commit 3a4da09).
-- **Retest:** pending
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-19 — Offline / capture (P2, priority High)
 
@@ -230,7 +231,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/pages/Capture.tsx; frontend/src/lib/auth.tsx
 - **Root Cause:** Event context cached only when /capture was opened online, and React Query's default networkMode 'online' paused the events query offline with neither data nor error, which the page rendered as 'no membership'.
 - **Fix:** Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run).
-- **Retest:** pending
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-20 — UX / mobile overflow (P1, priority High)
 
@@ -243,7 +244,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/pages/Dashboard.tsx, Capture.tsx, admin/Events.tsx, Notify.tsx, Settings.tsx
 - **Root Cause:** Implicit auto grid track + non-wrapping flex child sized to min-content of the unbroken string.
 - **Fix:** overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a).
-- **Retest:** pending
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-21 — Accessibility (WCAG 2.2 2.4.11) (P2, priority Medium)
 
@@ -256,7 +257,7 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/styles.css
 - **Root Cause:** `md:py-8` on <main> overrode `pb-28` (bottom padding fell to 32 px under a 64 px bar); no scroll padding for sticky/fixed bars.
 - **Fix:** Separate top/bottom padding (`pt-5 md:pt-8 pb-28 lg:pb-10`), html scroll-padding, focus-in guard in AppShell (commits 4c81bad, e661188).
-- **Retest:** pending
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
 
 ## QA-D-22 — Offline / data integrity (P2, priority High)
 
@@ -269,4 +270,17 @@ Total: 19 — P0: 0, P1: 4, P2: 12, P3: 3 (IDs QA-D-13..15 unused)
 - **Code:** frontend/src/lib/offline.ts key()
 - **Root Cause:** Non-atomic read→generate→put of the per-user key (pre-existing; made frequent by the login prefetch added for QA-D-19).
 - **Fix:** One in-flight key promise per user + add() with re-read on conflict (commit ec513af). Regression test fails on the previous code.
-- **Retest:** pending
+- **Retest:** PASS (final after-run e661188, 6 Chromium projects)
+
+## QA-D-23 — Accessibility (WCAG 1.4.3 / 2.1.1 / 4.1.2) (P3, priority Low)
+
+- **Scenario:** TC-MTX axe, final after-run e661188
+- **Env:** Chromium desktop-1440 / tablet-768 / mobile-390
+- **Steps:** axe-core WCAG 2.2 AA scan of /notifications, /admin/tags, /admin/roles.
+- **Expected:** No serious/critical violations.
+- **Actual:** aria-label on a role-less span (unread dot, 15 nodes); archived-tag suffix at 70% opacity below 4.5:1 (8 nodes); horizontally scrollable role matrix not keyboard-focusable (2 nodes).
+- **Evidence:** qa/results/axe-summary-after.json
+- **Code:** frontend/src/pages/Notifications.tsx, components/tags/Tags.tsx, pages/admin/DataQuality.tsx
+- **Root Cause:** Residual markup issues not covered by the first a11y pass.
+- **Fix:** role=img on the dot, full-opacity suffix, tabIndex+role=region+aria-label on the scroller (commit d478da7).
+- **Retest:** PASS (07-matrix-visual on d478da7: 66 axe scans, 0 violations; 3 reference viewports)

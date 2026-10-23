@@ -1,0 +1,47 @@
+# QA evidence manifest — MCI Expo Leads independent audit
+audited_commit: c6a1c88de0c243015941a166b22211c500543d59
+final_code_commit: e661188        # full 6-project browser run
+a11y_followup_commit: d478da7     # targeted matrix/axe re-run only
+branch: qa/audit-c6a1c88
+base_branch: ccr-c989dc1b-w7didd
+date: 2026-10-23
+environment:
+  os: Linux (cloud container)
+  backend: Django 5.2.18, DRF, PostgreSQL (local, db expo_leads_qa), Redis + Celery
+  frontend: React 19, Vite 6, Tailwind 4
+  browser: Playwright 1.56, Chromium 1194 (device emulation only)
+  locale: fa-IR
+  timezone: Asia/Tehran
+  data: synthetic only (seed_demo + seed_qa); mock SMS/SMTP providers; no real messages sent
+projects_executed: [desktop-1440, desktop-1920, tablet-768, tablet-1024, mobile-390, mobile-375]
+blocked:
+  - webkit (desktop + mobile): binaries absent; `playwright install` not permitted
+  - firefox: binaries absent
+  - physical devices: none available
+  - docker build / docker backup scripts: no Docker daemon
+results:
+  baseline: {pass: 322, fail: 62, skip: 12, blocked: 3, matrix_rows: 1364, matrix_fail: 34, axe_rules: 8, axe_nodes: 2145, screenshots: 809}
+  final:    {pass: 390, fail: 0,  skip: 12, blocked: 3, matrix_rows: 1452, matrix_fail: 0, axe_rules: 3, axe_nodes: 25, screenshots: 866}
+  a11y_followup: {tests_pass: 37, tests_skip: 2, matrix_rows: 726, axe_scans: 66, axe_violations: 0}
+  api_authorization_matrix: {cases: 180, pass: 180}
+  pytest: {baseline_product: 119, baseline_qa_audit_failures: 8, final: 157}
+  vitest: {baseline: 5, final: 7}
+defects: {total: 20, P0: 0, P1: 4, P2: 12, P3: 4, fixed_and_retested: 20}
+residual_risks: [QA-R-01, QA-R-02, QA-R-03, QA-R-04, QA-R-05, QA-R-06, QA-R-07]
+harness_incidents: [H-01, H-02, H-03, H-04, H-05]
+artifacts:
+  summary: qa/EXECUTIVE-QA-SUMMARY.fa.md
+  plan: qa/TEST-PLAN.fa.md
+  results: qa/TEST-RESULTS.csv            # baseline + final, column `run`
+  matrix: qa/ROLE-DEVICE-MATRIX.csv       # baseline + final, column `run`
+  defects: [qa/defects.md, qa/defects.csv, qa/defects-data.json]
+  ux_a11y: qa/UX-ACCESSIBILITY-REPORT.fa.md
+  security_reliability: qa/SECURITY-RELIABILITY-REPORT.fa.md
+  release_gates: qa/RELEASE-GATES.fa.md
+  changelog: qa/CHANGELOG-QA.md
+  screenshots: qa/screenshots/index.md
+  contact_sheets: [qa/screenshots/contact-sheets/c6a1c88/, qa/screenshots/contact-sheets/e661188/]
+  traces: qa/traces/README.md
+  raw: [qa/results/, qa/baseline/, qa/after/]
+  harness_notes: qa/results/HARNESS-NOTES.md
+  reproduction: qa/reproduction.md

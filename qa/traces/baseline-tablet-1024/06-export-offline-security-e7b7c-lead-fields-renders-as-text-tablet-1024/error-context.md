@@ -1,0 +1,55 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+    - generic [ref=e39]:
+      - generic [ref=e40]: س‌غ
+      - link "سینا غرفه‌دار کارشناس غرفه" [ref=e41] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e42]: سینا غرفه‌دار
+        - generic [ref=e43]: کارشناس غرفه
+      - button "خروج" [ref=e44]:
+        - img [ref=e45]
+  - generic [ref=e48]:
+    - banner [ref=e49]:
+      - generic [ref=e50]:
+        - generic "رویداد فعال" [ref=e52]:
+          - generic [ref=e54]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e55]: DEMO-TECH-1405
+        - generic [ref=e57]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e59]':
+          - img [ref=e60]
+          - generic [ref=e63]: همگام
+    - main [ref=e64]:
+      - generic [ref=e66]:
+        - heading "یافت نشد" [level=3] [ref=e67]
+        - paragraph [ref=e68]: <!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="content-type" content="text/html; charset=utf-8"> <title>Page not found at /api/v1/interactions/undefined</title> <meta name="robots" co
+        - button "تلاش دوباره" [ref=e69]
+```

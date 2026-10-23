@@ -1,0 +1,45 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - img "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: آفلاین" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e24] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e25]
+    - main [ref=e28]:
+      - generic [ref=e30]:
+        - img [ref=e32]
+        - heading "ثبت لید در دسترس نیست" [level=3] [ref=e35]
+        - paragraph [ref=e36]: شما عضو فعال هیچ رویدادی نیستید. برای ثبت لید، مدیر سامانه باید شما را به تیم رویداد اضافه کند.
+        - link "مشاهده لیدها" [ref=e37] [cursor=pointer]:
+          - /url: /leads
+          - button "مشاهده لیدها" [ref=e38]
+  - navigation "ناوبری پایین" [ref=e39]:
+    - generic [ref=e40]:
+      - link "خانه" [ref=e41] [cursor=pointer]:
+        - /url: /
+        - img [ref=e42]
+        - text: خانه
+      - link "لیدها" [ref=e45] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e46]
+        - text: لیدها
+      - button "ثبت لید جدید" [active] [ref=e50]:
+        - img [ref=e51]
+      - link "کارتابل ۱۵" [ref=e52] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e53]
+        - text: کارتابل
+        - generic [ref=e56]: ۱۵
+      - button "بیشتر" [ref=e57]:
+        - img [ref=e58]
+        - text: بیشتر
+```

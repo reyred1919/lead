@@ -1,0 +1,102 @@
+{
+ "note": "Production build (vite preview, local) under emulated mobile CPU 4x / 1.6 Mbps / 150 ms RTT, Chromium 390x844. Lab measurement, not field data.",
+ "budget_lcp_ms": 2500,
+ "results": {
+  "/login": {
+   "lcp_ms_median": 724,
+   "dcl_ms_median": 138,
+   "runs": [
+    {
+     "lcp": 3740,
+     "dcl": 2459.2999999988824,
+     "load": 2466.39999999851,
+     "transfer": 1124
+    },
+    {
+     "lcp": 724,
+     "dcl": 131.7999999988824,
+     "load": 132.59999999962747,
+     "transfer": 0
+    },
+    {
+     "lcp": 720,
+     "dcl": 137.90000000037253,
+     "load": 138.40000000037253,
+     "transfer": 0
+    }
+   ]
+  },
+  "/": {
+   "lcp_ms_median": 636,
+   "dcl_ms_median": 125,
+   "runs": [
+    {
+     "lcp": 716,
+     "dcl": 124.90000000037253,
+     "load": 125.5,
+     "transfer": 0
+    },
+    {
+     "lcp": 632,
+     "dcl": 123.79999999888241,
+     "load": 125.5,
+     "transfer": 0
+    },
+    {
+     "lcp": 636,
+     "dcl": 135.09999999962747,
+     "load": 136.19999999925494,
+     "transfer": 0
+    }
+   ]
+  },
+  "/capture": {
+   "lcp_ms_median": 908,
+   "dcl_ms_median": 125,
+   "runs": [
+    {
+     "lcp": 916,
+     "dcl": 114.90000000037253,
+     "load": 116.09999999962747,
+     "transfer": 0
+    },
+    {
+     "lcp": 908,
+     "dcl": 124.59999999962747,
+     "load": 125.80000000074506,
+     "transfer": 0
+    },
+    {
+     "lcp": 884,
+     "dcl": 149,
+     "load": 150.40000000037253,
+     "transfer": 0
+    }
+   ]
+  },
+  "/leads": {
+   "lcp_ms_median": 868,
+   "dcl_ms_median": 128,
+   "runs": [
+    {
+     "lcp": 868,
+     "dcl": 127.5,
+     "load": 127.69999999925494,
+     "transfer": 0
+    },
+    {
+     "lcp": 1012,
+     "dcl": 136.2000000011176,
+     "load": 136.90000000037253,
+     "transfer": 0
+    },
+    {
+     "lcp": 868,
+     "dcl": 126.90000000037253,
+     "load": 127.60000000149012,
+     "transfer": 0
+    }
+   ]
+  }
+ }
+}

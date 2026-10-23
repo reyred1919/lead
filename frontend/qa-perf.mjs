@@ -26,5 +26,5 @@ for (const path of ["/login", "/", "/capture", "/leads"]) {
   const med = (k) => runs.map((r) => r[k]).sort((a, b) => a - b)[1];
   results[path] = { lcp_ms_median: med("lcp"), dcl_ms_median: Math.round(med("dcl")), runs };
 }
-console.log(JSON.stringify({ note: "Vite DEV server (unbundled modules) under emulated mobile CPU/network; production build would be faster. Not a field measurement.", budget_lcp_ms: 2500, results }, null, 1));
+console.log(JSON.stringify({ note: process.env.QA_PERF_NOTE ?? "Vite DEV server (unbundled modules) under emulated mobile CPU/network; production build would be faster. Not a field measurement.", budget_lcp_ms: 2500, results }, null, 1));
 await browser.close();

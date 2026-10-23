@@ -1,0 +1,234 @@
+
+Running 67 tests using 2 workers
+
+  ✓   2 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:5:3 › Auth & session › TC-AUTH-01 invalid password shows error, no session (3.4s)
+  ✓   1 [tablet-1024] › qa-e2e/02-capture.spec.ts:23:1 › TC-CAP-01 existing organization chosen from search suggestion (5.8s)
+  ✓   3 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:13:3 › Auth & session › TC-AUTH-02 login then logout clears session and protected routes redirect (4.5s)
+  ✓   5 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:28:3 › Auth & session › TC-AUTH-03 login rate-limit message is shown for HTTP 429 (UI mapping; server limit covered in pytest) (2.4s)
+  ✓   4 [tablet-1024] › qa-e2e/02-capture.spec.ts:39:1 › TC-CAP-02 inline new organization and TC-CAP-05 Persian digits are normalized (4.5s)
+  ✓   6 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:35:3 › Auth & session › TC-AUTH-04 expired session during use redirects to login (4.1s)
+  ✓   7 [tablet-1024] › qa-e2e/02-capture.spec.ts:53:1 › TC-CAP-03 individual without organization; TC-CAP-04 Arabic-Indic digits (4.5s)
+  ✓   8 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:44:3 › Auth & session › TC-AUTH-05 expired session on in-app navigation (SPA, no reload) redirects to login (3.2s)
+  ✓   9 [tablet-1024] › qa-e2e/02-capture.spec.ts:67:1 › TC-CAP-06 validation: required fields, invalid mobile, invalid email (4.4s)
+  ✓  10 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:53:3 › Auth & session › TC-AUTH-06 activation/reset link: set password, link is single-use, new password works (6.7s)
+  ✓  11 [tablet-1024] › qa-e2e/02-capture.spec.ts:85:1 › TC-CAP-07 multi-product limited to event offerings, quality and note (5.2s)
+  ✓  12 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:79:3 › Event context › TC-CTX-01 single active membership: event is locked in capture (2.9s)
+  ✓  13 [tablet-1024] › qa-e2e/02-capture.spec.ts:105:1 › TC-CAP-08 rapid consecutive entry with 'next' loop (6.5s)
+  ✓  14 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:87:3 › Event context › TC-CTX-02 two active events: selector switches products and persists across reload (4.0s)
+  ✓  16 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:100:3 › Event context › TC-CTX-03 no membership: capture disabled with explanation (2.5s)
+  ✓  15 [tablet-1024] › qa-e2e/02-capture.spec.ts:125:1 › TC-CAP-09 captured_by stays separate from assignee (default owner mapping) (4.6s)
+  ✓  17 [tablet-1024] › qa-e2e/01-auth-context.spec.ts:109:3 › Event context › TC-CTX-04 only closed/archived events: capture blocked, home explains (3.5s)
+  ✓  18 [tablet-1024] › qa-e2e/02-capture.spec.ts:141:1 › TC-CAP-10 lost response then retry creates exactly one record (idempotency) (5.1s)
+  ✓  20 [tablet-1024] › qa-e2e/02-capture.spec.ts:163:1 › TC-CAP-11 same contact at two events links one contact, shows cross-event history (8.9s)
+  -  21 [tablet-1024] › qa-e2e/02-capture.spec.ts:184:1 › TC-CAP-12 keyboard-only capture
+  ✓  22 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:5:3 › Lead lists › TC-LST-01 pagination across >25 leads (3.0s)
+  ✓  23 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:18:3 › Lead lists › TC-LST-02 search by name and by Persian-digit mobile fragment (2.5s)
+  ✓  24 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:27:3 › Lead lists › TC-LST-03 filters (quality, stage) and empty state (3.7s)
+  ✓  25 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:38:3 › Lead lists › TC-LST-04 long and mixed-direction names render without overflow (3.3s)
+  ✓  26 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:54:3 › Lead lists › TC-LST-05 sorting control exists and changes order (2.5s)
+  ✓  27 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:63:3 › Lead lists › TC-LST-06 scope: booth specialist sees only own leads (2.8s)
+  ✘  19 [tablet-1024] › qa-e2e/03-referral.spec.ts:20:1 › TC-REF-01..05 create → accept → qualify → task → complete (UI on this device) (32.0s)
+  ✓  28 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:73:3 › Enrichment & opportunity detail › TC-ENR-01 enrichment after event closure with field history (7.9s)
+  ✓  30 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:98:3 › Enrichment & opportunity detail › TC-ENR-02 field-level authorization: viewer & creator read-only (7.0s)
+  ✓  29 [tablet-1024] › qa-e2e/03-referral.spec.ts:78:1 › TC-REF-03/04 return with mandatory reason, returned box, reassign keeps history (11.4s)
+  ✓  32 [tablet-1024] › qa-e2e/03-referral.spec.ts:111:1 › TC-REF-06 negative: specialist has no referral affordance and API refuses (4.6s)
+  ✓  31 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:117:3 › Enrichment & opportunity detail › TC-ENR-03 concurrent edit shows conflict instead of overwriting (7.3s)
+  ✓  33 [tablet-1024] › qa-e2e/03-referral.spec.ts:125:1 › TC-REF-08 overdue task is flagged in inbox (4.6s)
+  ✓  34 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:138:3 › Enrichment & opportunity detail › TC-ENR-04 tags: add/remove on qualified lead, archived tag label, stage change (9.0s)
+  ✓  36 [tablet-1024] › qa-e2e/04-leads-enrichment.spec.ts:158:1 › TC-LST-07 unbroken long lead name does not widen Home or Leads (bottom nav stays reachable) (4.2s)
+  ✓  37 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:5:3 › Exports › TC-EXP-01 JSON export via UI is scoped, versioned and masks unauthorized PII (3.3s)
+  ✓  38 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:23:3 › Exports › TC-EXP-02 CSV keeps Persian text (UTF-8 BOM) and neutralizes formulas (875ms)
+  ✓  39 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:41:3 › Exports › TC-EXP-03 download link is owner-only (1.5s)
+  ✘  35 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:5:3 › Admin CRUD › TC-ADM-01 create event via UI (Jalali dates), add product and member, activate (19.0s)
+  ✓  40 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:55:3 › Offline › TC-OFF-01/02 offline capture: encrypted at rest, exactly one sync upload, one record (4.7s)
+  ✓  41 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:48:3 › Admin CRUD › TC-ADM-02 clone event copies configuration, never leads (4.2s)
+  ✓  42 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:88:3 › Offline › TC-OFF-03 switching event while a record is queued never retags it (4.7s)
+  ✓  43 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:67:3 › Admin CRUD › TC-ADM-03 user creation requires valid mobile; activation link issued (11.8s)
+  ✓  45 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:89:3 › Admin CRUD › TC-ADM-04 tag taxonomy: create, archive; archived not selectable (3.9s)
+  ✓  46 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:107:3 › Admin CRUD › TC-ADM-05 logo upload: SVG rejected, PNG accepted, reset (2.7s)
+  ✘  44 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:109:3 › Offline › TC-OFF-04 logout with pending queue warns; discard wipes device; next user sees nothing (18.2s)
+  ✓  47 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:132:3 › Notification & action center › TC-NTF-01/02 action request: reading ≠ completing; completion tracked for requester (9.2s)
+  ✓  49 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:172:3 › Notification & action center › TC-NTF-03 mock SMS test send reported as SIMULATED, never delivered (3.4s)
+  ✓  50 [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:182:3 › Notification & action center › TC-NTF-04 delivery log never shows mock attempts as delivered (2.2s)
+  ✓  48 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:143:3 › Offline › TC-OFF-05 offline capture synced after closure beyond grace goes to admin review (26.5s)
+  ✘  52 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture (17.0s)
+  ✓  53 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:189:3 › Browser-level security › TC-SEC-01 stored XSS payload in lead fields renders as text (8.9s)
+  ✓  54 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:203:3 › Browser-level security › TC-SEC-02 CSRF required for state-changing API calls (1.2s)
+  ✓  55 [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:211:3 › Browser-level security › TC-SEC-03 security headers on API responses (565ms)
+  ✓  51 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX admin: route access, menu affordances, screenshots, overflow, axe (49.2s)
+  ✓  56 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX mdm: route access, menu affordances, screenshots, overflow, axe (41.9s)
+  ✓  57 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX dg: route access, menu affordances, screenshots, overflow, axe (39.9s)
+  ✓  58 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX exec: route access, menu affordances, screenshots, overflow, axe (34.5s)
+  ✓  59 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX evmgr: route access, menu affordances, screenshots, overflow, axe (34.1s)
+  ✓  60 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX planmgr: route access, menu affordances, screenshots, overflow, axe (39.5s)
+  ✓  61 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX owner: route access, menu affordances, screenshots, overflow, axe (32.5s)
+  ✓  62 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX specialist1: route access, menu affordances, screenshots, overflow, axe (35.0s)
+  ✓  63 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_dual: route access, menu affordances, screenshots, overflow, axe (35.9s)
+  ✓  64 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_nomember: route access, menu affordances, screenshots, overflow, axe (28.4s)
+  ✓  65 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:51:3 › TC-MTX qa_closed: route access, menu affordances, screenshots, overflow, axe (28.6s)
+  -  66 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:103:1 › TC-VIS-STATES loading, error, offline banner, popovers and toasts
+  -  67 [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts:143:1 › TC-VIS-JALALI date picker round-trips value and month/year navigation
+
+
+  1) [tablet-1024] › qa-e2e/03-referral.spec.ts:20:1 › TC-REF-01..05 create → accept → qualify → task → complete (UI on this device) 
+
+    TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ/ })[22m
+
+
+       at support.ts:24
+
+      22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */
+      23 | export async function press(info: TestInfo, loc: Locator) {
+    > 24 |   await loc.scrollIntoViewIfNeeded();
+         |             ^
+      25 |   if (isTouch(info)) await loc.tap();
+      26 |   else await loc.click();
+      27 | }
+        at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)
+        at /home/user/lead/frontend/qa-e2e/03-referral.spec.ts:56:9
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-1024/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-1024/test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-1024/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/after-tablet-1024/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-1024/error-context.md
+
+    attachment #5: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-1024/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/after-tablet-1024/03-referral-TC-REF-01-05-c-1cb8f-complete-UI-on-this-device--tablet-1024/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:5:3 › Admin CRUD › TC-ADM-01 create event via UI (Jalali dates), add product and member, activate 
+
+    TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for getByRole('dialog').getByRole('button', { name: /انتخاب تاریخ|^شروع$|^پایان$/ }).first()[22m
+
+
+       at support.ts:24
+
+      22 | /** Tap on touch projects, click otherwise (real touch emulation, not synthetic clicks). */
+      23 | export async function press(info: TestInfo, loc: Locator) {
+    > 24 |   await loc.scrollIntoViewIfNeeded();
+         |             ^
+      25 |   if (isTouch(info)) await loc.tap();
+      26 |   else await loc.click();
+      27 | }
+        at press (/home/user/lead/frontend/qa-e2e/support.ts:24:13)
+        at /home/user/lead/frontend/qa-e2e/05-admin-notify.spec.ts:14:13
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-1024/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-1024/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/after-tablet-1024/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-1024/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-1024/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/after-tablet-1024/05-admin-notify-Admin-CRUD-ef95d-product-and-member-activate-tablet-1024/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:109:3 › Offline › TC-OFF-04 logout with pending queue warns; discard wipes device; next user sees nothing 
+
+    TimeoutError: page.fill: Timeout 15000ms exceeded.
+    Call log:
+    [2m  - waiting for locator('#contact_name')[22m
+
+
+      111 |     await loginAs(page, "specialist2", "/capture");
+      112 |     await context.setOffline(true);
+    > 113 |     await page.fill("#contact_name", `نشت ${uniq()}`);
+          |                ^
+      114 |     await page.fill("#mobile", mobileNo());
+      115 |     await selectFirstProduct(page, info);
+      116 |     await press(info, page.getByRole("button", { name: "ذخیره آفلاین" }));
+        at /home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts:113:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-5d846-vice-next-user-sees-nothing-tablet-1024/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-5d846-vice-next-user-sees-nothing-tablet-1024/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-5d846-vice-next-user-sees-nothing-tablet-1024/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-5d846-vice-next-user-sees-nothing-tablet-1024/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-5d846-vice-next-user-sees-nothing-tablet-1024/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoBeVisible[2m([22m[2m)[22m failed
+
+    Locator: locator('#contact_name')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+    [2m  - Expect "toBeVisible" with timeout 10000ms[22m
+    [2m  - waiting for locator('#contact_name')[22m
+
+
+      180 |   else await press(info, page.locator("nav[aria-label='ناوبری پایین']").getByRole("button", { name: "ثبت لید جدید" }));
+      181 |   await expect(page).toHaveURL(/\/capture/);
+    > 182 |   await expect(page.locator("#contact_name")).toBeVisible();
+          |                                               ^
+      183 |   await expect(page.getByText(/عضو فعال هیچ رویدادی نیستید/)).toHaveCount(0);
+      184 |   await shot(page, info, "planmgr", "/capture", "offline-first-open", "TC-OFF-06");
+      185 |   await context.setOffline(false);
+        at /home/user/lead/frontend/qa-e2e/06-export-offline-security.spec.ts:182:47
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-1024/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-1024/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-1024/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-1024/trace.zip
+    Usage:
+
+        npx playwright show-trace ../qa/traces/test-output/after-tablet-1024/06-export-offline-security-9ff4d--login-still-allows-capture-tablet-1024/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Slow test file: [tablet-1024] › qa-e2e/07-matrix-visual.spec.ts (6.7m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  4 failed
+    [tablet-1024] › qa-e2e/03-referral.spec.ts:20:1 › TC-REF-01..05 create → accept → qualify → task → complete (UI on this device) 
+    [tablet-1024] › qa-e2e/05-admin-notify.spec.ts:5:3 › Admin CRUD › TC-ADM-01 create event via UI (Jalali dates), add product and member, activate 
+    [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:109:3 › Offline › TC-OFF-04 logout with pending queue warns; discard wipes device; next user sees nothing 
+    [tablet-1024] › qa-e2e/06-export-offline-security.spec.ts:173:1 › TC-OFF-06 first visit to capture while offline (after online login) still allows capture 
+  3 skipped
+  60 passed (9.2m)

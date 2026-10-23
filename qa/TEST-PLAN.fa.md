@@ -39,9 +39,9 @@
 | TC-CTX-01..04 | §4 قواعد انتخاب رویداد | همان |
 | TC-CAP-01..12 | §5، §21 ثبت همگانی، idempotency | `02-capture.spec.ts` |
 | TC-REF-01..08 | §7 ارجاع کامل روی **همه** دستگاه‌ها | `03-referral.spec.ts` |
-| TC-LST-01..06، TC-ENR-01..04 | فهرست‌ها، §15 تکمیل پس از رویداد، §23 برچسب | `04-leads-enrichment.spec.ts` |
+| TC-LST-01..07، TC-ENR-01..04 | فهرست‌ها، §15 تکمیل پس از رویداد، §23 برچسب | `04-leads-enrichment.spec.ts` |
 | TC-ADM-01..05، TC-NTF-01..04 | مدیریت، §17 مرکز اعلان، §22.5 | `05-admin-notify.spec.ts` |
-| TC-EXP-01..03، TC-OFF-01..05، TC-SEC-01..03 | §16، §22.4، امنیت مرورگر | `06-export-offline-security.spec.ts` |
+| TC-EXP-01..03، TC-OFF-01..06، TC-SEC-01..03 | §16، §22.4، امنیت مرورگر | `06-export-offline-security.spec.ts` |
 | TC-MTX-* ، TC-VIS-* | ماتریس نقش×مسیر×دستگاه، عکس‌ها، سرریز، axe | `07-matrix-visual.spec.ts` |
 | API-* و QA-D-* | ماتریس مجوز API، محدودیت نرخ، 401، حریم خصوصی، روز تهران، N+1 | `backend/tests/test_qa_audit.py` |
 

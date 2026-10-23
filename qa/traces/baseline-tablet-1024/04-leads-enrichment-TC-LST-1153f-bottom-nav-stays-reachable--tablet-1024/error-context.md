@@ -1,0 +1,121 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - complementary "ناوبری اصلی" [ref=e5]:
+    - generic [ref=e7]:
+      - generic "نشان موقت (جایگزین)" [ref=e8]:
+        - img [ref=e9]
+      - generic [ref=e13]:
+        - generic [ref=e14]: سامانه لیدهای نمایشگاهی
+        - generic [ref=e15]: همراه اول · نشان موقت
+    - button "ثبت لید جدید" [ref=e16]:
+      - img [ref=e17]
+      - text: ثبت لید جدید
+    - navigation [ref=e18]:
+      - link "خانه" [ref=e19] [cursor=pointer]:
+        - /url: /
+        - img [ref=e20]
+        - generic [ref=e23]: خانه
+      - link "لیدها" [ref=e24] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e25]
+        - generic [ref=e28]: لیدها
+      - link "کارتابل" [ref=e29] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e30]
+        - generic [ref=e33]: کارتابل
+      - link "اعلان‌ها" [ref=e34] [cursor=pointer]:
+        - /url: /notifications
+        - img [ref=e35]
+        - generic [ref=e38]: اعلان‌ها
+    - generic [ref=e39]:
+      - generic [ref=e40]: س‌غ
+      - link "سینا غرفه‌دار کارشناس غرفه" [ref=e41] [cursor=pointer]:
+        - /url: /profile
+        - generic [ref=e42]: سینا غرفه‌دار
+        - generic [ref=e43]: کارشناس غرفه
+      - button "خروج" [ref=e44]:
+        - img [ref=e45]
+  - generic [ref=e48]:
+    - banner [ref=e49]:
+      - generic [ref=e50]:
+        - generic "رویداد فعال" [ref=e52]:
+          - generic [ref=e54]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - generic [ref=e55]: DEMO-TECH-1405
+        - generic [ref=e57]: DEMO · داده نمونه
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e59]':
+          - img [ref=e60]
+          - generic [ref=e63]: همگام
+    - main [ref=e64]:
+      - generic [ref=e65]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: عصر بخیر
+          - heading "سینا غرفه‌دار" [level=1] [ref=e69]
+          - paragraph [ref=e70]: کارشناس غرفه
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]: رویداد فعال
+            - heading "نمایشگاه نمونه فناوری ۱۴۰۵" [level=2] [ref=e77]
+            - paragraph [ref=e78]:
+              - text: تهران · سالن نمونه ۳۸ ·
+              - generic [ref=e79]: DEMO-TECH-1405
+          - link "ثبت لید جدید" [ref=e80] [cursor=pointer]:
+            - /url: /capture
+            - button "ثبت لید جدید" [ref=e81]:
+              - img [ref=e82]
+              - text: ثبت لید جدید
+        - generic [ref=e83]:
+          - generic [ref=e84]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: ثبت‌های امروز من
+              - img [ref=e88]
+            - generic [ref=e90]: ۳۴
+            - generic [ref=e91]: "مجموع: ۴۰"
+          - link "ارجاع در انتظار من ۰ پذیرش یا بازگرداندن" [ref=e92] [cursor=pointer]:
+            - /url: /inbox
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - generic [ref=e95]: ارجاع در انتظار من
+                - img [ref=e97]
+              - generic [ref=e100]: ۰
+              - generic [ref=e101]: پذیرش یا بازگرداندن
+          - link "وظایف باز من ۰" [ref=e102] [cursor=pointer]:
+            - /url: /inbox?tab=tasks
+            - generic [ref=e103]:
+              - generic [ref=e104]:
+                - generic [ref=e105]: وظایف باز من
+                - img [ref=e107]
+              - generic [ref=e111]: ۰
+          - link "درخواست اقدام ۰" [ref=e112] [cursor=pointer]:
+            - /url: /inbox?tab=actions
+            - generic [ref=e113]:
+              - generic [ref=e114]:
+                - generic [ref=e115]: درخواست اقدام
+                - img [ref=e117]
+              - generic [ref=e121]: ۰
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - heading "آخرین ثبت‌های من" [level=2] [ref=e126]
+            - link "همه" [ref=e128] [cursor=pointer]:
+              - /url: /leads?scope=mine
+          - list [ref=e129]:
+            - listitem [ref=e130]:
+              - link "=HYPERLINK(\"http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"QA\") قابل‌پیگیری ۱ ثانیه پیش" [ref=e131] [cursor=pointer]:
+                - /url: /leads/fbdce171-f31f-4476-a9c3-afac01f2ab74
+                - generic [ref=e132]: =HYPERLINK("http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","QA")
+                - generic [ref=e133]: قابل‌پیگیری
+                - generic [ref=e134]: ۱ ثانیه پیش
+            - listitem [ref=e135]:
+              - link "لید QA 7305375 قابل‌پیگیری ۲۱ ثانیه پیش" [ref=e136] [cursor=pointer]:
+                - /url: /leads/4c013c49-69e0-4e26-b5cb-0867c2415a89
+                - generic [ref=e137]: لید QA 7305375
+                - generic [ref=e138]: قابل‌پیگیری
+                - generic [ref=e139]: ۲۱ ثانیه پیش
+            - listitem [ref=e140]:
+              - link "لید QA 1316455 قابل‌پیگیری ۴۷ ثانیه پیش" [ref=e141] [cursor=pointer]:
+                - /url: /leads/cd9601f1-a3f9-4e72-b5f0-4eab341976d9
+                - generic [ref=e142]: لید QA 1316455
+                - generic [ref=e143]: قابل‌پیگیری
+                - generic [ref=e144]: ۴۷ ثانیه پیش
+```

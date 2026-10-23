@@ -1,0 +1,130 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - generic "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - img [ref=e31]
+          - generic [ref=e33]:
+            - generic [ref=e34]: ثبت در رویداد
+            - generic [ref=e35]:
+              - text: نمایشگاه نمونه فناوری ۱۴۰۵
+              - img "رویداد قفل‌شده"
+          - generic [ref=e38]: DEMO-TECH-1405
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - text: نام مخاطب*
+              - generic [ref=e42]: (الزامی)
+            - generic [ref=e43]:
+              - img [ref=e44]
+              - textbox "نام مخاطب (الزامی)" [ref=e47]:
+                - /placeholder: مثلاً سارا احمدی
+                - text: مالک پیش‌فرض 3592922
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: راه تماس*
+              - radiogroup "نوع راه تماس" [ref=e51]:
+                - radio "موبایل" [checked] [ref=e52]:
+                  - img [ref=e53]
+                  - text: موبایل
+                - radio "ایمیل" [ref=e55]:
+                  - img [ref=e56]
+                  - text: ایمیل
+            - generic [ref=e59]:
+              - generic [ref=e60]: شماره موبایل
+              - textbox "شماره موبایل" [active] [ref=e61]:
+                - /placeholder: 0912 345 6789
+                - text: "09123890920"
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - text: محصول مورد علاقه*
+              - generic [ref=e64]: (الزامی)
+            - group "محصولات" [ref=e65]:
+              - button "دروازه IoT صنعتی" [ref=e66]:
+                - generic [ref=e67]: دروازه IoT صنعتی
+              - button "روشنایی هوشمند معابر" [ref=e68]:
+                - generic [ref=e69]: روشنایی هوشمند معابر
+              - button "پارکینگ هوشمند" [ref=e70]:
+                - generic [ref=e71]: پارکینگ هوشمند
+              - button "پایش هوشمند ناوگان" [ref=e72]:
+                - generic [ref=e73]: پایش هوشمند ناوگان
+            - paragraph [ref=e74]: فقط محصولات ارائه‌شده در این رویداد نمایش داده می‌شوند.
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: سازمان / شرکت (اختیاری)
+              - button "شخص حقیقی" [ref=e79]
+            - generic [ref=e80]:
+              - img [ref=e81]
+              - textbox "سازمان / شرکت (اختیاری)" [ref=e85]:
+                - /placeholder: جست‌وجو یا نام سازمان جدید
+          - generic [ref=e86]:
+            - generic [ref=e87]: کیفیت گفت‌وگو
+            - radiogroup "کیفیت گفت‌وگو" [ref=e88]:
+              - radio "جدی" [ref=e89]
+              - radio "قابل‌پیگیری" [checked] [ref=e90]
+              - radio "آشنایی" [ref=e91]
+          - generic [ref=e92]:
+            - generic [ref=e93]: یادداشت کوتاه
+            - textbox "یادداشت کوتاه" [ref=e94]:
+              - /placeholder: نیاز، زمان‌بندی یا نکته مهم گفت‌وگو
+        - button "ثبت لید" [ref=e96]
+        - paragraph [ref=e97]: رویداد، ثبت‌کننده (سینا غرفه‌دار) و زمان به‌صورت خودکار ثبت می‌شوند.
+        - generic [ref=e98]:
+          - generic [ref=e99]: آخرین ثبت‌های من
+          - list [ref=e100]:
+            - listitem [ref=e101]:
+              - link "=HYPERLINK(\"http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"QA\") قابل‌پیگیری ۷ دقیقه پیش" [ref=e102] [cursor=pointer]:
+                - /url: /leads/fbdce171-f31f-4476-a9c3-afac01f2ab74
+                - img [ref=e103]
+                - generic [ref=e106]: =HYPERLINK("http://example.invalid/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx","QA")
+                - generic [ref=e107]: قابل‌پیگیری
+                - generic [ref=e108]: ۷ دقیقه پیش
+            - listitem [ref=e109]:
+              - link "لید QA 7305375 قابل‌پیگیری ۷ دقیقه پیش" [ref=e110] [cursor=pointer]:
+                - /url: /leads/4c013c49-69e0-4e26-b5cb-0867c2415a89
+                - img [ref=e111]
+                - generic [ref=e114]: لید QA 7305375
+                - generic [ref=e115]: قابل‌پیگیری
+                - generic [ref=e116]: ۷ دقیقه پیش
+            - listitem [ref=e117]:
+              - link "لید QA 1316455 قابل‌پیگیری ۸ دقیقه پیش" [ref=e118] [cursor=pointer]:
+                - /url: /leads/cd9601f1-a3f9-4e72-b5f0-4eab341976d9
+                - img [ref=e119]
+                - generic [ref=e122]: لید QA 1316455
+                - generic [ref=e123]: قابل‌پیگیری
+                - generic [ref=e124]: ۸ دقیقه پیش
+  - navigation "ناوبری پایین" [ref=e125]:
+    - generic [ref=e126]:
+      - link "خانه" [ref=e127] [cursor=pointer]:
+        - /url: /
+        - img [ref=e128]
+        - text: خانه
+      - link "لیدها" [ref=e131] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e132]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e136]:
+        - img [ref=e137]
+      - link "کارتابل" [ref=e138] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e139]
+        - text: کارتابل
+      - button "بیشتر" [ref=e142]:
+        - img [ref=e143]
+        - text: بیشتر
+```

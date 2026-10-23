@@ -1,0 +1,221 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - banner [ref=e5]:
+        - generic [ref=e6]:
+          - generic "نشان موقت (جایگزین)" [ref=e9]:
+            - img [ref=e10]
+          - generic "رویداد فعال" [ref=e15]:
+            - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+          - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+            - img [ref=e20]
+          - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+            - /url: /notifications
+            - img [ref=e24]
+      - main [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e30]:
+            - heading "گزارش و خروجی داده" [level=1] [ref=e31]
+            - paragraph [ref=e32]: خروجی ساختاریافته با شناسه‌های پایدار، زمان UTC، کدهای استاندارد و فرهنگ داده نسخه‌دار — با همان محدوده مجوز صفحه‌ها.
+          - generic [ref=e33]:
+            - generic [ref=e34]:
+              - heading "خروجی جدید" [level=2] [ref=e37]
+              - generic [ref=e38]:
+                - generic [ref=e39]:
+                  - generic [ref=e40]: قالب
+                  - radiogroup "قالب خروجی" [ref=e41]:
+                    - radio "Excel" [checked] [ref=e42]:
+                      - img [ref=e43]
+                      - text: Excel
+                    - radio "CSV (UTF‑8 BOM)" [ref=e46]:
+                      - img [ref=e47]
+                      - text: CSV (UTF‑8 BOM)
+                    - radio "JSON" [ref=e50]:
+                      - img [ref=e51]
+                      - text: JSON
+                - generic [ref=e56]:
+                  - generic [ref=e57]: رویدادها
+                  - generic [ref=e58]:
+                    - button "رویداد موقت QA-MVL07547-4" [ref=e59]
+                    - button "رویداد موقت QA-MVL06YK9-519" [ref=e60]
+                    - button "نمایشگاه نمونه فناوری ۱۴۰۵" [ref=e61]
+                    - button "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)" [ref=e62]
+                    - button "نمایشگاه نمونه فناوری ۱۴۰۵ (کپی)" [ref=e63]
+                    - button "نمایشگاه نمونه ۱۴۰۴" [ref=e64]
+                  - paragraph [ref=e65]: خالی = همه رویدادهای مجاز (تجمیع بین‌رویدادی)
+                - generic [ref=e66]:
+                  - generic [ref=e67]:
+                    - generic [ref=e68]: کیفیت
+                    - combobox [ref=e69]:
+                      - option "همه" [selected]
+                      - option "جدی"
+                      - option "قابل‌پیگیری"
+                      - option "آشنایی"
+                  - generic [ref=e70]:
+                    - generic [ref=e71]: مرحله
+                    - combobox [ref=e72]:
+                      - option "همه" [selected]
+                      - option "در انتظار ارزیابی"
+                      - option "واجد شرایط"
+                      - option "تخصیص‌یافته"
+                      - option "در حال پیگیری"
+                      - option "موفق"
+                      - option "ناموفق"
+                      - option "پرورش"
+                  - generic [ref=e73]:
+                    - generic [ref=e74]: از تاریخ
+                    - button "انتخاب تاریخ" [expanded] [ref=e75]:
+                      - img [ref=e76]
+                      - generic [ref=e78]: انتخاب تاریخ
+                  - generic [ref=e79]:
+                    - generic [ref=e80]: تا تاریخ
+                    - button "انتخاب تاریخ" [ref=e81]:
+                      - img [ref=e82]
+                      - generic [ref=e84]: انتخاب تاریخ
+                - generic [ref=e85]:
+                  - generic [ref=e86]: مجموعه داده‌ها
+                  - generic [ref=e87]:
+                    - generic [ref=e88] [cursor=pointer]:
+                      - checkbox "جدول تحلیلی تجمیعی (fact)" [checked] [ref=e89]
+                      - generic [ref=e90]: جدول تحلیلی تجمیعی (fact)
+                    - generic [ref=e91] [cursor=pointer]:
+                      - checkbox "سازمان‌ها" [checked] [ref=e92]
+                      - generic [ref=e93]: سازمان‌ها
+                    - generic [ref=e94] [cursor=pointer]:
+                      - checkbox "مخاطبان" [checked] [ref=e95]
+                      - generic [ref=e96]: مخاطبان
+                    - generic [ref=e97] [cursor=pointer]:
+                      - checkbox "تعاملات" [checked] [ref=e98]
+                      - generic [ref=e99]: تعاملات
+                    - generic [ref=e100] [cursor=pointer]:
+                      - checkbox "علاقه به محصولات" [checked] [ref=e101]
+                      - generic [ref=e102]: علاقه به محصولات
+                    - generic [ref=e103] [cursor=pointer]:
+                      - checkbox "فرصت‌ها" [checked] [ref=e104]
+                      - generic [ref=e105]: فرصت‌ها
+                    - generic [ref=e106] [cursor=pointer]:
+                      - checkbox "برچسب‌ها" [checked] [ref=e107]
+                      - generic [ref=e108]: برچسب‌ها
+                    - generic [ref=e109] [cursor=pointer]:
+                      - checkbox "ارجاع‌ها" [checked] [ref=e110]
+                      - generic [ref=e111]: ارجاع‌ها
+                    - generic [ref=e112] [cursor=pointer]:
+                      - checkbox "وظایف" [checked] [ref=e113]
+                      - generic [ref=e114]: وظایف
+                    - generic [ref=e115] [cursor=pointer]:
+                      - checkbox "فعالیت‌ها" [checked] [ref=e116]
+                      - generic [ref=e117]: فعالیت‌ها
+                  - paragraph [ref=e118]: در Excel هر مجموعه یک برگه است؛ در CSV چند مجموعه به‌صورت ZIP
+                - button "ایجاد خروجی" [ref=e119]:
+                  - img [ref=e120]
+                  - text: ایجاد خروجی
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - generic [ref=e125]:
+                  - img [ref=e126]
+                  - text: حفاظت از داده
+                - paragraph [ref=e129]: مقادیر متنی که با = + - @ آغاز می‌شوند برای جلوگیری از تزریق فرمول در Excel با علامت ' پیشوند می‌گیرند.
+                - paragraph [ref=e130]: شماره و ایمیل مخاطبان خارج از مجوز شما پوشانده می‌شود. لینک دریافت فقط برای شما، با توکن یکتا و دارای انقضا است و هر دریافت ممیزی می‌شود.
+                - paragraph [ref=e131]: "نسخه طرح داده: 1.0 — فرهنگ ستون‌ها داخل هر فایل قرار دارد."
+              - generic [ref=e132]:
+                - heading "خروجی‌های اخیر من" [level=2] [ref=e135]
+                - list [ref=e136]:
+                  - listitem [ref=e137]:
+                    - generic [ref=e138]:
+                      - generic [ref=e139]: JSON · ۴۵۸ ردیف
+                      - generic [ref=e140]: آماده دریافت
+                    - generic [ref=e141]: ۱ آبان ۱۴۰۵ ساعت ۱۶:۵۷ · ۲۴۲٫۳ کیلوبایت · PII پوشانده · انقضا ۲ آبان ۱۴۰۵ ساعت ۱۶:۵۷
+                    - link "دریافت expo-leads-20261023-1327.json" [ref=e142] [cursor=pointer]:
+                      - /url: /api/v1/exports/3f995300-4764-44a3-a8a2-5b3f83a7c3a1/download?token=lEWy8VQPqS2QHZiuh8_adbCmUHANOuUFREdnnH2gYWY
+                      - img [ref=e143]
+                      - text: دریافت expo-leads-20261023-1327.json
+                  - listitem [ref=e146]:
+                    - generic [ref=e147]:
+                      - generic [ref=e148]: JSON · ۴۵۵ ردیف
+                      - generic [ref=e149]: آماده دریافت
+                    - generic [ref=e150]: ۱ آبان ۱۴۰۵ ساعت ۱۶:۵۶ · ۲۴۱٫۲ کیلوبایت · PII پوشانده · انقضا ۲ آبان ۱۴۰۵ ساعت ۱۶:۵۶
+                    - link "دریافت expo-leads-20261023-1326.json" [ref=e151] [cursor=pointer]:
+                      - /url: /api/v1/exports/466d249c-320e-4e0e-a38b-acf12c3f2d1c/download?token=d4KYrX0IrnqBLNREqaIm90hvcD7SPrjcf7G1d2lZQOo
+                      - img [ref=e152]
+                      - text: دریافت expo-leads-20261023-1326.json
+    - navigation "ناوبری پایین" [ref=e155]:
+      - generic [ref=e156]:
+        - link "خانه" [ref=e157] [cursor=pointer]:
+          - /url: /
+          - img [ref=e158]
+          - text: خانه
+        - link "لیدها" [ref=e161] [cursor=pointer]:
+          - /url: /leads
+          - img [ref=e162]
+          - text: لیدها
+        - button "ثبت لید جدید" [ref=e166]:
+          - img [ref=e167]
+        - link "کارتابل ۱۲" [ref=e168] [cursor=pointer]:
+          - /url: /inbox
+          - img [ref=e169]
+          - text: کارتابل
+          - generic [ref=e172]: ۱۲
+        - button "بیشتر" [ref=e173]:
+          - img [ref=e174]
+          - text: بیشتر
+  - dialog [ref=e180]:
+    - generic [ref=e181]:
+      - button "ماه قبل" [active] [ref=e182]:
+        - img [ref=e183]
+      - generic [ref=e185]:
+        - generic [ref=e186]: آبان
+        - combobox "سال" [ref=e187]:
+          - option "۱۴۰۱"
+          - option "۱۴۰۲"
+          - option "۱۴۰۳"
+          - option "۱۴۰۴"
+          - option "۱۴۰۵" [selected]
+          - option "۱۴۰۶"
+          - option "۱۴۰۷"
+          - option "۱۴۰۸"
+          - option "۱۴۰۹"
+      - button "ماه بعد" [ref=e188]:
+        - img [ref=e189]
+    - generic [ref=e191]:
+      - generic [ref=e192]: ش
+      - generic [ref=e193]: ی
+      - generic [ref=e194]: د
+      - generic [ref=e195]: س
+      - generic [ref=e196]: چ
+      - generic [ref=e197]: پ
+      - generic [ref=e198]: ج
+    - grid [ref=e199]:
+      - button "۱ آبان ۱۴۰۵" [ref=e206]: ۱
+      - button "۲ آبان ۱۴۰۵" [ref=e207]: ۲
+      - button "۳ آبان ۱۴۰۵" [ref=e208]: ۳
+      - button "۴ آبان ۱۴۰۵" [ref=e209]: ۴
+      - button "۵ آبان ۱۴۰۵" [ref=e210]: ۵
+      - button "۶ آبان ۱۴۰۵" [ref=e211]: ۶
+      - button "۷ آبان ۱۴۰۵" [ref=e212]: ۷
+      - button "۸ آبان ۱۴۰۵" [ref=e213]: ۸
+      - button "۹ آبان ۱۴۰۵" [ref=e214]: ۹
+      - button "۱۰ آبان ۱۴۰۵" [ref=e215]: ۱۰
+      - button "۱۱ آبان ۱۴۰۵" [ref=e216]: ۱۱
+      - button "۱۲ آبان ۱۴۰۵" [ref=e217]: ۱۲
+      - button "۱۳ آبان ۱۴۰۵" [ref=e218]: ۱۳
+      - button "۱۴ آبان ۱۴۰۵" [ref=e219]: ۱۴
+      - button "۱۵ آبان ۱۴۰۵" [ref=e220]: ۱۵
+      - button "۱۶ آبان ۱۴۰۵" [ref=e221]: ۱۶
+      - button "۱۷ آبان ۱۴۰۵" [ref=e222]: ۱۷
+      - button "۱۸ آبان ۱۴۰۵" [ref=e223]: ۱۸
+      - button "۱۹ آبان ۱۴۰۵" [ref=e224]: ۱۹
+      - button "۲۰ آبان ۱۴۰۵" [ref=e225]: ۲۰
+      - button "۲۱ آبان ۱۴۰۵" [ref=e226]: ۲۱
+      - button "۲۲ آبان ۱۴۰۵" [ref=e227]: ۲۲
+      - button "۲۳ آبان ۱۴۰۵" [ref=e228]: ۲۳
+      - button "۲۴ آبان ۱۴۰۵" [ref=e229]: ۲۴
+      - button "۲۵ آبان ۱۴۰۵" [ref=e230]: ۲۵
+      - button "۲۶ آبان ۱۴۰۵" [ref=e231]: ۲۶
+      - button "۲۷ آبان ۱۴۰۵" [ref=e232]: ۲۷
+      - button "۲۸ آبان ۱۴۰۵" [ref=e233]: ۲۸
+      - button "۲۹ آبان ۱۴۰۵" [ref=e234]: ۲۹
+      - button "۳۰ آبان ۱۴۰۵" [ref=e235]: ۳۰
+```

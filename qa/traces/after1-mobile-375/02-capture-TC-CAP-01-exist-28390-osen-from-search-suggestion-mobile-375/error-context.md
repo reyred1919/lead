@@ -1,0 +1,138 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - banner [ref=e5]:
+      - generic [ref=e6]:
+        - img "نشان موقت (جایگزین)" [ref=e9]:
+          - img [ref=e10]
+        - generic "رویداد فعال" [ref=e15]:
+          - generic [ref=e17]: نمایشگاه نمونه فناوری ۱۴۰۵
+        - 'button "وضعیت همگام‌سازی: همگام" [ref=e19]':
+          - img [ref=e20]
+        - link "اعلان‌ها" [ref=e23] [cursor=pointer]:
+          - /url: /notifications
+          - img [ref=e24]
+    - main [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - img [ref=e31]
+          - generic [ref=e33]:
+            - generic [ref=e34]: ثبت در رویداد
+            - generic [ref=e35]:
+              - generic [ref=e36]: نمایشگاه نمونه فناوری ۱۴۰۵
+              - img "رویداد قفل‌شده" [ref=e37]
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - text: نام مخاطب*
+              - generic [ref=e43]: (الزامی)
+            - generic [ref=e44]:
+              - img [ref=e45]
+              - textbox "نام مخاطب (الزامی)" [ref=e48]:
+                - /placeholder: مثلاً سارا احمدی
+                - text: مخاطب سازمان موجود 2407935
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - generic [ref=e51]: راه تماس*
+              - radiogroup "نوع راه تماس" [ref=e52]:
+                - radio "موبایل" [checked] [ref=e53]:
+                  - img [ref=e54]
+                  - text: موبایل
+                - radio "ایمیل" [ref=e56]:
+                  - img [ref=e57]
+                  - text: ایمیل
+            - generic [ref=e60]:
+              - generic [ref=e61]: شماره موبایل
+              - textbox "شماره موبایل" [ref=e62]:
+                - /placeholder: 0912 345 6789
+                - text: "09122407560"
+          - generic [ref=e63]:
+            - generic [ref=e64]:
+              - text: محصول مورد علاقه*
+              - generic [ref=e65]: (الزامی)
+            - group "محصولات" [ref=e66]:
+              - button "دروازه IoT صنعتی" [pressed] [ref=e67]:
+                - img [ref=e68]
+                - generic [ref=e70]: دروازه IoT صنعتی
+              - button "روشنایی هوشمند معابر" [ref=e71]:
+                - generic [ref=e72]: روشنایی هوشمند معابر
+              - button "پارکینگ هوشمند" [ref=e73]:
+                - generic [ref=e74]: پارکینگ هوشمند
+              - button "پایش هوشمند ناوگان" [ref=e75]:
+                - generic [ref=e76]: پایش هوشمند ناوگان
+            - paragraph [ref=e77]: فقط محصولات ارائه‌شده در این رویداد نمایش داده می‌شوند.
+        - generic [ref=e78]:
+          - generic [ref=e79]:
+            - generic [ref=e80]:
+              - generic [ref=e81]: سازمان / شرکت (اختیاری)
+              - button "شخص حقیقی" [ref=e82]
+            - generic [ref=e83]:
+              - img [ref=e84]
+              - generic [ref=e88]: شرکت نمونه آلفا
+              - generic [ref=e89]: سازمان موجود
+              - button "حذف سازمان" [ref=e90]:
+                - img [ref=e91]
+          - generic [ref=e94]:
+            - generic [ref=e95]: کیفیت گفت‌وگو
+            - radiogroup "کیفیت گفت‌وگو" [ref=e96]:
+              - radio "جدی" [ref=e97]
+              - radio "قابل‌پیگیری" [checked] [ref=e98]
+              - radio "آشنایی" [ref=e99]
+          - generic [ref=e100]:
+            - generic [ref=e101]: یادداشت کوتاه
+            - textbox "یادداشت کوتاه" [ref=e102]:
+              - /placeholder: نیاز، زمان‌بندی یا نکته مهم گفت‌وگو
+        - button "ثبت لید" [ref=e104]
+        - paragraph [ref=e105]: رویداد، ثبت‌کننده (سینا غرفه‌دار) و زمان به‌صورت خودکار ثبت می‌شوند.
+        - generic [ref=e106]:
+          - generic [ref=e107]: آخرین ثبت‌های من
+          - list [ref=e108]:
+            - listitem [ref=e109]:
+              - link "مخاطب سازمان موجود 6215304 · شرکت نمونه آلفا قابل‌پیگیری ۷ ثانیه پیش" [ref=e110] [cursor=pointer]:
+                - /url: /leads/11ccba51-2c37-4df3-8c6e-129cfe5e83ea
+                - img [ref=e111]
+                - generic [ref=e114]:
+                  - text: مخاطب سازمان موجود 6215304
+                  - generic [ref=e115]: · شرکت نمونه آلفا
+                - generic [ref=e116]: قابل‌پیگیری
+                - generic [ref=e117]: ۷ ثانیه پیش
+            - listitem [ref=e118]:
+              - link "<img src=x onerror=\"window.__xss=1\"> 7502820 · <script>window.__xss=2</script> قابل‌پیگیری ۷ دقیقه پیش" [ref=e119] [cursor=pointer]:
+                - /url: /leads/28f4b1d7-241f-47fe-af60-8c0b3f9081f9
+                - img [ref=e120]
+                - generic [ref=e123]:
+                  - text: <img src=x onerror="window.__xss=1"> 7502820
+                  - generic [ref=e124]: · <script>window.__xss=2</script>
+                - generic [ref=e125]: قابل‌پیگیری
+                - generic [ref=e126]: ۷ دقیقه پیش
+            - listitem [ref=e127]:
+              - link "<img src=x onerror=\"window.__xss=1\"> 8126184 · <script>window.__xss=2</script> قابل‌پیگیری ۸ دقیقه پیش" [ref=e128] [cursor=pointer]:
+                - /url: /leads/017fc6da-ea0a-4412-b5c1-e8009aa53699
+                - img [ref=e129]
+                - generic [ref=e132]:
+                  - text: <img src=x onerror="window.__xss=1"> 8126184
+                  - generic [ref=e133]: · <script>window.__xss=2</script>
+                - generic [ref=e134]: قابل‌پیگیری
+                - generic [ref=e135]: ۸ دقیقه پیش
+  - navigation "ناوبری پایین" [ref=e136]:
+    - generic [ref=e137]:
+      - link "خانه" [ref=e138] [cursor=pointer]:
+        - /url: /
+        - img [ref=e139]
+        - text: خانه
+      - link "لیدها" [ref=e142] [cursor=pointer]:
+        - /url: /leads
+        - img [ref=e143]
+        - text: لیدها
+      - button "ثبت لید جدید" [ref=e147]:
+        - img [ref=e148]
+      - link "کارتابل" [ref=e149] [cursor=pointer]:
+        - /url: /inbox
+        - img [ref=e150]
+        - text: کارتابل
+      - button "بیشتر" [ref=e153]:
+        - img [ref=e154]
+        - text: بیشتر
+```

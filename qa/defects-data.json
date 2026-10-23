@@ -13,7 +13,7 @@
   "code": "backend/apps/crm/services.py:suggest_contacts; backend/apps/crm/views.py:ContactSearchView",
   "root_cause": "Suggestion query searched the whole master contact table without row-level scope.",
   "fix": "Suggestions limited to contacts reachable through visible_interactions(user); global lead.view.all unchanged; exact-match linking on capture still server-side (commit 0651019).",
-  "retest": "PASS"
+  "retest": "PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)"
  },
  {
   "id": "QA-D-02",
@@ -29,7 +29,7 @@
   "code": "backend/apps/iam/views.py ResetThrottle (scope password_reset 5/hour)",
   "root_cause": "Single per-IP AnonRateThrottle shared by forgot, token check and submit.",
   "fix": "Per-token throttle on submit, per-IP on forgot, coarse 300/h per-IP ceiling; GET check no longer consumes the strict budget (commit cf6c845).",
-  "retest": "PASS"
+  "retest": "PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)"
  },
  {
   "id": "QA-D-03",
@@ -45,7 +45,7 @@
   "code": "backend/config/settings.py REST_FRAMEWORK; backend/apps/common/audit.py client_ip; infra/docker-compose.yml",
   "root_cause": "Trusted proxy hop count not declared for the documented deployment topology.",
   "fix": "DJANGO_NUM_PROXIES → REST_FRAMEWORK.NUM_PROXIES; compose sets 1; audit uses same rule (commit cf6c845).",
-  "retest": "PASS"
+  "retest": "PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)"
  },
  {
   "id": "QA-D-04",
@@ -61,7 +61,7 @@
   "code": "backend DRF SessionAuthentication (403); frontend/src/lib/api.ts, auth.tsx",
   "root_cause": "SessionAuthentication has no authenticate_header → DRF converts NotAuthenticated to 403; SPA has no global handler.",
   "fix": "SessionAuthentication401 + global session-expired event → identity cleared → Protected redirects (commits cf6c845, fa14bcf).",
-  "retest": "PASS"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-05",
@@ -77,7 +77,7 @@
   "code": "backend/apps/reports/views.py DashboardView; backend/apps/crm/views.py apply_lead_filters",
   "root_cause": "captured_at__date and TruncDate evaluated in TIME_ZONE=UTC.",
   "fix": "apps/common/dates.py local-day ranges + TruncDate(tzinfo=Asia/Tehran) (commit 0651019).",
-  "retest": "PASS"
+  "retest": "PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)"
  },
  {
   "id": "QA-D-06",
@@ -93,7 +93,7 @@
   "code": "backend/apps/iam/serializers.py get_global_roles; backend/apps/catalog/serializers.py get_product_count",
   "root_cause": "select_related inside serializer method bypassed prefetch; per-row count().",
   "fix": "Use prefetched relation; annotate product count (commit 00fd106).",
-  "retest": "PASS"
+  "retest": "PASS (pytest 157/157 incl. test_qa_audit.py; TC-AUTH-06 browser on 6 projects)"
  },
  {
   "id": "QA-D-07",
@@ -109,7 +109,7 @@
   "code": "frontend/src/pages/Leads.tsx",
   "root_cause": "Not implemented in UI.",
   "fix": "Sort select (newest/oldest/last changed) bound to ?ordering (commit fa14bcf).",
-  "retest": "PASS"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-08",
@@ -125,7 +125,7 @@
   "code": "frontend/src/pages/Capture.tsx header",
   "root_cause": "truncate on the flex row containing the lock icon; event code chip consumes width.",
   "fix": "Two-line clamp, lock shrink-0, code chip hidden < sm (commit fa14bcf).",
-  "retest": "PASS"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-09",
@@ -141,7 +141,7 @@
   "code": "frontend/src/styles.css --color-muted; primitives.tsx soft/action tones",
   "root_cause": "Design token below AA.",
   "fix": "Muted #5d6b81 (≥4.7:1 on every surface), soft action text uses action-2 (commit fa14bcf).",
-  "retest": "see axe-summary-after.json"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-10",
@@ -157,7 +157,7 @@
   "code": "frontend/src/components/ui/pickers.tsx; components/tags/Tags.tsx",
   "root_cause": "Implicit listitem role between listbox and option.",
   "fix": "li role=none (commit fa14bcf).",
-  "retest": "see axe-summary-after.json"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-11",
@@ -173,7 +173,7 @@
   "code": "frontend/src/components/ui/primitives.tsx Field; datepicker.tsx",
   "root_cause": "Field label without htmlFor; picker aria-label overrides label.",
   "fix": "Field auto-binds label → control id; picker uses label (commit fa14bcf).",
-  "retest": "see axe-summary-after.json"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-12",
@@ -189,7 +189,7 @@
   "code": "frontend/src/components/brand/BrandLogo.tsx",
   "root_cause": "Missing role.",
   "fix": "role=img (commit fa14bcf).",
-  "retest": "see axe-summary-after.json"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-16",
@@ -205,7 +205,7 @@
   "code": "frontend/src/lib/offline.ts cachedContext; auth.tsx",
   "root_cause": "No expiry on cached context.",
   "fix": "cachedAt + 12h max age (commit 8e43a73).",
-  "retest": "PASS"
+  "retest": "PASS (vitest offline.test.ts 7/7; TC-OFF-04 on 6 projects)"
  },
  {
   "id": "QA-D-17",
@@ -221,7 +221,7 @@
   "code": "frontend/src/pages/LeadDetail.tsx; styles.css",
   "root_cause": "No overflow-wrap for unbroken tokens.",
   "fix": "overflow-wrap:anywhere globally + on heading (commit 3a4da09).",
-  "retest": "pending"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-18",
@@ -237,7 +237,7 @@
   "code": "frontend/src/pages/Reports.tsx (also Messages, LeadDetail, Notify grids)",
   "root_cause": "Grid item min-width:auto expands to the no-wrap format selector.",
   "fix": "grid-cols-[minmax(0,1fr)] (commit 3a4da09).",
-  "retest": "pending"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-19",
@@ -253,7 +253,7 @@
   "code": "frontend/src/pages/Capture.tsx; frontend/src/lib/auth.tsx",
   "root_cause": "Event context cached only when /capture was opened online, and React Query's default networkMode 'online' paused the events query offline with neither data nor error, which the page rendered as 'no membership'.",
   "fix": "Prefetch+cache event context at login; truthful offline/retry state (commit cef25e4); networkMode 'always' so the query falls back to the encrypted cache (commit a665d76 — the first fix alone failed TC-OFF-04/06 in the interim after-run).",
-  "retest": "pending"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-20",
@@ -269,7 +269,7 @@
   "code": "frontend/src/pages/Dashboard.tsx, Capture.tsx, admin/Events.tsx, Notify.tsx, Settings.tsx",
   "root_cause": "Implicit auto grid track + non-wrapping flex child sized to min-content of the unbroken string.",
   "fix": "overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit a4f1e7a).",
-  "retest": "pending"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-21",
@@ -285,7 +285,7 @@
   "code": "frontend/src/styles.css",
   "root_cause": "`md:py-8` on <main> overrode `pb-28` (bottom padding fell to 32 px under a 64 px bar); no scroll padding for sticky/fixed bars.",
   "fix": "Separate top/bottom padding (`pt-5 md:pt-8 pb-28 lg:pb-10`), html scroll-padding, focus-in guard in AppShell (commits 4c81bad, e661188).",
-  "retest": "pending"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
  },
  {
   "id": "QA-D-22",
@@ -301,6 +301,22 @@
   "code": "frontend/src/lib/offline.ts key()",
   "root_cause": "Non-atomic read→generate→put of the per-user key (pre-existing; made frequent by the login prefetch added for QA-D-19).",
   "fix": "One in-flight key promise per user + add() with re-read on conflict (commit ec513af). Regression test fails on the previous code.",
-  "retest": "pending"
+  "retest": "PASS (final after-run e661188, 6 Chromium projects)"
+ },
+ {
+  "id": "QA-D-23",
+  "severity": "P3",
+  "priority": "Low",
+  "category": "Accessibility (WCAG 1.4.3 / 2.1.1 / 4.1.2)",
+  "scenario": "TC-MTX axe, final after-run e661188",
+  "env": "Chromium desktop-1440 / tablet-768 / mobile-390",
+  "steps": "axe-core WCAG 2.2 AA scan of /notifications, /admin/tags, /admin/roles.",
+  "expected": "No serious/critical violations.",
+  "actual": "aria-label on a role-less span (unread dot, 15 nodes); archived-tag suffix at 70% opacity below 4.5:1 (8 nodes); horizontally scrollable role matrix not keyboard-focusable (2 nodes).",
+  "evidence": "qa/results/axe-summary-after.json",
+  "code": "frontend/src/pages/Notifications.tsx, components/tags/Tags.tsx, pages/admin/DataQuality.tsx",
+  "root_cause": "Residual markup issues not covered by the first a11y pass.",
+  "fix": "role=img on the dot, full-opacity suffix, tabIndex+role=region+aria-label on the scroller (commit d478da7).",
+  "retest": "PASS (07-matrix-visual on d478da7: 66 axe scans, 0 violations; 3 reference viewports)"
  }
 ]
