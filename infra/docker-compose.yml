@@ -1,0 +1,55 @@
+# Production-like stack. TLS terminates at your reverse proxy / load balancer in front of `web`.
+name: mci-expo-leads
+x-backend-env: &backend-env
+  DJANGO_DEBUG: "false"
+  DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?set DJANGO_SECRET_KEY}
+  FIELD_ENCRYPTION_KEY: ${FIELD_ENCRYPTION_KEY:?set FIELD_ENCRYPTION_KEY (Fernet key)}
+  DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS:-localhost}
+  DJANGO_CSRF_TRUSTED_ORIGINS: ${DJANGO_CSRF_TRUSTED_ORIGINS:-https://localhost}
+  APP_BASE_URL: ${APP_BASE_URL:-https://localhost}
+  DATABASE_URL: postgres://expo:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD}@db:5432/expo_leads
+  CELERY_ENABLED: "true"
+  CELERY_BROKER_URL: redis://redis:6379/0
+  DEMO_MODE: ${DEMO_MODE:-false}
+  SECURE_COOKIES: ${SECURE_COOKIES:-true}
+  MEDIA_ROOT: /data/media
+  EXPORT_ROOT: /data/exports
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment: { POSTGRES_DB: expo_leads, POSTGRES_USER: expo, POSTGRES_PASSWORD: "${POSTGRES_PASSWORD}" }
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: { test: ["CMD-SHELL", "pg_isready -U expo -d expo_leads"], interval: 5s, retries: 20 }
+    restart: unless-stopped
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+  backend:
+    build: ../backend
+    environment: *backend-env
+    volumes: [appdata:/data]
+    depends_on: { db: { condition: service_healthy }, redis: { condition: service_started } }
+    restart: unless-stopped
+  worker:
+    build: ../backend
+    command: celery -A config worker -l info
+    environment: *backend-env
+    volumes: [appdata:/data]
+    depends_on: [backend]
+    restart: unless-stopped
+  beat:
+    build: ../backend
+    command: celery -A config beat -l info --schedule /tmp/celerybeat-schedule
+    environment: *backend-env
+    depends_on: [backend]
+    restart: unless-stopped
+  web:
+    build: ../frontend
+    ports: ["${WEB_PORT:-8080}:80"]
+    depends_on: [backend]
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  appdata:

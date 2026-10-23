@@ -112,6 +112,9 @@ X_FRAME_OPTIONS = "DENY"
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
     SECURE_HSTS_SECONDS = int(os.environ.get("SECURE_HSTS_SECONDS", "31536000"))
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = env_bool("SECURE_HSTS_INCLUDE_SUBDOMAINS", False)
+    # Enable when Django itself must redirect HTTP→HTTPS (usually done by the reverse proxy).
+    SECURE_SSL_REDIRECT = env_bool("SECURE_SSL_REDIRECT", False)
 
 # Key for encrypting provider secrets at rest (Fernet, urlsafe base64 32 bytes).
 FIELD_ENCRYPTION_KEY = os.environ.get("FIELD_ENCRYPTION_KEY", "")
