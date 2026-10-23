@@ -42,6 +42,8 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5173,
     proxy: { "/api": { target: backend, changeOrigin: false } },
+    // Editing test specs must not full-reload pages that a running browser suite is driving.
+    watch: { ignored: ["**/qa-e2e/**", "**/e2e/**", "**/qa.config.ts", "**/playwright.config.ts", "**/test-results/**"] },
   },
   preview: { port: 4173, proxy: { "/api": { target: backend, changeOrigin: false } } },
   test: {

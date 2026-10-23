@@ -1,6 +1,6 @@
 # Defect register
 
-Total: 17 — P0: 0, P1: 3, P2: 11, P3: 3 (IDs QA-D-13..15 unused)
+Total: 17 — P0: 0, P1: 4, P2: 10, P3: 3 (IDs QA-D-13..15 unused)
 
 | ID | Sev | Category | Summary | Fix | Retest |
 |---|---|---|---|---|---|
@@ -20,7 +20,7 @@ Total: 17 — P0: 0, P1: 3, P2: 11, P3: 3 (IDs QA-D-13..15 unused)
 | QA-D-17 | P2 | UX / mobile overflow | Page scrolls horizontally by 35px; heading clipped. | overflow-wrap:anywhere globally + on heading (commit dd4735c). | pending |
 | QA-D-18 | P2 | UX / mobile overflow | Export card 31px wider than the viewport; whole page scrolls sideways. | grid-cols-[minmax(0,1fr)] (commit dd4735c). | pending |
 | QA-D-19 | P2 | Offline / capture | 'شما عضو فعال هیچ رویدادی نیستید' — booth capture blocked although the user is a member. | Prefetch+cache event context at login; truthful offline/retry state on load failure (commit 0ab3cf7). | pending |
-| QA-D-20 | P2 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit 3af511f). | pending |
+| QA-D-20 | P1 | UX / mobile overflow | Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user. | overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit 3af511f). | pending |
 
 ## QA-D-01 — Privacy / cross-event exposure (P1, priority High)
 
@@ -230,14 +230,14 @@ Total: 17 — P0: 0, P1: 3, P2: 11, P3: 3 (IDs QA-D-13..15 unused)
 - **Fix:** Prefetch+cache event context at login; truthful offline/retry state on load failure (commit 0ab3cf7).
 - **Retest:** pending
 
-## QA-D-20 — UX / mobile overflow (P2, priority Medium)
+## QA-D-20 — UX / mobile overflow (P1, priority High)
 
-- **Scenario:** TC-MTX mdm Home on mobile-390; regression TC-LST-07
+- **Scenario:** TC-MTX mdm Home on mobile-390; regression TC-LST-07; TC-CAP-01/02/06/09 and TC-AUTH-02 on mobile-375
 - **Env:** Chromium 390×844 (touch emulation)
 - **Steps:** A lead with an unbroken long name (e.g. formula-like string) appears in 'آخرین ثبت‌های من'; open Home on a phone and tap 'بیشتر'.
 - **Expected:** Name wraps; no horizontal scroll; bottom nav tappable.
-- **Actual:** Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout).
-- **Evidence:** qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-*/test-failed-1.png
+- **Actual:** Page widened sideways; 'بیشتر' tab was off-screen and its tap was intercepted by list content (15 s timeout). On 375×667 the Capture page (own recent list) doubled in width and product, submit and bottom-nav taps landed outside the content (`<html> intercepts pointer events`) — booth capture blocked for that user.
+- **Evidence:** qa/traces/test-output/baseline-mobile-390/07-matrix-visual-TC-MTX-md-*/test-failed-1.png; qa/traces/test-output/baseline-mobile-375/02-capture-TC-CAP-01-*/test-failed-1.png
 - **Code:** frontend/src/pages/Dashboard.tsx, Capture.tsx, admin/Events.tsx, Notify.tsx, Settings.tsx
 - **Root Cause:** Implicit auto grid track + non-wrapping flex child sized to min-content of the unbroken string.
 - **Fix:** overflow-wrap:anywhere on rows, nowrap timestamps, grid-cols-[minmax(0,1fr)] base (commit 3af511f).

@@ -176,8 +176,8 @@ test("TC-OFF-06 first visit to capture while offline (after online login) still 
   await page.waitForLoadState("networkidle");
   await context.setOffline(true);
   await page.evaluate(() => window.dispatchEvent(new Event("offline")));
-  if ((page.viewportSize()?.width ?? 1440) >= 1024) await page.getByRole("button", { name: "ثبت لید جدید" }).first().click();
-  else await press(info, page.getByRole("button", { name: "ثبت لید جدید" }));
+  if ((page.viewportSize()?.width ?? 1440) >= 1024) await page.locator("aside").getByRole("button", { name: "ثبت لید جدید" }).click();
+  else await press(info, page.locator("nav[aria-label='ناوبری پایین']").getByRole("button", { name: "ثبت لید جدید" }));
   await expect(page).toHaveURL(/\/capture/);
   await expect(page.locator("#contact_name")).toBeVisible();
   await expect(page.getByText(/عضو فعال هیچ رویدادی نیستید/)).toHaveCount(0);
@@ -189,9 +189,10 @@ test.describe("Browser-level security", () => {
   test("TC-SEC-01 stored XSS payload in lead fields renders as text", async ({ page }, info) => {
     tc(info, "TC-SEC-01", { role: "specialist1", route: "/leads/:id", action: "XSS", expected: "no script execution" });
     await loginAs(page, "specialist1");
-    const evs = (await api(page, "GET", "/events/mine")).body;
+    const evs = ((await api(page, "GET", "/events/mine")).body as any[]).filter((e) => e.code === "DEMO-TECH-1405");
     const payload = `<img src=x onerror="window.__xss=1"> ${uniq()}`;
     const lead = await api(page, "POST", "/interactions", { event_id: evs[0].id, client_record_id: crypto.randomUUID(), contact_name: payload, mobile: mobileNo(), org_name: "<script>window.__xss=2</script>", note: "<svg onload=window.__xss=3>", product_ids: [evs[0].products[0].id] });
+    expect(lead.status, JSON.stringify(lead.body)).toBe(201);
     await page.goto(`/leads/${lead.body.id}`);
     await expect(page.getByRole("heading", { level: 1 })).toContainText("<img");
     await page.goto(`/leads?q=${encodeURIComponent(payload.slice(-7))}`);
