@@ -95,6 +95,20 @@ describe("offline queue", () => {
     expect((await q.counts()).queued).toBe(1);
   });
 
+  it("offline identity fallback expires with the session lifetime (shared devices)", async () => {
+    const { q } = queue();
+    await q.cacheContext("user-1", { user: { id: "user-1", full_name: "کاربر قبلی" } });
+    expect((await q.cachedContext())?.user.full_name).toBe("کاربر قبلی");
+    expect(await q.cachedContext(-1)).toBeNull();
+    const realNow = Date.now;
+    Date.now = () => realNow() + 13 * 3600 * 1000;
+    try {
+      expect(await q.cachedContext()).toBeNull();
+    } finally {
+      Date.now = realNow;
+    }
+  });
+
   it("isolates records per user and clears everything on logout", async () => {
     const { q } = queue();
     await q.enqueue(payload(), "E");
