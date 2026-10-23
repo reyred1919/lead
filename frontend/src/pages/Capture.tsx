@@ -48,6 +48,9 @@ export function useMyEvents() {
   return useQuery({
     queryKey: ["my-events"],
     enabled: !!me,
+    // Offline the default "online" mode pauses the query without data or error, which rendered as
+    // "not a member" (QA-D-19); the query function itself falls back to the encrypted local cache.
+    networkMode: "always",
     queryFn: async () => {
       try {
         const data = await get<MyEvent[]>("/events/mine");
