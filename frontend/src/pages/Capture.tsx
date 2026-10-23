@@ -382,9 +382,9 @@ function RecentCaptures({ data }: { data: any }) {
         {items.slice(0, 3).map((r: any) => (
           <li key={r.id}><Link to={`/leads/${r.id}`} className="px-5 py-3 flex items-center gap-3 hover:bg-line-2/50">
             <CheckCircle2 className="size-4 text-success" />
-            <span className="flex-1 min-w-0"><span className="font-semibold">{r.contact_name}</span>{r.account_name && <span className="text-muted text-[13px]"> · {r.account_name}</span>}</span>
+            <span className="flex-1 min-w-0 [overflow-wrap:anywhere]"><span className="font-semibold">{r.contact_name}</span>{r.account_name && <span className="text-muted text-[13px]"> · {r.account_name}</span>}</span>
             <QualityBadge q={r.quality} />
-            <span className="text-[12px] text-muted">{relTime(r.captured_at)}</span>
+            <span className="text-[12px] text-muted shrink-0 whitespace-nowrap">{relTime(r.captured_at)}</span>
           </Link></li>
         ))}
       </ul>

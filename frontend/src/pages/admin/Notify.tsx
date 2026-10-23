@@ -42,7 +42,7 @@ function Providers() {
     <div className="space-y-4">
       <div className="flex justify-end"><Button onClick={() => setEdit("new")}><Plus className="size-4" />افزودن اتصال</Button></div>
       {q.isLoading ? <Card><LoadingRows /></Card> : !q.data?.length ? <Card><EmptyState title="اتصالی تعریف نشده" body="بدون سرویس‌دهنده، فقط اعلان درون‌برنامه ارسال می‌شود و پیامک/ایمیل با دلیل «سرویس‌دهنده فعال وجود ندارد» ثبت می‌شود." /></Card> : (
-        <div className="grid md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-[minmax(0,1fr)] md:grid-cols-2 gap-4">
           {q.data.map((p) => (
             <Card key={p.id} className="p-5 space-y-3">
               <div className="flex items-start justify-between gap-2">
