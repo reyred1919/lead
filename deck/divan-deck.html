@@ -361,6 +361,17 @@ body[data-th=paper] .lay-card,body[data-th=paper] .lay-tall{box-shadow:0 18px 44
 .dots16 i.act,.dots16 i.us,.hot,.tl .ms.mj i{box-shadow:none}
 .sc.pp .dots16 i.act{background:#8f5f0f;border-color:#6f490a}
 .hint{transition:opacity .8s}
+/* v6 images: less zoom, frames closer to photo ratio */
+@keyframes kb{from{transform:scale(1.01)}to{transform:scale(1.05)}}
+.vi{transform:scale(1.02);object-position:50% 36%}
+.bg img{object-position:50% 36%}
+#vimg .pw{inset:-1%}
+@media(min-width:861px){
+ .lay-side{left:3%;top:15%;width:43%;height:60%;border-radius:6px;border-color:transparent;box-shadow:0 14px 36px rgba(0,0,0,.35)}
+ .lay-side:after{opacity:0}
+ .lay-card{left:3%;top:15%;width:43%;height:60%;border-color:transparent;box-shadow:0 14px 36px rgba(0,0,0,.35)}
+ body[data-th=paper] .lay-side,body[data-th=paper] .lay-card{box-shadow:0 14px 36px rgba(22,33,59,.22)}
+}
 
 </style>
 <div class="stage" id="stage">
