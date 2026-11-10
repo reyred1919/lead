@@ -1,7 +1,7 @@
 (function(){'use strict';
 var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 var fa=function(n,d){return isFinite(n)?Number(n).toLocaleString('fa-IR',{maximumFractionDigits:d||0}):'—'};
-var S=$$('.sl'),N=S.length,cur=-1,prevEl=null;
+var S=$$('.sl'),N=S.length,cur=-1,prevEl=null;S.forEach(function(x){if($('.pg img',x))x.classList.add('hasimg')});
 /* word split */
 $$('.sw').forEach(function(h){var k=0;h.innerHTML=h.textContent.trim().split(/\s+/).map(function(w){return '<span class="w"><i style="--k:'+(k++)+'">'+w+'</i></span>'}).join(' ')});
 function go(i){

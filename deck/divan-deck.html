@@ -182,6 +182,20 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
 .ckr i{width:calc(var(--u)*2.6);height:calc(var(--u)*2.6);border:2px solid var(--pt);position:relative;transition:background .3s}
 .ckr.ck i{background:var(--pt)}.ckr.ck i:after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:var(--cream);font-size:.9em}
 .ckr.ck span{opacity:.5;text-decoration:line-through}
+@media(max-width:860px){
+ .sl.hasimg .pg{background:var(--ink)}
+ .sl.hasimg .pg img{position:absolute;top:0;left:0;height:34vh;width:100%}
+ .sl.hasimg .veil{background:linear-gradient(180deg,rgba(10,15,30,.15) 0,rgba(10,15,30,0) 18%,rgba(10,15,30,.55) 28%,var(--ink) 35%)}
+ .sl.hasimg .in{padding-top:30vh}
+ .sl.hasimg .in>div[style*="max-width"]{max-width:100%!important}
+ .sl.hasimg .in.ctr{justify-content:flex-start;padding-top:36vh}
+ h1.dis{font-size:44px!important}
+ .quote{font-size:30px}
+ #bTot{font-size:20px!important;white-space:nowrap}
+ #regIn .sp{grid-template-columns:1fr!important}
+ .bars .br{grid-template-columns:90px 1fr 56px;font-size:13px}
+ .dots{max-width:100%}
+}
 
 </style></head><body>
 <div class="stage" id="stage">
@@ -189,9 +203,9 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
 <section class="sl dark" data-act="آغاز" data-title="دیوان را باز کن" data-note="امروز سه چیز را نشان می‌دهم: بازار دیوان چه شکلی است، تا شب یلدا چه می‌کنیم و برای این کار چه تصمیمی از شما می‌خواهیم.">
  <div class="pg"><img data-img="cover" style="object-position:30% 50%"><div class="veil v-r"></div></div>
  <div class="in bot" style="justify-content:center"><div style="max-width:46%;margin-inline-start:0">
-  <div class="eb r" style="--d:0">برنامه ورود به بازار و کمپین یلدا · پاییز و زمستان ۱۴۰۵</div>
+  <div class="eb r" style="--d:0">ورود به بازار و کمپین یلدا · پاییز و زمستان ۱۴۰۵</div>
   <h1 class="dis sw" style="font-size:calc(var(--u)*11);line-height:1.2">دیوان را باز کن</h1>
-  <p class="lead r" style="--d:4">این دیوان فال نمی‌گیرد؛ راه را نشان می‌دهد.</p>
+  <p class="lead r" style="--d:4">این دیوان فال نمی‌گیرد، راه نشان می‌دهد.</p>
   <p class="mut r" style="--d:6;margin-top:2em;font-size:.85em">دستیار هوشمند حقوقی همراه اول · ۱۸ آبان ۱۴۰۵<br>معاون مدیریت توسعه بازار، راهکارهای هوشمند</p>
  </div></div>
 </section>
@@ -199,8 +213,8 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
 <section class="sl dark" data-act="آغاز" data-title="یک پرسش" data-note="با یک پرسش شروع می‌کنم: آخرین بار که مسئله حقوقی داشتید، از چه کسی پرسیدید؟ بیشتر ما از یک آشنا. مسئله ما معرفی یک سایت نیست؛ جابه‌جاکردن همین عادت است.">
  <div class="pg"><img data-img="v6_door"><div class="veil v-all"></div></div>
  <div class="in ctr">
-  <h1 class="dis sw" style="font-size:calc(var(--u)*7.4);max-width:14em">آخرین‌بار کی یک سؤال حقوقی داشتی؟ از چه کسی پرسیدی؟</h1>
-  <p class="lead r" style="--d:8;margin-inline:auto;font-size:1.5em">بیشترِ ما اول زنگ می‌زنیم به یک آشنا. چون پرسیدنِ رسمی، انگار شروعِ دعواست.</p>
+  <h1 class="dis sw" style="font-size:calc(var(--u)*7.4);max-width:14em">آخرین بار که سؤال حقوقی داشتی، از کی پرسیدی؟</h1>
+  <p class="lead r" style="--d:8;margin-inline:auto;font-size:1.5em">بیشتر ما اول به یک آشنا زنگ می‌زنیم. پرسیدنِ رسمی انگار شروعِ دعواست.</p>
  </div>
 </section>
 <!-- 3 agenda -->
@@ -228,18 +242,18 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
  <div class="pg"></div>
  <div class="in">
   <div class="eb r">شرایط بازار</div>
-  <h2 class="sw">دیوان یکی از ۱۶ سکوی زیست‌بوم خدمات هوشمند قضایی است</h2>
+  <h2 class="sw">دیوان یکی از ۱۶ سکوی خدمات هوشمند قضایی است</h2>
   <div class="sp b mt">
    <div class="g2" style="gap:calc(var(--u)*2.5)">
-    <div class="cell r" style="--d:3"><span class="big" data-n="۱۶">۱۶</span><p>سکو؛ ۱۰ فعال، ۶ در حال اتصال</p></div>
+    <div class="cell r" style="--d:3"><span class="big" data-n="۱۶">۱۶</span><p>سکو: ۱۰ فعال و ۶ در حال اتصال</p></div>
     <div class="cell r" style="--d:4"><span class="big">۵</span><p>خدمت مشترک در همه سکوها</p></div>
-    <div class="cell r" style="--d:5"><span class="big">۱۰ م</span><p>دادنامه بی‌نام‌شده برای آموزش هوش مصنوعی</p></div>
+    <div class="cell r" style="--d:5"><span class="big">۱۰ م</span><p>میلیون دادنامهٔ بی‌نام برای آموزش هوش مصنوعی</p></div>
     <div class="cell r" style="--d:6"><span class="big">+۵۰</span><p>شرکت اعلام آمادگی کرده‌اند</p></div>
    </div>
    <div>
     <div class="dots"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i class="u" style="--k:4"></i><i style="--k:5"></i><i style="--k:6"></i><i style="--k:7"></i><i style="--k:8"></i><i style="--k:9"></i><i class="h" style="--k:10"></i><i class="h" style="--k:11"></i><i class="h" style="--k:12"></i><i class="h" style="--k:13"></i><i class="h" style="--k:14"></i><i class="h" style="--k:15"></i></div>
     <p class="mut" style="margin-top:1em;font-size:.85em">طلایی: فعال · خط‌چین: به‌زودی · آبی: دیوان</p>
-    <p class="lead r" style="--d:8;font-weight:700">اگر فقط خدمت را تبلیغ کنیم، برای همه‌ی رقبا تبلیغ کرده‌ایم. تمایز باید از نام، تجربه و اعتبار همراه اول بیاید.</p>
+    <p class="lead r" style="--d:8;font-weight:700">اگر فقط خدمت را تبلیغ کنیم، برای همهٔ رقبا تبلیغ کرده‌ایم. تمایز ما نام و اعتبار همراه اول است.</p>
    </div>
   </div>
   <p class="src">منبع: اظهارات رئیس مرکز آمار و فناوری اطلاعات قوه قضاییه، شفقنا، ۴ و ۱۱ آبان ۱۴۰۵</p>
@@ -251,7 +265,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
  <div class="in">
   <div class="eb r">تقاضا در گوگل · ایران · ۱۲ ماه منتهی به اکتبر ۲۰۲۶</div>
   <h2 class="sw">مردم نام درگاه را می‌جویند، نه سؤال‌شان را</h2>
-  <p class="lead r" style="--d:3">عدل ایران با فاصله بالاست. سؤال‌های موضوعی پراکنده‌اند. دیوان باید جایی باشد که از موقعیت به راه می‌رسی.</p>
+  <p class="lead r" style="--d:3">«عدل ایران» با فاصله بالاتر از همه است و سؤال‌های موضوعی پراکنده‌اند. دیوان باید جایی باشد که از دل موقعیت به راه می‌رسی.</p>
   <figure class="fig rv mul mt" style="--ar:3.41;--d:3;width:min(100%,calc(46vh*3.41));background:#fff"><img data-img="trends"></figure>
   <p class="src">منبع: Google Trends، جست‌وجوی وب، ایران. مقیاس نسبی (۱۰۰ = اوج جست‌وجو) و فقط گوگل.</p>
  </div>
@@ -262,7 +276,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
  <div class="in" id="netIn">
   <div style="max-width:52%;margin-inline-start:0">
    <div class="eb r">شرایط رسانه</div>
-   <h2 class="sw">رسانه‌های داخلی، ستون اصلی توزیع</h2>
+   <h2 class="sw">ستون اصلی توزیع، رسانه‌های داخلی است</h2>
    <div class="row mt r" style="--d:3"><button class="btn on" data-net="1">اینترنت بین‌الملل وصل</button><button class="btn" data-net="0">اختلال یا قطع</button></div>
    <div class="mt" id="netList" style="display:grid;gap:.1em">
     <div class="net r" data-i="0" style="--d:4"><b>یکتانت، تپسل، دیوار</b> <span class="mut">شبکه‌های تبلیغاتی داخلی</span><em></em></div>
@@ -270,7 +284,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
     <div class="net r" data-i="0" style="--d:6"><b>آپارات، صباویژن، گزارش خبری</b> <span class="mut">ویدئو و رسانه‌های داخلی</span><em></em></div>
     <div class="net r" data-i="1" style="--d:7"><b>اینستاگرام، تلگرام، تبلیغات گوگل</b> <span class="mut">فقط محتوای ارگانیک؛ خرید رسمی تبلیغ ممکن نیست</span><em></em></div>
    </div>
-   <p class="r" style="--d:9;font-size:.95em;margin-top:.6em"><b class="gold">اصل اول:</b> بودجه فقط در رسانه‌هایی خرج می‌شود که روی شبکه ملی در دسترس‌اند.</p>
+   <p class="r" style="--d:9;font-size:.95em;margin-top:.6em"><b class="gold">اصل اول:</b> بودجه را فقط جایی خرج می‌کنیم که روی شبکهٔ ملی در دسترس باشد.</p>
   </div>
  </div>
 </section>
@@ -282,9 +296,9 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
    <div class="eb r">رقبا و جایگزین‌ها</div>
    <h2 class="sw">رقیب اصلی دیوان، عادتِ پرسیدن از آشناست</h2>
    <div class="mt" style="display:grid;gap:.9em">
-    <div class="cell r" style="--d:3"><h3>رقیب اصلی: آشنا و خانواده</h3><p>دیوان باید نخستین گزینه در لحظه تردید شود.</p></div>
-    <div class="cell r" style="--d:4"><h3>رقیب مستقیم: دستیارهای هوش مصنوعی و ۱۵ سکوی دیگر</h3><p>همه یک حرف می‌زنند: هوش مصنوعی، رایگان، شبانه‌روزی. برتری ما: پیوند پاسخ با خدمت رسمی و اعتبار همراه اول.</p></div>
-    <div class="cell r" style="--d:5"><h3>شریک: سایت‌های مشاوره با وکیل و سامانه‌های رسمی</h3><p>دیوان کاربر را به‌موقع به وکیل می‌رساند؛ جایگزین‌شان نیست.</p></div>
+    <div class="cell r" style="--d:3"><h3>رقیب اصلی: آشنا و خانواده</h3><p>دیوان باید اولین گزینه در لحظهٔ تردید باشد.</p></div>
+    <div class="cell r" style="--d:4"><h3>رقیب مستقیم: دستیارهای هوش مصنوعی و ۱۵ سکوی دیگر</h3><p>همه یک حرف می‌زنند: هوش مصنوعی، رایگان، شبانه‌روزی. برتری ما این است که پاسخ‌مان به خدمت رسمی وصل است و پشتش همراه اول ایستاده.</p></div>
+    <div class="cell r" style="--d:5"><h3>شریک: سایت‌های مشاوره با وکیل و سامانه‌های رسمی</h3><p>دیوان کاربر را به‌موقع به وکیل می‌رساند و جای آن‌ها را نمی‌گیرد.</p></div>
    </div>
   </div>
   <figure class="fig rv" style="--ar:1.33;--d:2"><img data-img="car"></figure>
@@ -297,12 +311,12 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
   <div class="eb r">مخاطبان کمپین</div>
   <h2 class="sw">مخاطب را با موقعیتش تعریف کرده‌ایم، نه با سن و جنسیت</h2>
   <div class="g4 mt" style="gap:calc(var(--u)*2.4)">
-   <div class="cell r" style="--d:3"><span class="chip gold">مخاطب اصلی موج دوم</span><h3 style="margin-top:.6em">در آستانه تصمیم</h3><p>اجاره، خرید خودرو یا ملک، بیعانه، استخدام. بزرگ‌ترین و کم‌تنش‌ترین گروه، و بهترین در ورود به برند.</p></div>
+   <div class="cell r" style="--d:3"><span class="chip gold">مخاطب اصلی موج دوم</span><h3 style="margin-top:.6em">در آستانه تصمیم</h3><p>اجاره، خرید خودرو یا خانه، بیعانه، استخدام. بزرگ‌ترین و کم‌تنش‌ترین گروه و بهترین راه ورود به برند.</p></div>
    <div class="cell r" style="--d:4"><span class="chip mut">فوریت زیاد</span><h3 style="margin-top:.6em">درگیر یک مسئله</h3><p>طلب وصول‌نشده، چک برگشتی، دستمزد معوق. نقش: استفاده دوباره و معرفی.</p></div>
    <div class="cell r" style="--d:5"><span class="chip mut">فوریت زیاد</span><h3 style="margin-top:.6em">در جریان پرونده</h3><p>ابلاغیه، جلسه رسیدگی، تنظیم لایحه. نقش: تبدیل به کاربر فعال.</p></div>
    <div class="cell r" style="--d:6"><span class="chip mut">فوریت پیوسته</span><h3 style="margin-top:.6em">واسطه‌ها</h3><p>منابع انسانی، مشاوران املاک، کسب‌وکارهای کوچک. نقش: رساندن دیوان به مشتریان خود.</p></div>
   </div>
-  <p class="src r" style="--d:8"><b class="gold">خط قرمز:</b> تبلیغات بر اساس موضوع محتوا نمایش داده می‌شود و هرگز از اطلاعات یا وضعیت حقوقی افراد استفاده نمی‌کند.</p>
+  <p class="src r" style="--d:8"><b class="gold">خط قرمز:</b> تبلیغ را بر اساس موضوع محتوا نشان می‌دهیم و هرگز از وضعیت حقوقی افراد استفاده نمی‌کنیم.</p>
  </div>
 </section>
 <!-- 10 insight -->
@@ -325,7 +339,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
    <div class="g3 mt" style="gap:calc(var(--u)*2)">
     <div class="cell r" style="--d:5"><img data-img="ic_ask" style="width:calc(var(--u)*5);display:block"><h3>بپرس</h3><p>پیش از تصمیم، بی‌آنکه دعوایی شروع شود.</p></div>
     <div class="cell r" style="--d:6"><img data-img="ic_get" style="width:calc(var(--u)*5);display:block"><h3>بفهم</h3><p>قرارداد و ابلاغیه را به زبان ساده.</p></div>
-    <div class="cell r" style="--d:7"><img data-img="ic_act" style="width:calc(var(--u)*5);display:block"><h3>اقدام کن</h3><p>خدمت قضایی آنلاین، یا وکیل به‌موقع.</p></div>
+    <div class="cell r" style="--d:7"><img data-img="ic_act" style="width:calc(var(--u)*5);display:block"><h3>اقدام کن</h3><p>خدمت قضایی آنلاین یا وکیل، به‌موقع.</p></div>
    </div>
    <p class="src r" style="--d:8">متن ثابت همه تبلیغات: «دیوان دستیار هوشمند حقوقی است و جای مشاوره وکیل یا رأی مرجع قضایی را نمی‌گیرد.»</p>
   </div>
@@ -338,13 +352,13 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
  <div class="in bot">
   <div class="eb r">شعار پشتیبان</div>
   <p class="quote q-dark sw" style="max-width:12em">این دیوان فال نمی‌گیرد؛ راه را نشان می‌دهد.</p>
-  <p class="lead r" style="--d:9">انبوه برگه‌ها و ابلاغیه‌ها همان‌قدر گنگ‌اند که نامه‌ی رسمی برای یک شهروند. دیوان یک مسیر روشن از میان‌شان می‌کشد.</p>
+  <p class="lead r" style="--d:9">نامهٔ رسمی برای یک شهروند همان‌قدر گنگ است که انبوه این برگه‌ها. دیوان از میانشان یک مسیر روشن می‌کشد.</p>
  </div>
 </section>
 <!-- 13 ACT 2 -->
 <section class="sl dark" data-act="۲ مسیر ورود" data-title="پرده دوم · مسیر ورود" data-note="حالا از رونمایی تا یلدا.">
  <div class="pg"><img data-img="ceremony"><div class="veil v-b"></div></div>
- <div class="in bot chap"><span class="num">۲</span><h1 class="dis sw" style="font-size:calc(var(--u)*9)">مسیر ورود</h1><p class="lead r" style="--d:3">از رونمایی تا شب یلدا: چه کرده‌ایم، چه می‌کنیم و کجا می‌ایستیم تا داده بخواهد.</p></div>
+ <div class="in bot chap"><span class="num">۲</span><h1 class="dis sw" style="font-size:calc(var(--u)*9)">مسیر ورود</h1><p class="lead r" style="--d:3">از رونمایی تا شب یلدا: چه کرده‌ایم، چه می‌کنیم و کجا باید منتظر داده بمانیم.</p></div>
 </section>
 <!-- 14 site audit -->
 <section class="sl paper" data-act="۲ مسیر ورود" data-title="معاینه سایت" data-note="پیش از دعوت مهمان، خانه را معاینه کردم. وعده روشن است و اعتماد و حریم خصوصی خوب توضیح داده شده. سه فرصت دارد: امضای همراه اول، تمرکز روی جعبه پرسش و صفحه فرود جدا برای هر لحظه. این برداشت از تصویر صفحه اصلی است و با تیم محصول تطبیق می‌دهیم.">
@@ -395,23 +409,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
    <div class="cell r" style="--d:5"><span class="chip gold">هفته دوم</span><h3 style="margin-top:.5em">«پیش از امضا»</h3><p>پیام‌های موقعیت‌محور: اجاره، خودرو، قرارداد کاری. سه تیتر روی سه صفحه فرود.</p></div>
    <div class="cell r" style="--d:6"><span class="chip gold">هفته سوم</span><h3 style="margin-top:.5em">گرم‌کردن یلدا</h3><p>تیزر «سؤال‌هایی که تا حالا نپرسیده‌ای» و افزایش وزن رسانه‌ای که بهتر جواب داد.</p></div>
   </div>
-  <p class="src r" style="--d:8">آزمون‌ها: دو نسخه پیامک، سه تیتر تبلیغ، سه صفحه فرود. معیار پیروزی تبلیغ: نرخ شروع سؤال بعد از کلیک، نه خود کلیک.</p>
- </div>
-</section>
-<!-- 17 targets -->
-<section class="sl paper" data-act="۲ مسیر ورود" data-title="هدف‌های سنجش" data-note="کاربر فعال یعنی ثبت‌نام با رمز یک‌بارمصرف و دست‌کم یک پاسخ موفق در هفت روز. هر رسانه، هر پیام و هر نسخه کد پیگیری جدا دارد. دو مراقبت: ابزار خارجی ممکن است در اختلال کند شود، پس ابزار داخلی و لاگ سرور مرجع نهایی است؛ و متن سؤال حقوقی کاربر هرگز ثبت نمی‌شود.">
- <div class="pg"></div>
- <div class="in">
-  <div class="eb r">پیش از خرج اولین ریال، قیف را روشن کرده‌ایم</div>
-  <h2 class="sw">پنج عددی که موفقیت را می‌سنجند</h2>
-  <div class="g5 mt" style="gap:calc(var(--u)*2.5)">
-   <div class="cell r" style="--d:2"><span class="big" style="font-size:calc(var(--u)*5)">≥ ۲۲٪</span><p>بازدیدکننده‌ای که سؤال می‌پرسد</p></div>
-   <div class="cell r" style="--d:3"><span class="big" style="font-size:calc(var(--u)*5)">≥ ۴۰٪</span><p>ثبت‌نام با رمز یک‌بارمصرف</p></div>
-   <div class="cell r" style="--d:4"><span class="big" style="font-size:calc(var(--u)*5)">≥ ۴۵٪</span><p>فعال‌سازی</p></div>
-   <div class="cell r" style="--d:5"><span class="big" style="font-size:calc(var(--u)*5)">≤ ۳۵۰</span><p>هزار تومان؛ سقف هزینه هر کاربر فعال</p></div>
-   <div class="cell r" style="--d:6"><span class="big" style="font-size:calc(var(--u)*5)">≥ ۶۰٪</span><p>درک درست ماهیت دیوان (غیر وکیل، غیر مرجع رسمی)</p></div>
-  </div>
-  <p class="lead r" style="--d:8;font-size:1.05em"><b>کاربر فعال:</b> ثبت‌نام با رمز یک‌بارمصرف و دست‌کم یک پاسخ یا خدمت موفق در هفت روز. هر رسانه، پیام و نسخه آزمایشی کد پیگیری جدا دارد. متن سؤال حقوقی کاربر هرگز ثبت نمی‌شود.</p>
+  <p class="src r" style="--d:8">آزمون‌ها: دو نسخه پیامک، سه تیتر تبلیغ و سه صفحه فرود. معیار برنده‌شدن تبلیغ، نرخ شروع سؤال بعد از کلیک است، نه خود کلیک.</p>
  </div>
 </section>
 <!-- 18 gate -->
@@ -419,7 +417,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
  <div class="pg"><img data-img="review" style="object-position:50% 30%"><div class="veil v-r"></div></div>
  <div class="in"><div style="max-width:52%;margin-inline-start:0">
   <div class="eb r">۲۳ آذر · یک هفته به یلدا</div>
-  <h2 class="sw">سه هفته داده؛ بعد تصمیم</h2>
+  <h2 class="sw">سه هفته داده، بعد تصمیم</h2>
   <div class="g2 mt" style="gap:calc(var(--u)*3)">
    <div class="cell r" style="--d:3"><span class="big">۲۰٪</span><p>شروع سؤال از بازدیدکنندگان</p></div>
    <div class="cell r" style="--d:4"><span class="big">۶۰٪</span><p>درک درست ماهیت دیوان</p></div>
@@ -463,10 +461,10 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
   <div>
    <div class="eb r">ایده اصلی یلدا</div>
    <h1 class="dis sw" style="font-size:calc(var(--u)*8)">سفره‌ی سؤال</h1>
-   <p class="lead r" style="--d:3">هر خانواده یک «وکیلِ نانوشته» دارد: عمو حمید. شب یلدا از هر کس می‌خواهیم یک سؤال بنویسد؛ سؤالی که تا حالا نپرسیده.</p>
+   <p class="lead r" style="--d:3">هر خانواده یک «وکیلِ نانوشته» دارد: عمو حمید. شب یلدا از همه می‌خواهیم سؤالی بنویسند که تا حالا نپرسیده‌اند.</p>
    <div class="g3 mt" style="gap:calc(var(--u)*2)">
     <div class="cell r" style="--d:5"><h3>کارت سؤال</h3><p>کارت‌های قابل‌اشتراک با سؤال‌های واقعی</p></div>
-    <div class="cell r" style="--d:6"><h3>عمو حمید</h3><p>شخصیت ثابت کمپین؛ امشب یک همکار هوشمند پیدا کرده</p></div>
+    <div class="cell r" style="--d:6"><h3>عمو حمید</h3><p>شخصیت ثابت کمپین، که امشب یک همکار هوشمند پیدا کرده</p></div>
     <div class="cell r" style="--d:7"><h3>انار دیوان</h3><p>پوستر انار-کتاب: هر دانه یک سؤال</p></div>
    </div>
    <p class="lead r gold" style="--d:8;font-weight:700">دعوت به اقدام: یک سؤال بنویس. دیوان را باز کن.</p>
@@ -499,9 +497,9 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
   <h2 class="sw">چهار ابزار برای یک شب</h2>
   <div class="gal mt">
    <figure class="r" style="--d:2"><div class="fig" style="--ar:.67"><img data-img="pom_poster"></div><figcaption><b>پوستر انار دیوان</b><span class="mut">در شهر، روی شبکه‌ها و قابل دانلود. طراحی نهایی تا ۱۵ آذر.</span></figcaption></figure>
-   <figure class="r" style="--d:3"><div class="fig" style="--ar:.67"><img data-img="yalda_card"></div><figcaption><b>کارت یلدای همراه اول</b><span class="mut">کارت دیجیتال با شعر و دعوت «یک سؤال بنویس» به مشترکان رضایت‌داده.</span></figcaption></figure>
-   <figure class="r" style="--d:4"><div class="fig" style="--ar:1.78"><img data-img="live"></div><figcaption><b>پخش زنده شب یلدا</b><span class="mut">دو کارشناس حقوقی، یک مجری، پرسش‌های مردم. ارزش آن اعتماد و کلیپ است.</span></figcaption></figure>
-   <figure class="r" style="--d:5"><div class="fig" style="--ar:.67"><img data-img="reel"></div><figcaption><b>ریلز «یک سؤال»</b><span class="mut">برش‌های ۱۵ تا ۳۰ ثانیه؛ چهار کلیپ در هفته.</span></figcaption></figure>
+   <figure class="r" style="--d:3"><div class="fig" style="--ar:.67"><img data-img="yalda_card"></div><figcaption><b>کارت یلدای همراه اول</b><span class="mut">کارت دیجیتال با شعر و دعوت به «یک سؤال بنویس»، برای مشترکان رضایت‌داده.</span></figcaption></figure>
+   <figure class="r" style="--d:4"><div class="fig" style="--ar:1.78"><img data-img="live"></div><figcaption><b>پخش زنده شب یلدا</b><span class="mut">دو کارشناس حقوقی، یک مجری و سؤال‌های مردم. ارزشش در اعتماد و کلیپ‌هاست.</span></figcaption></figure>
+   <figure class="r" style="--d:5"><div class="fig" style="--ar:.67"><img data-img="reel"></div><figcaption><b>ریلز «یک سؤال»</b><span class="mut">برش‌های ۱۵ تا ۳۰ ثانیه‌ای، چهار کلیپ در هفته.</span></figcaption></figure>
   </div>
  </div>
 </section>
@@ -550,7 +548,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
   <div>
    <div class="eb r">کمپین عملکردی</div>
    <h1 class="dis sw" style="font-size:calc(var(--u)*8)">پیش از امضا</h1>
-   <p class="lead r" style="--d:3">هر امضا یک لحظه مکث می‌خواهد. چهار لحظه‌ی رایج را انتخاب کنید؛ برای هرکدام یک فهرست پنج‌سؤالی آماده است.</p>
+   <p class="lead r" style="--d:3">هر امضا یک لحظه مکث می‌خواهد. یکی از چهار موقعیت رایج را انتخاب کنید؛ برای هر کدام فهرستی پنج‌سؤالی آماده است.</p>
    <div class="row mt r" style="--d:4" id="ckTabs"><button class="btn on" data-k="0">اجاره</button><button class="btn" data-k="1">خودرو</button><button class="btn" data-k="2">قرارداد کاری</button><button class="btn" data-k="3">چک</button></div>
    <p class="src r" style="--d:6">فهرست‌ها راهنمای آگاهی‌اند، نه مشاوره حقوقی. هر فهرست یک صفحه فرود دارد؛ دکمه «پیش از امضا، بپرس» کنار آگهی‌های اجاره و خودرو.</p>
   </div>
@@ -565,7 +563,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
   <h2 class="sw">هر کدام یک لحظه، یک وعده</h2>
   <div class="g3 mt" style="gap:calc(var(--u)*3)">
    <div class="r" style="--d:2"><figure class="fig" style="--ar:1.78;width:100%"><img data-img="v6_sign"></figure><h3 style="margin-top:.8em">پیش از امضا</h3><p class="mut" style="font-size:.88em">هر امضا یک لحظه مکث می‌خواهد. برای اجاره، خودرو، قرارداد کاری و چک، یک فهرست پنج‌سؤالی و یک صفحه فرود.</p></div>
-   <div class="r" style="--d:3"><figure class="fig" style="--ar:1.78;width:100%"><img data-img="workshop"></figure><h3 style="margin-top:.8em">دیوان در سازمان</h3><p class="mut" style="font-size:.88em">کارگاه «قرارداد را بخوان» برای منابع انسانی و بسته میز مشاور برای دفاتر املاک. گزارش فقط تجمیعی؛ کارفرما سؤال‌ها را نمی‌بیند.</p></div>
+   <div class="r" style="--d:3"><figure class="fig" style="--ar:1.78;width:100%"><img data-img="workshop"></figure><h3 style="margin-top:.8em">دیوان در سازمان</h3><p class="mut" style="font-size:.88em">کارگاه «قرارداد را بخوان» برای منابع انسانی و بسته میز مشاور برای دفاتر املاک. گزارش‌ها فقط تجمیعی است و کارفرما سؤال‌ها را نمی‌بیند.</p></div>
    <div class="r" style="--d:4"><figure class="fig" style="--ar:1.78;width:100%;background:#fff"><img data-img="moment_obj" style="object-fit:contain"></figure><h3 style="margin-top:.8em">دفتر تازه</h3><p class="mut" style="font-size:.88em">۲۰ بهمن تا ۲۵ اسفند. «دیوان» یعنی دفتر هم: چک‌ها، بدهی‌ها، پاداش‌ها. «حساب‌هایت را پیش از عید روشن کن. دیوان را باز کن.»</p></div>
   </div>
  </div>
@@ -577,8 +575,8 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
   <div>
    <div class="eb r">چه کسی تصمیم می‌گیرد</div>
    <h2 class="sw">خرید رسانه و محتوا، با دو واحد همراه اول</h2>
-   <p class="lead r" style="--d:3">مرکز ارتباطات، توسعه برند و بین‌الملل و اداره کل تبلیغات؛ با مشارکت یا نظارت.</p>
-   <div class="cell r" style="--d:5;margin-top:1em"><h3>مهلت پاسخ هر مرحله: ۳ روز کاری</h3><p>اگر پاسخی نیامد، موضوع به جلسه هفتگی می‌رود. این برای جلوگیری از کندی در هفته‌های یلدا ضروری است.</p></div>
+   <p class="lead r" style="--d:3">مرکز ارتباطات، توسعه برند و بین‌الملل و اداره کل تبلیغات، یا در اجرا شریک ما هستند یا بر کار نظارت می‌کنند.</p>
+   <div class="cell r" style="--d:5;margin-top:1em"><h3>مهلت پاسخ هر مرحله: ۳ روز کاری</h3><p>اگر پاسخی نیامد، موضوع به جلسهٔ هفتگی می‌رود. بدون این قاعده در هفته‌های یلدا کند می‌شویم.</p></div>
   </div>
   <div style="display:grid;gap:.6em">
    <div class="cell r" style="--d:3"><span class="chip">۱</span> <h3 style="display:inline">پیشنهاد تیم دیوان</h3></div>
@@ -623,7 +621,7 @@ input[type=range]{width:100%;accent-color:var(--gold);direction:ltr}
     <div class="risk r" style="--d:2"><span class="lv hi">بالا</span><div><b>پاسخ نادرست دستیار</b><p>بازبینی ۱۰۰ پرسش رایج پیش از شروع، کنترل هفتگی و ارجاع به وکیل. شروع کمپین به این آزمون گره خورده است.</p></div></div>
     <div class="risk r" style="--d:3"><span class="lv hi">بالا</span><div><b>قطع یا کندی اینترنت بین‌الملل</b><p>میزبانی داخلی و انتقال بودجه به رسانه داخلی ظرف ۲۴ ساعت.</p></div></div>
     <div class="risk r" style="--d:4"><span class="lv md">متوسط</span><div><b>تأخیر تأیید در واحدهای همراه اول</b><p>مهلت ۳ روز کاری، نماینده ثابت هر واحد.</p></div></div>
-    <div class="risk r" style="--d:5"><span class="lv md">متوسط</span><div><b>برداشت فال‌گیری از ایده</b><p>تکرار شعار «فال نمی‌گیرد»، آزمون با مخاطب و ایده دوم آماده.</p></div></div>
+    <div class="risk r" style="--d:5"><span class="lv md">متوسط</span><div><b>برداشت فال‌گیری از ایده</b><p>شعار «فال نمی‌گیرد» را تکرار می‌کنیم، با مخاطب می‌سنجیم و ایدهٔ دوم را آماده نگه می‌داریم.</p></div></div>
    </div>
    <div>
     <div class="risk r" style="--d:3"><span class="lv md">متوسط</span><div><b>تمایز کم در برابر ۱۵ سکوی دیگر</b><p>تمرکز بر برند و تجربه کاربری، نه بر خدمت.</p></div></div>
@@ -674,7 +672,7 @@ var IMG={banner_a:"data:image/webp;base64,UklGRsi+AgBXRUJQVlA4ILy+AgDQDAmdASqIBq
 (function(){'use strict';
 var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 var fa=function(n,d){return isFinite(n)?Number(n).toLocaleString('fa-IR',{maximumFractionDigits:d||0}):'—'};
-$$('[data-img]').forEach(function(i){i.src=IMG[i.getAttribute('data-img')]});var S=$$('.sl'),N=S.length,cur=-1,prevEl=null;
+$$('[data-img]').forEach(function(i){i.src=IMG[i.getAttribute('data-img')]});var S=$$('.sl'),N=S.length,cur=-1,prevEl=null;S.forEach(function(x){if($('.pg img',x))x.classList.add('hasimg')});
 /* word split */
 $$('.sw').forEach(function(h){var k=0;h.innerHTML=h.textContent.trim().split(/\s+/).map(function(w){return '<span class="w"><i style="--k:'+(k++)+'">'+w+'</i></span>'}).join(' ')});
 function go(i){
