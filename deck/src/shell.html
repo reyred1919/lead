@@ -1,0 +1,14 @@
+<!doctype html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>دیوان را باز کن</title><style>
+{{css}}
+</style></head><body>
+<div class="stage" id="stage">
+{{slides}}
+</div>
+<button class="brand" id="brand"><img id="brandImg" alt="دیوان"></button>
+<div class="hud"><button class="hb" id="bFs" title="تمام‌صفحه (F)">⛶</button><button class="hb" id="bOv" title="فهرست (O)">☰</button><button class="hb" id="bNote" title="یادداشت (N)">✎</button><span id="cnt"></span><span class="bar"><i id="bar"></i></span><span id="act" style="min-width:6em"></span><button class="hb" id="bPrev" title="قبلی">›</button><button class="hb" id="bNext" title="بعدی">‹</button></div>
+<div id="notes"><b class="gold">یادداشت گوینده</b><p id="noteTxt"></p></div>
+<div id="ov"><div class="row" style="justify-content:space-between;margin-bottom:1em"><b class="gold">همه اسلایدها</b><button class="btn" id="ovClose">بستن</button></div><div class="grid" id="ovGrid"></div></div>
+<script>
+var IMG={{imgmap}};
+{{js}}
+</script></body></html>
